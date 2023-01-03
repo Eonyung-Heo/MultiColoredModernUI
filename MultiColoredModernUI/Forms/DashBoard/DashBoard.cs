@@ -161,7 +161,7 @@ namespace MultiColoredModernUI
             
             
         }
-
+        
         public void ColumnVisible()
         {
 

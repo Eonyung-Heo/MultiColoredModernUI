@@ -305,6 +305,7 @@
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\StaticMaster.cs" />
+    <Compile Include="Forms\Ship\test.cs" />
     <Compile Include="Forms\SubwaySchedule\SubwaySchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +457,7 @@
   <ItemGroup>
     <None Include="Resources\321321.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
