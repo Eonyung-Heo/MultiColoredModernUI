@@ -311,6 +311,7 @@
     <Compile Include="Forms\Ship\Ship.Designer.cs">
       <DependentUpon>Ship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Ship\test.cs" />
     <Compile Include="Forms\SubwaySchedule\SubwaySchedule.cs">
       <SubType>Form</SubType>
     </Compile>
