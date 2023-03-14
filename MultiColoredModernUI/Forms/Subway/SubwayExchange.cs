@@ -113,6 +113,7 @@ namespace MultiColoredModernUI.Forms.Subway
             sql.GetLaneType(cityCode);
             sql.GetExChangeStationName(cityCode, laneType);
             StationNameItemAdd();
+            guna2DataGridView1.Rows.Clear();
             ValueClear();
         }
 
@@ -152,6 +153,7 @@ namespace MultiColoredModernUI.Forms.Subway
 
         private void listStationName_Click(object sender, EventArgs e)
         {
+
             IEnumerator enm = listStationName.SelectedIndices.GetEnumerator();
 
             int currIndex = -1;
@@ -159,6 +161,7 @@ namespace MultiColoredModernUI.Forms.Subway
             while (enm.MoveNext())
             {
                 currIndex = (int)enm.Current;
+
 
             }
 
@@ -186,11 +189,14 @@ namespace MultiColoredModernUI.Forms.Subway
         {
 
 
-            int currIndex = 0;
+            int currIndex = -1;
 
 
-            currIndex = guna2DataGridView1.SelectedRows.Count;
-            
+            //currIndex = guna2DataGridView1.CurrentCell.RowIndex;
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+                currIndex = guna2DataGridView1.CurrentCell.RowIndex;
 
             if (currIndex != -1)
             {
@@ -206,6 +212,24 @@ namespace MultiColoredModernUI.Forms.Subway
                 textDoor3.Enabled = true;
                 textTrain4.Enabled = true;
                 textDoor4.Enabled = true;
+                transferCalculate1.Enabled = true;
+                transferCalculate2.Enabled = true;
+                transferCalculate3.Enabled = true;
+                transferCalculate4.Enabled = true;
+                transferDisable1.Enabled = true;
+                transferDisable2.Enabled = true;
+                transferDisable3.Enabled = true;
+                transferDisable4.Enabled = true;
+
+                transferDisable1.Checked = false;
+                transferDisable2.Checked = false;
+                transferDisable3.Checked = false;
+                transferDisable4.Checked = false;
+
+                transferCalculate1.Checked = false;
+                transferCalculate2.Checked = false;
+                transferCalculate3.Checked = false;
+                transferCalculate4.Checked = false;
 
 
                 textStationID.Text = StaticSubway.stations[currIndex][0].ToString();
@@ -283,6 +307,8 @@ namespace MultiColoredModernUI.Forms.Subway
 
         public void ValueClear()
         {
+           
+
             textStationName.Text = "";
             textLane1.Text = "";
             textLane2.Text = "";
@@ -317,6 +343,15 @@ namespace MultiColoredModernUI.Forms.Subway
             textDoor3.Enabled = false;
             textTrain4.Enabled = false;
             textDoor4.Enabled = false;
+            transferCalculate1.Enabled = false;
+            transferCalculate2.Enabled = false;
+            transferCalculate3.Enabled = false;
+            transferCalculate4.Enabled = false;
+
+            transferDisable1.Enabled = false;
+            transferDisable2.Enabled = false;
+            transferDisable3.Enabled = false;
+            transferDisable4.Enabled = false;
 
 
             textStationID.Enabled = false;
@@ -357,7 +392,7 @@ namespace MultiColoredModernUI.Forms.Subway
                 int currIndex = 0;
 
 
-                currIndex = guna2DataGridView1.SelectedRows.Count;
+                currIndex = guna2DataGridView1.CurrentCell.RowIndex;
 
 
                 bool check = itemCheck();
@@ -387,7 +422,8 @@ namespace MultiColoredModernUI.Forms.Subway
         {
             comboboxRegion.SelectedIndex = -1;
             comboBoxLaneType.SelectedIndex = -1;
-
+            
+            
             StationNameList();
             StationList();
             ValueClear();
@@ -408,32 +444,41 @@ namespace MultiColoredModernUI.Forms.Subway
 
             int sum = 0;
 
-            if (Convert.ToInt16(textExchangeTime1.Text) > 0)
+            if (textExchangeTime1.Text != "")
             {
-                sum += Convert.ToInt16(textExchangeTime1.Text);
-                exchangeCount++;
+                if (Convert.ToInt16(textExchangeTime1.Text) > 0)
+                {
+                    sum += Convert.ToInt16(textExchangeTime1.Text);
+                    exchangeCount++;
+                }
             }
-            
 
-            if (Convert.ToInt16(textExchangeTime2.Text) > 0)
+            if (textExchangeTime2.Text != "")
             {
-                sum += Convert.ToInt16(textExchangeTime2.Text);
-                exchangeCount++;
+                if (Convert.ToInt16(textExchangeTime2.Text) > 0)
+                {
+                    sum += Convert.ToInt16(textExchangeTime2.Text);
+                    exchangeCount++;
+                }
             }
-            
 
-            if (Convert.ToInt16(textExchangeTime3.Text) > 0)
+            if (textExchangeTime3.Text != "")
             {
-                sum += Convert.ToInt16(textExchangeTime3.Text);
-                exchangeCount++;
+                if (Convert.ToInt16(textExchangeTime3.Text) > 0)
+                {
+                    sum += Convert.ToInt16(textExchangeTime3.Text);
+                    exchangeCount++;
+                }
             }
-            
 
 
-            if (Convert.ToInt16(textExchangeTime4.Text) > 0)
+            if (textExchangeTime4.Text != "")
             {
-                sum += Convert.ToInt16(textExchangeTime4.Text);
-                exchangeCount++;
+                if (Convert.ToInt16(textExchangeTime4.Text) > 0)
+                {
+                    sum += Convert.ToInt16(textExchangeTime4.Text);
+                    exchangeCount++;
+                }
             }
             
 
@@ -499,11 +544,15 @@ namespace MultiColoredModernUI.Forms.Subway
         public string textLimit(string text)
         {
 
-
             string iLimit = "0";
-
-            if (Convert.ToInt16(text) < -3)
+            try
+            {
+                if (Convert.ToInt16(text) < -3)
+                    return iLimit;
+            }catch
+            {
                 return iLimit;
+            }
 
             return text;
         }
@@ -585,6 +634,238 @@ namespace MultiColoredModernUI.Forms.Subway
             if (rx.IsMatch(textDoor4.Text))
             {
                 textDoor4.Text = textLimit(textDoor4.Text);
+            }
+        }
+
+        private void transferDisable1_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+                if (transferDisable1.Checked == true)
+                {
+                    transferCalculate1.Checked = false;
+                    textDoor1.Text = "-3";
+                    textTrain1.Text = "-3";
+
+                    textDoor1.Enabled = false;
+                    textTrain1.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor1.Text = "0";
+                    textTrain1.Text = "0";
+
+                    textDoor1.Enabled = true;
+                    textTrain1.Enabled = true;
+
+                }
+            }
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+                if (transferDisable2.Checked == true)
+                {
+                    transferCalculate2.Checked = false;
+                    textDoor2.Text = "-3";
+                    textTrain2.Text = "-3";
+
+                    textDoor2.Enabled = false;
+                    textTrain2.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor2.Text = "0";
+                    textTrain2.Text = "0";
+
+                    textDoor2.Enabled = true;
+                    textTrain2.Enabled = true;
+
+                }
+            }
+        }
+
+        private void transferDisable3_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+
+                if (transferDisable3.Checked == true)
+                {
+                    transferCalculate3.Checked = false;
+                    textDoor3.Text = "-3";
+                    textTrain3.Text = "-3";
+
+                    textDoor3.Enabled = false;
+                    textTrain3.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor3.Text = "0";
+                    textTrain3.Text = "0";
+
+                    textDoor3.Enabled = true;
+                    textTrain3.Enabled = true;
+
+                }
+            }
+        }
+
+        private void transferDisable4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (transferDisable4.Checked == true)
+            {
+                transferCalculate4.Checked = false;
+                textDoor4.Text = "-3";
+                textTrain4.Text = "-3";
+
+                textDoor4.Enabled = false;
+                textTrain4.Enabled = false;
+
+
+            }
+            else
+            {
+                textDoor4.Text = "0";
+                textTrain4.Text = "0";
+
+                textDoor4.Enabled = true;
+                textTrain4.Enabled = true;
+
+            }
+        }
+
+        private void transferCalculate1_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+
+                if (transferCalculate1.Checked == true)
+                {
+                    transferDisable1.Checked = false;
+                    textDoor1.Text = "-1";
+                    textTrain1.Text = "-1";
+
+                    textDoor1.Enabled = false;
+                    textTrain1.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor1.Text = "0";
+                    textTrain1.Text = "0";
+
+                    textDoor1.Enabled = true;
+                    textTrain1.Enabled = true;
+
+                }
+            }
+        }
+
+        private void transferCalculate2_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+
+                if (transferCalculate2.Checked == true)
+                {
+                    transferDisable2.Checked = false;
+                    textDoor2.Text = "-1";
+                    textTrain2.Text = "-1";
+
+                    textDoor2.Enabled = false;
+                    textTrain2.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor2.Text = "0";
+                    textTrain2.Text = "0";
+
+                    textDoor2.Enabled = true;
+                    textTrain2.Enabled = true;
+
+                }
+            }
+        }
+
+        private void transferCalculate3_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+
+                if (transferCalculate3.Checked == true)
+                {
+                    transferDisable3.Checked = false;
+                    textDoor3.Text = "-1";
+                    textTrain3.Text = "-1";
+
+                    textDoor3.Enabled = false;
+                    textTrain3.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor3.Text = "0";
+                    textTrain3.Text = "0";
+
+                    textDoor3.Enabled = true;
+                    textTrain3.Enabled = true;
+
+                }
+            }
+        }
+
+        private void transferCalculate4_CheckedChanged(object sender, EventArgs e)
+        {
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+            {
+
+                if (transferCalculate4.Checked == true)
+                {
+                    transferDisable4.Checked = false;
+                    textDoor4.Text = "-1";
+                    textTrain4.Text = "-1";
+
+                    textDoor4.Enabled = false;
+                    textTrain4.Enabled = false;
+
+
+                }
+                else
+                {
+                    textDoor4.Text = "0";
+                    textTrain4.Text = "0";
+
+                    textDoor4.Enabled = true;
+                    textTrain4.Enabled = true;
+
+                }
             }
         }
     }

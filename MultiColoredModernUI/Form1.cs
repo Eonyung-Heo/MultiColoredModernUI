@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DF = MultiColoredModernUI.Forms.DashBoard;
 using SF = MultiColoredModernUI.Forms.Subway;
 using MF = MultiColoredModernUI.Forms.Master;
+using SpF = MultiColoredModernUI.Forms.Ship;
 using System.Net.NetworkInformation;
 
 namespace MultiColoredModernUI
@@ -32,6 +33,7 @@ namespace MultiColoredModernUI
         public SF.SubwayFacility sfFacility = new SF.SubwayFacility { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayGateLink sfGateLink = new SF.SubwayGateLink { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayStation sfStation = new SF.SubwayStation { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SpF.ShipData spfShip = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
@@ -128,6 +130,15 @@ namespace MultiColoredModernUI
                             //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
+                    foreach (Control previousSubBtn in panelShipSubMenu.Controls)
+                    {
+                        if (previousSubBtn.GetType() == typeof(Button))
+                        {
+                            previousSubBtn.BackColor = Color.White;
+                            //previousSubBtn.ForeColor = Color.LightGray;
+                            //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        }
+                    }
 
                 }
             }
@@ -158,6 +169,7 @@ namespace MultiColoredModernUI
         private void customizDesing()
         {
             panelProductsSubMenu.Visible = false;
+            panelShipSubMenu.Visible = false;
             /*
             panelToolListSubMenu.Visible = false;
             panelSettingListSubMenu.Visible = false;
@@ -168,6 +180,9 @@ namespace MultiColoredModernUI
         {
             if (panelProductsSubMenu.Visible == true)
                 panelProductsSubMenu.Visible = false;
+
+            if (panelShipSubMenu.Visible == true)
+                panelShipSubMenu.Visible = false;
 
             /*
             if (panelToolListSubMenu.Visible == true)
@@ -430,6 +445,19 @@ namespace MultiColoredModernUI
                 ShowWindow(GetActiveWindow(), 3);
             else
                 ShowWindow(GetActiveWindow(), 2);
+        }
+
+        private void btnShipProducts_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelShipSubMenu);
+            Activatebutton(sender);
+            btnShip_Click((Button)btnShip, e);
+        }
+
+        private void btnShip_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(spfShip, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 선택");
         }
     }
 }

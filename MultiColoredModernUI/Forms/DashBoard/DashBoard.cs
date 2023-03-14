@@ -91,8 +91,7 @@ namespace MultiColoredModernUI
         {
             sql.RegionData();
 
-           
-            
+                
             lblCityBusStation.Text = DB.StaticDashBoard.dashBoard_RegionData[0].ToString();
             lblExpressBusStation.Text = DB.StaticDashBoard.dashBoard_RegionData[5].ToString();
             lblInterBusStation.Text = DB.StaticDashBoard.dashBoard_RegionData[7].ToString(); ;
@@ -138,6 +137,19 @@ namespace MultiColoredModernUI
                     else if (i == 0)
                         guna2DataGridView4.Rows.Add(str);
                 }
+
+            }
+
+            for (int i = 0; i < 11; i++)
+            {
+                chart1.Series[0].Points.Add(i);
+                chart1.Series[1].Points.Add(i);
+                chart1.Series[2].Points.Add(i);
+            }
+
+            for (int i = 0; i < 11; i++)
+            {
+                chart2.Series[0].Points.Add(i);
 
             }
         }

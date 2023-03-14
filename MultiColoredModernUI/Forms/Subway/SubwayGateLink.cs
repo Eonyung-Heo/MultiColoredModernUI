@@ -330,7 +330,13 @@ namespace MultiColoredModernUI.Forms.Subway
 
                 for (int i = 0; i < linkKors.Length; i++)
                 {
+                    
+
                     linkkor = linkKors[i].Replace(" ", "");
+                    linkkor = linkkor.Replace("\r", "");
+                    linkkor = linkkor.Replace("\n", "");
+                    linkkor = linkkor.Replace(",", "");
+
 
                     if (!sql.setGateLinkAdd(stationID, gateNo, linkkor))
                         MessageBox.Show(linkkor + "의 출구 정보가 이미 존재 합니다.");
@@ -516,9 +522,9 @@ namespace MultiColoredModernUI.Forms.Subway
         {
             textGateInfoAdd.Enabled = true;
             textGateNoAdd.Enabled = true;
-            btnGateInfoAdd.Enabled = true;
             btndel.Enabled = true;
             btnDelete.Enabled = true;
+
 
         }
 
@@ -562,6 +568,14 @@ namespace MultiColoredModernUI.Forms.Subway
         public void listClickReset()
         {
             this.listClickCheck = false;
+        }
+
+        private void textGateInfoAdd_TextChanged(object sender, EventArgs e)
+        {
+            if (textGateInfoAdd.Text != "")
+                btnGateInfoAdd.Enabled = true;
+            else
+                btnGateInfoAdd.Enabled = false;
         }
     }
 }

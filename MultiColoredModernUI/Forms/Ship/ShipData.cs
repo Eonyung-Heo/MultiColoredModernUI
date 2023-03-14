@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MultiColoredModernUI.Forms.Ship
 {
-    public partial class Ship : Form
+    public partial class ShipData : Form
     {
-        public Ship()
+        public ShipData()
         {
             InitializeComponent();
         }

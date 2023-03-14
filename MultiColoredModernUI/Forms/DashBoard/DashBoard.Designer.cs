@@ -41,12 +41,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.naverOdsayUpdateDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -69,6 +74,10 @@
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.googleUpdateDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -169,10 +178,11 @@
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
             this.guna2Panel14.SuspendLayout();
@@ -181,6 +191,8 @@
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
@@ -202,13 +214,15 @@
             this.guna2GradientPanel7.SuspendLayout();
             this.guna2GradientPanel9.SuspendLayout();
             this.guna2GradientPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
+            this.guna2Panel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2Panel1.Controls.Add(this.guna2GradientPanel8);
             this.guna2Panel1.Controls.Add(this.tableLayoutPanel1);
             this.guna2Panel1.Controls.Add(this.guna2GradientPanel1);
@@ -220,79 +234,32 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1122, 985);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GradientPanel2.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel2.Controls.Add(this.guna2Button2);
-            this.guna2GradientPanel2.Controls.Add(this.pictureBox1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.White;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(20, 334);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1082, 31);
-            this.guna2GradientPanel2.TabIndex = 9;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Location = new System.Drawing.Point(1045, 2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.PressedDepth = 0;
-            this.guna2Button2.Size = new System.Drawing.Size(34, 28);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.UseTransparentBackground = true;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1045, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 5);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(166, 20);
-            this.guna2HtmlLabel3.TabIndex = 1;
-            this.guna2HtmlLabel3.Text = "데이터 관리(유지보수) 현황";
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.Controls.Add(this.tableLayoutPanel3);
             this.guna2Panel2.Controls.Add(this.tableLayoutPanel2);
             this.guna2Panel2.Location = new System.Drawing.Point(20, 238);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1082, 90);
-            this.guna2Panel2.TabIndex = 4;
+            this.guna2Panel2.Size = new System.Drawing.Size(1082, 428);
+            this.guna2Panel2.TabIndex = 10;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.chart2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.chart1, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 87);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1082, 341);
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
@@ -619,6 +586,70 @@
             this.guna2HtmlLabel6.TabIndex = 0;
             this.guna2HtmlLabel6.Text = "GOOGLE";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel2.Controls.Add(this.guna2Button2);
+            this.guna2GradientPanel2.Controls.Add(this.pictureBox1);
+            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(20, 681);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1082, 31);
+            this.guna2GradientPanel2.TabIndex = 9;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Location = new System.Drawing.Point(1045, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.PressedDepth = 0;
+            this.guna2Button2.Size = new System.Drawing.Size(34, 28);
+            this.guna2Button2.TabIndex = 3;
+            this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1045, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 5);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(166, 20);
+            this.guna2HtmlLabel3.TabIndex = 1;
+            this.guna2HtmlLabel3.Text = "데이터 관리(유지보수) 현황";
             // 
             // guna2GradientPanel8
             // 
@@ -1268,7 +1299,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel16.Controls.Add(this.tableLayoutPanel5);
             this.guna2Panel16.Controls.Add(this.tableLayoutPanel6);
-            this.guna2Panel16.Location = new System.Drawing.Point(20, 371);
+            this.guna2Panel16.Location = new System.Drawing.Point(20, 718);
             this.guna2Panel16.Name = "guna2Panel16";
             this.guna2Panel16.Size = new System.Drawing.Size(1082, 244);
             this.guna2Panel16.TabIndex = 8;
@@ -1366,54 +1397,63 @@
             this.Column28.HeaderText = "Column28";
             this.Column28.Name = "Column28";
             this.Column28.ReadOnly = true;
+            this.Column28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column29
             // 
             this.Column29.HeaderText = "Column29";
             this.Column29.Name = "Column29";
             this.Column29.ReadOnly = true;
+            this.Column29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column30
             // 
             this.Column30.HeaderText = "수단";
             this.Column30.Name = "Column30";
             this.Column30.ReadOnly = true;
+            this.Column30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column31
             // 
             this.Column31.HeaderText = "Column31";
             this.Column31.Name = "Column31";
             this.Column31.ReadOnly = true;
+            this.Column31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column32
             // 
             this.Column32.HeaderText = "Column32";
             this.Column32.Name = "Column32";
             this.Column32.ReadOnly = true;
+            this.Column32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column33
             // 
             this.Column33.HeaderText = "Column33";
             this.Column33.Name = "Column33";
             this.Column33.ReadOnly = true;
+            this.Column33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column34
             // 
             this.Column34.HeaderText = "Column34";
             this.Column34.Name = "Column34";
             this.Column34.ReadOnly = true;
+            this.Column34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column35
             // 
             this.Column35.HeaderText = "날짜";
             this.Column35.Name = "Column35";
             this.Column35.ReadOnly = true;
+            this.Column35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column36
             // 
             this.Column36.HeaderText = "Column36";
             this.Column36.Name = "Column36";
             this.Column36.ReadOnly = true;
+            this.Column36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // guna2DataGridView3
             // 
@@ -1489,54 +1529,63 @@
             this.Column19.HeaderText = "수단";
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column20
             // 
             this.Column20.HeaderText = "Column20";
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
+            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column21
             // 
             this.Column21.HeaderText = "Column21";
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
+            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column22
             // 
             this.Column22.HeaderText = "Column22";
             this.Column22.Name = "Column22";
             this.Column22.ReadOnly = true;
+            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column23
             // 
             this.Column23.HeaderText = "Column23";
             this.Column23.Name = "Column23";
             this.Column23.ReadOnly = true;
+            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column24
             // 
             this.Column24.HeaderText = "Column24";
             this.Column24.Name = "Column24";
             this.Column24.ReadOnly = true;
+            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column25
             // 
             this.Column25.HeaderText = "Column25";
             this.Column25.Name = "Column25";
             this.Column25.ReadOnly = true;
+            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column26
             // 
             this.Column26.HeaderText = "날짜";
             this.Column26.Name = "Column26";
             this.Column26.ReadOnly = true;
+            this.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column27
             // 
             this.Column27.HeaderText = "Column27";
             this.Column27.Name = "Column27";
             this.Column27.ReadOnly = true;
+            this.Column27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // guna2DataGridView2
             // 
@@ -1613,54 +1662,63 @@
             this.Column10.HeaderText = "지역";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Column11";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
+            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "Column12";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "Column13";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column14
             // 
             this.Column14.HeaderText = "Column14";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            this.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column15
             // 
             this.Column15.HeaderText = "Column15";
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
+            this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column16
             // 
             this.Column16.HeaderText = "Column16";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
+            this.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column17
             // 
             this.Column17.HeaderText = "날짜";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
+            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column18
             // 
             this.Column18.HeaderText = "Column18";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // guna2DataGridView1
             // 
@@ -1736,54 +1794,63 @@
             this.Column1.HeaderText = "지역";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Column2";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Column3";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Column4";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Column5";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Column6";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Column7";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "날짜";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Column9";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tableLayoutPanel6
             // 
@@ -1982,6 +2049,50 @@
             this.guna2HtmlLabel14.Text = "07/15";
             this.guna2HtmlLabel14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(544, 3);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(535, 335);
+            this.chart2.TabIndex = 3;
+            this.chart2.Text = "chart2";
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series2";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series3";
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(535, 335);
+            this.chart1.TabIndex = 2;
+            this.chart1.Text = "chart1";
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1993,10 +2104,8 @@
             this.Tag = "DASHBOARD";
             this.Text = "DashBoard";
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.guna2Panel15.ResumeLayout(false);
             this.guna2Panel14.ResumeLayout(false);
@@ -2005,6 +2114,9 @@
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel13.ResumeLayout(false);
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel8.ResumeLayout(false);
             this.guna2GradientPanel8.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2032,6 +2144,8 @@
             this.guna2GradientPanel9.PerformLayout();
             this.guna2GradientPanel10.ResumeLayout(false);
             this.guna2GradientPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2044,30 +2158,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
-        private Guna.UI2.WinForms.Guna2HtmlLabel naverOdsayUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private Guna.UI2.WinForms.Guna2HtmlLabel langUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel shipUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel odsayUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel naverUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel tmapUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel googleUpdateDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
@@ -2130,6 +2221,15 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
@@ -2157,14 +2257,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
+        private Guna.UI2.WinForms.Guna2HtmlLabel naverOdsayUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel langUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel shipUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel odsayUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel naverUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel tmapUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel googleUpdateDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MultiColoredModernUI.Forms.Ship
 {
-    partial class Ship
+    partial class ShipData
     {
         /// <summary>
         /// Required designer variable.

@@ -305,11 +305,11 @@
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\StaticMaster.cs" />
-    <Compile Include="Forms\Ship\Ship.cs">
+    <Compile Include="Forms\Ship\ShipData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Ship\Ship.Designer.cs">
-      <DependentUpon>Ship.cs</DependentUpon>
+    <Compile Include="Forms\Ship\ShipData.Designer.cs">
+      <DependentUpon>ShipData.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SubwaySchedule\SubwaySchedule.cs">
       <SubType>Form</SubType>

@@ -253,6 +253,7 @@
             // textGateInfo
             // 
             this.textGateInfo.Location = new System.Drawing.Point(103, 46);
+            this.textGateInfo.Multiline = true;
             this.textGateInfo.Name = "textGateInfo";
             this.textGateInfo.Size = new System.Drawing.Size(273, 21);
             this.textGateInfo.TabIndex = 40;
@@ -329,9 +330,11 @@
             // textGateInfoAdd
             // 
             this.textGateInfoAdd.Location = new System.Drawing.Point(103, 46);
+            this.textGateInfoAdd.Multiline = true;
             this.textGateInfoAdd.Name = "textGateInfoAdd";
             this.textGateInfoAdd.Size = new System.Drawing.Size(273, 21);
             this.textGateInfoAdd.TabIndex = 47;
+            this.textGateInfoAdd.TextChanged += new System.EventHandler(this.textGateInfoAdd_TextChanged);
             // 
             // label9
             // 

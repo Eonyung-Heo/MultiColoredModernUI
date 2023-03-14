@@ -23,7 +23,7 @@ namespace MultiColoredModernUI.Forms.Subway
         public SubwayFacility()
         {
             InitializeComponent();
-
+            ComboBoxValueAdd();
             sql.GetRegion();
             RegionAdd();
             StationNameList();
@@ -110,6 +110,7 @@ namespace MultiColoredModernUI.Forms.Subway
             sql.GetLaneType(cityCode);
             sql.GetStationName(cityCode, laneType);
             StationNameItemAdd();
+            guna2DataGridView1.Rows.Clear();
             ValueClear();
 
         }
@@ -131,16 +132,15 @@ namespace MultiColoredModernUI.Forms.Subway
 
         public void StationItemAdd()
         {
-            listStation.Items.Clear();
-            listStation.Refresh();
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
 
             for (int i = 0; i < StaticSubway.stations.Count; i++)
             {
                 string[] str = StaticSubway.stations[i].ToArray();
 
-                ListViewItem item = new ListViewItem(str);
+                guna2DataGridView1.Rows.Add(str);
 
-                listStation.Items.Add(item);
             }
         }
 
@@ -169,15 +169,15 @@ namespace MultiColoredModernUI.Forms.Subway
                 sql.GetFacility(stationID);
                 StationItemAdd();
 
-
                 ValueClear();
 
                 listStation_Click(sender, e);
             }
         }
-
+        
         private void StationList()
         {
+            /*
             listStation.Clear();
             listStation.View = View.Details;
             listStation.GridLines = true;
@@ -205,7 +205,9 @@ namespace MultiColoredModernUI.Forms.Subway
             //listStation.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             //listStation.Columns[0].Width = 0;
+            */
 
+            guna2DataGridView1.Columns[0].Visible = false;
         }
 
         public void ComboBoxValueAdd()
@@ -277,20 +279,17 @@ namespace MultiColoredModernUI.Forms.Subway
         private void listStation_Click(object sender, EventArgs e)
         {
 
+            int currIndex = -1;
 
-            IEnumerator enm = listStation.SelectedIndices.GetEnumerator();
 
-            int currIndex = 0;
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
 
-            while (enm.MoveNext())
-            {
-                currIndex = (int)enm.Current;
-            }
+            if (currRow == true)
+                currIndex = guna2DataGridView1.CurrentCell.RowIndex;
 
             if (currIndex != -1)
             {
                 ComboBoxValueAdd();
-                
 
                 textStationName.Text = StaticSubway.stations[currIndex][1].ToString();
                 comboLostCenter.SelectedIndex = ComboBoxValue(Convert.ToInt16(StaticSubway.stations[currIndex][2].ToString()), "");
@@ -313,15 +312,35 @@ namespace MultiColoredModernUI.Forms.Subway
 
                 itemList.AddRange(StaticSubway.stations[currIndex].ToList());
 
+                comboLostCenter.Enabled = true;
+                comboBicycleRack.Enabled = true;
+                comboTransferParking.Enabled = true;
+                comboStationOffice.Enabled = true;
+                comboPublicOffice.Enabled = true;
+                comboTicket.Enabled = true;
+                comboDisabledToilet.Enabled = true;
+                comboElevator.Enabled = true;
+                comboWheelChairLift.Enabled = true;
+                comboVisitorCenter.Enabled = true;
+                comboAutomaticDispenser.Enabled = true;
+                combolactationRoom.Enabled = true;
+                comboLocker.Enabled = true;
+                textLostCenterTel.Enabled = true;
+                textLostCenterUrl.Enabled = true;
+                textStationName.Enabled = true;
+                btnAlter.Enabled = true;
+
             }
         }
 
         public void ValueClear()
         {
+            //guna2DataGridView1.Rows.Clear();
+
             textStationName.Text = "";
             textLostCenterTel.Text = "";
             textLostCenterUrl.Text = "";
-
+            
             comboLostCenter.Text = "";
             comboBicycleRack.Text = "";
             comboTransferParking.Text = "";
@@ -351,7 +370,7 @@ namespace MultiColoredModernUI.Forms.Subway
             combolactationRoom.Items.Clear();
             comboLocker.Items.Clear();
             comboStationOffice.Items.Clear();
-
+            
             comboLostCenter.Enabled = false;
             comboBicycleRack.Enabled = false;
             comboTransferParking.Enabled = false;

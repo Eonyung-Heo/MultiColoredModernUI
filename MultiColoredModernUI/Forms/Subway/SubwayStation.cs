@@ -83,6 +83,7 @@ namespace MultiColoredModernUI.Forms.Subway
 
         private void StationList()
         {
+            /*
             listStation.Clear();
             listStation.View = View.Details;
             listStation.GridLines = true;
@@ -104,10 +105,13 @@ namespace MultiColoredModernUI.Forms.Subway
             listStation.Columns.Add("전화 번호", 100);
             listStation.Columns.Add("지번 주소", 250);
             listStation.Columns.Add("도로명 주소", 300);
-
+            */
             //listStation.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             //listStation.Columns[0].Width = 0;
+
+            guna2DataGridView1.Columns[0].Visible = false;
+            //guna2DataGridView1.Columns[2].Visible = false;
 
 
 
@@ -131,16 +135,15 @@ namespace MultiColoredModernUI.Forms.Subway
 
         public void StationItemAdd()
         {
-            listStation.Items.Clear();
-            listStation.Refresh();
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
 
             for (int i = 0; i < StaticSubway.stations.Count; i++)
             {
                 string[] str = StaticSubway.stations[i].ToArray();
 
-                ListViewItem item = new ListViewItem(str);
+                guna2DataGridView1.Rows.Add(str);
 
-                listStation.Items.Add(item);
             }
         }
 
@@ -179,6 +182,7 @@ namespace MultiColoredModernUI.Forms.Subway
             sql.GetLaneType(cityCode);
             sql.GetStationName(cityCode, laneType);
             StationNameItemAdd();
+            guna2DataGridView1.Rows.Clear();
             ValueClear();
             
         }
@@ -217,16 +221,17 @@ namespace MultiColoredModernUI.Forms.Subway
 
         private void listStation_Click(object sender, EventArgs e)
         {
-            
 
-            IEnumerator enm = listStation.SelectedIndices.GetEnumerator();
 
-            int currIndex = 0;
 
-            while (enm.MoveNext())
-            {
-                currIndex = (int)enm.Current;
-            }
+            int currIndex = -1;
+
+
+            //currIndex = guna2DataGridView1.CurrentCell.RowIndex;
+            bool currRow = guna2DataGridView1.CurrentRow.Selected;
+
+            if (currRow == true)
+                currIndex = guna2DataGridView1.CurrentCell.RowIndex;
 
             if (currIndex != -1)
             {
@@ -251,6 +256,12 @@ namespace MultiColoredModernUI.Forms.Subway
 
                 itemList.AddRange(StaticSubway.stations[currIndex].ToList());
 
+                comboStationPlatform.Enabled = true;
+                comboStationRestRoom.Enabled = true;
+                comboStationCrossOver.Enabled = true;
+                comboStationMeetingPlace.Enabled = true;
+                comboStationPublicOffice.Enabled = true;
+                comboStationOffDoor.Enabled = true;
 
 
             }
@@ -268,15 +279,15 @@ namespace MultiColoredModernUI.Forms.Subway
             string[] meetPlace = { "0:없음", "1:있음" };
             string[] publicOffice = { "0:없음", "1:있음" };
             string[] offDoor = { "0:왼쪽", "1:오른쪽", "2:양쪽" };
-
+            
             comboStationPlatform.Items.AddRange(platForm.ToArray());
             comboStationRestRoom.Items.AddRange(restRoom.ToArray());
             comboStationCrossOver.Items.AddRange(crossOver.ToArray());
             comboStationMeetingPlace.Items.AddRange(meetPlace.ToArray());
             comboStationPublicOffice.Items.AddRange(publicOffice.ToArray());
             comboStationOffDoor.Items.AddRange(offDoor.ToArray());
-
-            textStationAliaskor.Enabled = true;
+            
+            //textStationAliaskor.Enabled = true;
             //textStationName.Enabled = true;
             //textStationX.Enabled = true;
             //textStationY.Enabled = true;
@@ -319,6 +330,7 @@ namespace MultiColoredModernUI.Forms.Subway
             textStationAddress.Text = "";
             textStationRoadAddress.Text = "";
 
+            
             comboStationPlatform.Text = "";
             comboStationRestRoom.Text = "";
             comboStationCrossOver.Text = "";
@@ -332,7 +344,7 @@ namespace MultiColoredModernUI.Forms.Subway
             comboStationMeetingPlace.Items.Clear();
             comboStationPublicOffice.Items.Clear();
             comboStationOffDoor.Items.Clear();
-
+            
 
             textStationAliaskor.Enabled = false;
             textStationName.Enabled = false;

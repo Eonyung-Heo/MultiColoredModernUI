@@ -30,17 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnDataManegement = new System.Windows.Forms.Button();
-            this.btnRegionData = new System.Windows.Forms.Button();
-            this.btnMaster = new System.Windows.Forms.Button();
+            this.panelShipSubMenu = new System.Windows.Forms.Panel();
+            this.btnShip = new System.Windows.Forms.Button();
+            this.btnShipProducts = new System.Windows.Forms.Button();
             this.panelProductsSubMenu = new System.Windows.Forms.Panel();
             this.btnExchange = new System.Windows.Forms.Button();
             this.btnGateLink = new System.Windows.Forms.Button();
             this.btnFacility = new System.Windows.Forms.Button();
             this.btnStation = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
+            this.btnDataManegement = new System.Windows.Forms.Button();
+            this.btnRegionData = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMaster = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btnCloseChileForm = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +53,7 @@
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
+            this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,65 +64,63 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.White;
-            this.panelSideMenu.Controls.Add(this.btnDataManegement);
-            this.panelSideMenu.Controls.Add(this.btnRegionData);
-            this.panelSideMenu.Controls.Add(this.btnMaster);
+            this.panelSideMenu.Controls.Add(this.panelShipSubMenu);
+            this.panelSideMenu.Controls.Add(this.btnShipProducts);
             this.panelSideMenu.Controls.Add(this.panelProductsSubMenu);
             this.panelSideMenu.Controls.Add(this.btnProducts);
+            this.panelSideMenu.Controls.Add(this.btnDataManegement);
+            this.panelSideMenu.Controls.Add(this.btnRegionData);
             this.panelSideMenu.Controls.Add(this.panelLogo);
+            this.panelSideMenu.Controls.Add(this.btnMaster);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(204, 658);
             this.panelSideMenu.TabIndex = 0;
             // 
-            // btnDataManegement
+            // panelShipSubMenu
             // 
-            this.btnDataManegement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDataManegement.FlatAppearance.BorderSize = 0;
-            this.btnDataManegement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDataManegement.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btnDataManegement.ForeColor = System.Drawing.Color.Black;
-            this.btnDataManegement.Location = new System.Drawing.Point(0, 305);
-            this.btnDataManegement.Name = "btnDataManegement";
-            this.btnDataManegement.Size = new System.Drawing.Size(204, 45);
-            this.btnDataManegement.TabIndex = 5;
-            this.btnDataManegement.Text = "데이터 관리(유지보수) 현황";
-            this.btnDataManegement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDataManegement.UseVisualStyleBackColor = true;
-            this.btnDataManegement.Click += new System.EventHandler(this.btnDataManegement_Click);
+            this.panelShipSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelShipSubMenu.Controls.Add(this.btnShip);
+            this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShipSubMenu.Location = new System.Drawing.Point(0, 395);
+            this.panelShipSubMenu.Name = "panelShipSubMenu";
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 42);
+            this.panelShipSubMenu.TabIndex = 10;
             // 
-            // btnRegionData
+            // btnShip
             // 
-            this.btnRegionData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegionData.FlatAppearance.BorderSize = 0;
-            this.btnRegionData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegionData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegionData.ForeColor = System.Drawing.Color.Black;
-            this.btnRegionData.Location = new System.Drawing.Point(0, 260);
-            this.btnRegionData.Name = "btnRegionData";
-            this.btnRegionData.Size = new System.Drawing.Size(204, 45);
-            this.btnRegionData.TabIndex = 4;
-            this.btnRegionData.Text = "데이터 보유현황";
-            this.btnRegionData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegionData.UseVisualStyleBackColor = true;
-            this.btnRegionData.Click += new System.EventHandler(this.btnRegionData_Click);
+            this.btnShip.BackColor = System.Drawing.Color.White;
+            this.btnShip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShip.FlatAppearance.BorderSize = 0;
+            this.btnShip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShip.ForeColor = System.Drawing.Color.Black;
+            this.btnShip.Location = new System.Drawing.Point(0, 0);
+            this.btnShip.Name = "btnShip";
+            this.btnShip.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShip.Size = new System.Drawing.Size(204, 42);
+            this.btnShip.TabIndex = 0;
+            this.btnShip.Text = "해운 정보";
+            this.btnShip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShip.UseVisualStyleBackColor = false;
+            this.btnShip.Click += new System.EventHandler(this.btnShip_Click);
             // 
-            // btnMaster
+            // btnShipProducts
             // 
-            this.btnMaster.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnMaster.FlatAppearance.BorderSize = 0;
-            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaster.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaster.ForeColor = System.Drawing.Color.Black;
-            this.btnMaster.Location = new System.Drawing.Point(0, 613);
-            this.btnMaster.Name = "btnMaster";
-            this.btnMaster.Size = new System.Drawing.Size(204, 45);
-            this.btnMaster.TabIndex = 3;
-            this.btnMaster.Text = "Master";
-            this.btnMaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaster.UseVisualStyleBackColor = true;
-            this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
+            this.btnShipProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipProducts.FlatAppearance.BorderSize = 0;
+            this.btnShipProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
+            this.btnShipProducts.Location = new System.Drawing.Point(0, 350);
+            this.btnShipProducts.Name = "btnShipProducts";
+            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
+            this.btnShipProducts.TabIndex = 9;
+            this.btnShipProducts.Text = "해운 관리";
+            this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipProducts.UseVisualStyleBackColor = true;
+            this.btnShipProducts.Click += new System.EventHandler(this.btnShipProducts_Click);
             // 
             // panelProductsSubMenu
             // 
@@ -128,7 +130,7 @@
             this.panelProductsSubMenu.Controls.Add(this.btnFacility);
             this.panelProductsSubMenu.Controls.Add(this.btnStation);
             this.panelProductsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProductsSubMenu.Location = new System.Drawing.Point(0, 120);
+            this.panelProductsSubMenu.Location = new System.Drawing.Point(0, 210);
             this.panelProductsSubMenu.Name = "panelProductsSubMenu";
             this.panelProductsSubMenu.Size = new System.Drawing.Size(204, 140);
             this.panelProductsSubMenu.TabIndex = 2;
@@ -212,14 +214,46 @@
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.Black;
-            this.btnProducts.Location = new System.Drawing.Point(0, 75);
+            this.btnProducts.Location = new System.Drawing.Point(0, 165);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(204, 45);
-            this.btnProducts.TabIndex = 1;
+            this.btnProducts.TabIndex = 8;
             this.btnProducts.Text = "지하철 관리";
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            // 
+            // btnDataManegement
+            // 
+            this.btnDataManegement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDataManegement.FlatAppearance.BorderSize = 0;
+            this.btnDataManegement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataManegement.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnDataManegement.ForeColor = System.Drawing.Color.Black;
+            this.btnDataManegement.Location = new System.Drawing.Point(0, 120);
+            this.btnDataManegement.Name = "btnDataManegement";
+            this.btnDataManegement.Size = new System.Drawing.Size(204, 45);
+            this.btnDataManegement.TabIndex = 5;
+            this.btnDataManegement.Text = "데이터 관리(유지보수) 현황";
+            this.btnDataManegement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDataManegement.UseVisualStyleBackColor = true;
+            this.btnDataManegement.Click += new System.EventHandler(this.btnDataManegement_Click);
+            // 
+            // btnRegionData
+            // 
+            this.btnRegionData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegionData.FlatAppearance.BorderSize = 0;
+            this.btnRegionData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegionData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegionData.ForeColor = System.Drawing.Color.Black;
+            this.btnRegionData.Location = new System.Drawing.Point(0, 75);
+            this.btnRegionData.Name = "btnRegionData";
+            this.btnRegionData.Size = new System.Drawing.Size(204, 45);
+            this.btnRegionData.TabIndex = 4;
+            this.btnRegionData.Text = "데이터 보유현황";
+            this.btnRegionData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegionData.UseVisualStyleBackColor = true;
+            this.btnRegionData.Click += new System.EventHandler(this.btnRegionData_Click);
             // 
             // panelLogo
             // 
@@ -241,6 +275,22 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnMaster
+            // 
+            this.btnMaster.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMaster.FlatAppearance.BorderSize = 0;
+            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaster.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaster.ForeColor = System.Drawing.Color.Black;
+            this.btnMaster.Location = new System.Drawing.Point(0, 613);
+            this.btnMaster.Name = "btnMaster";
+            this.btnMaster.Size = new System.Drawing.Size(204, 45);
+            this.btnMaster.TabIndex = 3;
+            this.btnMaster.Text = "Master";
+            this.btnMaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaster.UseVisualStyleBackColor = true;
+            this.btnMaster.Click += new System.EventHandler(this.btnMaster_Click);
             // 
             // panelTitle
             // 
@@ -367,6 +417,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelShipSubMenu.ResumeLayout(false);
             this.panelProductsSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -384,7 +435,6 @@
         private System.Windows.Forms.Button btnGateLink;
         private System.Windows.Forms.Button btnFacility;
         private System.Windows.Forms.Button btnStation;
-        private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitle;
         private FontAwesome.Sharp.IconButton btnCloseChileForm;
@@ -398,6 +448,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelDeskTop;
         public System.Windows.Forms.Button btnDataManegement;
+        private System.Windows.Forms.Button btnProducts;
+        private System.Windows.Forms.Button btnShipProducts;
+        private System.Windows.Forms.Panel panelShipSubMenu;
+        private System.Windows.Forms.Button btnShip;
     }
 }
 
