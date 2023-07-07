@@ -454,13 +454,29 @@ namespace MultiColoredModernUI
         {
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
-            btnShip_Click((Button)btnShip, e);
+            btnShipCollection_Click((Button)btnShipCollection, e);
+            btnShipAdd_Click((Button)btnShipCollection, e);//상용추가
+            btnShipLoad_Click((Button)btnShipCollection, e);//상용추가
         }
 
-        private void btnShip_Click(object sender, EventArgs e)
+        private void btnShipCollection_Click(object sender, EventArgs e)
         {
             OpenChildForm(spfShip, sender);
-            sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 선택");
+            sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수집 선택");
+        }
+
+        //상용추가
+        private void btnShipAdd_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(spfShip, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 추가 선택");
+        }
+
+        //상용추가
+        private void btnShipLoad_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(spfShip, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수정 선택");
         }
     }
 }

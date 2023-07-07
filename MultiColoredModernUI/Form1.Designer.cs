@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelShipSubMenu = new System.Windows.Forms.Panel();
-            this.btnShip = new System.Windows.Forms.Button();
-            this.btnShipProducts = new System.Windows.Forms.Button();
             this.panelProductsSubMenu = new System.Windows.Forms.Panel();
             this.btnExchange = new System.Windows.Forms.Button();
             this.btnGateLink = new System.Windows.Forms.Button();
@@ -52,6 +50,10 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btnShipProducts = new System.Windows.Forms.Button();
+            this.btnShipCollection = new System.Windows.Forms.Button();
+            this.btnShipAdd = new System.Windows.Forms.Button();
+            this.btnShipLoad = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
@@ -81,46 +83,14 @@
             // panelShipSubMenu
             // 
             this.panelShipSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelShipSubMenu.Controls.Add(this.btnShip);
+            this.panelShipSubMenu.Controls.Add(this.btnShipLoad);
+            this.panelShipSubMenu.Controls.Add(this.btnShipAdd);
+            this.panelShipSubMenu.Controls.Add(this.btnShipCollection);
             this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShipSubMenu.Location = new System.Drawing.Point(0, 395);
             this.panelShipSubMenu.Name = "panelShipSubMenu";
-            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 42);
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 130);
             this.panelShipSubMenu.TabIndex = 10;
-            // 
-            // btnShip
-            // 
-            this.btnShip.BackColor = System.Drawing.Color.White;
-            this.btnShip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShip.FlatAppearance.BorderSize = 0;
-            this.btnShip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShip.ForeColor = System.Drawing.Color.Black;
-            this.btnShip.Location = new System.Drawing.Point(0, 0);
-            this.btnShip.Name = "btnShip";
-            this.btnShip.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShip.Size = new System.Drawing.Size(204, 42);
-            this.btnShip.TabIndex = 0;
-            this.btnShip.Text = "해운 정보";
-            this.btnShip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShip.UseVisualStyleBackColor = false;
-            this.btnShip.Click += new System.EventHandler(this.btnShip_Click);
-            // 
-            // btnShipProducts
-            // 
-            this.btnShipProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShipProducts.FlatAppearance.BorderSize = 0;
-            this.btnShipProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
-            this.btnShipProducts.Location = new System.Drawing.Point(0, 350);
-            this.btnShipProducts.Name = "btnShipProducts";
-            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
-            this.btnShipProducts.TabIndex = 9;
-            this.btnShipProducts.Text = "해운 관리";
-            this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShipProducts.UseVisualStyleBackColor = true;
-            this.btnShipProducts.Click += new System.EventHandler(this.btnShipProducts_Click);
             // 
             // panelProductsSubMenu
             // 
@@ -405,6 +375,74 @@
             this.panelDeskTop.Size = new System.Drawing.Size(889, 583);
             this.panelDeskTop.TabIndex = 2;
             // 
+            // btnShipProducts
+            // 
+            this.btnShipProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipProducts.FlatAppearance.BorderSize = 0;
+            this.btnShipProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
+            this.btnShipProducts.Location = new System.Drawing.Point(0, 350);
+            this.btnShipProducts.Name = "btnShipProducts";
+            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
+            this.btnShipProducts.TabIndex = 9;
+            this.btnShipProducts.Text = "해운 관리";
+            this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipProducts.UseVisualStyleBackColor = true;
+            this.btnShipProducts.Click += new System.EventHandler(this.btnShipProducts_Click);
+            // 
+            // btnShipCollection
+            // 
+            this.btnShipCollection.BackColor = System.Drawing.Color.White;
+            this.btnShipCollection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipCollection.FlatAppearance.BorderSize = 0;
+            this.btnShipCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipCollection.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipCollection.ForeColor = System.Drawing.Color.Black;
+            this.btnShipCollection.Location = new System.Drawing.Point(0, 0);
+            this.btnShipCollection.Name = "btnShipCollection";
+            this.btnShipCollection.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipCollection.Size = new System.Drawing.Size(204, 42);
+            this.btnShipCollection.TabIndex = 0;
+            this.btnShipCollection.Text = "해운 데이터 수집";
+            this.btnShipCollection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipCollection.UseVisualStyleBackColor = false;
+            this.btnShipCollection.Click += new System.EventHandler(this.btnShipCollection_Click);
+            // 
+            // btnShipAdd
+            // 
+            this.btnShipAdd.BackColor = System.Drawing.Color.White;
+            this.btnShipAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipAdd.FlatAppearance.BorderSize = 0;
+            this.btnShipAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnShipAdd.Location = new System.Drawing.Point(0, 42);
+            this.btnShipAdd.Name = "btnShipAdd";
+            this.btnShipAdd.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipAdd.Size = new System.Drawing.Size(204, 42);
+            this.btnShipAdd.TabIndex = 12;
+            this.btnShipAdd.Text = "해운 데이터 추가";
+            this.btnShipAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnShipLoad
+            // 
+            this.btnShipLoad.BackColor = System.Drawing.Color.White;
+            this.btnShipLoad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipLoad.FlatAppearance.BorderSize = 0;
+            this.btnShipLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipLoad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipLoad.ForeColor = System.Drawing.Color.Black;
+            this.btnShipLoad.Location = new System.Drawing.Point(0, 84);
+            this.btnShipLoad.Name = "btnShipLoad";
+            this.btnShipLoad.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipLoad.Size = new System.Drawing.Size(204, 42);
+            this.btnShipLoad.TabIndex = 13;
+            this.btnShipLoad.Text = "해운 데이터 수정";
+            this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipLoad.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -449,9 +487,11 @@
         public System.Windows.Forms.Panel panelDeskTop;
         public System.Windows.Forms.Button btnDataManegement;
         private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.Button btnShipProducts;
         private System.Windows.Forms.Panel panelShipSubMenu;
-        private System.Windows.Forms.Button btnShip;
+        private System.Windows.Forms.Button btnShipCollection;
+        private System.Windows.Forms.Button btnShipProducts;
+        private System.Windows.Forms.Button btnShipLoad;
+        private System.Windows.Forms.Button btnShipAdd;
     }
 }
 
