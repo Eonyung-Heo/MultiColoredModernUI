@@ -172,9 +172,12 @@ namespace MultiColoredModernUI
 
             }
 
+           
+
             if (user == "UserName")
             {
                 MessageBox.Show("해당 PC Mac 주소가 등록되어 있지 않습니다.");
+                return;
             }
 
         }

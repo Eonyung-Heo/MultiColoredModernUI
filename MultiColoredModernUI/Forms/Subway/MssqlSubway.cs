@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -259,6 +260,47 @@ namespace MultiColoredModernUI.Forms.Subway
             strSql += string.Format(",roadAddress = '{0}' ", roadAddress);
             strSql += string.Format("where ssid = '{0}' ", stationID);
 
+            string[] arrRoadAddress = roadAddress.Split(' ');
+
+            string roadName = "";
+            string bonbun = "";
+            string boobun = "";
+
+            Regex rx1 = new Regex(@"[가-힣]+로");
+            Regex rx2 = new Regex(@"([0-9,]+)?[가-힣]+길");
+            Regex rx3 = new Regex(@"[0-9,]+-+[0-9,]");
+            Regex rx4 = new Regex(@"[0-9,]");
+
+            for (int i = 0; i < arrRoadAddress.Length; i++)
+            {
+                if (rx1.IsMatch(arrRoadAddress[i]))
+                {
+                    roadName = arrRoadAddress[i];
+                }
+                else if (rx2.IsMatch(arrRoadAddress[i]))
+                {
+                    if (roadName != "")
+                        roadName += " " + arrRoadAddress[i];
+                    else
+                        roadName = arrRoadAddress[i];
+                }
+                else if (rx3.IsMatch(arrRoadAddress[i]))
+                {
+                    string[] arrT2 = arrRoadAddress[i].Split('-');
+
+                    bonbun = arrT2[0];
+                    boobun = arrT2[1];
+                }
+                else if (rx4.IsMatch(arrRoadAddress[i]))
+                    bonbun = arrRoadAddress[i];
+            }
+
+            cmd = new SqlCommand(strSql, sqlConnect);
+            cmd.CommandText = strSql;
+            cmd.ExecuteNonQuery();
+
+            strSql = string.Format("update naverodsay.dbo.TBStation");
+            strSql += string.Format(" set roadName = '{0}',bonbun = '{1}', boobun = '{2}',roadAddress = '{3}'", roadName, bonbun, boobun, roadAddress);
 
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
@@ -270,8 +312,6 @@ namespace MultiColoredModernUI.Forms.Subway
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
             cmd.ExecuteNonQuery();
-
-
 
             //연결종료
             sqlConnect.Close();
@@ -841,9 +881,6 @@ namespace MultiColoredModernUI.Forms.Subway
 
             sqlConnect.Close();
         }
-
-
-
 
     }
 }

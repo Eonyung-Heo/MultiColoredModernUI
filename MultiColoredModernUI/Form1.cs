@@ -311,6 +311,7 @@ namespace MultiColoredModernUI
         {
 
             OpenChildForm(dfRegionData, sender);
+            hideSubMenu();
         }
 
         private void btnStation_Click(object sender, EventArgs e)
@@ -427,7 +428,9 @@ namespace MultiColoredModernUI
         {
             
             OpenChildForm(dfDataManegement, sender);
-            
+            hideSubMenu();
+
+
         }
 
         private void toolSelectCheckReset()
