@@ -320,6 +320,18 @@
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\StaticMaster.cs" />
+    <Compile Include="Forms\Ship\ShipLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ship\ShipLoad.Designer.cs">
+      <DependentUpon>ShipLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ship\ShipAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ship\ShipAdd.Designer.cs">
+      <DependentUpon>ShipAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Ship\ShipData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,8 +405,14 @@
     <EmbeddedResource Include="Forms\Master\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ship\ShipAdd.resx">
+      <DependentUpon>ShipAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ship\ShipData.resx">
       <DependentUpon>ShipData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ship\ShipLoad.resx">
+      <DependentUpon>ShipLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubwaySchedule\SubwaySchedule.resx">
       <DependentUpon>SubwaySchedule.cs</DependentUpon>

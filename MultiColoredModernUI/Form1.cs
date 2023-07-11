@@ -33,7 +33,9 @@ namespace MultiColoredModernUI
         public SF.SubwayFacility sfFacility = new SF.SubwayFacility { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayGateLink sfGateLink = new SF.SubwayGateLink { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayStation sfStation = new SF.SubwayStation { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-        public SpF.ShipData spfShip = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SpF.ShipData spfShipCrawling = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
@@ -455,27 +457,27 @@ namespace MultiColoredModernUI
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
             btnShipCollection_Click((Button)btnShipCollection, e);
-            btnShipAdd_Click((Button)btnShipCollection, e);//상용추가
-            btnShipLoad_Click((Button)btnShipCollection, e);//상용추가
+            btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
+            btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
         }
 
         private void btnShipCollection_Click(object sender, EventArgs e)
         {
-            OpenChildForm(spfShip, sender);
+            OpenChildForm(spfShipCrawling, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수집 선택");
         }
 
         //상용추가
         private void btnShipAdd_Click(object sender, EventArgs e)
         {
-            OpenChildForm(spfShip, sender);
+            OpenChildForm(spfShipAdd, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 추가 선택");
         }
 
         //상용추가
         private void btnShipLoad_Click(object sender, EventArgs e)
         {
-            OpenChildForm(spfShip, sender);
+            OpenChildForm(spfShipLoad, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수정 선택");
         }
     }

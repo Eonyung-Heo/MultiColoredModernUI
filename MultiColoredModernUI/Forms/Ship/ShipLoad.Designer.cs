@@ -1,6 +1,6 @@
 ﻿namespace MultiColoredModernUI.Forms.Ship
 {
-    partial class ShipData
+    partial class ShipLoad
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Guna2Button Ship_ChromeDriverTermination;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Ship_DBupdate = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_DataDownload = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_TestdataButton = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_Pagelink = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_DataCollection = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_DateTimePickerSearch = new System.Windows.Forms.DateTimePicker();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Ship_DataGridViewData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.column_ShipName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,166 +46,8 @@
             this.Harbor_Name_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Ship_ChromeDriverTermination = new Guna.UI2.WinForms.Guna2Button();
-            this.Ship_MainPanel.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ship_DataGridViewData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Ship_ChromeDriverTermination
-            // 
-            Ship_ChromeDriverTermination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            Ship_ChromeDriverTermination.BorderColor = System.Drawing.Color.LightGray;
-            Ship_ChromeDriverTermination.BorderRadius = 8;
-            Ship_ChromeDriverTermination.BorderThickness = 1;
-            Ship_ChromeDriverTermination.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            Ship_ChromeDriverTermination.DisabledState.FillColor = System.Drawing.Color.White;
-            Ship_ChromeDriverTermination.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            Ship_ChromeDriverTermination.FillColor = System.Drawing.Color.White;
-            Ship_ChromeDriverTermination.Font = new System.Drawing.Font("Segoe UI", 9F);
-            Ship_ChromeDriverTermination.ForeColor = System.Drawing.Color.Black;
-            Ship_ChromeDriverTermination.Location = new System.Drawing.Point(454, 12);
-            Ship_ChromeDriverTermination.Name = "Ship_ChromeDriverTermination";
-            Ship_ChromeDriverTermination.Size = new System.Drawing.Size(133, 60);
-            Ship_ChromeDriverTermination.TabIndex = 16;
-            Ship_ChromeDriverTermination.Text = "크롬 드라이버 종료";
-            Ship_ChromeDriverTermination.Click += new System.EventHandler(this.Ship_ChromeDriverTermination_Click);
-            // 
-            // Ship_MainPanel
-            // 
-            this.Ship_MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_MainPanel.AutoSize = true;
-            this.Ship_MainPanel.BackColor = System.Drawing.Color.White;
-            this.Ship_MainPanel.Controls.Add(this.Ship_DBupdate);
-            this.Ship_MainPanel.Controls.Add(this.Ship_DataDownload);
-            this.Ship_MainPanel.Controls.Add(Ship_ChromeDriverTermination);
-            this.Ship_MainPanel.Controls.Add(this.Ship_TestdataButton);
-            this.Ship_MainPanel.Controls.Add(this.Ship_Pagelink);
-            this.Ship_MainPanel.Controls.Add(this.Ship_DataCollection);
-            this.Ship_MainPanel.Controls.Add(this.Ship_DateTimePickerSearch);
-            this.Ship_MainPanel.Location = new System.Drawing.Point(12, 15);
-            this.Ship_MainPanel.Name = "Ship_MainPanel";
-            this.Ship_MainPanel.Size = new System.Drawing.Size(1091, 83);
-            this.Ship_MainPanel.TabIndex = 0;
-            // 
-            // Ship_DBupdate
-            // 
-            this.Ship_DBupdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_DBupdate.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_DBupdate.BorderRadius = 8;
-            this.Ship_DBupdate.BorderThickness = 1;
-            this.Ship_DBupdate.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_DBupdate.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_DBupdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_DBupdate.FillColor = System.Drawing.Color.White;
-            this.Ship_DBupdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_DBupdate.ForeColor = System.Drawing.Color.Black;
-            this.Ship_DBupdate.Location = new System.Drawing.Point(700, 12);
-            this.Ship_DBupdate.Name = "Ship_DBupdate";
-            this.Ship_DBupdate.Size = new System.Drawing.Size(101, 60);
-            this.Ship_DBupdate.TabIndex = 18;
-            this.Ship_DBupdate.Text = "DB업데이트";
-            this.Ship_DBupdate.Click += new System.EventHandler(this.Ship_DBupdate_Click);
-            // 
-            // Ship_DataDownload
-            // 
-            this.Ship_DataDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_DataDownload.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_DataDownload.BorderRadius = 8;
-            this.Ship_DataDownload.BorderThickness = 1;
-            this.Ship_DataDownload.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_DataDownload.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_DataDownload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_DataDownload.FillColor = System.Drawing.Color.White;
-            this.Ship_DataDownload.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_DataDownload.ForeColor = System.Drawing.Color.Black;
-            this.Ship_DataDownload.Location = new System.Drawing.Point(593, 12);
-            this.Ship_DataDownload.Name = "Ship_DataDownload";
-            this.Ship_DataDownload.Size = new System.Drawing.Size(101, 60);
-            this.Ship_DataDownload.TabIndex = 17;
-            this.Ship_DataDownload.Text = "다운로드";
-            this.Ship_DataDownload.Click += new System.EventHandler(this.Ship_DataDownload_Click);
-            // 
-            // Ship_TestdataButton
-            // 
-            this.Ship_TestdataButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_TestdataButton.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_TestdataButton.BorderRadius = 8;
-            this.Ship_TestdataButton.BorderThickness = 1;
-            this.Ship_TestdataButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_TestdataButton.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_TestdataButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_TestdataButton.FillColor = System.Drawing.Color.White;
-            this.Ship_TestdataButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_TestdataButton.ForeColor = System.Drawing.Color.Black;
-            this.Ship_TestdataButton.Location = new System.Drawing.Point(223, 46);
-            this.Ship_TestdataButton.Name = "Ship_TestdataButton";
-            this.Ship_TestdataButton.Size = new System.Drawing.Size(107, 26);
-            this.Ship_TestdataButton.TabIndex = 15;
-            this.Ship_TestdataButton.Text = "테스트 데이터";
-            this.Ship_TestdataButton.Click += new System.EventHandler(this.Ship_TestdataButton_Click);
-            // 
-            // Ship_Pagelink
-            // 
-            this.Ship_Pagelink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_Pagelink.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_Pagelink.BorderRadius = 8;
-            this.Ship_Pagelink.BorderThickness = 1;
-            this.Ship_Pagelink.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_Pagelink.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_Pagelink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_Pagelink.FillColor = System.Drawing.Color.White;
-            this.Ship_Pagelink.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_Pagelink.ForeColor = System.Drawing.Color.Black;
-            this.Ship_Pagelink.Location = new System.Drawing.Point(223, 12);
-            this.Ship_Pagelink.Name = "Ship_Pagelink";
-            this.Ship_Pagelink.Size = new System.Drawing.Size(107, 26);
-            this.Ship_Pagelink.TabIndex = 14;
-            this.Ship_Pagelink.Text = "가보고싶은섬";
-            this.Ship_Pagelink.Click += new System.EventHandler(this.Ship_Pagelink_Click);
-            // 
-            // Ship_DataCollection
-            // 
-            this.Ship_DataCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_DataCollection.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_DataCollection.BorderRadius = 8;
-            this.Ship_DataCollection.BorderThickness = 1;
-            this.Ship_DataCollection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_DataCollection.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_DataCollection.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_DataCollection.FillColor = System.Drawing.Color.White;
-            this.Ship_DataCollection.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_DataCollection.ForeColor = System.Drawing.Color.Black;
-            this.Ship_DataCollection.Location = new System.Drawing.Point(347, 12);
-            this.Ship_DataCollection.Name = "Ship_DataCollection";
-            this.Ship_DataCollection.Size = new System.Drawing.Size(101, 60);
-            this.Ship_DataCollection.TabIndex = 13;
-            this.Ship_DataCollection.Text = "데이터 수집";
-            this.Ship_DataCollection.Click += new System.EventHandler(this.Ship_DataCollection_Click);
-            // 
-            // Ship_DateTimePickerSearch
-            // 
-            this.Ship_DateTimePickerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_DateTimePickerSearch.Location = new System.Drawing.Point(879, 12);
-            this.Ship_DateTimePickerSearch.Name = "Ship_DateTimePickerSearch";
-            this.Ship_DateTimePickerSearch.Size = new System.Drawing.Size(200, 21);
-            this.Ship_DateTimePickerSearch.TabIndex = 12;
-            this.Ship_DateTimePickerSearch.ValueChanged += new System.EventHandler(this.Ship_DateTimePickerSearch_ValueChanged);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.AutoSize = true;
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.Ship_DataGridViewData);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 110);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1091, 532);
-            this.guna2Panel1.TabIndex = 1;
             // 
             // Ship_DataGridViewData
             // 
@@ -257,14 +90,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Ship_DataGridViewData.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Ship_DataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Ship_DataGridViewData.GridColor = System.Drawing.Color.Black;
-            this.Ship_DataGridViewData.Location = new System.Drawing.Point(0, 0);
+            this.Ship_DataGridViewData.Location = new System.Drawing.Point(449, 166);
             this.Ship_DataGridViewData.Name = "Ship_DataGridViewData";
             this.Ship_DataGridViewData.RowHeadersVisible = false;
             this.Ship_DataGridViewData.RowTemplate.Height = 23;
-            this.Ship_DataGridViewData.Size = new System.Drawing.Size(1091, 532);
-            this.Ship_DataGridViewData.TabIndex = 0;
+            this.Ship_DataGridViewData.Size = new System.Drawing.Size(603, 400);
+            this.Ship_DataGridViewData.TabIndex = 1;
             this.Ship_DataGridViewData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Ship_DataGridViewData.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.Ship_DataGridViewData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -385,33 +217,26 @@
             this.Harbor_DetailsName_E.Name = "Harbor_DetailsName_E";
             this.Harbor_DetailsName_E.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // ShipData
+            // ShipLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 649);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.Ship_MainPanel);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1200, 654);
+            this.Controls.Add(this.Ship_DataGridViewData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ShipData";
-            this.Text = "Ship";
-            this.Ship_MainPanel.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
+            this.Name = "ShipLoad";
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Ship_DataGridViewData)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel Ship_MainPanel;
-        private System.Windows.Forms.DateTimePicker Ship_DateTimePickerSearch;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
         private Guna.UI2.WinForms.Guna2DataGridView Ship_DataGridViewData;
-        private Guna.UI2.WinForms.Guna2Button Ship_DataCollection;
-        private Guna.UI2.WinForms.Guna2Button Ship_Pagelink;
-        private Guna.UI2.WinForms.Guna2Button Ship_TestdataButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_ShipName;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_TimeRequired;
@@ -426,7 +251,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Harbor_Name_E;
         private System.Windows.Forms.DataGridViewTextBoxColumn Harbor_DetailsName_S;
         private System.Windows.Forms.DataGridViewTextBoxColumn Harbor_DetailsName_E;
-        private Guna.UI2.WinForms.Guna2Button Ship_DataDownload;
-        private Guna.UI2.WinForms.Guna2Button Ship_DBupdate;
     }
 }

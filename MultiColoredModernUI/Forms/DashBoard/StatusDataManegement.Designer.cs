@@ -36,7 +36,6 @@
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBIS = new Guna.UI2.WinForms.Guna2Button();
             this.btnEtc = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubway = new Guna.UI2.WinForms.Guna2Button();
@@ -54,6 +53,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -125,34 +125,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(102, 21);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // textSearchBox
-            // 
-            this.textSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textSearchBox.DefaultText = "Search";
-            this.textSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textSearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textSearchBox.IconLeft = global::MultiColoredModernUI.Properties.Resources._321321;
-            this.textSearchBox.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.textSearchBox.IconRight = global::MultiColoredModernUI.Properties.Resources._321321;
-            this.textSearchBox.IconRightSize = new System.Drawing.Size(30, 30);
-            this.textSearchBox.Location = new System.Drawing.Point(563, 10);
-            this.textSearchBox.Name = "textSearchBox";
-            this.textSearchBox.PasswordChar = '\0';
-            this.textSearchBox.PlaceholderText = "";
-            this.textSearchBox.SelectedText = "";
-            this.textSearchBox.Size = new System.Drawing.Size(369, 45);
-            this.textSearchBox.TabIndex = 4;
-            this.textSearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textSearchBox_KeyUp);
-            this.textSearchBox.Leave += new System.EventHandler(this.textSearchBox_Leave);
-            this.textSearchBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textSearchBox_MouseClick);
             // 
             // btnBIS
             // 
@@ -265,7 +237,7 @@
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeColumns = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Snow;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Snow;
@@ -295,7 +267,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView1.Location = new System.Drawing.Point(2, 0);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
@@ -309,7 +281,7 @@
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -369,6 +341,34 @@
             // 
             this.Column6.HeaderText = "메모";
             this.Column6.Name = "Column6";
+            // 
+            // textSearchBox
+            // 
+            this.textSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textSearchBox.DefaultText = "Search";
+            this.textSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textSearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textSearchBox.IconLeft = global::MultiColoredModernUI.Properties.Resources._321321;
+            this.textSearchBox.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.textSearchBox.IconRight = global::MultiColoredModernUI.Properties.Resources._321321;
+            this.textSearchBox.IconRightSize = new System.Drawing.Size(30, 30);
+            this.textSearchBox.Location = new System.Drawing.Point(563, 10);
+            this.textSearchBox.Name = "textSearchBox";
+            this.textSearchBox.PasswordChar = '\0';
+            this.textSearchBox.PlaceholderText = "";
+            this.textSearchBox.SelectedText = "";
+            this.textSearchBox.Size = new System.Drawing.Size(369, 45);
+            this.textSearchBox.TabIndex = 4;
+            this.textSearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textSearchBox_KeyUp);
+            this.textSearchBox.Leave += new System.EventHandler(this.textSearchBox_Leave);
+            this.textSearchBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textSearchBox_MouseClick);
             // 
             // StatusDataManegement
             // 
