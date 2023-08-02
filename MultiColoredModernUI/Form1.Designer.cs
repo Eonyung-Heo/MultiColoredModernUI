@@ -54,6 +54,7 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
@@ -83,13 +84,14 @@
             // panelShipSubMenu
             // 
             this.panelShipSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelShipSubMenu.Controls.Add(this.button1);
             this.panelShipSubMenu.Controls.Add(this.btnShipLoad);
             this.panelShipSubMenu.Controls.Add(this.btnShipAdd);
             this.panelShipSubMenu.Controls.Add(this.btnShipCollection);
             this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShipSubMenu.Location = new System.Drawing.Point(0, 395);
             this.panelShipSubMenu.Name = "panelShipSubMenu";
-            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 130);
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 173);
             this.panelShipSubMenu.TabIndex = 10;
             // 
             // btnShipLoad
@@ -445,6 +447,24 @@
             this.panelDeskTop.Size = new System.Drawing.Size(889, 583);
             this.panelDeskTop.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(0, 126);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(204, 42);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "별도 관리";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnShipSeparate_Management_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -494,6 +514,7 @@
         private System.Windows.Forms.Button btnShipProducts;
         private System.Windows.Forms.Button btnShipLoad;
         private System.Windows.Forms.Button btnShipAdd;
+        private System.Windows.Forms.Button button1;
     }
 }
 

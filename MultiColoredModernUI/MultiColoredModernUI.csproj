@@ -320,6 +320,12 @@
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\StaticMaster.cs" />
+    <Compile Include="Forms\Ship\ShipSeparate_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ship\ShipSeparate_Management.Designer.cs">
+      <DependentUpon>ShipSeparate_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Ship\ShipLoad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ship\ShipSeparate_Management.resx">
+      <DependentUpon>ShipSeparate_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ship\ShipAdd.resx">
       <DependentUpon>ShipAdd.cs</DependentUpon>

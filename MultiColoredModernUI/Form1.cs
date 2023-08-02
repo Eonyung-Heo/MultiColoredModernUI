@@ -36,6 +36,9 @@ namespace MultiColoredModernUI
         public SpF.ShipData spfShipCrawling = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SpF.ShipSeparate_Management spfShipSeparate_Management = new SpF.ShipSeparate_Management { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
@@ -481,5 +484,13 @@ namespace MultiColoredModernUI
             OpenChildForm(spfShipLoad, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수정 선택");
         }
+
+        //상용추가
+        private void btnShipSeparate_Management_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(spfShipSeparate_Management, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "별도 관리 선택");
+        }
+
     }
 }

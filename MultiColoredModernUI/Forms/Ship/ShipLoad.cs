@@ -110,25 +110,43 @@ namespace MultiColoredModernUI.Forms.Ship
         //구분 클릭시 그리드뷰 초기화하고 해당데이터 불러오기(ex:가나다라마바사...별도관리)
         private void Ship_DataGridViewData_Route_DG_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string Ship_Sortation_CB_select = Ship_Sortation_CB.SelectedItem.ToString();
-
-            Connect();
-
-            string strSql = "select * from NEW_SHIP.dbo.TBShipLane";
-
-
-            cmd = new SqlCommand(strSql, sqlConnect);
-
-            SqlDataReader dt = cmd.ExecuteReader();
-
-            Ship_DataGridViewData_Route_DG.Rows.Clear();
-
-            while (dt.Read())
+            string Ship_Sortation_CB_select = "";
+            var SelectedItem = Ship_Sortation_CB.SelectedItem;
+            
+            if (SelectedItem != null)
             {
-                if (Ship_Sortation_CB_select == dt[1].ToString())
+                Ship_Sortation_CB_select = SelectedItem.ToString();
+
+                if (Ship_Sortation_CB_select == "전체")
                 {
-                    Ship_DataGridViewData_Route_DG.Rows.Add(dt[8], dt[9], dt[6], dt[7], dt[13], dt[14]);
+                    Ship_DataGridViewData_Route_DG.Rows.Clear();
+                    selectODSayLaneID();
                 }
+                else
+                {
+                    Connect();
+
+                    string strSql = "select * from NEW_SHIP.dbo.TBShipLane";
+
+
+                    cmd = new SqlCommand(strSql, sqlConnect);
+
+                    SqlDataReader dt = cmd.ExecuteReader();
+
+                    Ship_DataGridViewData_Route_DG.Rows.Clear();
+
+                    while (dt.Read())
+                    {
+                        if (Ship_Sortation_CB_select == dt[1].ToString())
+                        {
+                            Ship_DataGridViewData_Route_DG.Rows.Add(dt[8], dt[9], dt[6], dt[7], dt[13], dt[14]);
+                        }
+                    }
+                }
+            }
+            else
+            {
+
             }
 
             sqlConnect.Close();
@@ -347,7 +365,7 @@ namespace MultiColoredModernUI.Forms.Ship
         }
 
         //셀 클릭시 해당 데이터 불러오기.
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Ship_DataGridViewData_Company_DG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Connect();
 
@@ -373,8 +391,8 @@ namespace MultiColoredModernUI.Forms.Ship
                     Ship_ShipKnot_TB.Text = dt[11].ToString(); //속력(노트)
                     Ship_ShipCompanyDate_TB.Text = dt[12].ToString(); //전수년월
                     Ship_ShipURL_TB.Text = dt[13].ToString(); //홈페이지
-                    Ship_ShipCreateDate_TB1.Text = dt[15].ToString(); //작성날짜
-                    Ship_ShipUpDate_TB1.Text = dt[16].ToString(); //수정날짜
+                    Ship_ShipCreateDate_TB2.Text = dt[15].ToString(); //작성날짜
+                    Ship_ShipUpDate_TB2.Text = dt[16].ToString(); //수정날짜
                 }
             }
             sqlConnect.Close();
