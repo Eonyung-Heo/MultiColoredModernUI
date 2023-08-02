@@ -452,13 +452,14 @@ namespace MultiColoredModernUI
                 ShowWindow(GetActiveWindow(), 2);
         }
 
+        // 버튼 클릭시 시작하는 화면 나오는곳
         private void btnShipProducts_Click(object sender, EventArgs e)
         {
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
-            btnShipCollection_Click((Button)btnShipCollection, e);
-            btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
-            btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
+            btnShipCollection_Click((Button)btnShipCollection, e); 
+            //btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
+            //btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
         }
 
         private void btnShipCollection_Click(object sender, EventArgs e)

@@ -108,6 +108,7 @@
             this.btnShipLoad.Text = "해운 데이터 수정";
             this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShipLoad.UseVisualStyleBackColor = false;
+            this.btnShipLoad.Click += new System.EventHandler(this.btnShipLoad_Click);
             // 
             // btnShipAdd
             // 
