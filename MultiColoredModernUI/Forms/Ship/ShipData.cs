@@ -231,8 +231,8 @@ namespace MultiColoredModernUI.Forms.Ship
                 _driver.SwitchTo().Window(_driver.WindowHandles[1]);
 
 
-                //for (var num_korea = 1; num_korea <= KoreaLanguage.Count * 2; num_korea += 2)
-                for (var num_korea = 7; num_korea <= 7; num_korea += 2)
+                for (var num_korea = 1; num_korea <= KoreaLanguage.Count * 2; num_korea += 2)
+                //for (var num_korea = 7; num_korea <= 7; num_korea += 2)
                 {
                     string Num = num_korea.ToString();
                     //가나다라마바사아자차카타파하 클릭

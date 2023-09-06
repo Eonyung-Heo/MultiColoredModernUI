@@ -54,7 +54,7 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Text = "가나다라마바사";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ShipSeparate_Management

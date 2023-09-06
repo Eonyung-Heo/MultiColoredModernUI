@@ -26,6 +26,7 @@ namespace MultiColoredModernUI.Forms.Ship
             InitializeComponent();
             selectODSayLaneID();
             selectODSayShipCompanyID();
+            selectODSayShipStation();
         }
 
         //SQL접속
@@ -60,6 +61,38 @@ namespace MultiColoredModernUI.Forms.Ship
         private void Ship_Clear_BT_Click(object sender, EventArgs e)
         {
             Ship_Clear_BT_Clear();
+        }
+
+        //데이터 삭제 버튼
+        private void Ship_Delete_BT_Delete()
+        {
+            Connect();
+
+
+            if (Ship_Load_TabControl.SelectedTab == Ship_ShipCompany_page)
+            {
+                //string strSql = "select * from NEW_SHIP.dbo.TBShipLane";
+                MessageBox.Show("삭제할 데이터가 없습니다.");
+            }
+            else if (Ship_Load_TabControl.SelectedTab == Ship_Route_page)
+            {
+                //string strSql = "select * from NEW_SHIP.dbo.TBShipLane";
+                MessageBox.Show("삭제할 데이터가 없습니다.");
+            }
+            else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
+            {
+                string DeleteSql = "delete NEW_SHIP.[dbo].[TBStation_Ship] where StationID = @StationID";
+                cmd = new SqlCommand(DeleteSql, sqlConnect);
+                cmd.Parameters.AddWithValue("@StationID", Ship_StationID_TB.Text);
+                cmd.CommandText = DeleteSql;
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                MessageBox.Show("선택 오류입니다.");
+            }
+
+            sqlConnect.Close();
         }
 
         //텍스트박스 초기화 코드
@@ -101,11 +134,21 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_ShipCreateDate_TB1.Text = string.Empty;
                 Ship_ShipUpDate_TB1.Text = string.Empty;
             }
+            else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
+            {
+                Ship_StationID_TB.Text = string.Empty;
+                Ship_X_TB.Text = string.Empty;
+                Ship_Y_TB.Text = string.Empty;
+                Ship_StationName_TB.Text = string.Empty;
+                Ship_CityCode_TB.Text = string.Empty;
+                Ship_District_TB.Text = string.Empty;
+            }
             else
             {
                 MessageBox.Show("탭 선택 오류입니다.");
             }
         }
+
         //-----------------------------------------------노선정보------------------------------------------------------------
         //구분 클릭시 그리드뷰 초기화하고 해당데이터 불러오기(ex:가나다라마바사...별도관리)
         private void Ship_DataGridViewData_Route_DG_SelectedIndexChanged(object sender, EventArgs e)
@@ -335,7 +378,8 @@ namespace MultiColoredModernUI.Forms.Ship
             Ship_DetailedHarborName_S_TB_TextChanged();//출발지 상세주소 변경
             Ship_DetailedHarborName_E_TB_TextChanged();//도착지 상세주소 변경
             Ship_UpdateDate_TB_TextChanged();//시간변경
-
+            Ship_DataGridViewData_Route_DG.Rows.Clear();
+            selectODSayLaneID();
             MessageBox.Show("저장되었습니다.");
         }
 
@@ -399,7 +443,7 @@ namespace MultiColoredModernUI.Forms.Ship
         }
 
         //텍스트박스 수정 후 DB저장
-        private void Ship_textBox_TextChanged()
+        private void Ship_textBox_TextChanged1()
         {
             Connect();
 
@@ -664,10 +708,193 @@ namespace MultiColoredModernUI.Forms.Ship
 
         private void Ship_Update_BT2_Click(object sender, EventArgs e)
         {
-            Ship_textBox_TextChanged(); // 텍스트박스 수정 후 저장코드
+            Ship_textBox_TextChanged1(); // 텍스트박스 수정 후 저장코드
             Ship_ShipUpDate_TB2_TextChanged(); // 시간변경 코드
+            Ship_DataGridViewData_Company_DG.Rows.Clear();
+            selectODSayShipCompanyID();
             MessageBox.Show("저장되었습니다.");
         }
+
+        //-----------------------------------------------해운정보------------------------------------------------------------
+
+
+
+        //-----------------------------------------------항구정보------------------------------------------------------------
+        public void selectODSayShipStation()
+        {
+
+            Connect();
+
+            string strSql = "select * from NEW_SHIP.dbo.TBStation_Ship";
+
+            cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader dt = cmd.ExecuteReader();
+
+            while (dt.Read())
+            {
+                Ship_DataGridViewData_Station_DG.Rows.Add(dt[0], dt[1], dt[2], dt[5], dt[8], dt[12]);
+            }
+
+            sqlConnect.Close();
+
+        }
+
+        //셀 클릭시 해당 데이터 불러오기.
+        private void Ship_DataGridViewData_Station_DG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Connect();
+
+            string strSql = "select * from NEW_SHIP.dbo.TBStation_Ship";
+
+            SqlCommand cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader dt = cmd.ExecuteReader();
+            while (dt.Read())
+            {
+                if (Ship_DataGridViewData_Station_DG.Rows[e.RowIndex].Cells[0].Value.ToString() == dt[0].ToString())
+                {
+                    Ship_StationID_TB.Text = dt[0].ToString(); //항구ID
+                    Ship_X_TB.Text = dt[1].ToString(); //카텍 X
+                    Ship_Y_TB.Text = dt[2].ToString(); //카텍 Y
+                    Ship_StationName_TB.Text = dt[5].ToString(); //항구명
+                    Ship_CityCode_TB.Text = dt[8].ToString(); //시티코드
+                    Ship_District_TB.Text = dt[12].ToString(); //행정구역
+                }
+            }
+            sqlConnect.Close();
+        }
+
+        //텍스트박스 수정 후 DB저장
+        private void Ship_textBox_TextChanged2()
+        {
+            Connect();
+
+            string strSql = "select * from NEW_SHIP.dbo.TBStation_Ship";
+
+            SqlCommand cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader dt = cmd.ExecuteReader();
+
+            string Update_strSql = "UPDATE NEW_SHIP.dbo.TBStation_Ship SET";
+
+            string StationID = "";
+            string X = "";
+            string Y = "";
+            string NameKor = "";
+            string CityCode = "";
+            string Do = "";
+            
+
+            //해운정보 텍스트박스의 공백이 아닐 경우 출력을 하기위해 조건을 건다.
+
+            if (!string.IsNullOrEmpty("@StationID"))
+            {
+                StationID = " StationID = @StationID,";
+            }
+            if (!string.IsNullOrEmpty("@X"))
+            {
+                X = " X = @X,";
+            }
+            if (!string.IsNullOrEmpty("@Y"))
+            {
+                Y = " Y = @Y,";
+            }
+            if (!string.IsNullOrEmpty("@NameKor"))
+            {
+                NameKor = " NameKor = @NameKor,";
+            }
+            if (!string.IsNullOrEmpty("@CityCode"))
+            {
+                CityCode = " CityCode = @CityCode,";
+            }
+            if (!string.IsNullOrEmpty("@Do"))
+            {
+                Do = " Do = @Do,";
+            }
+
+            string Update_where = " where StationID = @StationID";
+
+            Update_strSql += StationID += X += Y += NameKor += CityCode += Do += Update_where;
+
+            //구간별 하나씩 오류발생시 어디서 오류인지 파악할수있게 구분.
+            SqlCommand Update_cmd = new SqlCommand(Update_strSql, sqlConnect);
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@StationID", Ship_StationID_TB.Text);
+            }
+            catch
+            {
+                MessageBox.Show(Ship_StationID_TB.Text + "저장 오류입니다.");
+            }
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@X", Ship_X_TB.Text); //선사번호(사업자)
+            }
+            catch
+            {
+                MessageBox.Show(Ship_X_TB.Text + "저장 오류입니다.");
+            }
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@Y", Ship_Y_TB.Text); //선사명
+            }
+            catch
+            {
+                MessageBox.Show(Ship_Y_TB.Text + "저장 오류입니다.");
+            }
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@NameKor", Ship_StationName_TB.Text); //선사연락처
+            }
+            catch
+            {
+                MessageBox.Show(Ship_StationName_TB.Text + "저장 오류입니다.");
+            }
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@CityCode", Ship_CityCode_TB.Text); //선박명
+            }
+            catch
+            {
+                MessageBox.Show(Ship_CityCode_TB.Text + "저장 오류입니다.");
+            }
+            try
+            {
+                Update_cmd.Parameters.AddWithValue("@Do", Ship_District_TB.Text); //선박종류
+            }
+            catch
+            {
+                MessageBox.Show(Ship_District_TB.Text + "저장 오류입니다.");
+            }
+
+            Update_cmd.ExecuteNonQuery();
+            sqlConnect.Close();
+        }
+
+        //초기화 버튼.
+        private void Ship_Clear_BT3_Click(object sender, EventArgs e)
+        {
+            Ship_Clear_BT_Clear();
+        }
+
+        private void Ship_Update_BT3_Click(object sender, EventArgs e)
+        {
+            Ship_textBox_TextChanged2(); // 텍스트박스 수정 후 저장코드
+            MessageBox.Show("저장되었습니다.");
+        }
+
+        private void Ship_Delete_BT3_Click(object sender, EventArgs e)
+        {
+            /* 삭제 기능 일시 대기.
+            Ship_Delete_BT_Delete();
+            MessageBox.Show("삭제 되었습니다.");
+            Ship_DataGridViewData_Station_DG.Rows.Clear();
+            selectODSayShipStation();
+            */
+            MessageBox.Show("사용 불가능한 기능입니다.");
+        }
+        //-----------------------------------------------항구정보------------------------------------------------------------
 
     }
 }
