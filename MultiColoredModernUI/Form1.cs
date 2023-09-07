@@ -13,6 +13,7 @@ using DF = MultiColoredModernUI.Forms.DashBoard;
 using SF = MultiColoredModernUI.Forms.Subway;
 using MF = MultiColoredModernUI.Forms.Master;
 using SpF = MultiColoredModernUI.Forms.Ship;
+using SaF = MultiColoredModernUI.Forms.Airplane;
 using System.Net.NetworkInformation;
 
 namespace MultiColoredModernUI
@@ -36,7 +37,7 @@ namespace MultiColoredModernUI
         public SpF.ShipData spfShipCrawling = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-        public SpF.ShipSeparate_Management spfShipSeparate_Management = new SpF.ShipSeparate_Management { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SaF.AirData safAirData = new SaF.AirData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -486,11 +487,11 @@ namespace MultiColoredModernUI
         }
 
         //상용추가
-        private void btnShipSeparate_Management_Click(object sender, EventArgs e)
+        private void btnAirPlane_Click(object sender, EventArgs e)
         {
-            OpenChildForm(spfShipSeparate_Management, sender);
-            sql.Log(StaticMain.userName, StaticMain.userMac, "별도 관리 선택");
+            OpenChildForm(safAirData, sender);
+            hideSubMenu();
+            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 선택");
         }
-
     }
 }
