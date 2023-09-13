@@ -14,6 +14,7 @@ namespace MultiColoredModernUI.Forms.Ship
 {
     public partial class ShipLoad : Form
     {
+        
         public int i;
 
         //db 관련함수
@@ -27,6 +28,7 @@ namespace MultiColoredModernUI.Forms.Ship
             selectODSayLaneID();
             selectODSayShipCompanyID();
             selectODSayShipStation();
+
         }
 
         //SQL접속
@@ -55,6 +57,15 @@ namespace MultiColoredModernUI.Forms.Ship
             }
 
             sqlConnect.Close();
+
+
+            //데이터를 불러오는 공간에 해당 코드를 넣으면 정렬화를 비활성화 가능(행헤더를 클릭시 오류나는거 방지)
+            foreach (DataGridViewColumn column in Ship_DataGridViewData_Route_DG.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            Ship_DataGridViewData_Route_DG.CurrentCell = null;
+
         }
 
         //초기화 버튼
@@ -62,6 +73,7 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             Ship_Clear_BT_Clear();
         }
+
 
         //데이터 삭제 버튼
         private void Ship_Delete_BT_Delete()
@@ -116,6 +128,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_ShipAddress_TB.Text = string.Empty;
                 Ship_ShipCreateDate_TB2.Text = string.Empty;
                 Ship_ShipUpDate_TB2.Text = string.Empty;
+                Ship_DataGridViewData_Company_DG.CurrentCell = null;
             }
             else if (Ship_Load_TabControl.SelectedTab == Ship_Route_page)
             {
@@ -133,6 +146,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_DetailedHarborName_E_TB.Text = string.Empty;
                 Ship_ShipCreateDate_TB1.Text = string.Empty;
                 Ship_ShipUpDate_TB1.Text = string.Empty;
+                Ship_DataGridViewData_Route_DG.CurrentCell = null;
             }
             else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
             {
@@ -142,6 +156,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_StationName_TB.Text = string.Empty;
                 Ship_CityCode_TB.Text = string.Empty;
                 Ship_District_TB.Text = string.Empty;
+                Ship_DataGridViewData_Station_DG.CurrentCell = null;
             }
             else
             {
@@ -153,6 +168,7 @@ namespace MultiColoredModernUI.Forms.Ship
         //구분 클릭시 그리드뷰 초기화하고 해당데이터 불러오기(ex:가나다라마바사...별도관리)
         private void Ship_DataGridViewData_Route_DG_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             string Ship_Sortation_CB_select = "";
             var SelectedItem = Ship_Sortation_CB.SelectedItem;
             
@@ -401,10 +417,16 @@ namespace MultiColoredModernUI.Forms.Ship
 
             while (dt.Read())
             {
-                Ship_DataGridViewData_Company_DG.Rows.Add(dt[0], dt[2], dt[3], dt[4], dt[5], dt[10]);
+                Ship_DataGridViewData_Company_DG.Rows.Add(dt[0], dt[2], dt[4], dt[5], dt[10]);
             }
 
             sqlConnect.Close();
+
+            foreach (DataGridViewColumn column in Ship_DataGridViewData_Company_DG.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            Ship_DataGridViewData_Company_DG.CurrentCell = null;
 
         }
 
@@ -420,21 +442,27 @@ namespace MultiColoredModernUI.Forms.Ship
             SqlDataReader dt = cmd.ExecuteReader();
             while (dt.Read())
             {
-                if (Ship_DataGridViewData_Company_DG.Rows[e.RowIndex].Cells[0].Value.ToString() == dt[0].ToString())
+                if (e.RowIndex == -1)
+                {
+                    continue;
+                }
+                else if (Ship_DataGridViewData_Company_DG.Rows[e.RowIndex].Cells[0].Value.ToString() == dt[0].ToString())
                 {
                     Ship_ShipCompanyID_TB.Text = dt[0].ToString(); //아로선사ID
                     Ship_BusinessNum_TB.Text = dt[1].ToString(); //선사번호(사업자)
                     Ship_ShipCompanyName_TB.Text = dt[2].ToString(); //선사명
-                    Ship_ShipCompanyNum_TB.Text = dt[3].ToString(); //선사연락처
+                    //Ship_ShipCompanyNum_TB.Text = dt[3].ToString(); //선사연락처
                     Ship_ShipName_TB.Text = dt[4].ToString(); //선박명
                     Ship_ShipType_TB.Text = dt[5].ToString(); //선박종류
-                    Ship_ShipCapacity_TB.Text = dt[7].ToString(); //정원
                     Ship_ShipAddress_TB.Text = dt[6].ToString(); //주소
+                    Ship_ShipCapacity_TB.Text = dt[7].ToString(); //정원
+                    //dt[8]은 선착 유무인데 불필요
                     Ship_ShipCarNum_TB.Text = dt[9].ToString(); //차량선적대수
                     Ship_ShipRoute_TB.Text = dt[10].ToString(); //운행구간
                     Ship_ShipKnot_TB.Text = dt[11].ToString(); //속력(노트)
                     Ship_ShipCompanyDate_TB.Text = dt[12].ToString(); //전수년월
                     Ship_ShipURL_TB.Text = dt[13].ToString(); //홈페이지
+                    //dt[14]은 불필요
                     Ship_ShipCreateDate_TB2.Text = dt[15].ToString(); //작성날짜
                     Ship_ShipUpDate_TB2.Text = dt[16].ToString(); //수정날짜
                 }
@@ -457,7 +485,7 @@ namespace MultiColoredModernUI.Forms.Ship
 
             string ShipCompanyNo = "";
             string ShipCompanyName = "";
-            string Tel = "";
+            //string Tel = "";
             string ShipName = "";
             string ShipType = "";
             string Addr = "";
@@ -483,10 +511,10 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 ShipCompanyName = " ShipCompanyName = @ShipCompanyName,";
             }
-            if (!string.IsNullOrEmpty("@Tel"))
+            /*if (!string.IsNullOrEmpty("@Tel"))
             {
                 Tel = " Tel = @Tel, ShipName = @ShipName,";
-            }
+            }*/
             if (!string.IsNullOrEmpty("@ShipType"))
             {
                 ShipType = " ShipType = @ShipType,";
@@ -538,7 +566,7 @@ namespace MultiColoredModernUI.Forms.Ship
             */
             string Update_where = " where ODSayShipCompanyID = @ODSayShipCompanyID";
 
-            Update_strSql += ShipCompanyNo += ShipCompanyName += Tel += ShipName += ShipType += Addr += Personnel += ShipVehiclesCnt += OperationRange += Speed += ShipCompanyDate += URL += Update_where;
+            Update_strSql += ShipCompanyNo += ShipCompanyName += ShipName += ShipType += Addr += Personnel += ShipVehiclesCnt += OperationRange += Speed += ShipCompanyDate += URL += Update_where;
 
             //구간별 하나씩 오류발생시 어디서 오류인지 파악할수있게 구분.
             SqlCommand Update_cmd = new SqlCommand(Update_strSql, sqlConnect);
@@ -566,14 +594,14 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 MessageBox.Show(Ship_ShipName_TB.Text + "저장 오류입니다.");
             }
-            try
+            /*try
             {
                 Update_cmd.Parameters.AddWithValue("@Tel", Ship_ShipCompanyNum_TB.Text); //선사연락처
             }
             catch
             {
                 MessageBox.Show(Ship_ShipCompanyNum_TB.Text + "저장 오류입니다.");
-            }
+            }*/
             try
             {
                 Update_cmd.Parameters.AddWithValue("@ShipName", Ship_ShipName_TB.Text); //선박명
@@ -704,6 +732,7 @@ namespace MultiColoredModernUI.Forms.Ship
         private void Ship_Clear_BT2_Click(object sender, EventArgs e)
         {
             Ship_Clear_BT_Clear();
+            Ship_DataGridViewData_Station_DG.CurrentCell = null;
         }
 
         private void Ship_Update_BT2_Click(object sender, EventArgs e)
@@ -737,7 +766,11 @@ namespace MultiColoredModernUI.Forms.Ship
             }
 
             sqlConnect.Close();
-
+            foreach (DataGridViewColumn column in Ship_DataGridViewData_Station_DG.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            Ship_DataGridViewData_Station_DG.CurrentCell = null;
         }
 
         //셀 클릭시 해당 데이터 불러오기.
@@ -752,7 +785,11 @@ namespace MultiColoredModernUI.Forms.Ship
             SqlDataReader dt = cmd.ExecuteReader();
             while (dt.Read())
             {
-                if (Ship_DataGridViewData_Station_DG.Rows[e.RowIndex].Cells[0].Value.ToString() == dt[0].ToString())
+                if (e.RowIndex == -1)
+                {
+                    continue;
+                }
+                else if (Ship_DataGridViewData_Station_DG.Rows[e.RowIndex].Cells[0].Value.ToString() == dt[0].ToString())
                 {
                     Ship_StationID_TB.Text = dt[0].ToString(); //항구ID
                     Ship_X_TB.Text = dt[1].ToString(); //카텍 X
@@ -763,6 +800,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 }
             }
             sqlConnect.Close();
+
         }
 
         //텍스트박스 수정 후 DB저장
@@ -894,6 +932,8 @@ namespace MultiColoredModernUI.Forms.Ship
             */
             MessageBox.Show("사용 불가능한 기능입니다.");
         }
+
+        
         //-----------------------------------------------항구정보------------------------------------------------------------
 
     }

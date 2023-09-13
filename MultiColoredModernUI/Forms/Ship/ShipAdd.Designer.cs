@@ -60,6 +60,7 @@
             this.Ship_OdsayID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_OdsayID_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_ShipCompany_page = new System.Windows.Forms.TabPage();
+            this.Ship_ShipCar_CB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Ship_ShipAddress_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_ShipAddress_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_ShipURL_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -88,6 +89,7 @@
             this.Ship_BusinessNum_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_BusinessNum_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_Route_page = new System.Windows.Forms.TabPage();
+            this.Ship_Sortation_CB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Ship_DetailedHarborName_E_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_DetailedHarborName_E_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_DetailedHarborName_S_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -111,8 +113,6 @@
             this.Ship_HarborSE_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_RouteID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_RouteID_TB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Ship_Sortation_CB = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Ship_ShipCar_CB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2.SuspendLayout();
             this.Ship_Add_TabControl.SuspendLayout();
             this.Ship_Harbor_page.SuspendLayout();
@@ -205,11 +205,11 @@
             this.Ship_Add_TabControl.Name = "Ship_Add_TabControl";
             this.Ship_Add_TabControl.SelectedIndex = 0;
             this.Ship_Add_TabControl.Size = new System.Drawing.Size(798, 656);
-            this.Ship_Add_TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.Ship_Add_TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Ship_Add_TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Black;
+            this.Ship_Add_TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Lavender;
             this.Ship_Add_TabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.Ship_Add_TabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.Ship_Add_TabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Ship_Add_TabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.Black;
+            this.Ship_Add_TabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.Lavender;
             this.Ship_Add_TabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Black;
             this.Ship_Add_TabControl.TabButtonIdleState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.Ship_Add_TabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -750,6 +750,24 @@
             this.Ship_ShipCompany_page.Text = "해운";
             this.Ship_ShipCompany_page.UseVisualStyleBackColor = true;
             // 
+            // Ship_ShipCar_CB
+            // 
+            this.Ship_ShipCar_CB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCar_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Ship_ShipCar_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ship_ShipCar_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCar_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCar_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Ship_ShipCar_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Ship_ShipCar_CB.ItemHeight = 30;
+            this.Ship_ShipCar_CB.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.Ship_ShipCar_CB.Location = new System.Drawing.Point(450, 29);
+            this.Ship_ShipCar_CB.Name = "Ship_ShipCar_CB";
+            this.Ship_ShipCar_CB.Size = new System.Drawing.Size(162, 36);
+            this.Ship_ShipCar_CB.TabIndex = 88;
+            // 
             // Ship_ShipAddress_Label
             // 
             this.Ship_ShipAddress_Label.AutoSize = false;
@@ -1267,6 +1285,37 @@
             this.Ship_Route_page.Text = "노선";
             this.Ship_Route_page.UseVisualStyleBackColor = true;
             // 
+            // Ship_Sortation_CB
+            // 
+            this.Ship_Sortation_CB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_Sortation_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Ship_Sortation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ship_Sortation_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_Sortation_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_Sortation_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Ship_Sortation_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Ship_Sortation_CB.ItemHeight = 30;
+            this.Ship_Sortation_CB.Items.AddRange(new object[] {
+            "가",
+            "나",
+            "다",
+            "라",
+            "마",
+            "바",
+            "사",
+            "아",
+            "자",
+            "차",
+            "카",
+            "타",
+            "파",
+            "하",
+            "별도관리"});
+            this.Ship_Sortation_CB.Location = new System.Drawing.Point(150, 140);
+            this.Ship_Sortation_CB.Name = "Ship_Sortation_CB";
+            this.Ship_Sortation_CB.Size = new System.Drawing.Size(150, 36);
+            this.Ship_Sortation_CB.TabIndex = 87;
+            // 
             // Ship_DetailedHarborName_E_Label
             // 
             this.Ship_DetailedHarborName_E_Label.AutoSize = false;
@@ -1681,55 +1730,6 @@
             this.Ship_RouteID_TB.SelectedText = "";
             this.Ship_RouteID_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_RouteID_TB.TabIndex = 5;
-            // 
-            // Ship_Sortation_CB
-            // 
-            this.Ship_Sortation_CB.BackColor = System.Drawing.Color.Transparent;
-            this.Ship_Sortation_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Ship_Sortation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Ship_Sortation_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_Sortation_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_Sortation_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Ship_Sortation_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Ship_Sortation_CB.ItemHeight = 30;
-            this.Ship_Sortation_CB.Items.AddRange(new object[] {
-            "가",
-            "나",
-            "다",
-            "라",
-            "마",
-            "바",
-            "사",
-            "아",
-            "자",
-            "차",
-            "카",
-            "타",
-            "파",
-            "하",
-            "별도관리"});
-            this.Ship_Sortation_CB.Location = new System.Drawing.Point(150, 140);
-            this.Ship_Sortation_CB.Name = "Ship_Sortation_CB";
-            this.Ship_Sortation_CB.Size = new System.Drawing.Size(150, 36);
-            this.Ship_Sortation_CB.TabIndex = 87;
-            // 
-            // Ship_ShipCar_CB
-            // 
-            this.Ship_ShipCar_CB.BackColor = System.Drawing.Color.Transparent;
-            this.Ship_ShipCar_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Ship_ShipCar_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Ship_ShipCar_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_ShipCar_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_ShipCar_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Ship_ShipCar_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Ship_ShipCar_CB.ItemHeight = 30;
-            this.Ship_ShipCar_CB.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.Ship_ShipCar_CB.Location = new System.Drawing.Point(450, 29);
-            this.Ship_ShipCar_CB.Name = "Ship_ShipCar_CB";
-            this.Ship_ShipCar_CB.Size = new System.Drawing.Size(162, 36);
-            this.Ship_ShipCar_CB.TabIndex = 88;
             // 
             // ShipAdd
             // 
