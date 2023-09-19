@@ -457,8 +457,8 @@ namespace MultiColoredModernUI
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
             btnShipCollection_Click((Button)btnShipCollection, e);
-            //btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
-            //btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
+            btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
+            btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
         }
 
         private void btnShipCollection_Click(object sender, EventArgs e)
