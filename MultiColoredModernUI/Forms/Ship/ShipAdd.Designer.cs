@@ -36,8 +36,6 @@
             this.Ship_Harbor_page = new System.Windows.Forms.TabPage();
             this.Ship_Addr_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_Addr_TB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Ship_8_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Ship_8_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_Harbor3_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_Harbor3_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_XYMap_Bt = new Guna.UI2.WinForms.Guna2Button();
@@ -58,63 +56,63 @@
             this.Ship_CityCode_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_CityCode_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_ID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_PortID_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_OdsayID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_OdsayID_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_ShipCompany_page = new System.Windows.Forms.TabPage();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox13 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCar_CB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Ship_ShipAddress_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipAddress_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipURL_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipURL_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCompanyID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCompanyID_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCapacity_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCapacity_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCompanyDate_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCompanyDate_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipKnot_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipKnot_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipRoute_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipRoute_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCarNum_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCarNum_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCar_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipType_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipType_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipName_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipName_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCompanyNum_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCompanyNum_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipCompanyName_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipCompanyName_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_BusinessNum_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_BusinessNum_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.Ship_Route_page = new System.Windows.Forms.TabPage();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox15 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox16 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox17 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox18 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox21 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox22 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox23 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox24 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox25 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox26 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox27 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox28 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel28 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox29 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_Sortation_CB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Ship_DetailedHarborName_E_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_DetailedHarborName_E_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_DetailedHarborName_S_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_DetailedHarborName_S_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipRouteOdsayIDE_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipRouteOdsayIDE_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipRouteOdsayIDS_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipRouteOdsayIDS_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_ShipSortation_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_ShipSortation_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_HarborE_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborE_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_HarborS_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborS_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_HarborEID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborEID_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_HarborSID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborSID_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_Sortation_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborSE_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_HarborSE_TB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Ship_RouteID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Ship_RouteID_TB = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2.SuspendLayout();
             this.Ship_Add_TabControl.SuspendLayout();
             this.Ship_Harbor_page.SuspendLayout();
@@ -140,7 +138,7 @@
             // 
             // Ship_TestUpdate_BT
             // 
-            this.Ship_TestUpdate_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ship_TestUpdate_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_TestUpdate_BT.BorderColor = System.Drawing.Color.LightGray;
             this.Ship_TestUpdate_BT.BorderRadius = 8;
             this.Ship_TestUpdate_BT.BorderThickness = 1;
@@ -150,7 +148,7 @@
             this.Ship_TestUpdate_BT.FillColor = System.Drawing.Color.White;
             this.Ship_TestUpdate_BT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_TestUpdate_BT.ForeColor = System.Drawing.Color.Black;
-            this.Ship_TestUpdate_BT.Location = new System.Drawing.Point(804, 499);
+            this.Ship_TestUpdate_BT.Location = new System.Drawing.Point(804, 146);
             this.Ship_TestUpdate_BT.Name = "Ship_TestUpdate_BT";
             this.Ship_TestUpdate_BT.Size = new System.Drawing.Size(129, 45);
             this.Ship_TestUpdate_BT.TabIndex = 34;
@@ -158,7 +156,7 @@
             // 
             // Ship_Clear_BT
             // 
-            this.Ship_Clear_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ship_Clear_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_Clear_BT.BorderColor = System.Drawing.Color.LightGray;
             this.Ship_Clear_BT.BorderRadius = 8;
             this.Ship_Clear_BT.BorderThickness = 1;
@@ -168,15 +166,16 @@
             this.Ship_Clear_BT.FillColor = System.Drawing.Color.White;
             this.Ship_Clear_BT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_Clear_BT.ForeColor = System.Drawing.Color.Black;
-            this.Ship_Clear_BT.Location = new System.Drawing.Point(804, 550);
+            this.Ship_Clear_BT.Location = new System.Drawing.Point(804, 95);
             this.Ship_Clear_BT.Name = "Ship_Clear_BT";
             this.Ship_Clear_BT.Size = new System.Drawing.Size(129, 45);
             this.Ship_Clear_BT.TabIndex = 33;
             this.Ship_Clear_BT.Text = "초기화";
+            this.Ship_Clear_BT.Click += new System.EventHandler(this.Ship_Clear_BT_Click);
             // 
             // Ship_Update_BT
             // 
-            this.Ship_Update_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ship_Update_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_Update_BT.BorderColor = System.Drawing.Color.LightGray;
             this.Ship_Update_BT.BorderRadius = 8;
             this.Ship_Update_BT.BorderThickness = 1;
@@ -186,11 +185,12 @@
             this.Ship_Update_BT.FillColor = System.Drawing.Color.White;
             this.Ship_Update_BT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_Update_BT.ForeColor = System.Drawing.Color.Black;
-            this.Ship_Update_BT.Location = new System.Drawing.Point(804, 601);
+            this.Ship_Update_BT.Location = new System.Drawing.Point(804, 44);
             this.Ship_Update_BT.Name = "Ship_Update_BT";
             this.Ship_Update_BT.Size = new System.Drawing.Size(129, 45);
             this.Ship_Update_BT.TabIndex = 32;
             this.Ship_Update_BT.Text = "저장";
+            this.Ship_Update_BT.Click += new System.EventHandler(this.Ship_Update_BT_Click);
             // 
             // Ship_Add_TabControl
             // 
@@ -205,11 +205,11 @@
             this.Ship_Add_TabControl.Name = "Ship_Add_TabControl";
             this.Ship_Add_TabControl.SelectedIndex = 0;
             this.Ship_Add_TabControl.Size = new System.Drawing.Size(798, 656);
-            this.Ship_Add_TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.Ship_Add_TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Ship_Add_TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Black;
+            this.Ship_Add_TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Lavender;
             this.Ship_Add_TabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.Ship_Add_TabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.Ship_Add_TabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Ship_Add_TabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.Black;
+            this.Ship_Add_TabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.Lavender;
             this.Ship_Add_TabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Black;
             this.Ship_Add_TabControl.TabButtonIdleState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.Ship_Add_TabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -230,8 +230,6 @@
             this.Ship_Harbor_page.BackColor = System.Drawing.Color.White;
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_TB);
-            this.Ship_Harbor_page.Controls.Add(this.Ship_8_Label);
-            this.Ship_Harbor_page.Controls.Add(this.Ship_8_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Harbor3_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Harbor3_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_XYMap_Bt);
@@ -252,7 +250,7 @@
             this.Ship_Harbor_page.Controls.Add(this.Ship_CityCode_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_CityCode_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_ID_Label);
-            this.Ship_Harbor_page.Controls.Add(this.guna2TextBox1);
+            this.Ship_Harbor_page.Controls.Add(this.Ship_PortID_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_OdsayID_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_OdsayID_TB);
             this.Ship_Harbor_page.Location = new System.Drawing.Point(4, 44);
@@ -294,47 +292,9 @@
             this.Ship_Addr_TB.Name = "Ship_Addr_TB";
             this.Ship_Addr_TB.PasswordChar = '\0';
             this.Ship_Addr_TB.PlaceholderText = "";
-            this.Ship_Addr_TB.ReadOnly = true;
             this.Ship_Addr_TB.SelectedText = "";
             this.Ship_Addr_TB.Size = new System.Drawing.Size(450, 45);
             this.Ship_Addr_TB.TabIndex = 30;
-            // 
-            // Ship_8_Label
-            // 
-            this.Ship_8_Label.AutoSize = false;
-            this.Ship_8_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Ship_8_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ship_8_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Ship_8_Label.ForeColor = System.Drawing.Color.Black;
-            this.Ship_8_Label.Location = new System.Drawing.Point(325, 320);
-            this.Ship_8_Label.Name = "Ship_8_Label";
-            this.Ship_8_Label.Size = new System.Drawing.Size(100, 45);
-            this.Ship_8_Label.TabIndex = 28;
-            this.Ship_8_Label.Text = "미사용";
-            this.Ship_8_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Ship_8_TB
-            // 
-            this.Ship_8_TB.BackColor = System.Drawing.Color.Transparent;
-            this.Ship_8_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Ship_8_TB.DefaultText = "";
-            this.Ship_8_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Ship_8_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Ship_8_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_8_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_8_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_8_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Ship_8_TB.ForeColor = System.Drawing.Color.Black;
-            this.Ship_8_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Ship_8_TB.Location = new System.Drawing.Point(450, 320);
-            this.Ship_8_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Ship_8_TB.Name = "Ship_8_TB";
-            this.Ship_8_TB.PasswordChar = '\0';
-            this.Ship_8_TB.PlaceholderText = "";
-            this.Ship_8_TB.ReadOnly = true;
-            this.Ship_8_TB.SelectedText = "";
-            this.Ship_8_TB.Size = new System.Drawing.Size(150, 45);
-            this.Ship_8_TB.TabIndex = 27;
             // 
             // Ship_Harbor3_Label
             // 
@@ -368,7 +328,6 @@
             this.Ship_Harbor3_TB.Name = "Ship_Harbor3_TB";
             this.Ship_Harbor3_TB.PasswordChar = '\0';
             this.Ship_Harbor3_TB.PlaceholderText = "";
-            this.Ship_Harbor3_TB.ReadOnly = true;
             this.Ship_Harbor3_TB.SelectedText = "";
             this.Ship_Harbor3_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_Harbor3_TB.TabIndex = 24;
@@ -423,7 +382,6 @@
             this.Ship_WGS84_Y_TB.Name = "Ship_WGS84_Y_TB";
             this.Ship_WGS84_Y_TB.PasswordChar = '\0';
             this.Ship_WGS84_Y_TB.PlaceholderText = "";
-            this.Ship_WGS84_Y_TB.ReadOnly = true;
             this.Ship_WGS84_Y_TB.SelectedText = "";
             this.Ship_WGS84_Y_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_WGS84_Y_TB.TabIndex = 21;
@@ -460,7 +418,6 @@
             this.Ship_WGS84_X_TB.Name = "Ship_WGS84_X_TB";
             this.Ship_WGS84_X_TB.PasswordChar = '\0';
             this.Ship_WGS84_X_TB.PlaceholderText = "";
-            this.Ship_WGS84_X_TB.ReadOnly = true;
             this.Ship_WGS84_X_TB.SelectedText = "";
             this.Ship_WGS84_X_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_WGS84_X_TB.TabIndex = 19;
@@ -497,7 +454,6 @@
             this.Ship_Y_TB.Name = "Ship_Y_TB";
             this.Ship_Y_TB.PasswordChar = '\0';
             this.Ship_Y_TB.PlaceholderText = "";
-            this.Ship_Y_TB.ReadOnly = true;
             this.Ship_Y_TB.SelectedText = "";
             this.Ship_Y_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_Y_TB.TabIndex = 17;
@@ -534,7 +490,6 @@
             this.Ship_X_TB.Name = "Ship_X_TB";
             this.Ship_X_TB.PasswordChar = '\0';
             this.Ship_X_TB.PlaceholderText = "";
-            this.Ship_X_TB.ReadOnly = true;
             this.Ship_X_TB.SelectedText = "";
             this.Ship_X_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_X_TB.TabIndex = 15;
@@ -571,7 +526,6 @@
             this.Ship_Area_TB.Name = "Ship_Area_TB";
             this.Ship_Area_TB.PasswordChar = '\0';
             this.Ship_Area_TB.PlaceholderText = "";
-            this.Ship_Area_TB.ReadOnly = true;
             this.Ship_Area_TB.SelectedText = "";
             this.Ship_Area_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_Area_TB.TabIndex = 13;
@@ -608,7 +562,6 @@
             this.Ship_Harbor2_TB.Name = "Ship_Harbor2_TB";
             this.Ship_Harbor2_TB.PasswordChar = '\0';
             this.Ship_Harbor2_TB.PlaceholderText = "";
-            this.Ship_Harbor2_TB.ReadOnly = true;
             this.Ship_Harbor2_TB.SelectedText = "";
             this.Ship_Harbor2_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_Harbor2_TB.TabIndex = 11;
@@ -645,7 +598,6 @@
             this.Ship_Harbor1_TB.Name = "Ship_Harbor1_TB";
             this.Ship_Harbor1_TB.PasswordChar = '\0';
             this.Ship_Harbor1_TB.PlaceholderText = "";
-            this.Ship_Harbor1_TB.ReadOnly = true;
             this.Ship_Harbor1_TB.SelectedText = "";
             this.Ship_Harbor1_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_Harbor1_TB.TabIndex = 9;
@@ -682,7 +634,6 @@
             this.Ship_CityCode_TB.Name = "Ship_CityCode_TB";
             this.Ship_CityCode_TB.PasswordChar = '\0';
             this.Ship_CityCode_TB.PlaceholderText = "";
-            this.Ship_CityCode_TB.ReadOnly = true;
             this.Ship_CityCode_TB.SelectedText = "";
             this.Ship_CityCode_TB.Size = new System.Drawing.Size(150, 45);
             this.Ship_CityCode_TB.TabIndex = 6;
@@ -701,28 +652,28 @@
             this.Ship_ID_Label.Text = "항구ID";
             this.Ship_ID_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox1
+            // Ship_PortID_TB
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(150, 80);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox1.TabIndex = 3;
+            this.Ship_PortID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_PortID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_PortID_TB.DefaultText = "";
+            this.Ship_PortID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_PortID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_PortID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_PortID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_PortID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_PortID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_PortID_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_PortID_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_PortID_TB.Location = new System.Drawing.Point(150, 80);
+            this.Ship_PortID_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_PortID_TB.Name = "Ship_PortID_TB";
+            this.Ship_PortID_TB.PasswordChar = '\0';
+            this.Ship_PortID_TB.PlaceholderText = "";
+            this.Ship_PortID_TB.ReadOnly = true;
+            this.Ship_PortID_TB.SelectedText = "";
+            this.Ship_PortID_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_PortID_TB.TabIndex = 3;
             // 
             // Ship_OdsayID_Label
             // 
@@ -763,34 +714,34 @@
             // 
             // Ship_ShipCompany_page
             // 
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel14);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox15);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel2);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox3);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel3);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox4);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel4);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox5);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel5);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox6);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel6);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox7);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel7);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox8);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel8);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox9);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel9);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox10);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel10);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox11);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel11);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox12);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel12);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox13);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel13);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox14);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2HtmlLabel1);
-            this.Ship_ShipCompany_page.Controls.Add(this.guna2TextBox2);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCar_CB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipAddress_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipAddress_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipURL_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipURL_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyID_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyID_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCapacity_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCapacity_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyDate_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyDate_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipKnot_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipKnot_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipRoute_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipRoute_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCarNum_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCarNum_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCar_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipType_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipType_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipName_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipName_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyNum_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyNum_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyName_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_ShipCompanyName_TB);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_BusinessNum_Label);
+            this.Ship_ShipCompany_page.Controls.Add(this.Ship_BusinessNum_TB);
             this.Ship_ShipCompany_page.Location = new System.Drawing.Point(4, 44);
             this.Ship_ShipCompany_page.Name = "Ship_ShipCompany_page";
             this.Ship_ShipCompany_page.Padding = new System.Windows.Forms.Padding(3);
@@ -799,513 +750,533 @@
             this.Ship_ShipCompany_page.Text = "해운";
             this.Ship_ShipCompany_page.UseVisualStyleBackColor = true;
             // 
-            // guna2HtmlLabel2
+            // Ship_ShipCar_CB
             // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(25, 380);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel2.TabIndex = 56;
-            this.guna2HtmlLabel2.Text = "홈페이지";
-            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCar_CB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCar_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Ship_ShipCar_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ship_ShipCar_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCar_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCar_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Ship_ShipCar_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Ship_ShipCar_CB.ItemHeight = 30;
+            this.Ship_ShipCar_CB.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.Ship_ShipCar_CB.Location = new System.Drawing.Point(450, 29);
+            this.Ship_ShipCar_CB.Name = "Ship_ShipCar_CB";
+            this.Ship_ShipCar_CB.Size = new System.Drawing.Size(162, 36);
+            this.Ship_ShipCar_CB.TabIndex = 88;
             // 
-            // guna2TextBox3
+            // Ship_ShipAddress_Label
             // 
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(150, 380);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.ReadOnly = true;
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(462, 45);
-            this.guna2TextBox3.TabIndex = 55;
+            this.Ship_ShipAddress_Label.AutoSize = false;
+            this.Ship_ShipAddress_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipAddress_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipAddress_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipAddress_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipAddress_Label.Location = new System.Drawing.Point(25, 440);
+            this.Ship_ShipAddress_Label.Name = "Ship_ShipAddress_Label";
+            this.Ship_ShipAddress_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipAddress_Label.TabIndex = 59;
+            this.Ship_ShipAddress_Label.Text = "주소";
+            this.Ship_ShipAddress_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel3
+            // Ship_ShipAddress_TB
             // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(325, 320);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel3.TabIndex = 54;
-            this.guna2HtmlLabel3.Text = "ID";
-            this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipAddress_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipAddress_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipAddress_TB.DefaultText = "";
+            this.Ship_ShipAddress_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipAddress_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipAddress_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipAddress_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipAddress_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipAddress_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipAddress_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipAddress_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipAddress_TB.Location = new System.Drawing.Point(150, 440);
+            this.Ship_ShipAddress_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipAddress_TB.Name = "Ship_ShipAddress_TB";
+            this.Ship_ShipAddress_TB.PasswordChar = '\0';
+            this.Ship_ShipAddress_TB.PlaceholderText = "";
+            this.Ship_ShipAddress_TB.SelectedText = "";
+            this.Ship_ShipAddress_TB.Size = new System.Drawing.Size(462, 45);
+            this.Ship_ShipAddress_TB.TabIndex = 58;
             // 
-            // guna2TextBox4
+            // Ship_ShipURL_Label
             // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(450, 320);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.ReadOnly = true;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox4.TabIndex = 53;
+            this.Ship_ShipURL_Label.AutoSize = false;
+            this.Ship_ShipURL_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipURL_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipURL_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipURL_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipURL_Label.Location = new System.Drawing.Point(25, 380);
+            this.Ship_ShipURL_Label.Name = "Ship_ShipURL_Label";
+            this.Ship_ShipURL_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipURL_Label.TabIndex = 56;
+            this.Ship_ShipURL_Label.Text = "홈페이지";
+            this.Ship_ShipURL_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel4
+            // Ship_ShipURL_TB
             // 
-            this.guna2HtmlLabel4.AutoSize = false;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(25, 320);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel4.TabIndex = 52;
-            this.guna2HtmlLabel4.Text = "정원";
-            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipURL_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipURL_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipURL_TB.DefaultText = "";
+            this.Ship_ShipURL_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipURL_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipURL_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipURL_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipURL_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipURL_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipURL_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipURL_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipURL_TB.Location = new System.Drawing.Point(150, 380);
+            this.Ship_ShipURL_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipURL_TB.Name = "Ship_ShipURL_TB";
+            this.Ship_ShipURL_TB.PasswordChar = '\0';
+            this.Ship_ShipURL_TB.PlaceholderText = "";
+            this.Ship_ShipURL_TB.SelectedText = "";
+            this.Ship_ShipURL_TB.Size = new System.Drawing.Size(462, 45);
+            this.Ship_ShipURL_TB.TabIndex = 55;
             // 
-            // guna2TextBox5
+            // Ship_ShipCompanyID_Label
             // 
-            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(150, 320);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.ReadOnly = true;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox5.TabIndex = 51;
+            this.Ship_ShipCompanyID_Label.AutoSize = false;
+            this.Ship_ShipCompanyID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyID_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCompanyID_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCompanyID_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyID_Label.Location = new System.Drawing.Point(325, 320);
+            this.Ship_ShipCompanyID_Label.Name = "Ship_ShipCompanyID_Label";
+            this.Ship_ShipCompanyID_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipCompanyID_Label.TabIndex = 54;
+            this.Ship_ShipCompanyID_Label.Text = "ID";
+            this.Ship_ShipCompanyID_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel5
+            // Ship_ShipCompanyID_TB
             // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(325, 260);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel5.TabIndex = 50;
-            this.guna2HtmlLabel5.Text = "전수년월";
-            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCompanyID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCompanyID_TB.DefaultText = "";
+            this.Ship_ShipCompanyID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCompanyID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCompanyID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCompanyID_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyID_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyID_TB.Location = new System.Drawing.Point(450, 320);
+            this.Ship_ShipCompanyID_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCompanyID_TB.Name = "Ship_ShipCompanyID_TB";
+            this.Ship_ShipCompanyID_TB.PasswordChar = '\0';
+            this.Ship_ShipCompanyID_TB.PlaceholderText = "";
+            this.Ship_ShipCompanyID_TB.ReadOnly = true;
+            this.Ship_ShipCompanyID_TB.SelectedText = "";
+            this.Ship_ShipCompanyID_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipCompanyID_TB.TabIndex = 53;
             // 
-            // guna2TextBox6
+            // Ship_ShipCapacity_Label
             // 
-            this.guna2TextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(450, 260);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.ReadOnly = true;
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox6.TabIndex = 49;
+            this.Ship_ShipCapacity_Label.AutoSize = false;
+            this.Ship_ShipCapacity_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCapacity_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCapacity_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCapacity_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCapacity_Label.Location = new System.Drawing.Point(25, 320);
+            this.Ship_ShipCapacity_Label.Name = "Ship_ShipCapacity_Label";
+            this.Ship_ShipCapacity_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipCapacity_Label.TabIndex = 52;
+            this.Ship_ShipCapacity_Label.Text = "정원";
+            this.Ship_ShipCapacity_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel6
+            // Ship_ShipCapacity_TB
             // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(325, 200);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel6.TabIndex = 48;
-            this.guna2HtmlLabel6.Text = "속력(노트)";
-            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCapacity_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCapacity_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCapacity_TB.DefaultText = "";
+            this.Ship_ShipCapacity_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCapacity_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCapacity_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCapacity_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCapacity_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCapacity_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCapacity_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCapacity_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCapacity_TB.Location = new System.Drawing.Point(150, 320);
+            this.Ship_ShipCapacity_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCapacity_TB.Name = "Ship_ShipCapacity_TB";
+            this.Ship_ShipCapacity_TB.PasswordChar = '\0';
+            this.Ship_ShipCapacity_TB.PlaceholderText = "";
+            this.Ship_ShipCapacity_TB.SelectedText = "";
+            this.Ship_ShipCapacity_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_ShipCapacity_TB.TabIndex = 51;
             // 
-            // guna2TextBox7
+            // Ship_ShipCompanyDate_Label
             // 
-            this.guna2TextBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(450, 200);
-            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "";
-            this.guna2TextBox7.ReadOnly = true;
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox7.TabIndex = 47;
+            this.Ship_ShipCompanyDate_Label.AutoSize = false;
+            this.Ship_ShipCompanyDate_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyDate_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCompanyDate_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCompanyDate_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyDate_Label.Location = new System.Drawing.Point(325, 260);
+            this.Ship_ShipCompanyDate_Label.Name = "Ship_ShipCompanyDate_Label";
+            this.Ship_ShipCompanyDate_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipCompanyDate_Label.TabIndex = 50;
+            this.Ship_ShipCompanyDate_Label.Text = "전수년월";
+            this.Ship_ShipCompanyDate_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel7
+            // Ship_ShipCompanyDate_TB
             // 
-            this.guna2HtmlLabel7.AutoSize = false;
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(325, 140);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel7.TabIndex = 46;
-            this.guna2HtmlLabel7.Text = "운행구간";
-            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCompanyDate_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyDate_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCompanyDate_TB.DefaultText = "";
+            this.Ship_ShipCompanyDate_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCompanyDate_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCompanyDate_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyDate_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyDate_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyDate_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCompanyDate_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyDate_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyDate_TB.Location = new System.Drawing.Point(450, 260);
+            this.Ship_ShipCompanyDate_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCompanyDate_TB.Name = "Ship_ShipCompanyDate_TB";
+            this.Ship_ShipCompanyDate_TB.PasswordChar = '\0';
+            this.Ship_ShipCompanyDate_TB.PlaceholderText = "";
+            this.Ship_ShipCompanyDate_TB.SelectedText = "";
+            this.Ship_ShipCompanyDate_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipCompanyDate_TB.TabIndex = 49;
             // 
-            // guna2TextBox8
+            // Ship_ShipKnot_Label
             // 
-            this.guna2TextBox8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox8.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(450, 140);
-            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PasswordChar = '\0';
-            this.guna2TextBox8.PlaceholderText = "";
-            this.guna2TextBox8.ReadOnly = true;
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox8.TabIndex = 45;
+            this.Ship_ShipKnot_Label.AutoSize = false;
+            this.Ship_ShipKnot_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipKnot_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipKnot_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipKnot_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipKnot_Label.Location = new System.Drawing.Point(325, 200);
+            this.Ship_ShipKnot_Label.Name = "Ship_ShipKnot_Label";
+            this.Ship_ShipKnot_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipKnot_Label.TabIndex = 48;
+            this.Ship_ShipKnot_Label.Text = "속력(노트)";
+            this.Ship_ShipKnot_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel8
+            // Ship_ShipKnot_TB
             // 
-            this.guna2HtmlLabel8.AutoSize = false;
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(325, 80);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel8.TabIndex = 44;
-            this.guna2HtmlLabel8.Text = "차량선적대수";
-            this.guna2HtmlLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipKnot_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipKnot_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipKnot_TB.DefaultText = "";
+            this.Ship_ShipKnot_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipKnot_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipKnot_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipKnot_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipKnot_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipKnot_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipKnot_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipKnot_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipKnot_TB.Location = new System.Drawing.Point(450, 200);
+            this.Ship_ShipKnot_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipKnot_TB.Name = "Ship_ShipKnot_TB";
+            this.Ship_ShipKnot_TB.PasswordChar = '\0';
+            this.Ship_ShipKnot_TB.PlaceholderText = "";
+            this.Ship_ShipKnot_TB.SelectedText = "";
+            this.Ship_ShipKnot_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipKnot_TB.TabIndex = 47;
             // 
-            // guna2TextBox9
+            // Ship_ShipRoute_Label
             // 
-            this.guna2TextBox9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox9.DefaultText = "";
-            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox9.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Location = new System.Drawing.Point(450, 80);
-            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox9.Name = "guna2TextBox9";
-            this.guna2TextBox9.PasswordChar = '\0';
-            this.guna2TextBox9.PlaceholderText = "";
-            this.guna2TextBox9.ReadOnly = true;
-            this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox9.TabIndex = 43;
+            this.Ship_ShipRoute_Label.AutoSize = false;
+            this.Ship_ShipRoute_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRoute_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipRoute_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipRoute_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRoute_Label.Location = new System.Drawing.Point(325, 140);
+            this.Ship_ShipRoute_Label.Name = "Ship_ShipRoute_Label";
+            this.Ship_ShipRoute_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipRoute_Label.TabIndex = 46;
+            this.Ship_ShipRoute_Label.Text = "운행구간";
+            this.Ship_ShipRoute_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel9
+            // Ship_ShipRoute_TB
             // 
-            this.guna2HtmlLabel9.AutoSize = false;
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(325, 20);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel9.TabIndex = 42;
-            this.guna2HtmlLabel9.Text = "차량선착가능";
-            this.guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipRoute_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRoute_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipRoute_TB.DefaultText = "";
+            this.Ship_ShipRoute_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipRoute_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipRoute_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRoute_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRoute_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRoute_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipRoute_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRoute_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRoute_TB.Location = new System.Drawing.Point(450, 140);
+            this.Ship_ShipRoute_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipRoute_TB.Name = "Ship_ShipRoute_TB";
+            this.Ship_ShipRoute_TB.PasswordChar = '\0';
+            this.Ship_ShipRoute_TB.PlaceholderText = "";
+            this.Ship_ShipRoute_TB.SelectedText = "";
+            this.Ship_ShipRoute_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipRoute_TB.TabIndex = 45;
             // 
-            // guna2TextBox10
+            // Ship_ShipCarNum_Label
             // 
-            this.guna2TextBox10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox10.DefaultText = "";
-            this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(450, 20);
-            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox10.Name = "guna2TextBox10";
-            this.guna2TextBox10.PasswordChar = '\0';
-            this.guna2TextBox10.PlaceholderText = "";
-            this.guna2TextBox10.ReadOnly = true;
-            this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox10.TabIndex = 41;
+            this.Ship_ShipCarNum_Label.AutoSize = false;
+            this.Ship_ShipCarNum_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCarNum_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCarNum_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCarNum_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCarNum_Label.Location = new System.Drawing.Point(325, 80);
+            this.Ship_ShipCarNum_Label.Name = "Ship_ShipCarNum_Label";
+            this.Ship_ShipCarNum_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipCarNum_Label.TabIndex = 44;
+            this.Ship_ShipCarNum_Label.Text = "차량선적대수";
+            this.Ship_ShipCarNum_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel10
+            // Ship_ShipCarNum_TB
             // 
-            this.guna2HtmlLabel10.AutoSize = false;
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(25, 260);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel10.TabIndex = 40;
-            this.guna2HtmlLabel10.Text = "선종";
-            this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCarNum_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCarNum_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCarNum_TB.DefaultText = "";
+            this.Ship_ShipCarNum_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCarNum_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCarNum_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCarNum_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCarNum_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCarNum_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCarNum_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCarNum_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCarNum_TB.Location = new System.Drawing.Point(450, 80);
+            this.Ship_ShipCarNum_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCarNum_TB.Name = "Ship_ShipCarNum_TB";
+            this.Ship_ShipCarNum_TB.PasswordChar = '\0';
+            this.Ship_ShipCarNum_TB.PlaceholderText = "";
+            this.Ship_ShipCarNum_TB.SelectedText = "";
+            this.Ship_ShipCarNum_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipCarNum_TB.TabIndex = 43;
             // 
-            // guna2TextBox11
+            // Ship_ShipCar_Label
             // 
-            this.guna2TextBox11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox11.DefaultText = "";
-            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox11.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(150, 260);
-            this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox11.Name = "guna2TextBox11";
-            this.guna2TextBox11.PasswordChar = '\0';
-            this.guna2TextBox11.PlaceholderText = "";
-            this.guna2TextBox11.ReadOnly = true;
-            this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox11.TabIndex = 39;
+            this.Ship_ShipCar_Label.AutoSize = false;
+            this.Ship_ShipCar_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCar_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCar_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCar_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCar_Label.Location = new System.Drawing.Point(325, 20);
+            this.Ship_ShipCar_Label.Name = "Ship_ShipCar_Label";
+            this.Ship_ShipCar_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipCar_Label.TabIndex = 42;
+            this.Ship_ShipCar_Label.Text = "차량선착가능";
+            this.Ship_ShipCar_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel11
+            // Ship_ShipType_Label
             // 
-            this.guna2HtmlLabel11.AutoSize = false;
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(25, 200);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel11.TabIndex = 38;
-            this.guna2HtmlLabel11.Text = "선박명";
-            this.guna2HtmlLabel11.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipType_Label.AutoSize = false;
+            this.Ship_ShipType_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipType_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipType_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipType_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipType_Label.Location = new System.Drawing.Point(25, 260);
+            this.Ship_ShipType_Label.Name = "Ship_ShipType_Label";
+            this.Ship_ShipType_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipType_Label.TabIndex = 40;
+            this.Ship_ShipType_Label.Text = "선종";
+            this.Ship_ShipType_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox12
+            // Ship_ShipType_TB
             // 
-            this.guna2TextBox12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox12.DefaultText = "";
-            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox12.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Location = new System.Drawing.Point(150, 200);
-            this.guna2TextBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox12.Name = "guna2TextBox12";
-            this.guna2TextBox12.PasswordChar = '\0';
-            this.guna2TextBox12.PlaceholderText = "";
-            this.guna2TextBox12.ReadOnly = true;
-            this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox12.TabIndex = 37;
+            this.Ship_ShipType_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipType_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipType_TB.DefaultText = "";
+            this.Ship_ShipType_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipType_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipType_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipType_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipType_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipType_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipType_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipType_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipType_TB.Location = new System.Drawing.Point(150, 260);
+            this.Ship_ShipType_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipType_TB.Name = "Ship_ShipType_TB";
+            this.Ship_ShipType_TB.PasswordChar = '\0';
+            this.Ship_ShipType_TB.PlaceholderText = "";
+            this.Ship_ShipType_TB.SelectedText = "";
+            this.Ship_ShipType_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_ShipType_TB.TabIndex = 39;
             // 
-            // guna2HtmlLabel12
+            // Ship_ShipName_Label
             // 
-            this.guna2HtmlLabel12.AutoSize = false;
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(25, 140);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel12.TabIndex = 36;
-            this.guna2HtmlLabel12.Text = "선사연락처";
-            this.guna2HtmlLabel12.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipName_Label.AutoSize = false;
+            this.Ship_ShipName_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipName_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipName_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipName_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipName_Label.Location = new System.Drawing.Point(25, 200);
+            this.Ship_ShipName_Label.Name = "Ship_ShipName_Label";
+            this.Ship_ShipName_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipName_Label.TabIndex = 38;
+            this.Ship_ShipName_Label.Text = "선박명";
+            this.Ship_ShipName_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox13
+            // Ship_ShipName_TB
             // 
-            this.guna2TextBox13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox13.DefaultText = "";
-            this.guna2TextBox13.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox13.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox13.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox13.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox13.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox13.Location = new System.Drawing.Point(150, 140);
-            this.guna2TextBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox13.Name = "guna2TextBox13";
-            this.guna2TextBox13.PasswordChar = '\0';
-            this.guna2TextBox13.PlaceholderText = "";
-            this.guna2TextBox13.ReadOnly = true;
-            this.guna2TextBox13.SelectedText = "";
-            this.guna2TextBox13.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox13.TabIndex = 35;
+            this.Ship_ShipName_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipName_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipName_TB.DefaultText = "";
+            this.Ship_ShipName_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipName_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipName_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipName_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipName_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipName_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipName_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipName_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipName_TB.Location = new System.Drawing.Point(150, 200);
+            this.Ship_ShipName_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipName_TB.Name = "Ship_ShipName_TB";
+            this.Ship_ShipName_TB.PasswordChar = '\0';
+            this.Ship_ShipName_TB.PlaceholderText = "";
+            this.Ship_ShipName_TB.SelectedText = "";
+            this.Ship_ShipName_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_ShipName_TB.TabIndex = 37;
             // 
-            // guna2HtmlLabel13
+            // Ship_ShipCompanyNum_Label
             // 
-            this.guna2HtmlLabel13.AutoSize = false;
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(25, 80);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel13.TabIndex = 34;
-            this.guna2HtmlLabel13.Text = "선사명";
-            this.guna2HtmlLabel13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCompanyNum_Label.AutoSize = false;
+            this.Ship_ShipCompanyNum_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyNum_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCompanyNum_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCompanyNum_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyNum_Label.Location = new System.Drawing.Point(25, 140);
+            this.Ship_ShipCompanyNum_Label.Name = "Ship_ShipCompanyNum_Label";
+            this.Ship_ShipCompanyNum_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipCompanyNum_Label.TabIndex = 36;
+            this.Ship_ShipCompanyNum_Label.Text = "선사연락처";
+            this.Ship_ShipCompanyNum_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox14
+            // Ship_ShipCompanyNum_TB
             // 
-            this.guna2TextBox14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox14.DefaultText = "";
-            this.guna2TextBox14.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox14.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox14.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox14.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Location = new System.Drawing.Point(150, 80);
-            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox14.Name = "guna2TextBox14";
-            this.guna2TextBox14.PasswordChar = '\0';
-            this.guna2TextBox14.PlaceholderText = "";
-            this.guna2TextBox14.ReadOnly = true;
-            this.guna2TextBox14.SelectedText = "";
-            this.guna2TextBox14.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox14.TabIndex = 33;
+            this.Ship_ShipCompanyNum_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyNum_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCompanyNum_TB.DefaultText = "";
+            this.Ship_ShipCompanyNum_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCompanyNum_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCompanyNum_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyNum_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyNum_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyNum_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCompanyNum_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyNum_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyNum_TB.Location = new System.Drawing.Point(150, 140);
+            this.Ship_ShipCompanyNum_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCompanyNum_TB.Name = "Ship_ShipCompanyNum_TB";
+            this.Ship_ShipCompanyNum_TB.PasswordChar = '\0';
+            this.Ship_ShipCompanyNum_TB.PlaceholderText = "";
+            this.Ship_ShipCompanyNum_TB.SelectedText = "";
+            this.Ship_ShipCompanyNum_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_ShipCompanyNum_TB.TabIndex = 35;
             // 
-            // guna2HtmlLabel1
+            // Ship_ShipCompanyName_Label
             // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 20);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel1.TabIndex = 4;
-            this.guna2HtmlLabel1.Text = "사업자번호";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipCompanyName_Label.AutoSize = false;
+            this.Ship_ShipCompanyName_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyName_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipCompanyName_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipCompanyName_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyName_Label.Location = new System.Drawing.Point(25, 80);
+            this.Ship_ShipCompanyName_Label.Name = "Ship_ShipCompanyName_Label";
+            this.Ship_ShipCompanyName_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_ShipCompanyName_Label.TabIndex = 34;
+            this.Ship_ShipCompanyName_Label.Text = "선사명";
+            this.Ship_ShipCompanyName_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox2
+            // Ship_ShipCompanyName_TB
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(150, 20);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox2.TabIndex = 3;
+            this.Ship_ShipCompanyName_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipCompanyName_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipCompanyName_TB.DefaultText = "";
+            this.Ship_ShipCompanyName_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipCompanyName_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipCompanyName_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyName_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipCompanyName_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyName_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipCompanyName_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipCompanyName_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipCompanyName_TB.Location = new System.Drawing.Point(150, 80);
+            this.Ship_ShipCompanyName_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipCompanyName_TB.Name = "Ship_ShipCompanyName_TB";
+            this.Ship_ShipCompanyName_TB.PasswordChar = '\0';
+            this.Ship_ShipCompanyName_TB.PlaceholderText = "";
+            this.Ship_ShipCompanyName_TB.SelectedText = "";
+            this.Ship_ShipCompanyName_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_ShipCompanyName_TB.TabIndex = 33;
+            // 
+            // Ship_BusinessNum_Label
+            // 
+            this.Ship_BusinessNum_Label.AutoSize = false;
+            this.Ship_BusinessNum_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_BusinessNum_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_BusinessNum_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_BusinessNum_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_BusinessNum_Label.Location = new System.Drawing.Point(25, 20);
+            this.Ship_BusinessNum_Label.Name = "Ship_BusinessNum_Label";
+            this.Ship_BusinessNum_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_BusinessNum_Label.TabIndex = 4;
+            this.Ship_BusinessNum_Label.Text = "사업자번호";
+            this.Ship_BusinessNum_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Ship_BusinessNum_TB
+            // 
+            this.Ship_BusinessNum_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_BusinessNum_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_BusinessNum_TB.DefaultText = "";
+            this.Ship_BusinessNum_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_BusinessNum_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_BusinessNum_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_BusinessNum_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_BusinessNum_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_BusinessNum_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_BusinessNum_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_BusinessNum_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_BusinessNum_TB.Location = new System.Drawing.Point(150, 20);
+            this.Ship_BusinessNum_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_BusinessNum_TB.Name = "Ship_BusinessNum_TB";
+            this.Ship_BusinessNum_TB.PasswordChar = '\0';
+            this.Ship_BusinessNum_TB.PlaceholderText = "";
+            this.Ship_BusinessNum_TB.SelectedText = "";
+            this.Ship_BusinessNum_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_BusinessNum_TB.TabIndex = 3;
             // 
             // Ship_Route_page
             // 
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel16);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox17);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel17);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox18);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel20);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox21);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel21);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox22);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel22);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox23);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel23);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox24);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel24);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox25);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel25);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox26);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel26);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox27);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel27);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox28);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel28);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox29);
-            this.Ship_Route_page.Controls.Add(this.guna2HtmlLabel15);
-            this.Ship_Route_page.Controls.Add(this.guna2TextBox16);
+            this.Ship_Route_page.Controls.Add(this.Ship_Sortation_CB);
+            this.Ship_Route_page.Controls.Add(this.Ship_DetailedHarborName_E_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_DetailedHarborName_E_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_DetailedHarborName_S_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_DetailedHarborName_S_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipRouteOdsayIDE_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipRouteOdsayIDE_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipRouteOdsayIDS_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipRouteOdsayIDS_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipSortation_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_ShipSortation_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborE_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborE_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborS_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborS_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborEID_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborEID_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborSID_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborSID_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_Sortation_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborSE_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_HarborSE_TB);
+            this.Ship_Route_page.Controls.Add(this.Ship_RouteID_Label);
+            this.Ship_Route_page.Controls.Add(this.Ship_RouteID_TB);
             this.Ship_Route_page.Location = new System.Drawing.Point(4, 44);
             this.Ship_Route_page.Name = "Ship_Route_page";
             this.Ship_Route_page.Padding = new System.Windows.Forms.Padding(3);
@@ -1314,486 +1285,451 @@
             this.Ship_Route_page.Text = "노선";
             this.Ship_Route_page.UseVisualStyleBackColor = true;
             // 
-            // guna2HtmlLabel14
+            // Ship_Sortation_CB
             // 
-            this.guna2HtmlLabel14.AutoSize = false;
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel14.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(25, 440);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel14.TabIndex = 59;
-            this.guna2HtmlLabel14.Text = "주소";
-            this.guna2HtmlLabel14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_Sortation_CB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_Sortation_CB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Ship_Sortation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ship_Sortation_CB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_Sortation_CB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_Sortation_CB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Ship_Sortation_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Ship_Sortation_CB.ItemHeight = 30;
+            this.Ship_Sortation_CB.Items.AddRange(new object[] {
+            "가",
+            "나",
+            "다",
+            "라",
+            "마",
+            "바",
+            "사",
+            "아",
+            "자",
+            "차",
+            "카",
+            "타",
+            "파",
+            "하",
+            "별도관리"});
+            this.Ship_Sortation_CB.Location = new System.Drawing.Point(150, 140);
+            this.Ship_Sortation_CB.Name = "Ship_Sortation_CB";
+            this.Ship_Sortation_CB.Size = new System.Drawing.Size(150, 36);
+            this.Ship_Sortation_CB.TabIndex = 87;
             // 
-            // guna2TextBox15
+            // Ship_DetailedHarborName_E_Label
             // 
-            this.guna2TextBox15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox15.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox15.DefaultText = "";
-            this.guna2TextBox15.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox15.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox15.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox15.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox15.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox15.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox15.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox15.Location = new System.Drawing.Point(150, 440);
-            this.guna2TextBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox15.Name = "guna2TextBox15";
-            this.guna2TextBox15.PasswordChar = '\0';
-            this.guna2TextBox15.PlaceholderText = "";
-            this.guna2TextBox15.ReadOnly = true;
-            this.guna2TextBox15.SelectedText = "";
-            this.guna2TextBox15.Size = new System.Drawing.Size(462, 45);
-            this.guna2TextBox15.TabIndex = 58;
+            this.Ship_DetailedHarborName_E_Label.AutoSize = false;
+            this.Ship_DetailedHarborName_E_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_DetailedHarborName_E_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_DetailedHarborName_E_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_DetailedHarborName_E_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_DetailedHarborName_E_Label.Location = new System.Drawing.Point(25, 380);
+            this.Ship_DetailedHarborName_E_Label.Name = "Ship_DetailedHarborName_E_Label";
+            this.Ship_DetailedHarborName_E_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_DetailedHarborName_E_Label.TabIndex = 86;
+            this.Ship_DetailedHarborName_E_Label.Text = "도착지\r\n상세주소";
+            this.Ship_DetailedHarborName_E_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel15
+            // Ship_DetailedHarborName_E_TB
             // 
-            this.guna2HtmlLabel15.AutoSize = false;
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel15.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(25, 20);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel15.TabIndex = 6;
-            this.guna2HtmlLabel15.Text = "경로ID";
-            this.guna2HtmlLabel15.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_DetailedHarborName_E_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_DetailedHarborName_E_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_DetailedHarborName_E_TB.DefaultText = "";
+            this.Ship_DetailedHarborName_E_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_DetailedHarborName_E_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_DetailedHarborName_E_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_DetailedHarborName_E_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_DetailedHarborName_E_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_DetailedHarborName_E_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_DetailedHarborName_E_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_DetailedHarborName_E_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_DetailedHarborName_E_TB.Location = new System.Drawing.Point(150, 380);
+            this.Ship_DetailedHarborName_E_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_DetailedHarborName_E_TB.Name = "Ship_DetailedHarborName_E_TB";
+            this.Ship_DetailedHarborName_E_TB.PasswordChar = '\0';
+            this.Ship_DetailedHarborName_E_TB.PlaceholderText = "";
+            this.Ship_DetailedHarborName_E_TB.SelectedText = "";
+            this.Ship_DetailedHarborName_E_TB.Size = new System.Drawing.Size(462, 45);
+            this.Ship_DetailedHarborName_E_TB.TabIndex = 85;
             // 
-            // guna2TextBox16
+            // Ship_DetailedHarborName_S_Label
             // 
-            this.guna2TextBox16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox16.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox16.DefaultText = "";
-            this.guna2TextBox16.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox16.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox16.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox16.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox16.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox16.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox16.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox16.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox16.Location = new System.Drawing.Point(150, 20);
-            this.guna2TextBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox16.Name = "guna2TextBox16";
-            this.guna2TextBox16.PasswordChar = '\0';
-            this.guna2TextBox16.PlaceholderText = "";
-            this.guna2TextBox16.ReadOnly = true;
-            this.guna2TextBox16.SelectedText = "";
-            this.guna2TextBox16.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox16.TabIndex = 5;
+            this.Ship_DetailedHarborName_S_Label.AutoSize = false;
+            this.Ship_DetailedHarborName_S_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_DetailedHarborName_S_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_DetailedHarborName_S_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_DetailedHarborName_S_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_DetailedHarborName_S_Label.Location = new System.Drawing.Point(25, 320);
+            this.Ship_DetailedHarborName_S_Label.Name = "Ship_DetailedHarborName_S_Label";
+            this.Ship_DetailedHarborName_S_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_DetailedHarborName_S_Label.TabIndex = 84;
+            this.Ship_DetailedHarborName_S_Label.Text = "출발지\r\n상세주소\r\n";
+            this.Ship_DetailedHarborName_S_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel16
+            // Ship_DetailedHarborName_S_TB
             // 
-            this.guna2HtmlLabel16.AutoSize = false;
-            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel16.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(25, 380);
-            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel16.TabIndex = 86;
-            this.guna2HtmlLabel16.Text = "주소";
-            this.guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_DetailedHarborName_S_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_DetailedHarborName_S_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_DetailedHarborName_S_TB.DefaultText = "";
+            this.Ship_DetailedHarborName_S_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_DetailedHarborName_S_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_DetailedHarborName_S_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_DetailedHarborName_S_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_DetailedHarborName_S_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_DetailedHarborName_S_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_DetailedHarborName_S_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_DetailedHarborName_S_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_DetailedHarborName_S_TB.Location = new System.Drawing.Point(150, 320);
+            this.Ship_DetailedHarborName_S_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_DetailedHarborName_S_TB.Name = "Ship_DetailedHarborName_S_TB";
+            this.Ship_DetailedHarborName_S_TB.PasswordChar = '\0';
+            this.Ship_DetailedHarborName_S_TB.PlaceholderText = "";
+            this.Ship_DetailedHarborName_S_TB.SelectedText = "";
+            this.Ship_DetailedHarborName_S_TB.Size = new System.Drawing.Size(462, 45);
+            this.Ship_DetailedHarborName_S_TB.TabIndex = 83;
             // 
-            // guna2TextBox17
+            // Ship_ShipRouteOdsayIDE_Label
             // 
-            this.guna2TextBox17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox17.DefaultText = "";
-            this.guna2TextBox17.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox17.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox17.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox17.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox17.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox17.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox17.Location = new System.Drawing.Point(150, 380);
-            this.guna2TextBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox17.Name = "guna2TextBox17";
-            this.guna2TextBox17.PasswordChar = '\0';
-            this.guna2TextBox17.PlaceholderText = "";
-            this.guna2TextBox17.ReadOnly = true;
-            this.guna2TextBox17.SelectedText = "";
-            this.guna2TextBox17.Size = new System.Drawing.Size(462, 45);
-            this.guna2TextBox17.TabIndex = 85;
+            this.Ship_ShipRouteOdsayIDE_Label.AutoSize = false;
+            this.Ship_ShipRouteOdsayIDE_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRouteOdsayIDE_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipRouteOdsayIDE_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipRouteOdsayIDE_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRouteOdsayIDE_Label.Location = new System.Drawing.Point(325, 260);
+            this.Ship_ShipRouteOdsayIDE_Label.Name = "Ship_ShipRouteOdsayIDE_Label";
+            this.Ship_ShipRouteOdsayIDE_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipRouteOdsayIDE_Label.TabIndex = 78;
+            this.Ship_ShipRouteOdsayIDE_Label.Text = "ODSayID_E";
+            this.Ship_ShipRouteOdsayIDE_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel17
+            // Ship_ShipRouteOdsayIDE_TB
             // 
-            this.guna2HtmlLabel17.AutoSize = false;
-            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel17.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(25, 320);
-            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel17.TabIndex = 84;
-            this.guna2HtmlLabel17.Text = "홈페이지";
-            this.guna2HtmlLabel17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipRouteOdsayIDE_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRouteOdsayIDE_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipRouteOdsayIDE_TB.DefaultText = "";
+            this.Ship_ShipRouteOdsayIDE_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipRouteOdsayIDE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipRouteOdsayIDE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRouteOdsayIDE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRouteOdsayIDE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRouteOdsayIDE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipRouteOdsayIDE_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRouteOdsayIDE_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRouteOdsayIDE_TB.Location = new System.Drawing.Point(450, 260);
+            this.Ship_ShipRouteOdsayIDE_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipRouteOdsayIDE_TB.Name = "Ship_ShipRouteOdsayIDE_TB";
+            this.Ship_ShipRouteOdsayIDE_TB.PasswordChar = '\0';
+            this.Ship_ShipRouteOdsayIDE_TB.PlaceholderText = "";
+            this.Ship_ShipRouteOdsayIDE_TB.ReadOnly = true;
+            this.Ship_ShipRouteOdsayIDE_TB.SelectedText = "";
+            this.Ship_ShipRouteOdsayIDE_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipRouteOdsayIDE_TB.TabIndex = 77;
             // 
-            // guna2TextBox18
+            // Ship_ShipRouteOdsayIDS_Label
             // 
-            this.guna2TextBox18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox18.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox18.DefaultText = "";
-            this.guna2TextBox18.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox18.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox18.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox18.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox18.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox18.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox18.Location = new System.Drawing.Point(150, 320);
-            this.guna2TextBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox18.Name = "guna2TextBox18";
-            this.guna2TextBox18.PasswordChar = '\0';
-            this.guna2TextBox18.PlaceholderText = "";
-            this.guna2TextBox18.ReadOnly = true;
-            this.guna2TextBox18.SelectedText = "";
-            this.guna2TextBox18.Size = new System.Drawing.Size(462, 45);
-            this.guna2TextBox18.TabIndex = 83;
+            this.Ship_ShipRouteOdsayIDS_Label.AutoSize = false;
+            this.Ship_ShipRouteOdsayIDS_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRouteOdsayIDS_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipRouteOdsayIDS_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipRouteOdsayIDS_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRouteOdsayIDS_Label.Location = new System.Drawing.Point(325, 200);
+            this.Ship_ShipRouteOdsayIDS_Label.Name = "Ship_ShipRouteOdsayIDS_Label";
+            this.Ship_ShipRouteOdsayIDS_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipRouteOdsayIDS_Label.TabIndex = 76;
+            this.Ship_ShipRouteOdsayIDS_Label.Text = "ODSayID_S";
+            this.Ship_ShipRouteOdsayIDS_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel20
+            // Ship_ShipRouteOdsayIDS_TB
             // 
-            this.guna2HtmlLabel20.AutoSize = false;
-            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel20.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(325, 260);
-            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel20.TabIndex = 78;
-            this.guna2HtmlLabel20.Text = "ODSayID_E";
-            this.guna2HtmlLabel20.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipRouteOdsayIDS_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipRouteOdsayIDS_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipRouteOdsayIDS_TB.DefaultText = "";
+            this.Ship_ShipRouteOdsayIDS_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipRouteOdsayIDS_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipRouteOdsayIDS_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRouteOdsayIDS_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipRouteOdsayIDS_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRouteOdsayIDS_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipRouteOdsayIDS_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipRouteOdsayIDS_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipRouteOdsayIDS_TB.Location = new System.Drawing.Point(450, 200);
+            this.Ship_ShipRouteOdsayIDS_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipRouteOdsayIDS_TB.Name = "Ship_ShipRouteOdsayIDS_TB";
+            this.Ship_ShipRouteOdsayIDS_TB.PasswordChar = '\0';
+            this.Ship_ShipRouteOdsayIDS_TB.PlaceholderText = "";
+            this.Ship_ShipRouteOdsayIDS_TB.ReadOnly = true;
+            this.Ship_ShipRouteOdsayIDS_TB.SelectedText = "";
+            this.Ship_ShipRouteOdsayIDS_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipRouteOdsayIDS_TB.TabIndex = 75;
             // 
-            // guna2TextBox21
+            // Ship_ShipSortation_Label
             // 
-            this.guna2TextBox21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox21.DefaultText = "";
-            this.guna2TextBox21.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox21.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox21.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox21.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox21.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox21.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox21.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox21.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox21.Location = new System.Drawing.Point(450, 260);
-            this.guna2TextBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox21.Name = "guna2TextBox21";
-            this.guna2TextBox21.PasswordChar = '\0';
-            this.guna2TextBox21.PlaceholderText = "";
-            this.guna2TextBox21.ReadOnly = true;
-            this.guna2TextBox21.SelectedText = "";
-            this.guna2TextBox21.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox21.TabIndex = 77;
+            this.Ship_ShipSortation_Label.AutoSize = false;
+            this.Ship_ShipSortation_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipSortation_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_ShipSortation_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_ShipSortation_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipSortation_Label.Location = new System.Drawing.Point(325, 140);
+            this.Ship_ShipSortation_Label.Name = "Ship_ShipSortation_Label";
+            this.Ship_ShipSortation_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_ShipSortation_Label.TabIndex = 74;
+            this.Ship_ShipSortation_Label.Text = "구분항구";
+            this.Ship_ShipSortation_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel21
+            // Ship_ShipSortation_TB
             // 
-            this.guna2HtmlLabel21.AutoSize = false;
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel21.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(325, 200);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel21.TabIndex = 76;
-            this.guna2HtmlLabel21.Text = "ODSayID_S";
-            this.guna2HtmlLabel21.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_ShipSortation_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_ShipSortation_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_ShipSortation_TB.DefaultText = "";
+            this.Ship_ShipSortation_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_ShipSortation_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_ShipSortation_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipSortation_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_ShipSortation_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipSortation_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_ShipSortation_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_ShipSortation_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_ShipSortation_TB.Location = new System.Drawing.Point(450, 140);
+            this.Ship_ShipSortation_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_ShipSortation_TB.Name = "Ship_ShipSortation_TB";
+            this.Ship_ShipSortation_TB.PasswordChar = '\0';
+            this.Ship_ShipSortation_TB.PlaceholderText = "";
+            this.Ship_ShipSortation_TB.SelectedText = "";
+            this.Ship_ShipSortation_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_ShipSortation_TB.TabIndex = 73;
             // 
-            // guna2TextBox22
+            // Ship_HarborE_Label
             // 
-            this.guna2TextBox22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox22.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox22.DefaultText = "";
-            this.guna2TextBox22.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox22.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox22.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox22.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox22.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox22.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox22.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox22.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox22.Location = new System.Drawing.Point(450, 200);
-            this.guna2TextBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox22.Name = "guna2TextBox22";
-            this.guna2TextBox22.PasswordChar = '\0';
-            this.guna2TextBox22.PlaceholderText = "";
-            this.guna2TextBox22.ReadOnly = true;
-            this.guna2TextBox22.SelectedText = "";
-            this.guna2TextBox22.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox22.TabIndex = 75;
+            this.Ship_HarborE_Label.AutoSize = false;
+            this.Ship_HarborE_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborE_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_HarborE_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_HarborE_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborE_Label.Location = new System.Drawing.Point(325, 80);
+            this.Ship_HarborE_Label.Name = "Ship_HarborE_Label";
+            this.Ship_HarborE_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_HarborE_Label.TabIndex = 72;
+            this.Ship_HarborE_Label.Text = "도착항";
+            this.Ship_HarborE_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel22
+            // Ship_HarborE_TB
             // 
-            this.guna2HtmlLabel22.AutoSize = false;
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(325, 140);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel22.TabIndex = 74;
-            this.guna2HtmlLabel22.Text = "구분항구";
-            this.guna2HtmlLabel22.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_HarborE_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborE_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_HarborE_TB.DefaultText = "";
+            this.Ship_HarborE_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_HarborE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_HarborE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_HarborE_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborE_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborE_TB.Location = new System.Drawing.Point(450, 80);
+            this.Ship_HarborE_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_HarborE_TB.Name = "Ship_HarborE_TB";
+            this.Ship_HarborE_TB.PasswordChar = '\0';
+            this.Ship_HarborE_TB.PlaceholderText = "";
+            this.Ship_HarborE_TB.SelectedText = "";
+            this.Ship_HarborE_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_HarborE_TB.TabIndex = 71;
             // 
-            // guna2TextBox23
+            // Ship_HarborS_Label
             // 
-            this.guna2TextBox23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox23.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox23.DefaultText = "";
-            this.guna2TextBox23.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox23.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox23.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox23.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox23.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox23.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox23.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox23.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox23.Location = new System.Drawing.Point(450, 140);
-            this.guna2TextBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox23.Name = "guna2TextBox23";
-            this.guna2TextBox23.PasswordChar = '\0';
-            this.guna2TextBox23.PlaceholderText = "";
-            this.guna2TextBox23.ReadOnly = true;
-            this.guna2TextBox23.SelectedText = "";
-            this.guna2TextBox23.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox23.TabIndex = 73;
+            this.Ship_HarborS_Label.AutoSize = false;
+            this.Ship_HarborS_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborS_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_HarborS_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_HarborS_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborS_Label.Location = new System.Drawing.Point(325, 20);
+            this.Ship_HarborS_Label.Name = "Ship_HarborS_Label";
+            this.Ship_HarborS_Label.Size = new System.Drawing.Size(112, 45);
+            this.Ship_HarborS_Label.TabIndex = 70;
+            this.Ship_HarborS_Label.Text = "출발항";
+            this.Ship_HarborS_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel23
+            // Ship_HarborS_TB
             // 
-            this.guna2HtmlLabel23.AutoSize = false;
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(325, 80);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel23.TabIndex = 72;
-            this.guna2HtmlLabel23.Text = "도착항";
-            this.guna2HtmlLabel23.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_HarborS_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborS_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_HarborS_TB.DefaultText = "";
+            this.Ship_HarborS_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_HarborS_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_HarborS_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborS_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborS_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborS_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_HarborS_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborS_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborS_TB.Location = new System.Drawing.Point(450, 20);
+            this.Ship_HarborS_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_HarborS_TB.Name = "Ship_HarborS_TB";
+            this.Ship_HarborS_TB.PasswordChar = '\0';
+            this.Ship_HarborS_TB.PlaceholderText = "";
+            this.Ship_HarborS_TB.SelectedText = "";
+            this.Ship_HarborS_TB.Size = new System.Drawing.Size(162, 45);
+            this.Ship_HarborS_TB.TabIndex = 69;
             // 
-            // guna2TextBox24
+            // Ship_HarborEID_Label
             // 
-            this.guna2TextBox24.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox24.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox24.DefaultText = "";
-            this.guna2TextBox24.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox24.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox24.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox24.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox24.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox24.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox24.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox24.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox24.Location = new System.Drawing.Point(450, 80);
-            this.guna2TextBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox24.Name = "guna2TextBox24";
-            this.guna2TextBox24.PasswordChar = '\0';
-            this.guna2TextBox24.PlaceholderText = "";
-            this.guna2TextBox24.ReadOnly = true;
-            this.guna2TextBox24.SelectedText = "";
-            this.guna2TextBox24.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox24.TabIndex = 71;
+            this.Ship_HarborEID_Label.AutoSize = false;
+            this.Ship_HarborEID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborEID_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_HarborEID_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_HarborEID_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborEID_Label.Location = new System.Drawing.Point(25, 260);
+            this.Ship_HarborEID_Label.Name = "Ship_HarborEID_Label";
+            this.Ship_HarborEID_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_HarborEID_Label.TabIndex = 68;
+            this.Ship_HarborEID_Label.Text = "도착지ID";
+            this.Ship_HarborEID_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel24
+            // Ship_HarborEID_TB
             // 
-            this.guna2HtmlLabel24.AutoSize = false;
-            this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel24.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel24.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(325, 20);
-            this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(112, 45);
-            this.guna2HtmlLabel24.TabIndex = 70;
-            this.guna2HtmlLabel24.Text = "출발항";
-            this.guna2HtmlLabel24.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_HarborEID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborEID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_HarborEID_TB.DefaultText = "";
+            this.Ship_HarborEID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_HarborEID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_HarborEID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborEID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborEID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborEID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_HarborEID_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborEID_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborEID_TB.Location = new System.Drawing.Point(150, 260);
+            this.Ship_HarborEID_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_HarborEID_TB.Name = "Ship_HarborEID_TB";
+            this.Ship_HarborEID_TB.PasswordChar = '\0';
+            this.Ship_HarborEID_TB.PlaceholderText = "";
+            this.Ship_HarborEID_TB.ReadOnly = true;
+            this.Ship_HarborEID_TB.SelectedText = "";
+            this.Ship_HarborEID_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_HarborEID_TB.TabIndex = 67;
             // 
-            // guna2TextBox25
+            // Ship_HarborSID_Label
             // 
-            this.guna2TextBox25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox25.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox25.DefaultText = "";
-            this.guna2TextBox25.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox25.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox25.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox25.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox25.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox25.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox25.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox25.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox25.Location = new System.Drawing.Point(450, 20);
-            this.guna2TextBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox25.Name = "guna2TextBox25";
-            this.guna2TextBox25.PasswordChar = '\0';
-            this.guna2TextBox25.PlaceholderText = "";
-            this.guna2TextBox25.ReadOnly = true;
-            this.guna2TextBox25.SelectedText = "";
-            this.guna2TextBox25.Size = new System.Drawing.Size(162, 45);
-            this.guna2TextBox25.TabIndex = 69;
+            this.Ship_HarborSID_Label.AutoSize = false;
+            this.Ship_HarborSID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborSID_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_HarborSID_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_HarborSID_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborSID_Label.Location = new System.Drawing.Point(25, 200);
+            this.Ship_HarborSID_Label.Name = "Ship_HarborSID_Label";
+            this.Ship_HarborSID_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_HarborSID_Label.TabIndex = 66;
+            this.Ship_HarborSID_Label.Text = "출발지ID";
+            this.Ship_HarborSID_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel25
+            // Ship_HarborSID_TB
             // 
-            this.guna2HtmlLabel25.AutoSize = false;
-            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel25.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(25, 260);
-            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel25.TabIndex = 68;
-            this.guna2HtmlLabel25.Text = "도착지ID";
-            this.guna2HtmlLabel25.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_HarborSID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborSID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_HarborSID_TB.DefaultText = "";
+            this.Ship_HarborSID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_HarborSID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_HarborSID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborSID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborSID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborSID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_HarborSID_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborSID_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborSID_TB.Location = new System.Drawing.Point(150, 200);
+            this.Ship_HarborSID_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_HarborSID_TB.Name = "Ship_HarborSID_TB";
+            this.Ship_HarborSID_TB.PasswordChar = '\0';
+            this.Ship_HarborSID_TB.PlaceholderText = "";
+            this.Ship_HarborSID_TB.ReadOnly = true;
+            this.Ship_HarborSID_TB.SelectedText = "";
+            this.Ship_HarborSID_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_HarborSID_TB.TabIndex = 65;
             // 
-            // guna2TextBox26
+            // Ship_Sortation_Label
             // 
-            this.guna2TextBox26.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox26.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox26.DefaultText = "";
-            this.guna2TextBox26.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox26.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox26.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox26.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox26.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox26.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox26.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox26.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox26.Location = new System.Drawing.Point(150, 260);
-            this.guna2TextBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox26.Name = "guna2TextBox26";
-            this.guna2TextBox26.PasswordChar = '\0';
-            this.guna2TextBox26.PlaceholderText = "";
-            this.guna2TextBox26.ReadOnly = true;
-            this.guna2TextBox26.SelectedText = "";
-            this.guna2TextBox26.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox26.TabIndex = 67;
+            this.Ship_Sortation_Label.AutoSize = false;
+            this.Ship_Sortation_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_Sortation_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_Sortation_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_Sortation_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_Sortation_Label.Location = new System.Drawing.Point(25, 140);
+            this.Ship_Sortation_Label.Name = "Ship_Sortation_Label";
+            this.Ship_Sortation_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_Sortation_Label.TabIndex = 64;
+            this.Ship_Sortation_Label.Text = "구분";
+            this.Ship_Sortation_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel26
+            // Ship_HarborSE_Label
             // 
-            this.guna2HtmlLabel26.AutoSize = false;
-            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel26.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel26.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(25, 200);
-            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel26.TabIndex = 66;
-            this.guna2HtmlLabel26.Text = "출발지ID";
-            this.guna2HtmlLabel26.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_HarborSE_Label.AutoSize = false;
+            this.Ship_HarborSE_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborSE_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_HarborSE_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_HarborSE_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborSE_Label.Location = new System.Drawing.Point(25, 80);
+            this.Ship_HarborSE_Label.Name = "Ship_HarborSE_Label";
+            this.Ship_HarborSE_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_HarborSE_Label.TabIndex = 62;
+            this.Ship_HarborSE_Label.Text = "출도착지";
+            this.Ship_HarborSE_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox27
+            // Ship_HarborSE_TB
             // 
-            this.guna2TextBox27.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox27.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox27.DefaultText = "";
-            this.guna2TextBox27.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox27.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox27.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox27.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox27.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox27.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox27.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox27.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox27.Location = new System.Drawing.Point(150, 200);
-            this.guna2TextBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox27.Name = "guna2TextBox27";
-            this.guna2TextBox27.PasswordChar = '\0';
-            this.guna2TextBox27.PlaceholderText = "";
-            this.guna2TextBox27.ReadOnly = true;
-            this.guna2TextBox27.SelectedText = "";
-            this.guna2TextBox27.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox27.TabIndex = 65;
+            this.Ship_HarborSE_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_HarborSE_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_HarborSE_TB.DefaultText = "";
+            this.Ship_HarborSE_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_HarborSE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_HarborSE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborSE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_HarborSE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborSE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_HarborSE_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_HarborSE_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_HarborSE_TB.Location = new System.Drawing.Point(150, 80);
+            this.Ship_HarborSE_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_HarborSE_TB.Name = "Ship_HarborSE_TB";
+            this.Ship_HarborSE_TB.PasswordChar = '\0';
+            this.Ship_HarborSE_TB.PlaceholderText = "";
+            this.Ship_HarborSE_TB.SelectedText = "";
+            this.Ship_HarborSE_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_HarborSE_TB.TabIndex = 61;
             // 
-            // guna2HtmlLabel27
+            // Ship_RouteID_Label
             // 
-            this.guna2HtmlLabel27.AutoSize = false;
-            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel27.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(25, 140);
-            this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel27.TabIndex = 64;
-            this.guna2HtmlLabel27.Text = "구분";
-            this.guna2HtmlLabel27.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ship_RouteID_Label.AutoSize = false;
+            this.Ship_RouteID_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_RouteID_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ship_RouteID_Label.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Ship_RouteID_Label.ForeColor = System.Drawing.Color.Black;
+            this.Ship_RouteID_Label.Location = new System.Drawing.Point(25, 20);
+            this.Ship_RouteID_Label.Name = "Ship_RouteID_Label";
+            this.Ship_RouteID_Label.Size = new System.Drawing.Size(100, 45);
+            this.Ship_RouteID_Label.TabIndex = 6;
+            this.Ship_RouteID_Label.Text = "경로ID";
+            this.Ship_RouteID_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox28
+            // Ship_RouteID_TB
             // 
-            this.guna2TextBox28.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox28.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox28.DefaultText = "";
-            this.guna2TextBox28.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox28.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox28.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox28.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox28.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox28.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox28.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox28.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox28.Location = new System.Drawing.Point(150, 140);
-            this.guna2TextBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox28.Name = "guna2TextBox28";
-            this.guna2TextBox28.PasswordChar = '\0';
-            this.guna2TextBox28.PlaceholderText = "";
-            this.guna2TextBox28.ReadOnly = true;
-            this.guna2TextBox28.SelectedText = "";
-            this.guna2TextBox28.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox28.TabIndex = 63;
-            // 
-            // guna2HtmlLabel28
-            // 
-            this.guna2HtmlLabel28.AutoSize = false;
-            this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel28.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(25, 80);
-            this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(100, 45);
-            this.guna2HtmlLabel28.TabIndex = 62;
-            this.guna2HtmlLabel28.Text = "출도착지";
-            this.guna2HtmlLabel28.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2TextBox29
-            // 
-            this.guna2TextBox29.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox29.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox29.DefaultText = "";
-            this.guna2TextBox29.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox29.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox29.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox29.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox29.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox29.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox29.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox29.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox29.Location = new System.Drawing.Point(150, 80);
-            this.guna2TextBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox29.Name = "guna2TextBox29";
-            this.guna2TextBox29.PasswordChar = '\0';
-            this.guna2TextBox29.PlaceholderText = "";
-            this.guna2TextBox29.ReadOnly = true;
-            this.guna2TextBox29.SelectedText = "";
-            this.guna2TextBox29.Size = new System.Drawing.Size(150, 45);
-            this.guna2TextBox29.TabIndex = 61;
+            this.Ship_RouteID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_RouteID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Ship_RouteID_TB.DefaultText = "";
+            this.Ship_RouteID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Ship_RouteID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Ship_RouteID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_RouteID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Ship_RouteID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_RouteID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Ship_RouteID_TB.ForeColor = System.Drawing.Color.Black;
+            this.Ship_RouteID_TB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Ship_RouteID_TB.Location = new System.Drawing.Point(150, 20);
+            this.Ship_RouteID_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Ship_RouteID_TB.Name = "Ship_RouteID_TB";
+            this.Ship_RouteID_TB.PasswordChar = '\0';
+            this.Ship_RouteID_TB.PlaceholderText = "";
+            this.Ship_RouteID_TB.ReadOnly = true;
+            this.Ship_RouteID_TB.SelectedText = "";
+            this.Ship_RouteID_TB.Size = new System.Drawing.Size(150, 45);
+            this.Ship_RouteID_TB.TabIndex = 5;
             // 
             // ShipAdd
             // 
@@ -1840,68 +1776,66 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_CityCode_Label;
         private Guna.UI2.WinForms.Guna2TextBox Ship_CityCode_TB;
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ID_Label;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_PortID_TB;
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_Addr_Label;
         private Guna.UI2.WinForms.Guna2TextBox Ship_Addr_TB;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_8_Label;
-        private Guna.UI2.WinForms.Guna2TextBox Ship_8_TB;
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_Harbor3_Label;
         private Guna.UI2.WinForms.Guna2TextBox Ship_Harbor3_TB;
         private Guna.UI2.WinForms.Guna2Button Ship_XYMap_Bt;
         private Guna.UI2.WinForms.Guna2Button Ship_TestUpdate_BT;
         private Guna.UI2.WinForms.Guna2Button Ship_Clear_BT;
         private Guna.UI2.WinForms.Guna2Button Ship_Update_BT;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox13;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox14;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox15;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox17;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox18;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox21;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox23;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox24;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox25;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox26;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox27;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox28;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox29;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox16;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipURL_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipURL_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCompanyID_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCompanyID_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCapacity_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCapacity_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCompanyDate_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCompanyDate_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipKnot_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipKnot_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipRoute_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipRoute_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCarNum_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCarNum_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCar_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipType_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipType_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipName_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipName_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCompanyNum_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCompanyNum_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipCompanyName_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipCompanyName_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_BusinessNum_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_BusinessNum_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipAddress_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipAddress_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_DetailedHarborName_E_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_DetailedHarborName_E_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_DetailedHarborName_S_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_DetailedHarborName_S_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipRouteOdsayIDE_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipRouteOdsayIDE_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipRouteOdsayIDS_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipRouteOdsayIDS_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipSortation_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_ShipSortation_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_HarborE_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_HarborE_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_HarborS_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_HarborS_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_HarborEID_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_HarborEID_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_HarborSID_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_HarborSID_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_Sortation_Label;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_HarborSE_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_HarborSE_TB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ship_RouteID_Label;
+        private Guna.UI2.WinForms.Guna2TextBox Ship_RouteID_TB;
+        private Guna.UI2.WinForms.Guna2ComboBox Ship_Sortation_CB;
+        private Guna.UI2.WinForms.Guna2ComboBox Ship_ShipCar_CB;
     }
 }

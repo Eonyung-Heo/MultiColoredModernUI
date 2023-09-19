@@ -54,6 +54,7 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btnAirPlane = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.White;
+            this.panelSideMenu.Controls.Add(this.btnAirPlane);
             this.panelSideMenu.Controls.Add(this.panelShipSubMenu);
             this.panelSideMenu.Controls.Add(this.btnShipProducts);
             this.panelSideMenu.Controls.Add(this.panelProductsSubMenu);
@@ -89,7 +91,7 @@
             this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShipSubMenu.Location = new System.Drawing.Point(0, 395);
             this.panelShipSubMenu.Name = "panelShipSubMenu";
-            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 130);
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 136);
             this.panelShipSubMenu.TabIndex = 10;
             // 
             // btnShipLoad
@@ -108,6 +110,7 @@
             this.btnShipLoad.Text = "해운 데이터 수정";
             this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShipLoad.UseVisualStyleBackColor = false;
+            this.btnShipLoad.Click += new System.EventHandler(this.btnShipLoad_Click);
             // 
             // btnShipAdd
             // 
@@ -444,6 +447,22 @@
             this.panelDeskTop.Size = new System.Drawing.Size(889, 583);
             this.panelDeskTop.TabIndex = 2;
             // 
+            // btnAirPlane
+            // 
+            this.btnAirPlane.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAirPlane.FlatAppearance.BorderSize = 0;
+            this.btnAirPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAirPlane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAirPlane.ForeColor = System.Drawing.Color.Black;
+            this.btnAirPlane.Location = new System.Drawing.Point(0, 531);
+            this.btnAirPlane.Name = "btnAirPlane";
+            this.btnAirPlane.Size = new System.Drawing.Size(204, 45);
+            this.btnAirPlane.TabIndex = 11;
+            this.btnAirPlane.Text = "항공";
+            this.btnAirPlane.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAirPlane.UseVisualStyleBackColor = true;
+            this.btnAirPlane.Click += new System.EventHandler(this.btnAirPlane_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -493,6 +512,7 @@
         private System.Windows.Forms.Button btnShipProducts;
         private System.Windows.Forms.Button btnShipLoad;
         private System.Windows.Forms.Button btnShipAdd;
+        private System.Windows.Forms.Button btnAirPlane;
     }
 }
 

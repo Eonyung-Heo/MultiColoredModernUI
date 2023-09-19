@@ -13,6 +13,7 @@ using DF = MultiColoredModernUI.Forms.DashBoard;
 using SF = MultiColoredModernUI.Forms.Subway;
 using MF = MultiColoredModernUI.Forms.Master;
 using SpF = MultiColoredModernUI.Forms.Ship;
+using SaF = MultiColoredModernUI.Forms.Airplane;
 using System.Net.NetworkInformation;
 
 namespace MultiColoredModernUI
@@ -36,6 +37,9 @@ namespace MultiColoredModernUI
         public SpF.ShipData spfShipCrawling = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SaF.AirData safAirData = new SaF.AirData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
@@ -452,13 +456,14 @@ namespace MultiColoredModernUI
                 ShowWindow(GetActiveWindow(), 2);
         }
 
+        // 버튼 클릭시 시작하는 화면 나오는곳
         private void btnShipProducts_Click(object sender, EventArgs e)
         {
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
-            btnShipCollection_Click((Button)btnShipCollection, e);
-            btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
-            btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
+            btnShipCollection_Click((Button)btnShipCollection, e); 
+            //btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
+            //btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
         }
 
         private void btnShipCollection_Click(object sender, EventArgs e)
@@ -479,6 +484,14 @@ namespace MultiColoredModernUI
         {
             OpenChildForm(spfShipLoad, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "해운 데이터 수정 선택");
+        }
+
+        //상용추가
+        private void btnAirPlane_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(safAirData, sender);
+            hideSubMenu();
+            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 선택");
         }
     }
 }

@@ -282,6 +282,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Airplane\AirData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Airplane\AirData.Designer.cs">
+      <DependentUpon>AirData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashBoard\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StaticMain.cs" />
+    <EmbeddedResource Include="Forms\Airplane\AirData.resx">
+      <DependentUpon>AirData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
