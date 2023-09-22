@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Guna2Button Air_ChromeDriverTermination_BT;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Air_DBupdate_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_DataDownload_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_Pagelink_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_DataCollection_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_DateTimePickerSearch_DTP = new System.Windows.Forms.DateTimePicker();
             this.Air_DataGridViewData = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Air_DBupdate_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_DataDownload_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_Pagelink_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_DataCollection_BT = new Guna.UI2.WinForms.Guna2Button();
             Air_ChromeDriverTermination_BT = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
-            this.Ship_MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Air_DataGridViewData)).BeginInit();
+            this.Ship_MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Air_ChromeDriverTermination_BT
@@ -84,6 +86,117 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1170, 655);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // Air_DataGridViewData
+            // 
+            this.Air_DataGridViewData.AllowUserToAddRows = false;
+            this.Air_DataGridViewData.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Air_DataGridViewData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Air_DataGridViewData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.Air_DataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Air_DataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Air_DataGridViewData.ColumnHeadersHeight = 26;
+            this.Air_DataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Air_DataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column1,
+            this.Column8,
+            this.Column9,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Air_DataGridViewData.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Air_DataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Air_DataGridViewData.GridColor = System.Drawing.Color.Black;
+            this.Air_DataGridViewData.Location = new System.Drawing.Point(0, 0);
+            this.Air_DataGridViewData.Name = "Air_DataGridViewData";
+            this.Air_DataGridViewData.RowHeadersVisible = false;
+            this.Air_DataGridViewData.RowTemplate.Height = 23;
+            this.Air_DataGridViewData.Size = new System.Drawing.Size(1170, 655);
+            this.Air_DataGridViewData.TabIndex = 1;
+            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.Air_DataGridViewData.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.Air_DataGridViewData.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.Height = 26;
+            this.Air_DataGridViewData.ThemeStyle.ReadOnly = false;
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.Height = 23;
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "항공사";
+            this.Column7.Name = "Column7";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "항공편";
+            this.Column1.Name = "Column1";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "출발지";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "도착지";
+            this.Column9.Name = "Column9";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "출발 시간";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "도착 시간";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "운항요일";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "운항 시작 기간";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "운행 종료 기간";
+            this.Column6.Name = "Column6";
+            // 
             // Ship_MainPanel
             // 
             this.Ship_MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -95,7 +208,6 @@
             this.Ship_MainPanel.Controls.Add(Air_ChromeDriverTermination_BT);
             this.Ship_MainPanel.Controls.Add(this.Air_Pagelink_BT);
             this.Ship_MainPanel.Controls.Add(this.Air_DataCollection_BT);
-            this.Ship_MainPanel.Controls.Add(this.Air_DateTimePickerSearch_DTP);
             this.Ship_MainPanel.Location = new System.Drawing.Point(15, 15);
             this.Ship_MainPanel.Name = "Ship_MainPanel";
             this.Ship_MainPanel.Size = new System.Drawing.Size(1170, 100);
@@ -136,6 +248,7 @@
             this.Air_DataDownload_BT.Size = new System.Drawing.Size(101, 60);
             this.Air_DataDownload_BT.TabIndex = 17;
             this.Air_DataDownload_BT.Text = "다운로드";
+            this.Air_DataDownload_BT.Click += new System.EventHandler(this.Air_DataDownload_BT_Click);
             // 
             // Air_Pagelink_BT
             // 
@@ -175,107 +288,6 @@
             this.Air_DataCollection_BT.Text = "데이터 수집";
             this.Air_DataCollection_BT.Click += new System.EventHandler(this.Air_DataCollection_BT_Click);
             // 
-            // Air_DateTimePickerSearch_DTP
-            // 
-            this.Air_DateTimePickerSearch_DTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Air_DateTimePickerSearch_DTP.Location = new System.Drawing.Point(958, 12);
-            this.Air_DateTimePickerSearch_DTP.Name = "Air_DateTimePickerSearch_DTP";
-            this.Air_DateTimePickerSearch_DTP.Size = new System.Drawing.Size(200, 21);
-            this.Air_DateTimePickerSearch_DTP.TabIndex = 12;
-            // 
-            // Air_DataGridViewData
-            // 
-            this.Air_DataGridViewData.AllowUserToAddRows = false;
-            this.Air_DataGridViewData.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Air_DataGridViewData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Air_DataGridViewData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.Air_DataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Air_DataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Air_DataGridViewData.ColumnHeadersHeight = 26;
-            this.Air_DataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.Air_DataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Air_DataGridViewData.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Air_DataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Air_DataGridViewData.GridColor = System.Drawing.Color.Black;
-            this.Air_DataGridViewData.Location = new System.Drawing.Point(0, 0);
-            this.Air_DataGridViewData.Name = "Air_DataGridViewData";
-            this.Air_DataGridViewData.RowHeadersVisible = false;
-            this.Air_DataGridViewData.RowTemplate.Height = 23;
-            this.Air_DataGridViewData.Size = new System.Drawing.Size(1170, 655);
-            this.Air_DataGridViewData.TabIndex = 1;
-            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.Air_DataGridViewData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.Air_DataGridViewData.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.Air_DataGridViewData.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.Air_DataGridViewData.ThemeStyle.HeaderStyle.Height = 26;
-            this.Air_DataGridViewData.ThemeStyle.ReadOnly = false;
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.Height = 23;
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "항공편";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "출발 시간";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "도착 시간";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "운항요일";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "운항기간-시작";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "운행기간-종료";
-            this.Column6.Name = "Column6";
-            // 
             // AirData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -288,8 +300,8 @@
             this.Name = "AirData";
             this.Text = "AirData";
             this.guna2Panel1.ResumeLayout(false);
-            this.Ship_MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Air_DataGridViewData)).EndInit();
+            this.Ship_MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,9 +315,11 @@
         private Guna.UI2.WinForms.Guna2Button Air_DataDownload_BT;
         private Guna.UI2.WinForms.Guna2Button Air_Pagelink_BT;
         private Guna.UI2.WinForms.Guna2Button Air_DataCollection_BT;
-        private System.Windows.Forms.DateTimePicker Air_DateTimePickerSearch_DTP;
         private Guna.UI2.WinForms.Guna2DataGridView Air_DataGridViewData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

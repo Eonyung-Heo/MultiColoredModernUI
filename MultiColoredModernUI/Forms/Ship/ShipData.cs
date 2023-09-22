@@ -14,7 +14,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Text.RegularExpressions;
 using System.IO;
-using ChromeDriverUpdater;
+//using ChromeDriverUpdater;
 using System.Data.SqlClient;
 
 using System.Threading;
@@ -69,7 +69,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 _driverService.HideCommandPromptWindow = true;
 
                 //드라이버 자동 업데이트 실행
-                Ship_chromeDriverUpdate();
+                //Ship_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
                 _options.AddArgument("headless");
@@ -130,7 +130,7 @@ namespace MultiColoredModernUI.Forms.Ship
             }
         }
 
-
+        /*
         //크롬 드라이버 자동업데이트 코드
         public void Ship_chromeDriverUpdate()
         {
@@ -144,7 +144,7 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 // ...
             }
-        }
+        }*/
 
         //캘린더의 년도월 대입 구문
         public void Ship_DateTimePickerSearch_ValueChanged(object sender, EventArgs e)
