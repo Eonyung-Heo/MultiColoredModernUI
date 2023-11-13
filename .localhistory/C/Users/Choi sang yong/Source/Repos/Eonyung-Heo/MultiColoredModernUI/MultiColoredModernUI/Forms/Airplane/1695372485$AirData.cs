@@ -47,7 +47,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 //Airplane_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                _options.AddArgument("headless");
+                //_options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");
@@ -127,7 +127,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                     Thread.Sleep(2000);
                     //노선 갯수 카운트
                     IWebElement RouteCountList = _driver.FindElement(By.XPath("//*[@id='outTbody']"));
-                    string RouteCountText = RouteCountList.Text;
+                    var RouteCountText = RouteCountList.Text;
                     RouteCount = RouteCountList.FindElements(By.TagName("tr")).Count;
                     if (RouteCountText == "검색된 데이터가 없습니다.")
                     {
@@ -149,7 +149,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                         {
                             IWebElement element = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[{daycount}]"));
 
-                            string innerHTML = element.GetAttribute("innerHTML");
+                            var innerHTML = element.GetAttribute("innerHTML");
                             
                             if (innerHTML.Contains("<img"))
                             {
@@ -184,10 +184,10 @@ namespace MultiColoredModernUI.Forms.Airplane
                         //운항기간이 2가지 일경우
                         else if (DatatestList.Length == 3)
                         {
-                            string DataSlicing1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
-                            string DataSlicing2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23);
-                            Data.AddRange(DataSlicing1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            var testdata1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
+                            var testdata2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23);
+                            Data.AddRange(testdata1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
                             DataList.Add(Data.ToList());
                             if (Air_DataGridViewData.InvokeRequired)
                             {
@@ -202,12 +202,12 @@ namespace MultiColoredModernUI.Forms.Airplane
                         // 운항기간이 3가지 일 경우
                         else if (DatatestList.Length > 3)
                         {
-                            string DataSlicing1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
-                            string DataSlicing2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23, 25);
-                            string DataSlicing3 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(48);
-                            Data.AddRange(DataSlicing1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing3.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            var testdata1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
+                            var testdata2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23, 25);
+                            var testdata3 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(48);
+                            Data.AddRange(testdata1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata3.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
                             DataList.Add(Data.ToList());
                             if (Air_DataGridViewData.InvokeRequired)
                             {
@@ -245,7 +245,6 @@ namespace MultiColoredModernUI.Forms.Airplane
             Thread th1 = new Thread(new ThreadStart(Airplane_DataCrawling));
             th1.Start();
         }
-
         public void Air_SaveFileOpenFile()
         {
             SaveFileDialog saveFile = new SaveFileDialog();
@@ -287,7 +286,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 {
                     //리스트 초기화
                     List<string> strList = new List<string>();
-                    /*
+
                     for (int j = 0; j < Air_DataGridViewData.Columns.Count; j++)
                     {
                         //strList.Add(Ship_DataGridViewData[j, i].Value.ToString());
@@ -295,7 +294,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                         string value = Air_DataGridViewData[j, i].Value.ToString();
                         value = value.Replace(",", "");
                         strList.Add(value);
-                    }*/
+                    }
                     String[] strArray = strList.ToArray(); //배열로 변환
                     //CSV 형식으로 변환
                     String strCsvData = String.Join(",", strArray);

@@ -47,7 +47,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 //Airplane_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                _options.AddArgument("headless");
+                //_options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");

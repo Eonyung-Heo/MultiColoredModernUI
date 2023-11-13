@@ -87,11 +87,6 @@
             this.Ship_Clear_BT2 = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_Update_BT2 = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_DataGridViewData_Company_DG = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShipName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShipRoute = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_ShipAddress_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_ShipURL_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Ship_ShipCompanyID_Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -142,6 +137,11 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShipName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShipRoute = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_Load_Panel.SuspendLayout();
             this.Ship_Load_TabControl.SuspendLayout();
             this.Ship_Route_page.SuspendLayout();
@@ -1133,31 +1133,6 @@
             this.Ship_DataGridViewData_Company_DG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.Ship_DataGridViewData_Company_DG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Ship_DataGridViewData_Company_DG_CellClick);
             // 
-            // CompanyID
-            // 
-            this.CompanyID.HeaderText = "아로 선사ID";
-            this.CompanyID.Name = "CompanyID";
-            // 
-            // CompanyName
-            // 
-            this.CompanyName.HeaderText = "선사명";
-            this.CompanyName.Name = "CompanyName";
-            // 
-            // ShipName
-            // 
-            this.ShipName.HeaderText = "선박명";
-            this.ShipName.Name = "ShipName";
-            // 
-            // ShipType
-            // 
-            this.ShipType.HeaderText = "선종";
-            this.ShipType.Name = "ShipType";
-            // 
-            // ShipRoute
-            // 
-            this.ShipRoute.HeaderText = "운행구간";
-            this.ShipRoute.Name = "ShipRoute";
-            // 
             // Ship_ShipAddress_Label
             // 
             this.Ship_ShipAddress_Label.AutoSize = false;
@@ -2031,6 +2006,31 @@
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "행정구역";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // CompanyID
+            // 
+            this.CompanyID.HeaderText = "아로 선사ID";
+            this.CompanyID.Name = "CompanyID";
+            // 
+            // CompanyName
+            // 
+            this.CompanyName.HeaderText = "선사명";
+            this.CompanyName.Name = "CompanyName";
+            // 
+            // ShipName
+            // 
+            this.ShipName.HeaderText = "선박명";
+            this.ShipName.Name = "ShipName";
+            // 
+            // ShipType
+            // 
+            this.ShipType.HeaderText = "선종";
+            this.ShipType.Name = "ShipType";
+            // 
+            // ShipRoute
+            // 
+            this.ShipRoute.HeaderText = "운행구간";
+            this.ShipRoute.Name = "ShipRoute";
             // 
             // ShipLoad
             // 

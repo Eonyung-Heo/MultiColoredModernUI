@@ -47,7 +47,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 //Airplane_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                _options.AddArgument("headless");
+                //_options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");
@@ -149,7 +149,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                         {
                             IWebElement element = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[{daycount}]"));
 
-                            string innerHTML = element.GetAttribute("innerHTML");
+                            var innerHTML = element.GetAttribute("innerHTML");
                             
                             if (innerHTML.Contains("<img"))
                             {
@@ -184,10 +184,10 @@ namespace MultiColoredModernUI.Forms.Airplane
                         //운항기간이 2가지 일경우
                         else if (DatatestList.Length == 3)
                         {
-                            string DataSlicing1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
-                            string DataSlicing2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23);
-                            Data.AddRange(DataSlicing1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            string testdata1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
+                            string testdata2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23);
+                            Data.AddRange(testdata1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
                             DataList.Add(Data.ToList());
                             if (Air_DataGridViewData.InvokeRequired)
                             {
@@ -202,12 +202,12 @@ namespace MultiColoredModernUI.Forms.Airplane
                         // 운항기간이 3가지 일 경우
                         else if (DatatestList.Length > 3)
                         {
-                            string DataSlicing1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
-                            string DataSlicing2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23, 25);
-                            string DataSlicing3 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(48);
-                            Data.AddRange(DataSlicing1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                            Data.AddRange(DataSlicing3.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            string testdata1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(0, 23);
+                            string testdata2 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(23, 25);
+                            string testdata3 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Substring(48);
+                            Data.AddRange(testdata1.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
+                            Data.AddRange(testdata3.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
                             DataList.Add(Data.ToList());
                             if (Air_DataGridViewData.InvokeRequired)
                             {
@@ -245,7 +245,6 @@ namespace MultiColoredModernUI.Forms.Airplane
             Thread th1 = new Thread(new ThreadStart(Airplane_DataCrawling));
             th1.Start();
         }
-
         public void Air_SaveFileOpenFile()
         {
             SaveFileDialog saveFile = new SaveFileDialog();

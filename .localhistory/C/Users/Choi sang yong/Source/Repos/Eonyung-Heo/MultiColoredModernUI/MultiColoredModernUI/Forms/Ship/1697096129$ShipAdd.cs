@@ -30,8 +30,8 @@ namespace MultiColoredModernUI.Forms.Ship
         public void Connect()
         {
             // db접속정보
-            sqlConnect = new SqlConnection("Server = 218.234.32.194,5242; Database = NEW_SHIP; uid = sa; pwd = yasdo12!@; MultipleActiveResultSets = True");
-            //sqlConnect = new SqlConnection("Server = 218.234.32.245,5242; Database = TEST_Choi; uid = aro_choi; pwd = 1q2w3e4r!; MultipleActiveResultSets = True");
+            //sqlConnect = new SqlConnection("Server = 218.234.32.194,5242; Database = NEW_SHIP; uid = sa; pwd = yasdo12!@; MultipleActiveResultSets = True");
+            sqlConnect = new SqlConnection("Server = 218.234.32.245,5242; Database = TEST_Choi; uid = aro_choi; pwd = 1q2w3e4r!; MultipleActiveResultSets = True");
 
             sqlConnect.Open();
         }
@@ -115,8 +115,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 string strSql_NEWodsayID1 = "select next VALUE for TBHarborODSAYID";
                 string strSql_NEWID1 = "select next VALUE for TBHarborID";
                 string queryInsert = "INSERT INTO TEST_Choi.dbo.";
-                //textquery = "CHOI_HARBOR VALUES (@ODSayHarborID, @ID, @Area, @HarborName, @HarborName2, @HarborName3, @X, @Y, @WGS84_X, @WGS84_Y, @Addr, @CityCode, getdate(), getdate())";
-                textquery = "TBHarbor VALUES (@ODSayHarborID, @ID, @Area, @HarborName, @HarborName2, @HarborName3, @X, @Y, @WGS84_X, @WGS84_Y, @Addr, @CityCode, getdate(), getdate())";
+                textquery = "CHOI_HARBOR VALUES (@ODSayHarborID, @ID, @Area, @HarborName, @HarborName2, @HarborName3, @X, @Y, @WGS84_X, @WGS84_Y, @Addr, @CityCode, getdate(), getdate())";
                 string queryString = queryInsert + textquery;
 
                 SqlCommand cmd_NEWID1 = new SqlCommand(strSql_NEWodsayID1, sqlConnect);
@@ -169,8 +168,7 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 string strSql_NEWID2 = "select next VALUE for TBShipCompanyID";
                 string queryInsert = "INSERT INTO TEST_Choi.dbo.";
-                //textquery = "CHOI_ShipCompany VALUES (@ODSayShipCompanyID, @ShipCompanyNo, @ShipCompanyName, @Tel, @ShipName, @ShipType, @Addr ,@Personnel, @ShipVehiclesYN, @ShipVehiclesCnt, @OperationRange, @Speed, @ShipCompanyDate, @URL, @DelYN, getdate(), getdate())";
-                textquery = "TBShipCompany VALUES (@ODSayShipCompanyID, @ShipCompanyNo, @ShipCompanyName, @Tel, @ShipName, @ShipType, @Addr ,@Personnel, @ShipVehiclesYN, @ShipVehiclesCnt, @OperationRange, @Speed, @ShipCompanyDate, @URL, @DelYN, getdate(), getdate())";
+                textquery = "CHOI_ShipCompany VALUES (@ODSayShipCompanyID, @ShipCompanyNo, @ShipCompanyName, @Tel, @ShipName, @ShipType, @Addr ,@Personnel, @ShipVehiclesYN, @ShipVehiclesCnt, @OperationRange, @Speed, @ShipCompanyDate, @URL, @DelYN, getdate(), getdate())";
                 string queryString = queryInsert + textquery;
 
                 SqlCommand cmd_NEWID2 = new SqlCommand(strSql_NEWID2, sqlConnect);
@@ -220,8 +218,7 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 string strSql_NEWID3 = "select next VALUE for shiplaneID";
                 string queryInsert = "INSERT INTO TEST_Choi.dbo.";
-                //textquery = "CHOI_SHIP VALUES (@ODSayLaneID, @IndexedSearch, @IndexedSearch2, @SelectedInfo, @ODSayHarborID_S, @ODSayHarborID_E, @Harbor_ID_S, @Harbor_ID_E, @Harbor_Name_S, @Harbor_Name_E, @Harbor_Name_SE, @DelYN, @ImportantYN, getdate(), getdate())";
-                textquery = "TBShipLane VALUES (@ODSayLaneID, @IndexedSearch, @IndexedSearch2, @SelectedInfo, @ODSayHarborID_S, @ODSayHarborID_E, @Harbor_ID_S, @Harbor_ID_E, @Harbor_Name_S, @Harbor_Name_E, @Harbor_Name_SE, @DelYN, @ImportantYN, getdate(), getdate())";
+                textquery = "CHOI_SHIP VALUES (@ODSayLaneID, @IndexedSearch, @IndexedSearch2, @SelectedInfo, @ODSayHarborID_S, @ODSayHarborID_E, @Harbor_ID_S, @Harbor_ID_E, @Harbor_Name_S, @Harbor_Name_E, @Harbor_Name_SE, @DelYN, @ImportantYN, getdate(), getdate())";
                 string queryString = queryInsert + textquery;
 
                 SqlCommand cmd_NEWID3 = new SqlCommand(strSql_NEWID3, sqlConnect);

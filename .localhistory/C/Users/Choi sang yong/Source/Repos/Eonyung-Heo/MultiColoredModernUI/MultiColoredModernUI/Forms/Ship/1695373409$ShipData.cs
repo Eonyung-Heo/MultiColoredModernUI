@@ -26,7 +26,7 @@ namespace MultiColoredModernUI.Forms.Ship
         protected ChromeDriverService _driverService = null;
         protected ChromeOptions _options = null;
         protected ChromeDriver _driver = null;
-        DateTime today = DateTime.Today;
+
         string calendar = "";
         string Address_S = "";
         string Address_E = "";
@@ -34,7 +34,6 @@ namespace MultiColoredModernUI.Forms.Ship
         List<string> A_Code = new List<string>();
         List<string> B_Code = new List<string>();
         List<string> C_Code = new List<string>();
-        List<string> D_Code = new List<string>();
         public IWebElement Page;
         public IWebElement Num_Click;
 
@@ -73,7 +72,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 //Ship_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                //_options.AddArgument("headless");
+                _options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");
@@ -169,7 +168,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 _driver.Navigate().GoToUrl("https://island.haewoon.co.kr/island/html/menu02/sub04.aspx");
                 //사이트 호출
 
-                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 //호출 과정 중 신호 약화시 대기?
 
                 //항로검색
@@ -186,17 +185,17 @@ namespace MultiColoredModernUI.Forms.Ship
                 else
                     Year.Click();
                 // 년도 매년 수정 (1월1일 기준 직전년도 사라짐)
-                if (calendar_split[0] == today.Year.ToString())
+                if (calendar_split[0] == "2023")
                 {
                     Year1.Click();
                 }
-                else if (calendar_split[0] == (today.Year+1).ToString())
+                else if (calendar_split[0] == "2024")
                 {
                     Year2.Click();
                 }
                 else
                 {
-                    MessageBox.Show("연도 오류입니다.");
+                    MessageBox.Show("년도 오류입니다.");
                     _driver.Dispose();
                 }
                 //=============================================================================================
@@ -267,7 +266,7 @@ namespace MultiColoredModernUI.Forms.Ship
                         string sectionnum3 = sectionnum1.ToString();
                         for (int sectionnum2 = 1; sectionnum2 < 9; sectionnum2++)
                         {
-                            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+                            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                             string sectionnum4 = sectionnum2.ToString();
                             // 목적지 리스트 - 도착지(섬 명)에 공백일 경우 패스
                             string EndList = _driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Text;
@@ -289,28 +288,44 @@ namespace MultiColoredModernUI.Forms.Ship
                             //패스하거나 해당 엘리먼트값을 저장해둔다.
                             if (EndList_x == "선택하신 도착지의 항로가 없습니다.")
                             {
-                                //_driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
-                                _driver.Navigate().Back();
+                                _driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Click();
                                 continue;
                             }
                             else if (EndList_x != "선택하신 도착지의 항로가 없습니다.")
                             {
                                 _driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Click();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 // 경로 자체를 저장.
                                 A_Code.Add($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a");
                                 B_Code.Add($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]");
-                                C_Code.Add(_driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Text);
-                                D_Code.Add(_driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Text);
+                                //_driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Click(); // B코드 클릭
+
+                                /*
+                                var tbody_count = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table/tbody"));
+                                var tr_count = tbody_count.FindElements(By.TagName("tr"));
+                                for (int sectionnum5 = 1; sectionnum5 <= tr_count.Count; sectionnum5++)
+                                {
+                                    C_Code.Add($"//*[@id='pnlRouteSelect']/div[2]/table/tbody/tr[{sectionnum5}]/td[3]/b/input[6]");
+                                    Address_E = _driver.FindElement(By.XPath(C_Code[sectionnum5])).Text; // 여기서 왜 뻑나지?
+                                }
+                                /*
+                                for (int i_count = 1; i_count <= C_Code.Count; i_count++)
+                                {
+                                    Address_E = _driver.FindElement(By.XPath(C_Code[i_count])).Text;
+                                }
                                 
+                                C_Code.Clear();
+                                _driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
+                                */
+
                                 continue;
 
                             }
+
                         }
                     }
+
                 }
 
                 // 여기 아래에서부터 "가 나 다 라 마 ..." 넘어가는 순서가 문제있음
@@ -324,71 +339,34 @@ namespace MultiColoredModernUI.Forms.Ship
                     _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                     _driver.SwitchTo().Window(_driver.WindowHandles[1]);
                     _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{m}]/a")).Click();
-                    _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+                    _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                     //IWebElement A_Code1 = _driver.FindElement(By.XPath(A_Code[i]));
 
 
                     for (int j = 0; j <= B_Code.Count; j++)
                     {
-                        try
-                        {
-                            _driver.FindElement(By.XPath(A_Code[j])).Click();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("A코드 오류.");
-                        }
-                        
-                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+                        _driver.FindElement(By.XPath(A_Code[j])).Click();
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
-                        IWebElement GetAttribute1 = _driver.FindElement(By.XPath(B_Code[j])); // 엘리먼트 호출
-                        string GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출
-                        string[] style = GetAttribute2.Split('"'); // ="showNote(\"가사도\", \"전남 진도군 조도면 가사도리\", this)" / 데이터 구분
+                        var GetAttribute1 = _driver.FindElement(By.XPath(B_Code[j])); // 엘리먼트 호출
+                        var GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출
+                        var style = GetAttribute2.Split('"'); // ="showNote(\"가사도\", \"전남 진도군 조도면 가사도리\", this)" / 데이터 구분
                         Address_E = style[1] + "(" + style[3] + ")"; // 가사도(전남 진도군 조도면 가사도리)
 
                         //IWebElement B_Code1 = _driver.FindElement(By.XPath(B_Code[j]));
-                        try
-                        {
-                            _driver.FindElement(By.XPath(B_Code[j])).Click();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("B코드 오류.");
-                        }
+                        _driver.FindElement(By.XPath(B_Code[j])).Click();
 
-                        IWebElement table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
-                        IWebElement tbody_end = table_end.FindElement(By.TagName("tbody"));
+                        var table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
+                        var tbody_end = table_end.FindElement(By.TagName("tbody"));
                         var tr_end = tbody_end.FindElements(By.TagName("tr"));
-                        
+
 
                         for (int k = 1; k <= tr_end.Count; k++)
                         {
                             string k1 = k.ToString(); // int값 str로 변환
-                            _driver.Manage().Window.Maximize();
-                            try
-                            {
-                                Thread.Sleep(1000);
-                                //ButtonClick
-                                if (tr_end.Count >=20)
-                                {
-                                    int intk = 10;
-                                    if (k>=12)
-                                    {
-                                        var kkk = k * intk;
-                                        string script = $"window.scrollTo(0, document.body.scrollHeight - 150 + {kkk});";
-                                        ((IJavaScriptExecutor)_driver).ExecuteScript(script);
-                                    }
-                                    
-                                }
-                                _driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("버튼 클릭 오류.");
-                                //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
-                                
-                            }
-                            
+
+                            //ButtonClick
+                            _driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
 
                             //창 아래로 내리기
                             ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
@@ -397,40 +375,30 @@ namespace MultiColoredModernUI.Forms.Ship
                             Address_S = _driver.FindElement(By.XPath("//*[@id='NociteLayer2']")).Text;
 
                             IWebElement Pick = _driver.FindElement(By.XPath("//*[@id='frmRoute']/table/tbody/tr/td/table/tbody/tr[8]/td/a"));
-                            try
-                            {
-                                Pick.Click(); // 선택완료
-                            }
-                            catch
-                            {
-                                MessageBox.Show("선택 완료 오류.");
-                            }
+                            Pick.Click(); // 선택완료
                             _driver.SwitchTo().Window(_driver.WindowHandles[0]); // 창전환
                             IWebElement Search = _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td[4]/table/tbody/tr[1]/td[8]/input"));
-                            try
-                            {
-                                //조회하기 클릭
-                                Search.Click();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("조회하기 오류.");
-                            }
-                            
-                            
+                            Search.Click();
+                            //조회하기 클릭
 
-                            IWebElement tbody_a = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody"));
-                            IWebElement tr_a = tbody_a.FindElement(By.TagName("tr"));
+                            var tbody_a = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody"));
+                            var tr_a = tbody_a.FindElement(By.TagName("tr"));
                             var tr_b = tbody_a.FindElements(By.TagName("tr"));
+
+                            //var Data_XPath = _driver.FindElement(By.XPath($"//*[@id='layer_DepartureAFare']/div/table/tbody/tr[{M}]/td[{L}]"));
+
+
+                            //*[@id="layer_DepartureAFare"]/div/table/tbody/tr[1]
+                            //*[@id="layer_DepartureAFare"]/div/table/tbody/tr[3]
 
                             int c = 0;
 
                             string DataListText = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody/tr/td")).Text;
                             string DataListStrart = _driver.FindElement(By.XPath("//*[@id='F_PortNameView']")).Text;
                             string DataListEnd = _driver.FindElement(By.XPath("//*[@id='T_PortNameView']")).Text;
-                            
+
                             //홈페이지창 데이터 입력
-                            foreach (IWebElement tr_bb in tr_b)
+                            foreach (var tr_bb in tr_b)
                             {
                                 if (DataListText != "항차정보가 존재하지 않습니다.")
                                 {
@@ -563,50 +531,25 @@ namespace MultiColoredModernUI.Forms.Ship
                                 c++;
                             }// 여기서 foreach가 끝남
                              //항로검색
-                            try
-                            {
-                                _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("재항로검색 오류.");
-                            }
+                            _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                             //팝업창 전환
                             _driver.SwitchTo().Window(_driver.WindowHandles[1]);
-                            try
-                            {
-                                _driver.FindElement(By.XPath(A_Code[j])).Click(); // = A_Code1    
-                            }
-                            catch
-                            {
-                                MessageBox.Show("2A코드 오류.");
-                            }
-                            
-                            try
-                            {
-                                _driver.FindElement(By.XPath(B_Code[j])).Click(); // = B_Code1
-                            }
-                            catch
-                            {
-                                MessageBox.Show("2B코드 오류.");
-                            }
-                            
+                            _driver.FindElement(By.XPath(A_Code[j])).Click(); // = A_Code1
+                            _driver.FindElement(By.XPath(B_Code[j])).Click(); // = B_Code1
                         }
                         _driver.Close();
                         _driver.SwitchTo().Window(_driver.WindowHandles[0]);
-                        try
-                        {
-                            _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
-                        }
-                        catch
-                        {
-                            MessageBox.Show($"{_driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Text} 오류.");
-                        }
-                        
+                        _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                         _driver.SwitchTo().Window(_driver.WindowHandles[1]);
+                        //_driver.Dispose();
+
                     }
+
                 }
+
+                //_driver.Dispose();
             }
+
             catch (Exception exc)
             {
                 _driver.Dispose();
@@ -672,6 +615,7 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             Ship_SaveFileOpenFile();
             using (StreamWriter writer = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+            //using (StreamWriter writer = new StreamWriter("D:odsay_ship_.csv", false, Encoding.GetEncoding("utf-8")))
             {
                 int rowCount = Ship_DataGridViewData.Rows.Count;
 
@@ -707,9 +651,8 @@ namespace MultiColoredModernUI.Forms.Ship
         // DB업데이트
         private void Ship_DBupdate_Click(object sender, EventArgs e)
         {
-            //db접속정보
-            string connectionString = "Server = 218.234.32.194,5242; Database = NEW_SHIP; uid = sa; pwd = yasdo12!@";
-            string queryString = "INSERT INTO NEW_SHIP.dbo.TBShipCrawlingData (ShipName, StartTime, TimeRequired, Rank, AdultFee, YouthFee, SeniorFee, ChildFee, RemainingSeat, Reservation, Harbor_Name_S, Harbor_Name_E, Detailed_Harbor_Name_S, Detailed_Harbor_Name_E, Collection_date, Collection_day) " +
+            string connectionString = "Server = 218.234.32.245,5242; Database = TEST_Choi; uid = sa; pwd = yasdo12!@";
+            string queryString = "INSERT INTO TEST_Choi.dbo.ship_choi_01_CSharp (ShipName, StartTime, TimeRequired, Rank, AdultFee, YouthFee, SeniorFee, ChildFee, RemainingSeat, Reservation, Harbor_Name_S, Harbor_Name_E, Detailed_Harbor_Name_S, Detailed_Harbor_Name_E, Collection_date, Collection_day) " +
                 "VALUES (@ShipName, @StartTime, @TimeRequired, @Rank, @AdultFee, @YouthFee, @SeniorFee, @ChildFee, @RemainingSeat, @Reservation, @Harbor_Name_S, @Harbor_Name_E, @Detailed_Harbor_Name_S, @Detailed_Harbor_Name_E, @Collection_date, @Collection_day)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -751,13 +694,18 @@ namespace MultiColoredModernUI.Forms.Ship
                 {
                     connection.Close();
                 }
+                /*
+                command = new SqlCommand(queryString, connection);
+                connection.Open();
+
+                string queryString2 = "exec usp_0000_01_Shipcopydata";
+                command = new SqlCommand(queryString2, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+                */
             }
             MessageBox.Show("완료되었습니다");
-        }
-
-        private void Ship_DataClear_Click(object sender, EventArgs e)
-        {
-            Ship_DataGridViewData.Rows.Clear();
         }
     }
 }

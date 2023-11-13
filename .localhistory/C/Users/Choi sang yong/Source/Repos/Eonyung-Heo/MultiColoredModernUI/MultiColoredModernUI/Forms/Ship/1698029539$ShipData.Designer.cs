@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Guna2Button Ship_ChromeDriverTermination;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.Ship_DBupdate = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_DataDownload = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +55,6 @@
             this.Harbor_Name_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ship_DataClear = new Guna.UI2.WinForms.Guna2Button();
             Ship_ChromeDriverTermination = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_MainPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -87,7 +86,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_MainPanel.AutoSize = true;
             this.Ship_MainPanel.BackColor = System.Drawing.Color.White;
-            this.Ship_MainPanel.Controls.Add(this.Ship_DataClear);
             this.Ship_MainPanel.Controls.Add(this.Ship_DBupdate);
             this.Ship_MainPanel.Controls.Add(this.Ship_DataDownload);
             this.Ship_MainPanel.Controls.Add(Ship_ChromeDriverTermination);
@@ -150,7 +148,7 @@
             this.Ship_TestdataButton.FillColor = System.Drawing.Color.White;
             this.Ship_TestdataButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_TestdataButton.ForeColor = System.Drawing.Color.Black;
-            this.Ship_TestdataButton.Location = new System.Drawing.Point(127, 46);
+            this.Ship_TestdataButton.Location = new System.Drawing.Point(223, 46);
             this.Ship_TestdataButton.Name = "Ship_TestdataButton";
             this.Ship_TestdataButton.Size = new System.Drawing.Size(107, 26);
             this.Ship_TestdataButton.TabIndex = 15;
@@ -169,7 +167,7 @@
             this.Ship_Pagelink.FillColor = System.Drawing.Color.White;
             this.Ship_Pagelink.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_Pagelink.ForeColor = System.Drawing.Color.Black;
-            this.Ship_Pagelink.Location = new System.Drawing.Point(127, 12);
+            this.Ship_Pagelink.Location = new System.Drawing.Point(223, 12);
             this.Ship_Pagelink.Name = "Ship_Pagelink";
             this.Ship_Pagelink.Size = new System.Drawing.Size(107, 26);
             this.Ship_Pagelink.TabIndex = 14;
@@ -222,18 +220,18 @@
             // 
             this.Ship_DataGridViewData.AllowUserToAddRows = false;
             this.Ship_DataGridViewData.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.Ship_DataGridViewData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Ship_DataGridViewData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Ship_DataGridViewData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.Ship_DataGridViewData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Ship_DataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ship_DataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Ship_DataGridViewData.ColumnHeadersHeight = 26;
             this.Ship_DataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Ship_DataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -251,14 +249,14 @@
             this.Harbor_Name_E,
             this.Harbor_DetailsName_S,
             this.Harbor_DetailsName_E});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Ship_DataGridViewData.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Ship_DataGridViewData.DefaultCellStyle = dataGridViewCellStyle3;
             this.Ship_DataGridViewData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Ship_DataGridViewData.GridColor = System.Drawing.Color.Black;
             this.Ship_DataGridViewData.Location = new System.Drawing.Point(0, 0);
@@ -387,25 +385,6 @@
             this.Harbor_DetailsName_E.Name = "Harbor_DetailsName_E";
             this.Harbor_DetailsName_E.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Ship_DataClear
-            // 
-            this.Ship_DataClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ship_DataClear.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_DataClear.BorderRadius = 8;
-            this.Ship_DataClear.BorderThickness = 1;
-            this.Ship_DataClear.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_DataClear.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_DataClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_DataClear.FillColor = System.Drawing.Color.White;
-            this.Ship_DataClear.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_DataClear.ForeColor = System.Drawing.Color.Black;
-            this.Ship_DataClear.Location = new System.Drawing.Point(240, 12);
-            this.Ship_DataClear.Name = "Ship_DataClear";
-            this.Ship_DataClear.Size = new System.Drawing.Size(101, 60);
-            this.Ship_DataClear.TabIndex = 19;
-            this.Ship_DataClear.Text = "초기화";
-            this.Ship_DataClear.Click += new System.EventHandler(this.Ship_DataClear_Click);
-            // 
             // ShipData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -449,6 +428,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Harbor_DetailsName_E;
         private Guna.UI2.WinForms.Guna2Button Ship_DataDownload;
         private Guna.UI2.WinForms.Guna2Button Ship_DBupdate;
-        private Guna.UI2.WinForms.Guna2Button Ship_DataClear;
     }
 }

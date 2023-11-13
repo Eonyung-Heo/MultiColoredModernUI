@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Ship_TestUpdate_BT = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_Clear_BT = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_Update_BT = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_Add_TabControl = new Guna.UI2.WinForms.Guna2TabControl();
@@ -126,6 +127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.AutoSize = true;
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.Ship_TestUpdate_BT);
             this.guna2Panel2.Controls.Add(this.Ship_Clear_BT);
             this.guna2Panel2.Controls.Add(this.Ship_Update_BT);
             this.guna2Panel2.Controls.Add(this.Ship_Add_TabControl);
@@ -133,6 +135,24 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(945, 659);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // Ship_TestUpdate_BT
+            // 
+            this.Ship_TestUpdate_BT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ship_TestUpdate_BT.BorderColor = System.Drawing.Color.LightGray;
+            this.Ship_TestUpdate_BT.BorderRadius = 8;
+            this.Ship_TestUpdate_BT.BorderThickness = 1;
+            this.Ship_TestUpdate_BT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Ship_TestUpdate_BT.DisabledState.FillColor = System.Drawing.Color.White;
+            this.Ship_TestUpdate_BT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Ship_TestUpdate_BT.FillColor = System.Drawing.Color.White;
+            this.Ship_TestUpdate_BT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Ship_TestUpdate_BT.ForeColor = System.Drawing.Color.Black;
+            this.Ship_TestUpdate_BT.Location = new System.Drawing.Point(804, 146);
+            this.Ship_TestUpdate_BT.Name = "Ship_TestUpdate_BT";
+            this.Ship_TestUpdate_BT.Size = new System.Drawing.Size(129, 45);
+            this.Ship_TestUpdate_BT.TabIndex = 34;
+            this.Ship_TestUpdate_BT.Text = "테스트 저장";
             // 
             // Ship_Clear_BT
             // 
@@ -1762,6 +1782,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_Harbor3_Label;
         private Guna.UI2.WinForms.Guna2TextBox Ship_Harbor3_TB;
         private Guna.UI2.WinForms.Guna2Button Ship_XYMap_Bt;
+        private Guna.UI2.WinForms.Guna2Button Ship_TestUpdate_BT;
         private Guna.UI2.WinForms.Guna2Button Ship_Clear_BT;
         private Guna.UI2.WinForms.Guna2Button Ship_Update_BT;
         private Guna.UI2.WinForms.Guna2HtmlLabel Ship_ShipURL_Label;

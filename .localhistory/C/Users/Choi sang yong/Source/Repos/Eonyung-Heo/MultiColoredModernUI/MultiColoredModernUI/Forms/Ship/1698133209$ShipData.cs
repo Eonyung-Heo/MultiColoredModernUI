@@ -297,7 +297,6 @@ namespace MultiColoredModernUI.Forms.Ship
                             else if (EndList_x != "선택하신 도착지의 항로가 없습니다.")
                             {
                                 _driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Click();
                                 _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 // 경로 자체를 저장.
@@ -355,40 +354,28 @@ namespace MultiColoredModernUI.Forms.Ship
                         {
                             MessageBox.Show("B코드 오류.");
                         }
+                        
+                        
 
                         IWebElement table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
                         IWebElement tbody_end = table_end.FindElement(By.TagName("tbody"));
                         var tr_end = tbody_end.FindElements(By.TagName("tr"));
-                        
+
 
                         for (int k = 1; k <= tr_end.Count; k++)
                         {
                             string k1 = k.ToString(); // int값 str로 변환
-                            _driver.Manage().Window.Maximize();
+
                             try
                             {
-                                Thread.Sleep(1000);
                                 //ButtonClick
-                                if (tr_end.Count >=20)
-                                {
-                                    int intk = 10;
-                                    if (k>=12)
-                                    {
-                                        var kkk = k * intk;
-                                        string script = $"window.scrollTo(0, document.body.scrollHeight - 150 + {kkk});";
-                                        ((IJavaScriptExecutor)_driver).ExecuteScript(script);
-                                    }
-                                    
-                                }
                                 _driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
                             }
                             catch
                             {
                                 MessageBox.Show("버튼 클릭 오류.");
-                                //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
-                                
                             }
-                            
+                            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
 
                             //창 아래로 내리기
                             ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
