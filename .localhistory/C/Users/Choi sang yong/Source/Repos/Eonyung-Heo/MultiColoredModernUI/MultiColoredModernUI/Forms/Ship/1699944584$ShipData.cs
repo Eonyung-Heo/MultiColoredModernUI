@@ -328,7 +328,7 @@ namespace MultiColoredModernUI.Forms.Ship
                     _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                     //IWebElement A_Code1 = _driver.FindElement(By.XPath(A_Code[i]));
 
-                    for (int j = 0; j < B_Code.Count; j++)
+                    for (int j = 0; j <= B_Code.Count; j++)
                     {
                         try
                         {

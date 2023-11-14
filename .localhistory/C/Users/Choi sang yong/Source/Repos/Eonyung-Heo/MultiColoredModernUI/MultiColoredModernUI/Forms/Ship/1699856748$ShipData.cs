@@ -305,15 +305,14 @@ namespace MultiColoredModernUI.Forms.Ship
                                 B_Code.Add($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]");
                                 C_Code.Add(_driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Text);
                                 D_Code.Add(_driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Text);
-                                //*[@id="pnl_Default"]/table[2]/tbody/tr[1]/td[27]
-                                //*[@id="pnl_Text"]/div[2]/table/tbody/tr[8]/td[8]
+                                
                                 continue;
 
                             }
                         }
                     }
                 }
-                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+
                 // 여기 아래에서부터 "가 나 다 라 마 ..." 넘어가는 순서가 문제있음
                 int kk = 0;
                 //저장해두었던 경로찾아 입력.
@@ -328,7 +327,8 @@ namespace MultiColoredModernUI.Forms.Ship
                     _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                     //IWebElement A_Code1 = _driver.FindElement(By.XPath(A_Code[i]));
 
-                    for (int j = 0; j < B_Code.Count; j++)
+
+                    for (int j = 0; j <= B_Code.Count; j++)
                     {
                         try
                         {
@@ -359,6 +359,7 @@ namespace MultiColoredModernUI.Forms.Ship
                         IWebElement table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
                         IWebElement tbody_end = table_end.FindElement(By.TagName("tbody"));
                         var tr_end = tbody_end.FindElements(By.TagName("tr"));
+                        
 
                         for (int k = 1; k <= tr_end.Count; k++)
                         {
@@ -613,7 +614,6 @@ namespace MultiColoredModernUI.Forms.Ship
             }
             finally
             {
-                _driver.Dispose();
                 MessageBox.Show("종료되었습니다.");
             }
         }
