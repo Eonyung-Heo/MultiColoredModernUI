@@ -759,5 +759,10 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             Ship_DataGridViewData.Rows.Clear();
         }
+
+        private void Ship_DataCsvLoad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

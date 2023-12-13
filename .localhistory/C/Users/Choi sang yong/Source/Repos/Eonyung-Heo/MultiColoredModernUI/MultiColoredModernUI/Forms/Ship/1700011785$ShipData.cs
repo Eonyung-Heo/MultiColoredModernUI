@@ -659,7 +659,7 @@ namespace MultiColoredModernUI.Forms.Ship
             // 파일 목록 필터링
             saveFile.Filter = "CSV files(*.csv) | *.csv";
 
-            // ok버튼을 눌렀을때의 동작
+            // ok버튼을 눌럿을대의 동작
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 // 경로와 파일명을 filename에 저장

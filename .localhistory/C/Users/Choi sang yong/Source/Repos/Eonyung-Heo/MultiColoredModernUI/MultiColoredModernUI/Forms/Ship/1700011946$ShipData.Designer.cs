@@ -56,6 +56,7 @@
             this.Harbor_Name_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harbor_DetailsName_E = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ship_DataCsvLoad = new Guna.UI2.WinForms.Guna2Button();
             Ship_ChromeDriverTermination = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_MainPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -87,6 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_MainPanel.AutoSize = true;
             this.Ship_MainPanel.BackColor = System.Drawing.Color.White;
+            this.Ship_MainPanel.Controls.Add(this.Ship_DataCsvLoad);
             this.Ship_MainPanel.Controls.Add(this.Ship_DataClear);
             this.Ship_MainPanel.Controls.Add(this.Ship_DBupdate);
             this.Ship_MainPanel.Controls.Add(this.Ship_DataDownload);
@@ -406,6 +408,25 @@
             this.Harbor_DetailsName_E.Name = "Harbor_DetailsName_E";
             this.Harbor_DetailsName_E.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // Ship_DataCsvLoad
+            // 
+            this.Ship_DataCsvLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ship_DataCsvLoad.BorderColor = System.Drawing.Color.LightGray;
+            this.Ship_DataCsvLoad.BorderRadius = 8;
+            this.Ship_DataCsvLoad.BorderThickness = 1;
+            this.Ship_DataCsvLoad.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Ship_DataCsvLoad.DisabledState.FillColor = System.Drawing.Color.White;
+            this.Ship_DataCsvLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Ship_DataCsvLoad.FillColor = System.Drawing.Color.White;
+            this.Ship_DataCsvLoad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Ship_DataCsvLoad.ForeColor = System.Drawing.Color.Black;
+            this.Ship_DataCsvLoad.Location = new System.Drawing.Point(20, 12);
+            this.Ship_DataCsvLoad.Name = "Ship_DataCsvLoad";
+            this.Ship_DataCsvLoad.Size = new System.Drawing.Size(101, 60);
+            this.Ship_DataCsvLoad.TabIndex = 14;
+            this.Ship_DataCsvLoad.Text = "데이터 불러오기";
+            this.Ship_DataCsvLoad.Click += new System.EventHandler(this.Ship_DataCsvLoad_Click);
+            // 
             // ShipData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -450,5 +471,6 @@
         private Guna.UI2.WinForms.Guna2Button Ship_DataDownload;
         private Guna.UI2.WinForms.Guna2Button Ship_DBupdate;
         private Guna.UI2.WinForms.Guna2Button Ship_DataClear;
+        private Guna.UI2.WinForms.Guna2Button Ship_DataCsvLoad;
     }
 }
