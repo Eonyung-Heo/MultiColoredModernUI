@@ -301,6 +301,7 @@ namespace MultiColoredModernUI.Forms.Subway
 
             strSql = string.Format("update naverodsay.dbo.TBStation");
             strSql += string.Format(" set roadName = '{0}',bonbun = '{1}', boobun = '{2}',roadAddress = '{3}'", roadName, bonbun, boobun, roadAddress);
+            strSql += string.Format(" where stationID = {0}", stationID);
 
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
