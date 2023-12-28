@@ -50,7 +50,7 @@ namespace MultiColoredModernUI
                 textUserName.Text = "UserName";
             }
         }
-
+        /*
         private void textPassword_Enter(object sender, EventArgs e)
         {
             if (textPassword.Text == "Password")
@@ -66,7 +66,7 @@ namespace MultiColoredModernUI
             {
                 textPassword.Text = "Password";
             }
-        }
+        }*/
 
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -84,12 +84,12 @@ namespace MultiColoredModernUI
         {
             //
             
-            bool loginCheck = sql.Login(textUserName.Text, textPassword.Text,mac);
+            bool loginCheck = sql.Login(textUserName.Text,mac);
             
             if (loginCheck == true || textUserName.Text == "aro")
             {
                 close = true;
-                StaticMain.userName = "Master"; 
+                StaticMain.userName = textUserName.Text;
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -101,7 +101,6 @@ namespace MultiColoredModernUI
                 keyCheck = true;
                 MessageBox.Show("이름 또는 비밀번호를 확인해 주세요.");
                 textUserName.Text = StaticMain.userName;
-                textPassword.Text = "Password";
             
             }          
 
@@ -179,6 +178,16 @@ namespace MultiColoredModernUI
                 MessageBox.Show("해당 PC Mac 주소가 등록되어 있지 않습니다.");
                 return;
             }
+
+        }
+
+        private void textPassword_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textPassword_Leave(object sender, EventArgs e)
+        {
 
         }
     }

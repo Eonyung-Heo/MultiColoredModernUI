@@ -24,7 +24,7 @@ namespace MultiColoredModernUI
 
         }
 
-        public bool Login(string username , string pwd, string mac)
+        public bool Login(string username , string mac)
         {
             bool check = false;
 
@@ -32,7 +32,7 @@ namespace MultiColoredModernUI
 
             string strSql = "";
 
-            strSql = string.Format("select * from TBMembers  where username = '{0}' and userpwd = '{1}' and macaddress = '{2}'", username, pwd, mac);
+            strSql = string.Format("select * from TBMembers  where username = '{0}' and macaddress = '{1}'", username, mac);
 
             cmd = new SqlCommand(strSql, sqlConnect);
 

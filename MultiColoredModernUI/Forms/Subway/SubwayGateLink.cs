@@ -551,6 +551,8 @@ namespace MultiColoredModernUI.Forms.Subway
                     mainSql.Log(StaticMain.userName, StaticMain.userMac, "지하철 출구 정보 수정");
 
                     MessageBox.Show("DB 입력 완료", "알림");
+
+                    strLogList.Clear();
                 }
             }
 

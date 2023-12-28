@@ -308,7 +308,7 @@ namespace MultiColoredModernUI.Forms.Subway
             cmd.ExecuteNonQuery();
 
             strSql = string.Format("insert AID_TOOL.dbo.[TBSubway_History]   ");
-            strSql += string.Format("values('TBSubwayStation',{0},'{1}','',getdate(),'{2}')",stationID,namekor,log);
+            strSql += string.Format("values('{0}','TBSubwayStation',{1},'{2}','',getdate(),'{3}')", StaticMain.userName,stationID, namekor,log);
 
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
@@ -438,8 +438,8 @@ namespace MultiColoredModernUI.Forms.Subway
             cmd.ExecuteNonQuery();
 
             strSql = string.Format("insert AID_TOOL.dbo.[TBSubway_History]   ");
-            strSql += string.Format("values('TBSubwayFacility',{0},'{1}','',getdate(),'{2}')", stationID, namekor, log);
-
+            strSql += string.Format("values('{0}','TBSubwayFacility',{1},'{2}','',getdate(),'{3}')", StaticMain.userName,stationID, namekor, log);
+           
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
             cmd.ExecuteNonQuery();
@@ -717,7 +717,8 @@ namespace MultiColoredModernUI.Forms.Subway
             for(int i = 0; i < strLog.Count; i++)
             {
                 strSql = string.Format("insert AID_TOOL.dbo.[TBSubway_History]   ");
-                strSql += string.Format("values('TBSubwayGateLink',{0},'{1}','{2}',getdate(),'{3}')", strLog[i][0], strLog[i][1], strLog[i][2], strLog[i][3]);
+                strSql += string.Format("values('{0}','TBSubwayGateLink',{1},'{2}','{3}',getdate(),'{4}')", StaticMain.userName,strLog[i][0], strLog[i][1], strLog[i][2], strLog[i][3]);
+                
 
                 cmd = new SqlCommand(strSql, sqlConnect);
                 cmd.CommandText = strSql;
@@ -873,7 +874,9 @@ namespace MultiColoredModernUI.Forms.Subway
 
 
             strSql = string.Format("insert AID_TOOL.dbo.[TBSubway_History]   ");
-            strSql += string.Format("values('TBSubwayExchange',{0},'{1}','',getdate(),'{2}')", stationID1, namekor, log);
+            strSql += string.Format("values('{0}','TBSubwayExchange',{1},'{2}','',getdate(),'{3}')", StaticMain.userName, stationID1, namekor, log);
+
+
 
             cmd = new SqlCommand(strSql, sqlConnect);
             cmd.CommandText = strSql;
