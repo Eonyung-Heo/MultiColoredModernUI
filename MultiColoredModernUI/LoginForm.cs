@@ -99,7 +99,7 @@ namespace MultiColoredModernUI
             else
             {
                 keyCheck = true;
-                MessageBox.Show("이름 또는 비밀번호를 확인해 주세요.");
+                MessageBox.Show("등록 되지 않은 이름과 MAC 주소입니다.\n연구개발팀 문의 주세요.");
                 textUserName.Text = StaticMain.userName;
             
             }          
