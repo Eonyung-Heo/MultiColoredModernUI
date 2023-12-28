@@ -276,6 +276,9 @@ namespace MultiColoredModernUI
 
             BtnEvent();
 
+           
+   
+
         }
         
         private void btnMaster_Click(object sender, EventArgs e)
@@ -418,6 +421,8 @@ namespace MultiColoredModernUI
                 {
                     panelSideMenu.Visible = true;
                     label2.Text = StaticMain.userName;
+
+                    levelDisable(StaticMain.userLevel);
                 }
             }
         }
@@ -492,6 +497,22 @@ namespace MultiColoredModernUI
             OpenChildForm(safAirData, sender);
             hideSubMenu();
             sql.Log(StaticMain.userName, StaticMain.userMac, "항공 선택");
+        }
+
+        public void levelDisable(int level)
+        {
+            
+            if (level != -1)
+            {
+                if (level == 1)
+                {
+                    btnMaster.Visible = false;
+                    btnShipProducts.Visible = false;
+                    btnAirPlane.Visible = false;
+
+                }
+            }
+                
         }
     }
 }

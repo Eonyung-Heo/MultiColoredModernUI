@@ -38,7 +38,13 @@ namespace MultiColoredModernUI
 
             SqlDataReader reader = cmd.ExecuteReader();
 
+
+            
+
             check = reader.Read();
+
+            if(check)
+                StaticMain.userLevel = Convert.ToInt16(reader["UserLevel"].ToString());
 
             //연결종료
             reader.Close();

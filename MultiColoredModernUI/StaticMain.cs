@@ -13,8 +13,8 @@ namespace MultiColoredModernUI
         public static string userName = "";
         public static string userMac = "";
         public static int toolSelect = -1;
+        public static int userLevel = -1;
 
-        
 
         public static List<string> ColorList = new List<string>()
         {
