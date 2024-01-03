@@ -308,281 +308,280 @@ namespace MultiColoredModernUI.Forms.Ship
                 Thread.Sleep(1000);
                 //저장해두었던 경로찾아 입력.
 
-                //for (int m = 1; m <= KoreaLanguage.Count * 2; m = m + 2)
-                //{
-                // 재설정을 눌렀기 때문에 창을 닫고 다시켬.
-                _driver.Close();
-                _driver.SwitchTo().Window(_driver.WindowHandles[0]); 
-                _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
-                _driver.SwitchTo().Window(_driver.WindowHandles[1]); // 창전환
-                //_driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{m}]/a")).Click(); // 가,나,다,라.. 등등 클릭
-                _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[1]/a")).Click(); // 가,나,다,라.. 등등 클릭
-                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000); // 속도 제어
-
-                for (int j = 0; j < B_Code.Count; j++)
+                for (int m = 1; m <= KoreaLanguage.Count * 2; m = m + 2)
                 {
-                    try
+                    // 재설정을 눌렀기 때문에 창을 닫고 다시켬.
+                    _driver.Close();
+                    _driver.SwitchTo().Window(_driver.WindowHandles[0]); 
+                    _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
+                    _driver.SwitchTo().Window(_driver.WindowHandles[1]); // 창전환
+                    _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{m}]/a")).Click(); // 가,나,다,라.. 등등 클릭
+                    _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000); // 속도 제어
+
+                    for (int j = 0; j < B_Code.Count; j++)
                     {
-                        _driver.FindElement(By.XPath(A_Code[j])).Click();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("A코드 오류.");
-                    }
+                        try
+                        {
+                            _driver.FindElement(By.XPath(A_Code[j])).Click();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("A코드 오류.");
+                        }
                         
-                    _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
 
-                    IWebElement GetAttribute1 = _driver.FindElement(By.XPath(B_Code[j])); // 엘리먼트 호출
-                    string GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출
-                    string[] style = GetAttribute2.Split('"'); // ="showNote(\"가사도\", \"전남 진도군 조도면 가사도리\", this)" / 데이터 구분
-                    Address_E = style[1] + "(" + style[3] + ")"; // 가사도(전남 진도군 조도면 가사도리)
+                        IWebElement GetAttribute1 = _driver.FindElement(By.XPath(B_Code[j])); // 엘리먼트 호출
+                        string GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출
+                        string[] style = GetAttribute2.Split('"'); // ="showNote(\"가사도\", \"전남 진도군 조도면 가사도리\", this)" / 데이터 구분
+                        Address_E = style[1] + "(" + style[3] + ")"; // 가사도(전남 진도군 조도면 가사도리)
 
-                    //IWebElement B_Code1 = _driver.FindElement(By.XPath(B_Code[j]));
-                    try
-                    {
-                        _driver.FindElement(By.XPath(B_Code[j])).Click();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("B코드 오류.");
-                    }
-
-                    IWebElement table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
-                    IWebElement tbody_end = table_end.FindElement(By.TagName("tbody"));
-                    var tr_end = tbody_end.FindElements(By.TagName("tr")); //tr(선택/출발지/도착지)의 줄 
-
-                    for (int k = 1; k <= tr_end.Count; k++)
-                    {
-                        string k1 = k.ToString(); // int값 str로 변환
-                        _driver.Manage().Window.Maximize();
+                        //IWebElement B_Code1 = _driver.FindElement(By.XPath(B_Code[j]));
                         try
                         {
-                            Thread.Sleep(1000);
-                            //ButtonClick
-                            if (tr_end.Count >=20)
+                            _driver.FindElement(By.XPath(B_Code[j])).Click();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("B코드 오류.");
+                        }
+
+                        IWebElement table_end = _driver.FindElement(By.XPath("//*[@id='pnlRouteSelect']/div[2]/table"));
+                        IWebElement tbody_end = table_end.FindElement(By.TagName("tbody"));
+                        var tr_end = tbody_end.FindElements(By.TagName("tr")); //tr(선택/출발지/도착지)의 줄 
+
+                        for (int k = 1; k <= tr_end.Count; k++)
+                        {
+                            string k1 = k.ToString(); // int값 str로 변환
+                            _driver.Manage().Window.Maximize();
+                            try
                             {
-                                int intk = 10;
-                                if (k>=12)
+                                Thread.Sleep(1000);
+                                //ButtonClick
+                                if (tr_end.Count >=20)
                                 {
-                                    var kkk = k * intk;
-                                    string script = $"window.scrollTo(0, document.body.scrollHeight - 150 + {kkk});";
-                                    ((IJavaScriptExecutor)_driver).ExecuteScript(script);
-                                }
+                                    int intk = 10;
+                                    if (k>=12)
+                                    {
+                                        var kkk = k * intk;
+                                        string script = $"window.scrollTo(0, document.body.scrollHeight - 150 + {kkk});";
+                                        ((IJavaScriptExecutor)_driver).ExecuteScript(script);
+                                    }
                                     
+                                }
+                                _driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
                             }
-                            _driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("버튼 클릭 오류.");
-                            //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
-                                
-                        }
-                            
-
-                        //창 아래로 내리기
-                        ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
-
-                        //상세 출발지 입력
-                        Address_S = _driver.FindElement(By.XPath("//*[@id='NociteLayer2']")).Text;
-
-                        IWebElement Pick = _driver.FindElement(By.XPath("//*[@id='frmRoute']/table/tbody/tr/td/table/tbody/tr[8]/td/a"));
-                        try
-                        {
-                            Pick.Click(); // 선택완료
-                        }
-                        catch
-                        {
-                            MessageBox.Show("선택 완료 오류.");
-                        }
-                        _driver.SwitchTo().Window(_driver.WindowHandles[0]); // 창전환
-                        IWebElement Search = _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td[4]/table/tbody/tr[1]/td[8]/input"));
-                        try
-                        {
-                            //조회하기 클릭
-                            Search.Click();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("조회하기 오류.");
-                        }
-                            
-                            
-
-                        IWebElement tbody_a = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody"));
-                        IWebElement tr_a = tbody_a.FindElement(By.TagName("tr"));
-                        var tr_b = tbody_a.FindElements(By.TagName("tr"));
-
-                        int c = 0;
-                                                                            //*[@id="layer_DepartureAFare"]/div/table/tbody/tr[1]/td[1]
-                        string DataListText = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody/tr/td")).Text;
-                        string DataListStrart = _driver.FindElement(By.XPath("//*[@id='F_PortNameView']")).Text;
-                        string DataListEnd = _driver.FindElement(By.XPath("//*[@id='T_PortNameView']")).Text;
-                            
-                        //홈페이지창 데이터 입력
-                        foreach (IWebElement tr_bb in tr_b)
-                        {
-                            if (DataListText != "항차정보가 존재하지 않습니다.")
+                            catch
                             {
-                                if (c % 2 == 0)
+                                MessageBox.Show("버튼 클릭 오류.");
+                                //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
+                                
+                            }
+                            
+
+                            //창 아래로 내리기
+                            ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
+
+                            //상세 출발지 입력
+                            Address_S = _driver.FindElement(By.XPath("//*[@id='NociteLayer2']")).Text;
+
+                            IWebElement Pick = _driver.FindElement(By.XPath("//*[@id='frmRoute']/table/tbody/tr/td/table/tbody/tr[8]/td/a"));
+                            try
+                            {
+                                Pick.Click(); // 선택완료
+                            }
+                            catch
+                            {
+                                MessageBox.Show("선택 완료 오류.");
+                            }
+                            _driver.SwitchTo().Window(_driver.WindowHandles[0]); // 창전환
+                            IWebElement Search = _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td[4]/table/tbody/tr[1]/td[8]/input"));
+                            try
+                            {
+                                //조회하기 클릭
+                                Search.Click();
+                            }
+                            catch
+                            {
+                                MessageBox.Show("조회하기 오류.");
+                            }
+                            
+                            
+
+                            IWebElement tbody_a = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody"));
+                            IWebElement tr_a = tbody_a.FindElement(By.TagName("tr"));
+                            var tr_b = tbody_a.FindElements(By.TagName("tr"));
+
+                            int c = 0;
+                                                                                //*[@id="layer_DepartureAFare"]/div/table/tbody/tr[1]/td[1]
+                            string DataListText = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody/tr/td")).Text;
+                            string DataListStrart = _driver.FindElement(By.XPath("//*[@id='F_PortNameView']")).Text;
+                            string DataListEnd = _driver.FindElement(By.XPath("//*[@id='T_PortNameView']")).Text;
+                            
+                            //홈페이지창 데이터 입력
+                            foreach (IWebElement tr_bb in tr_b)
+                            {
+                                if (DataListText != "항차정보가 존재하지 않습니다.")
                                 {
-                                    Data.Clear();
-
-                                    var td_a = tr_bb.FindElements(By.TagName("td"));
-                                    /*
-                                    foreach (var td in td_a)
+                                    if (c % 2 == 0)
                                     {
-                                        if (td.Text == ".")
-                                            Data.Add("등급없음");
-                                        else if (td.Text == "-")
-                                            Data.Add("등급없음");
+                                        Data.Clear();
+
+                                        var td_a = tr_bb.FindElements(By.TagName("td"));
+                                        /*
+                                        foreach (var td in td_a)
+                                        {
+                                            if (td.Text == ".")
+                                                Data.Add("등급없음");
+                                            else if (td.Text == "-")
+                                                Data.Add("등급없음");
+                                            else
+                                                Data.Add(td.Text);
+                                        }
+                                        */
+
+                                        //===============================================================================================
+                                        //데이터가 잘못들어가는 경우가 있어 간단하게 구분하면서 중복이 나올경우 데이터를 넣지않음
+                                        string[] test1 = Address_S.Split('(');
+                                        if (DataListStrart == test1[0])
+                                        {
+                                            Data.Add(Address_S); // 출발지 상세주소
+                                        }
                                         else
-                                            Data.Add(td.Text);
-                                    }
-                                    */
-
-                                    //===============================================================================================
-                                    //데이터가 잘못들어가는 경우가 있어 간단하게 구분하면서 중복이 나올경우 데이터를 넣지않음
-                                    string[] test1 = Address_S.Split('(');
-                                    if (DataListStrart == test1[0])
-                                    {
-                                        Data.Add(Address_S); // 출발지 상세주소
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
-                                    //===============================================================================================
-                                    string[] test2 = Address_E.Split('(');
-                                    if (DataListEnd == test2[0])
-                                    {
-                                        Data.Add(Address_E); // 도착지 상세주소
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
-                                    //===============================================================================================
+                                        {
+                                            break;
+                                        }
+                                        //===============================================================================================
+                                        string[] test2 = Address_E.Split('(');
+                                        if (DataListEnd == test2[0])
+                                        {
+                                            Data.Add(Address_E); // 도착지 상세주소
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                        //===============================================================================================
 
 
-                                    Data.Add(td_a[0].Text); // 선박명
-                                    Data.Add(td_a[1].Text); // 출발시각
+                                        Data.Add(td_a[0].Text); // 선박명
+                                        Data.Add(td_a[1].Text); // 출발시각
 
 
-                                    //===============================================================================================
-                                    // 소요시각
+                                        //===============================================================================================
+                                        // 소요시각
 
-                                    if (td_a[2].Text != "-")
-                                    {
-                                        string[] TimeExchange = td_a[2].Text.Replace("시간 ", ":").Replace("분", "").Split(':');
-                                        string hours1 = TimeExchange[0];
-                                        string hours2 = TimeExchange[1];
-                                        int min = int.Parse(hours1) * 60;
-                                        int Time = int.Parse(hours2) + min;
-                                        Data.Add(Time.ToString());
-                                    }
+                                        if (td_a[2].Text != "-")
+                                        {
+                                            string[] TimeExchange = td_a[2].Text.Replace("시간 ", ":").Replace("분", "").Split(':');
+                                            string hours1 = TimeExchange[0];
+                                            string hours2 = TimeExchange[1];
+                                            int min = int.Parse(hours1) * 60;
+                                            int Time = int.Parse(hours2) + min;
+                                            Data.Add(Time.ToString());
+                                        }
 
-                                    else
-                                    {
-                                        Data.Add(td_a[2].Text);
-                                    }
-                                    //===============================================================================================
-                                    // 등급
+                                        else
+                                        {
+                                            Data.Add(td_a[2].Text);
+                                        }
+                                        //===============================================================================================
+                                        // 등급
 
-                                    if (td_a[3].Text == ".")
-                                    { Data.Add("등급없음"); }
-                                    else if (td_a[3].Text == "-")
-                                    { Data.Add("등급없음"); }
-                                    else
-                                    { Data.Add(td_a[3].Text); }
+                                        if (td_a[3].Text == ".")
+                                        { Data.Add("등급없음"); }
+                                        else if (td_a[3].Text == "-")
+                                        { Data.Add("등급없음"); }
+                                        else
+                                        { Data.Add(td_a[3].Text); }
 
-                                    //===============================================================================================
-                                    Data.Add(td_a[4].Text); // 대인
-                                    Data.Add(td_a[5].Text); // 중고
-                                    Data.Add(td_a[6].Text); // 경로
-                                    Data.Add(td_a[7].Text); // 소아
-                                    Data.Add(td_a[8].Text); // 잔여석
-                                    Data.Add(td_a[9].Text); // 예매
-                                    Data.Add(DataListStrart); // 출발지
-                                    Data.Add(DataListEnd); // 도착지
+                                        //===============================================================================================
+                                        Data.Add(td_a[4].Text); // 대인
+                                        Data.Add(td_a[5].Text); // 중고
+                                        Data.Add(td_a[6].Text); // 경로
+                                        Data.Add(td_a[7].Text); // 소아
+                                        Data.Add(td_a[8].Text); // 잔여석
+                                        Data.Add(td_a[9].Text); // 예매
+                                        Data.Add(DataListStrart); // 출발지
+                                        Data.Add(DataListEnd); // 도착지
 
-                                    List<List<string>> Data2 = new List<List<string>>();
-                                    Data2.Add(Data.ToList());
+                                        List<List<string>> Data2 = new List<List<string>>();
+                                        Data2.Add(Data.ToList());
 
-                                    if (!DataList.Any() || !DataList.SequenceEqual(Data2))
-                                    {
-                                        DataList.Add(Data.ToList());
-                                        Data2.Clear();
+                                        if (!DataList.Any() || !DataList.SequenceEqual(Data2))
+                                        {
+                                            DataList.Add(Data.ToList());
+                                            Data2.Clear();
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
                                     else
                                     {
+                                        c++;
                                         continue;
+                                    }
+                                    //데이터그리드뷰에 데이터 삽입
+                                    if (Ship_DataGridViewData.InvokeRequired)
+                                    {
+                                        Ship_DataGridViewData.BeginInvoke(new MethodInvoker(delegate ()
+                                        {
+                                            Ship_DataGridViewData.Rows.Add(DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8], DataList[kk][9], DataList[kk][10], DataList[kk][11], DataList[kk][12], DataList[kk][13], DataList[kk][0], DataList[kk][1]);
+                                            kk++;
+                                        }));
                                     }
                                 }
                                 else
                                 {
-                                    c++;
                                     continue;
                                 }
-                                //데이터그리드뷰에 데이터 삽입
-                                if (Ship_DataGridViewData.InvokeRequired)
-                                {
-                                    Ship_DataGridViewData.BeginInvoke(new MethodInvoker(delegate ()
-                                    {
-                                        Ship_DataGridViewData.Rows.Add(DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8], DataList[kk][9], DataList[kk][10], DataList[kk][11], DataList[kk][12], DataList[kk][13], DataList[kk][0], DataList[kk][1]);
-                                        kk++;
-                                    }));
-                                }
-                            }
-                            else
+                                c++;
+                            }// 여기서 foreach가 끝남
+                            //항로검색
+                            try
                             {
-                                continue;
+                                _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                             }
-                            c++;
-                        }// 여기서 foreach가 끝남
-                        //항로검색
+                            catch
+                            {
+                                MessageBox.Show("재항로검색 오류.");
+                            }
+                            //팝업창 전환
+                            _driver.SwitchTo().Window(_driver.WindowHandles[1]);
+                            try
+                            {
+                                _driver.FindElement(By.XPath(A_Code[j])).Click(); // = A_Code1    
+                            }
+                            catch
+                            {
+                                MessageBox.Show("2A코드 오류.");
+                            }
+                            try
+                            {
+                                _driver.FindElement(By.XPath(B_Code[j])).Click(); // = B_Code1
+                            }
+                            catch
+                            {
+                                MessageBox.Show("2B코드 오류.");
+                            }
+                            
+                        }
+                        _driver.Close();
+                        _driver.SwitchTo().Window(_driver.WindowHandles[0]);
                         try
                         {
                             _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                         }
                         catch
                         {
-                            MessageBox.Show("재항로검색 오류.");
+                            MessageBox.Show($"{_driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Text} 오류.");
                         }
-                        //팝업창 전환
-                        _driver.SwitchTo().Window(_driver.WindowHandles[1]);
-                        try
-                        {
-                            _driver.FindElement(By.XPath(A_Code[j])).Click(); // = A_Code1    
-                        }
-                        catch
-                        {
-                            MessageBox.Show("2A코드 오류.");
-                        }
-                        try
-                        {
-                            _driver.FindElement(By.XPath(B_Code[j])).Click(); // = B_Code1
-                        }
-                        catch
-                        {
-                            MessageBox.Show("2B코드 오류.");
-                        }
-                            
-                    }
-                    _driver.Close();
-                    _driver.SwitchTo().Window(_driver.WindowHandles[0]);
-                    try
-                    {
-                        _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
-                    }
-                    catch
-                    {
-                        MessageBox.Show($"{_driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Text} 오류.");
-                    }
                         
-                    _driver.SwitchTo().Window(_driver.WindowHandles[1]);
+                        _driver.SwitchTo().Window(_driver.WindowHandles[1]);
+                    }
                 }
-                //}
             }
             catch (Exception exc)
             {

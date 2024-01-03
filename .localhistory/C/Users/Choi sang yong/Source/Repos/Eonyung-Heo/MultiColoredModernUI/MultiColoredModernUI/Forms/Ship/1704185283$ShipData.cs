@@ -315,8 +315,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 _driver.SwitchTo().Window(_driver.WindowHandles[0]); 
                 _driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Click();
                 _driver.SwitchTo().Window(_driver.WindowHandles[1]); // 창전환
-                //_driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{m}]/a")).Click(); // 가,나,다,라.. 등등 클릭
-                _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[1]/a")).Click(); // 가,나,다,라.. 등등 클릭
+                _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{m}]/a")).Click(); // 가,나,다,라.. 등등 클릭
                 _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000); // 속도 제어
 
                 for (int j = 0; j < B_Code.Count; j++)
