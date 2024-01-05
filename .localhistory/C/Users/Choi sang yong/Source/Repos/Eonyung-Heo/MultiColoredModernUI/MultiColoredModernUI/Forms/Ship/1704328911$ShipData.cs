@@ -271,17 +271,18 @@ namespace MultiColoredModernUI.Forms.Ship
                             else if (EndList != "")
                             {
                                 // 섬명 하나씩 클릭
+                                //IWebElement Page = _driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]"));
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Click();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                             }
 
-                            //패스하거나 해당 엘리먼트값을 저장해둔다.
                             string EndList_x = _driver.FindElement(By.XPath("//*[@id='divContent']/table/tbody/tr[2]/td")).Text;
+                            //IWebElement BackMove = _driver.FindElement(By.XPath("//*[@id='tb_start_ON']/tbody/tr/td[3]/a/img")); //재설정 눌러서 뒤로가기 삭제예정
+
+                            //패스하거나 해당 엘리먼트값을 저장해둔다.
                             if (EndList_x == "선택하신 도착지의 항로가 없습니다.")
                             {
                                 //_driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
                                 _driver.Navigate().Back();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Click();
                                 continue;
                             }
@@ -306,6 +307,9 @@ namespace MultiColoredModernUI.Forms.Ship
                 int kk = 0;
                 Thread.Sleep(1000);
                 //저장해두었던 경로찾아 입력.
+
+                //for (int m = 1; m <= KoreaLanguage.Count * 2; m = m + 2)
+                //{
                 // 재설정을 눌렀기 때문에 창을 닫고 다시켬.
                 _driver.Close();
                 _driver.SwitchTo().Window(_driver.WindowHandles[0]); 
@@ -371,7 +375,11 @@ namespace MultiColoredModernUI.Forms.Ship
                         catch
                         {
                             MessageBox.Show("버튼 클릭 오류.");
+                            //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
+                                
                         }
+                            
+
                         //창 아래로 내리기
                         ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
 
@@ -398,12 +406,15 @@ namespace MultiColoredModernUI.Forms.Ship
                         {
                             MessageBox.Show("조회하기 오류.");
                         }
-                        
+                            
+                            
+
                         IWebElement tbody_a = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody"));
                         IWebElement tr_a = tbody_a.FindElement(By.TagName("tr"));
                         var tr_b = tbody_a.FindElements(By.TagName("tr"));
 
                         int c = 0;
+                                                                            //*[@id="layer_DepartureAFare"]/div/table/tbody/tr[1]/td[1]
                         string DataListText = _driver.FindElement(By.XPath("//*[@id='layer_DepartureAFare']/div/table/tbody/tr/td")).Text;
                         string DataListStrart = _driver.FindElement(By.XPath("//*[@id='F_PortNameView']")).Text;
                         string DataListEnd = _driver.FindElement(By.XPath("//*[@id='T_PortNameView']")).Text;
@@ -418,6 +429,18 @@ namespace MultiColoredModernUI.Forms.Ship
                                     Data.Clear();
 
                                     var td_a = tr_bb.FindElements(By.TagName("td"));
+                                    /*
+                                    foreach (var td in td_a)
+                                    {
+                                        if (td.Text == ".")
+                                            Data.Add("등급없음");
+                                        else if (td.Text == "-")
+                                            Data.Add("등급없음");
+                                        else
+                                            Data.Add(td.Text);
+                                    }
+                                    */
+
                                     //===============================================================================================
                                     //데이터가 잘못들어가는 경우가 있어 간단하게 구분하면서 중복이 나올경우 데이터를 넣지않음
                                     string[] test1 = Address_S.Split('(');
@@ -544,6 +567,7 @@ namespace MultiColoredModernUI.Forms.Ship
                         {
                             MessageBox.Show("2B코드 오류.");
                         }
+                            
                     }
                     _driver.Close();
                     _driver.SwitchTo().Window(_driver.WindowHandles[0]);
@@ -555,8 +579,10 @@ namespace MultiColoredModernUI.Forms.Ship
                     {
                         MessageBox.Show($"{_driver.FindElement(By.XPath("/html/body/form/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[3]/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[2]/td[4]/table/tbody/tr/td[8]/a")).Text} 오류.");
                     }
+                        
                     _driver.SwitchTo().Window(_driver.WindowHandles[1]);
                 }
+                //}
             }
             catch (Exception exc)
             {

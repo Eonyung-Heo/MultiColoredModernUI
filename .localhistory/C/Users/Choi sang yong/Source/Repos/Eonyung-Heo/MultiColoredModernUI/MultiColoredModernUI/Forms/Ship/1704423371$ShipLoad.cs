@@ -106,19 +106,6 @@ namespace MultiColoredModernUI.Forms.Ship
             sqlConnect.Close();
         }
 
-        private void Ship_Clear_BT_Fee()
-        {
-            Ship_CompanyName_TB.Text = string.Empty;
-            Ship_ShipName2_TB.Text = string.Empty;
-            Ship_StartTime_TB.Text = string.Empty;
-            Ship_Timerequired_TB.Text = string.Empty;
-            Ship_Rank2_TB.Text = string.Empty;
-            Ship_AdultFee_TB.Text = string.Empty;
-            Ship_YouthFee_TB.Text = string.Empty;
-            Ship_SeniorFee_TB.Text = string.Empty;
-            Ship_ChildFee_TB.Text = string.Empty;
-            Ship_DataGridViewData_Fee_DG.Rows.Clear();
-        }
         //텍스트박스 초기화 코드
         private void Ship_Clear_BT_Clear()
         {
@@ -160,7 +147,16 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_ShipUpDate_TB1.Text = string.Empty;
                 Ship_DataGridViewData_Route_DG.CurrentCell = null;
 
-                Ship_Clear_BT_Fee();
+                Ship_CompanyName_TB.Text = string.Empty;
+                Ship_ShipName2_TB.Text = string.Empty;
+                Ship_StartTime_TB.Text = string.Empty;
+                Ship_Timerequired_TB.Text = string.Empty;
+                Ship_Rank2_TB.Text = string.Empty;
+                Ship_AdultFee_TB.Text = string.Empty;
+                Ship_YouthFee_TB.Text = string.Empty;
+                Ship_SeniorFee_TB.Text = string.Empty;
+                Ship_ChildFee_TB.Text = string.Empty;
+                Ship_DataGridViewData_Fee_DG.Rows.Clear();
             }
             else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
             {
@@ -229,7 +225,7 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             if (e.RowIndex != -1)
             {
-                Ship_Clear_BT_Fee();
+
                 Connect();
 
                 string strSql_Lane = "select * from NEW_SHIP.dbo.TBShipLane";

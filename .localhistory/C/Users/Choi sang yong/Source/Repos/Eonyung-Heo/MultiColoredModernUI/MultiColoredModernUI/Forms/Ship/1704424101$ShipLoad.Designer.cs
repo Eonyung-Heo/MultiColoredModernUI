@@ -292,7 +292,6 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.Ship_DataGridViewData_Fee_DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Ship_DataGridViewData_Fee_DG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Ship_DataGridViewData_Fee_DG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;

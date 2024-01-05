@@ -28,7 +28,7 @@ namespace MultiColoredModernUI.Forms.Ship
             selectODSayLaneID();
             selectODSayShipCompanyID();
             selectODSayShipStation();
-            Ship_Sortation_CB.SelectedIndex = 0;// 구분 콤보박스 기본값 전체(index 0)로 설정
+
         }
 
         //SQL접속
@@ -36,6 +36,7 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             // db접속정보
             sqlConnect = new SqlConnection("Server = 218.234.32.194,5242; Database = NEW_SHIP; uid = sa; pwd = yasdo12!@; MultipleActiveResultSets = True");
+            //sqlConnect = new SqlConnection("Server = 218.234.32.245,5242; Database = TEST_Choi; uid = aro_choi; pwd = aro7321@; MultipleActiveResultSets = True");
 
             sqlConnect.Open();
         }
@@ -106,19 +107,6 @@ namespace MultiColoredModernUI.Forms.Ship
             sqlConnect.Close();
         }
 
-        private void Ship_Clear_BT_Fee()
-        {
-            Ship_CompanyName_TB.Text = string.Empty;
-            Ship_ShipName2_TB.Text = string.Empty;
-            Ship_StartTime_TB.Text = string.Empty;
-            Ship_Timerequired_TB.Text = string.Empty;
-            Ship_Rank2_TB.Text = string.Empty;
-            Ship_AdultFee_TB.Text = string.Empty;
-            Ship_YouthFee_TB.Text = string.Empty;
-            Ship_SeniorFee_TB.Text = string.Empty;
-            Ship_ChildFee_TB.Text = string.Empty;
-            Ship_DataGridViewData_Fee_DG.Rows.Clear();
-        }
         //텍스트박스 초기화 코드
         private void Ship_Clear_BT_Clear()
         {
@@ -159,8 +147,6 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_ShipCreateDate_TB1.Text = string.Empty;
                 Ship_ShipUpDate_TB1.Text = string.Empty;
                 Ship_DataGridViewData_Route_DG.CurrentCell = null;
-
-                Ship_Clear_BT_Fee();
             }
             else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
             {
@@ -182,9 +168,10 @@ namespace MultiColoredModernUI.Forms.Ship
         //구분 클릭시 그리드뷰 초기화하고 해당데이터 불러오기(ex:가나다라마바사...별도관리)
         private void Ship_DataGridViewData_Route_DG_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             string Ship_Sortation_CB_select = "";
             var SelectedItem = Ship_Sortation_CB.SelectedItem;
-
+            
             if (SelectedItem != null)
             {
                 Ship_Sortation_CB_select = SelectedItem.ToString();
@@ -229,24 +216,21 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             if (e.RowIndex != -1)
             {
-                Ship_Clear_BT_Fee();
+
                 Connect();
 
                 string strSql_Lane = "select * from NEW_SHIP.dbo.TBShipLane";
                 string strSql_Harbor = "select * from NEW_SHIP.dbo.TBHarbor";
-                string strSql_TBShipLaneInfo = "select * from NEW_SHIP.dbo.TBShipLaneInfo order by ODSayLaneID,StartTime asc";
 
                 SqlCommand cmd_Lane = new SqlCommand(strSql_Lane, sqlConnect);
                 SqlCommand cmd_Harbor = new SqlCommand(strSql_Harbor, sqlConnect);
-                SqlCommand cmd_TBShipLaneInfo = new SqlCommand(strSql_TBShipLaneInfo, sqlConnect);
 
                 SqlDataReader dt = cmd_Lane.ExecuteReader();
                 SqlDataReader sdt = cmd_Harbor.ExecuteReader();
-                SqlDataReader gdt = cmd_TBShipLaneInfo.ExecuteReader();
 
                 int index = 0;
                 index = e.RowIndex;
-                Ship_DataGridViewData_Fee_DG.Rows.Clear();
+
                 while (dt.Read())
                 {
                     if (Ship_DataGridViewData_Route_DG.Rows[index].Cells[0].Value.ToString() == dt[8].ToString() &&
@@ -285,60 +269,12 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_HarborEID_TB.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[3].Value.ToString(); //도착항구ID
                 Ship_ShipCreateDate_TB1.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[4].Value.ToString(); //작성날짜
                 Ship_ShipUpDate_TB1.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[5].Value.ToString(); //수정날짜
-                while (gdt.Read())
-                {
-                    if (Ship_RouteID_TB.Text == gdt[0].ToString())
-                    {
-                        Ship_DataGridViewData_Fee_DG.Rows.Add(gdt[3], gdt[5], gdt[7], gdt[8], gdt[9], gdt[10], gdt[11], gdt[12], gdt[13]);
-                    }
-                }
+
+
                 sdt.Close();
                 dt.Close();
                 sqlConnect.Close();
             }
-        }
-
-        // 상세 내역 변경
-        private void Ship_Fee_TB_TextChanged()
-        {
-            Connect();
-
-            string strSql_TBShipLaneInfo = "select * from NEW_SHIP.dbo.TBShipLaneInfo";
-            SqlCommand cmd_TBShipLaneInfo = new SqlCommand(strSql_TBShipLaneInfo, sqlConnect);
-            SqlDataReader gdt = cmd_TBShipLaneInfo.ExecuteReader();
-
-            string TimeAdd = Ship_StartTime_TB.Text;
-            string TimerequiredAdd = Ship_Timerequired_TB.Text;
-            string Rank2Add = Ship_Rank2_TB.Text;
-            string AdultFeeAdd = Ship_AdultFee_TB.Text;
-            string YouthFeeAdd = Ship_YouthFee_TB.Text;
-            string SeniorFeeAdd = Ship_SeniorFee_TB.Text;
-            string ChildFeeAdd = Ship_ChildFee_TB.Text;
-
-            string strSql = "UPDATE NEW_SHIP.dbo.TBShipLaneInfo SET StartTime = @TimeAdd, Rank = @Rank2Add, TimeRequired = @TimerequiredAdd, AdultFee = @AdultFeeAdd, YouthFee = @YouthFeeAdd, SeniorFee = @SeniorFeeAdd, ChildFee = @ChildFeeAdd where ODSayLaneID = @ODSayLaneID and StartTime = @TimeAdd and ShipName = @Ship_ShipName2_TB";
-            SqlCommand cmd = new SqlCommand(strSql, sqlConnect);
-            try
-            {
-                cmd.Parameters.AddWithValue("@TimeAdd", TimeAdd);
-                cmd.Parameters.AddWithValue("@TimerequiredAdd", Ship_Timerequired_TB.Text);
-                cmd.Parameters.AddWithValue("@Rank2Add", Ship_Rank2_TB.Text);
-                cmd.Parameters.AddWithValue("@AdultFeeAdd", Ship_AdultFee_TB.Text);
-                cmd.Parameters.AddWithValue("@YouthFeeAdd", Ship_YouthFee_TB.Text);
-                cmd.Parameters.AddWithValue("@RSeniorFeeAddank2Add", Ship_SeniorFee_TB.Text);
-                cmd.Parameters.AddWithValue("@ChildFeeAdd", Ship_ChildFee_TB.Text);
-                cmd.Parameters.AddWithValue("@ODSayLaneID", Ship_RouteID_TB.Text);
-                cmd.ExecuteNonQuery();
-
-                //몇 개의 데이터가 바뀌었는지 알수있음.
-                int rowsAffected = cmd.ExecuteNonQuery();
-                MessageBox.Show("상세 내역 " + rowsAffected + "개의 행이 변경되었습니다.");
-            }
-            catch
-            {
-                MessageBox.Show("상세 내역 오류입니다.");
-            }
-
-            sqlConnect.Close();
         }
 
         // 출발지 상세주소지 변경
@@ -455,7 +391,6 @@ namespace MultiColoredModernUI.Forms.Ship
         //저장하기 누를시 코드
         private void Ship_Update_BT_Click(object sender, EventArgs e)
         {
-            Ship_Fee_TB_TextChanged(); // 상세내역 변경
             Ship_DetailedHarborName_S_TB_TextChanged();//출발지 상세주소 변경
             Ship_DetailedHarborName_E_TB_TextChanged();//도착지 상세주소 변경
             Ship_UpdateDate_TB_TextChanged();//시간변경
@@ -464,34 +399,9 @@ namespace MultiColoredModernUI.Forms.Ship
             MessageBox.Show("저장되었습니다.");
         }
 
-        private void Ship_DataGridViewData_Fee_DG_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Ship_CompanyName_TB.Clear();
-            Ship_ShipName2_TB.Clear();
-            Ship_StartTime_TB.Clear();
-            Ship_Timerequired_TB.Clear();
-            Ship_Rank2_TB.Clear();
-            Ship_AdultFee_TB.Clear();
-            Ship_YouthFee_TB.Clear();
-            Ship_SeniorFee_TB.Clear();
-            Ship_ChildFee_TB.Clear();
-
-            int index = 0;
-            index = e.RowIndex;
-
-            Ship_CompanyName_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[0].Value.ToString();
-            Ship_ShipName2_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[1].Value.ToString();
-            Ship_StartTime_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[2].Value.ToString();
-            Ship_Timerequired_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[3].Value.ToString();
-            Ship_Rank2_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[4].Value.ToString();
-            Ship_AdultFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[5].Value.ToString();
-            Ship_YouthFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[6].Value.ToString();
-            Ship_SeniorFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[7].Value.ToString();
-            Ship_ChildFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[8].Value.ToString();
-        }
         //-----------------------------------------------노선정보------------------------------------------------------------
 
-            
+
 
         //-----------------------------------------------해운정보------------------------------------------------------------
         public void selectODSayShipCompanyID()
@@ -1024,12 +934,6 @@ namespace MultiColoredModernUI.Forms.Ship
         }
 
         
-
-
-
-
-
-
 
 
         //-----------------------------------------------항구정보------------------------------------------------------------

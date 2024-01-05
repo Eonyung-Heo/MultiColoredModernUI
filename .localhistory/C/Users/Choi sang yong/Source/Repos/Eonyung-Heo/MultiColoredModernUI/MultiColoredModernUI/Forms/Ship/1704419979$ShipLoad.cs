@@ -106,19 +106,6 @@ namespace MultiColoredModernUI.Forms.Ship
             sqlConnect.Close();
         }
 
-        private void Ship_Clear_BT_Fee()
-        {
-            Ship_CompanyName_TB.Text = string.Empty;
-            Ship_ShipName2_TB.Text = string.Empty;
-            Ship_StartTime_TB.Text = string.Empty;
-            Ship_Timerequired_TB.Text = string.Empty;
-            Ship_Rank2_TB.Text = string.Empty;
-            Ship_AdultFee_TB.Text = string.Empty;
-            Ship_YouthFee_TB.Text = string.Empty;
-            Ship_SeniorFee_TB.Text = string.Empty;
-            Ship_ChildFee_TB.Text = string.Empty;
-            Ship_DataGridViewData_Fee_DG.Rows.Clear();
-        }
         //텍스트박스 초기화 코드
         private void Ship_Clear_BT_Clear()
         {
@@ -160,7 +147,15 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_ShipUpDate_TB1.Text = string.Empty;
                 Ship_DataGridViewData_Route_DG.CurrentCell = null;
 
-                Ship_Clear_BT_Fee();
+                Ship_CompanyName_TB.Text = string.Empty;
+                Ship_ShipName2_TB.Text = string.Empty;
+                Ship_StartTime_TB.Text = string.Empty;
+                Ship_Timerequired_TB.Text = string.Empty;
+                Ship_Rank2_TB.Text = string.Empty;
+                Ship_AdultFee_TB.Text = string.Empty;
+                Ship_YouthFee_TB.Text = string.Empty;
+                Ship_SeniorFee_TB.Text = string.Empty;
+                Ship_ChildFee_TB.Text = string.Empty;
             }
             else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
             {
@@ -229,12 +224,12 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             if (e.RowIndex != -1)
             {
-                Ship_Clear_BT_Fee();
+
                 Connect();
 
                 string strSql_Lane = "select * from NEW_SHIP.dbo.TBShipLane";
                 string strSql_Harbor = "select * from NEW_SHIP.dbo.TBHarbor";
-                string strSql_TBShipLaneInfo = "select * from NEW_SHIP.dbo.TBShipLaneInfo order by ODSayLaneID,StartTime asc";
+                string strSql_TBShipLaneInfo = "select * from NEW_SHIP.dbo.TBShipLaneInfo";
 
                 SqlCommand cmd_Lane = new SqlCommand(strSql_Lane, sqlConnect);
                 SqlCommand cmd_Harbor = new SqlCommand(strSql_Harbor, sqlConnect);
@@ -462,6 +457,13 @@ namespace MultiColoredModernUI.Forms.Ship
             Ship_DataGridViewData_Route_DG.Rows.Clear();
             selectODSayLaneID();
             MessageBox.Show("저장되었습니다.");
+        }
+
+        private void Ship_DataGridViewData_Fee_DG_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Ship_DataGridViewData_Route_DG.Dock = DockStyle.Right;
+            Ship_DataGridViewData_Route_DG.Columns[4].Visible = false;
+            Ship_DataGridViewData_Route_DG.Columns[5].Visible = false;
         }
 
         private void Ship_DataGridViewData_Fee_DG_CellContentClick(object sender, DataGridViewCellEventArgs e)

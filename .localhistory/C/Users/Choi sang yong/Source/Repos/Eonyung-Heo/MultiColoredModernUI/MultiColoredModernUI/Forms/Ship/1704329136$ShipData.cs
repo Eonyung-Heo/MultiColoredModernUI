@@ -272,7 +272,6 @@ namespace MultiColoredModernUI.Forms.Ship
                             {
                                 // 섬명 하나씩 클릭
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Click();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                             }
 
                             //패스하거나 해당 엘리먼트값을 저장해둔다.
@@ -281,7 +280,6 @@ namespace MultiColoredModernUI.Forms.Ship
                             {
                                 //_driver.FindElement(By.XPath("/html/body/form/table/tbody/tr/td/table/tbody/tr[4]/td/div/table[1]/tbody/tr/td[3]/a/img")).Click(); //재설정 눌러서 뒤로가기
                                 _driver.Navigate().Back();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Default']/table[2]/tbody/tr[1]/td[{Num}]/a")).Click();
                                 continue;
                             }
@@ -371,7 +369,11 @@ namespace MultiColoredModernUI.Forms.Ship
                         catch
                         {
                             MessageBox.Show("버튼 클릭 오류.");
+                            //_driver.FindElement(By.XPath($"/html/body/form/table/tbody/tr/td/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[{k1}]/td[1]/input")).Click();
+                                
                         }
+                            
+
                         //창 아래로 내리기
                         ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
 

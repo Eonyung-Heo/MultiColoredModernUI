@@ -272,7 +272,6 @@ namespace MultiColoredModernUI.Forms.Ship
                             {
                                 // 섬명 하나씩 클릭
                                 _driver.FindElement(By.XPath($"//*[@id='pnl_Text']/div[2]/table/tbody/tr[{sectionnum3}]/td[{sectionnum4}]")).Click();
-                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1000);
                             }
 
                             //패스하거나 해당 엘리먼트값을 저장해둔다.
