@@ -191,6 +191,9 @@ namespace MultiColoredModernUI
             if (panelShipSubMenu.Visible == true)
                 panelShipSubMenu.Visible = false;
 
+            if (panelInterCityBusSubMenu.Visible == true)
+                panelInterCityBusSubMenu.Visible = false;
+
             /*
             if (panelToolListSubMenu.Visible == true)
                 panelToolListSubMenu.Visible = false;
@@ -539,6 +542,13 @@ namespace MultiColoredModernUI
                 }
             }
                 
+        }
+
+        private void btnInterCityBus_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelInterCityBusSubMenu);
+            Activatebutton(sender);
+            btnShipCollection_Click((Button)btnShipCollection, e);
         }
     }
 }

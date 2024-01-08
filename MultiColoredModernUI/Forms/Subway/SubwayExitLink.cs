@@ -228,6 +228,7 @@ namespace MultiColoredModernUI.Forms.Subway
             guna2TextBox1.Text = "";
 
             StationNameList();
+            guna2DataGridView1.Rows.Clear();
         }
     }
 }

@@ -30,7 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panelShipSubMenu = new System.Windows.Forms.Panel();
+            this.btnShipLoad = new System.Windows.Forms.Button();
+            this.btnShipAdd = new System.Windows.Forms.Button();
+            this.btnShipCollection = new System.Windows.Forms.Button();
+            this.btnShipProducts = new System.Windows.Forms.Button();
             this.panelProductsSubMenu = new System.Windows.Forms.Panel();
+            this.btnExitLink = new System.Windows.Forms.Button();
             this.btnExchange = new System.Windows.Forms.Button();
             this.btnGateLink = new System.Windows.Forms.Button();
             this.btnFacility = new System.Windows.Forms.Button();
@@ -39,29 +45,29 @@
             this.btnDataManegement = new System.Windows.Forms.Button();
             this.btnRegionData = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMaster = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.btnCloseChileForm = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.btnCloseChileForm = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnShipProducts = new System.Windows.Forms.Button();
-            this.panelShipSubMenu = new System.Windows.Forms.Panel();
-            this.btnShipLoad = new System.Windows.Forms.Button();
-            this.btnShipAdd = new System.Windows.Forms.Button();
-            this.btnShipCollection = new System.Windows.Forms.Button();
+            this.btnInterCityBus = new System.Windows.Forms.Button();
+            this.panelInterCityBusSubMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnRoute = new System.Windows.Forms.Button();
+            this.btnSchedule = new System.Windows.Forms.Button();
             this.btnAirPlane = new System.Windows.Forms.Button();
-            this.btnExitLink = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
+            this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelShipSubMenu.SuspendLayout();
+            this.panelTitle.SuspendLayout();
+            this.panelInterCityBusSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -69,6 +75,8 @@
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.White;
             this.panelSideMenu.Controls.Add(this.btnAirPlane);
+            this.panelSideMenu.Controls.Add(this.panelInterCityBusSubMenu);
+            this.panelSideMenu.Controls.Add(this.btnInterCityBus);
             this.panelSideMenu.Controls.Add(this.panelShipSubMenu);
             this.panelSideMenu.Controls.Add(this.btnShipProducts);
             this.panelSideMenu.Controls.Add(this.panelProductsSubMenu);
@@ -80,8 +88,90 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(204, 758);
+            this.panelSideMenu.Size = new System.Drawing.Size(204, 888);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // panelShipSubMenu
+            // 
+            this.panelShipSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelShipSubMenu.Controls.Add(this.btnShipLoad);
+            this.panelShipSubMenu.Controls.Add(this.btnShipAdd);
+            this.panelShipSubMenu.Controls.Add(this.btnShipCollection);
+            this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShipSubMenu.Location = new System.Drawing.Point(0, 434);
+            this.panelShipSubMenu.Name = "panelShipSubMenu";
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 136);
+            this.panelShipSubMenu.TabIndex = 13;
+            // 
+            // btnShipLoad
+            // 
+            this.btnShipLoad.BackColor = System.Drawing.Color.White;
+            this.btnShipLoad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipLoad.FlatAppearance.BorderSize = 0;
+            this.btnShipLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipLoad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipLoad.ForeColor = System.Drawing.Color.Black;
+            this.btnShipLoad.Location = new System.Drawing.Point(0, 84);
+            this.btnShipLoad.Name = "btnShipLoad";
+            this.btnShipLoad.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipLoad.Size = new System.Drawing.Size(204, 42);
+            this.btnShipLoad.TabIndex = 13;
+            this.btnShipLoad.Text = "해운 데이터 수정";
+            this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipLoad.UseVisualStyleBackColor = false;
+            this.btnShipLoad.Click += new System.EventHandler(this.btnShipLoad_Click);
+            // 
+            // btnShipAdd
+            // 
+            this.btnShipAdd.BackColor = System.Drawing.Color.White;
+            this.btnShipAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipAdd.FlatAppearance.BorderSize = 0;
+            this.btnShipAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnShipAdd.Location = new System.Drawing.Point(0, 42);
+            this.btnShipAdd.Name = "btnShipAdd";
+            this.btnShipAdd.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipAdd.Size = new System.Drawing.Size(204, 42);
+            this.btnShipAdd.TabIndex = 12;
+            this.btnShipAdd.Text = "해운 데이터 추가";
+            this.btnShipAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipAdd.UseVisualStyleBackColor = false;
+            this.btnShipAdd.Click += new System.EventHandler(this.btnShipAdd_Click);
+            // 
+            // btnShipCollection
+            // 
+            this.btnShipCollection.BackColor = System.Drawing.Color.White;
+            this.btnShipCollection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipCollection.FlatAppearance.BorderSize = 0;
+            this.btnShipCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipCollection.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipCollection.ForeColor = System.Drawing.Color.Black;
+            this.btnShipCollection.Location = new System.Drawing.Point(0, 0);
+            this.btnShipCollection.Name = "btnShipCollection";
+            this.btnShipCollection.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnShipCollection.Size = new System.Drawing.Size(204, 42);
+            this.btnShipCollection.TabIndex = 0;
+            this.btnShipCollection.Text = "해운 데이터 수집";
+            this.btnShipCollection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipCollection.UseVisualStyleBackColor = false;
+            this.btnShipCollection.Click += new System.EventHandler(this.btnShipCollection_Click);
+            // 
+            // btnShipProducts
+            // 
+            this.btnShipProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShipProducts.FlatAppearance.BorderSize = 0;
+            this.btnShipProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
+            this.btnShipProducts.Location = new System.Drawing.Point(0, 389);
+            this.btnShipProducts.Name = "btnShipProducts";
+            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
+            this.btnShipProducts.TabIndex = 12;
+            this.btnShipProducts.Text = "해운";
+            this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShipProducts.UseVisualStyleBackColor = true;
+            this.btnShipProducts.Click += new System.EventHandler(this.btnShipProducts_Click);
             // 
             // panelProductsSubMenu
             // 
@@ -96,6 +186,24 @@
             this.panelProductsSubMenu.Name = "panelProductsSubMenu";
             this.panelProductsSubMenu.Size = new System.Drawing.Size(204, 179);
             this.panelProductsSubMenu.TabIndex = 2;
+            // 
+            // btnExitLink
+            // 
+            this.btnExitLink.BackColor = System.Drawing.Color.White;
+            this.btnExitLink.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExitLink.FlatAppearance.BorderSize = 0;
+            this.btnExitLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitLink.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitLink.ForeColor = System.Drawing.Color.Black;
+            this.btnExitLink.Location = new System.Drawing.Point(0, 140);
+            this.btnExitLink.Name = "btnExitLink";
+            this.btnExitLink.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnExitLink.Size = new System.Drawing.Size(204, 35);
+            this.btnExitLink.TabIndex = 5;
+            this.btnExitLink.Text = "지하철 빠른 하차";
+            this.btnExitLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExitLink.UseVisualStyleBackColor = false;
+            this.btnExitLink.Click += new System.EventHandler(this.btnExitLink_Click);
             // 
             // btnExchange
             // 
@@ -180,7 +288,7 @@
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(204, 45);
             this.btnProducts.TabIndex = 8;
-            this.btnProducts.Text = "지하철 관리";
+            this.btnProducts.Text = "지하철";
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
@@ -227,6 +335,17 @@
             this.panelLogo.Size = new System.Drawing.Size(204, 75);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnMaster
             // 
             this.btnMaster.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -234,7 +353,7 @@
             this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaster.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaster.ForeColor = System.Drawing.Color.Black;
-            this.btnMaster.Location = new System.Drawing.Point(0, 713);
+            this.btnMaster.Location = new System.Drawing.Point(0, 843);
             this.btnMaster.Name = "btnMaster";
             this.btnMaster.Size = new System.Drawing.Size(204, 45);
             this.btnMaster.TabIndex = 3;
@@ -259,6 +378,23 @@
             this.panelTitle.TabIndex = 1;
             this.panelTitle.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDoubleClick);
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // btnCloseChileForm
+            // 
+            this.btnCloseChileForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChileForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChileForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChileForm.IconChar = FontAwesome.Sharp.IconChar.RectangleXmark;
+            this.btnCloseChileForm.IconColor = System.Drawing.Color.Black;
+            this.btnCloseChileForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloseChileForm.IconSize = 20;
+            this.btnCloseChileForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChileForm.Name = "btnCloseChileForm";
+            this.btnCloseChileForm.Size = new System.Drawing.Size(75, 75);
+            this.btnCloseChileForm.TabIndex = 1;
+            this.btnCloseChileForm.Tag = "DASHBOARD";
+            this.btnCloseChileForm.UseVisualStyleBackColor = true;
+            this.btnCloseChileForm.Click += new System.EventHandler(this.btnCloseChileForm_Click);
             // 
             // label2
             // 
@@ -336,118 +472,87 @@
             this.panelDeskTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDeskTop.Location = new System.Drawing.Point(204, 75);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(971, 683);
+            this.panelDeskTop.Size = new System.Drawing.Size(971, 813);
             this.panelDeskTop.TabIndex = 2;
             // 
-            // btnCloseChileForm
+            // btnInterCityBus
             // 
-            this.btnCloseChileForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChileForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChileForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChileForm.IconChar = FontAwesome.Sharp.IconChar.RectangleXmark;
-            this.btnCloseChileForm.IconColor = System.Drawing.Color.Black;
-            this.btnCloseChileForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCloseChileForm.IconSize = 20;
-            this.btnCloseChileForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChileForm.Name = "btnCloseChileForm";
-            this.btnCloseChileForm.Size = new System.Drawing.Size(75, 75);
-            this.btnCloseChileForm.TabIndex = 1;
-            this.btnCloseChileForm.Tag = "DASHBOARD";
-            this.btnCloseChileForm.UseVisualStyleBackColor = true;
-            this.btnCloseChileForm.Click += new System.EventHandler(this.btnCloseChileForm_Click);
+            this.btnInterCityBus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInterCityBus.FlatAppearance.BorderSize = 0;
+            this.btnInterCityBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInterCityBus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterCityBus.ForeColor = System.Drawing.Color.Black;
+            this.btnInterCityBus.Location = new System.Drawing.Point(0, 570);
+            this.btnInterCityBus.Name = "btnInterCityBus";
+            this.btnInterCityBus.Size = new System.Drawing.Size(204, 45);
+            this.btnInterCityBus.TabIndex = 15;
+            this.btnInterCityBus.Text = "공항버스";
+            this.btnInterCityBus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInterCityBus.UseVisualStyleBackColor = true;
+            this.btnInterCityBus.Click += new System.EventHandler(this.btnInterCityBus_Click);
             // 
-            // pictureBox1
+            // panelInterCityBusSubMenu
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelInterCityBusSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelInterCityBusSubMenu.Controls.Add(this.button2);
+            this.panelInterCityBusSubMenu.Controls.Add(this.btnRoute);
+            this.panelInterCityBusSubMenu.Controls.Add(this.btnSchedule);
+            this.panelInterCityBusSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInterCityBusSubMenu.Location = new System.Drawing.Point(0, 615);
+            this.panelInterCityBusSubMenu.Name = "panelInterCityBusSubMenu";
+            this.panelInterCityBusSubMenu.Size = new System.Drawing.Size(204, 131);
+            this.panelInterCityBusSubMenu.TabIndex = 16;
             // 
-            // btnShipProducts
+            // button2
             // 
-            this.btnShipProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShipProducts.FlatAppearance.BorderSize = 0;
-            this.btnShipProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
-            this.btnShipProducts.Location = new System.Drawing.Point(0, 389);
-            this.btnShipProducts.Name = "btnShipProducts";
-            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
-            this.btnShipProducts.TabIndex = 12;
-            this.btnShipProducts.Text = "해운 관리";
-            this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShipProducts.UseVisualStyleBackColor = true;
-            this.btnShipProducts.Click += new System.EventHandler(this.btnShipProducts_Click);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(0, 84);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(204, 42);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "노선 관리";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // panelShipSubMenu
+            // btnRoute
             // 
-            this.panelShipSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelShipSubMenu.Controls.Add(this.btnShipLoad);
-            this.panelShipSubMenu.Controls.Add(this.btnShipAdd);
-            this.panelShipSubMenu.Controls.Add(this.btnShipCollection);
-            this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShipSubMenu.Location = new System.Drawing.Point(0, 434);
-            this.panelShipSubMenu.Name = "panelShipSubMenu";
-            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 136);
-            this.panelShipSubMenu.TabIndex = 13;
+            this.btnRoute.BackColor = System.Drawing.Color.White;
+            this.btnRoute.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRoute.FlatAppearance.BorderSize = 0;
+            this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoute.ForeColor = System.Drawing.Color.Black;
+            this.btnRoute.Location = new System.Drawing.Point(0, 42);
+            this.btnRoute.Name = "btnRoute";
+            this.btnRoute.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRoute.Size = new System.Drawing.Size(204, 42);
+            this.btnRoute.TabIndex = 12;
+            this.btnRoute.Text = "노선 관리";
+            this.btnRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoute.UseVisualStyleBackColor = false;
             // 
-            // btnShipLoad
+            // btnSchedule
             // 
-            this.btnShipLoad.BackColor = System.Drawing.Color.White;
-            this.btnShipLoad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShipLoad.FlatAppearance.BorderSize = 0;
-            this.btnShipLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipLoad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShipLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnShipLoad.Location = new System.Drawing.Point(0, 84);
-            this.btnShipLoad.Name = "btnShipLoad";
-            this.btnShipLoad.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipLoad.Size = new System.Drawing.Size(204, 42);
-            this.btnShipLoad.TabIndex = 13;
-            this.btnShipLoad.Text = "해운 데이터 수정";
-            this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShipLoad.UseVisualStyleBackColor = false;
-            this.btnShipLoad.Click += new System.EventHandler(this.btnShipLoad_Click);
-            // 
-            // btnShipAdd
-            // 
-            this.btnShipAdd.BackColor = System.Drawing.Color.White;
-            this.btnShipAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShipAdd.FlatAppearance.BorderSize = 0;
-            this.btnShipAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShipAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnShipAdd.Location = new System.Drawing.Point(0, 42);
-            this.btnShipAdd.Name = "btnShipAdd";
-            this.btnShipAdd.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipAdd.Size = new System.Drawing.Size(204, 42);
-            this.btnShipAdd.TabIndex = 12;
-            this.btnShipAdd.Text = "해운 데이터 추가";
-            this.btnShipAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShipAdd.UseVisualStyleBackColor = false;
-            this.btnShipAdd.Click += new System.EventHandler(this.btnShipAdd_Click);
-            // 
-            // btnShipCollection
-            // 
-            this.btnShipCollection.BackColor = System.Drawing.Color.White;
-            this.btnShipCollection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShipCollection.FlatAppearance.BorderSize = 0;
-            this.btnShipCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipCollection.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShipCollection.ForeColor = System.Drawing.Color.Black;
-            this.btnShipCollection.Location = new System.Drawing.Point(0, 0);
-            this.btnShipCollection.Name = "btnShipCollection";
-            this.btnShipCollection.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipCollection.Size = new System.Drawing.Size(204, 42);
-            this.btnShipCollection.TabIndex = 0;
-            this.btnShipCollection.Text = "해운 데이터 수집";
-            this.btnShipCollection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShipCollection.UseVisualStyleBackColor = false;
-            this.btnShipCollection.Click += new System.EventHandler(this.btnShipCollection_Click);
+            this.btnSchedule.BackColor = System.Drawing.Color.White;
+            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedule.ForeColor = System.Drawing.Color.Black;
+            this.btnSchedule.Location = new System.Drawing.Point(0, 0);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSchedule.Size = new System.Drawing.Size(204, 42);
+            this.btnSchedule.TabIndex = 0;
+            this.btnSchedule.Text = "스케쥴 입력";
+            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedule.UseVisualStyleBackColor = false;
             // 
             // btnAirPlane
             // 
@@ -456,38 +561,20 @@
             this.btnAirPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAirPlane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAirPlane.ForeColor = System.Drawing.Color.Black;
-            this.btnAirPlane.Location = new System.Drawing.Point(0, 570);
+            this.btnAirPlane.Location = new System.Drawing.Point(0, 746);
             this.btnAirPlane.Name = "btnAirPlane";
             this.btnAirPlane.Size = new System.Drawing.Size(204, 45);
-            this.btnAirPlane.TabIndex = 14;
+            this.btnAirPlane.TabIndex = 17;
             this.btnAirPlane.Text = "항공";
             this.btnAirPlane.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAirPlane.UseVisualStyleBackColor = true;
             this.btnAirPlane.Click += new System.EventHandler(this.btnAirPlane_Click);
             // 
-            // btnExitLink
-            // 
-            this.btnExitLink.BackColor = System.Drawing.Color.White;
-            this.btnExitLink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExitLink.FlatAppearance.BorderSize = 0;
-            this.btnExitLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExitLink.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitLink.ForeColor = System.Drawing.Color.Black;
-            this.btnExitLink.Location = new System.Drawing.Point(0, 140);
-            this.btnExitLink.Name = "btnExitLink";
-            this.btnExitLink.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnExitLink.Size = new System.Drawing.Size(204, 35);
-            this.btnExitLink.TabIndex = 5;
-            this.btnExitLink.Text = "지하철 빠른 하차";
-            this.btnExitLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExitLink.UseVisualStyleBackColor = false;
-            this.btnExitLink.Click += new System.EventHandler(this.btnExitLink_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 758);
+            this.ClientSize = new System.Drawing.Size(1175, 888);
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelSideMenu);
@@ -495,12 +582,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelShipSubMenu.ResumeLayout(false);
             this.panelProductsSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelShipSubMenu.ResumeLayout(false);
+            this.panelInterCityBusSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -527,13 +615,18 @@
         public System.Windows.Forms.Panel panelDeskTop;
         public System.Windows.Forms.Button btnDataManegement;
         private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.Button btnAirPlane;
         private System.Windows.Forms.Panel panelShipSubMenu;
         private System.Windows.Forms.Button btnShipLoad;
         private System.Windows.Forms.Button btnShipAdd;
         private System.Windows.Forms.Button btnShipCollection;
         private System.Windows.Forms.Button btnShipProducts;
         private System.Windows.Forms.Button btnExitLink;
+        private System.Windows.Forms.Panel panelInterCityBusSubMenu;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRoute;
+        private System.Windows.Forms.Button btnSchedule;
+        private System.Windows.Forms.Button btnInterCityBus;
+        private System.Windows.Forms.Button btnAirPlane;
     }
 }
 

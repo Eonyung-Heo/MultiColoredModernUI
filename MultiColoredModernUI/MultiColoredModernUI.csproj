@@ -326,6 +326,12 @@
     <Compile Include="Forms\DashBoard\StatusUpdateData.Designer.cs">
       <DependentUpon>StatusUpdateData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InterCityBus\InterCityBusSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InterCityBus\InterCityBusSchedule.Designer.cs">
+      <DependentUpon>InterCityBusSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>

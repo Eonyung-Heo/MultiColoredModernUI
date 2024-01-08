@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxLaneType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboboxRegion = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.label1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.listStationName = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.route = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.station = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -56,22 +66,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.listStation = new System.Windows.Forms.ListView();
             this.comGateNo = new System.Windows.Forms.ComboBox();
-            this.listStationName = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.SSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.route = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.station = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboBoxLaneType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboboxRegion = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listStationName)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listStationName)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,6 +90,207 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 649);
             this.panel1.TabIndex = 2;
+            // 
+            // comboBoxLaneType
+            // 
+            this.comboBoxLaneType.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxLaneType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxLaneType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLaneType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxLaneType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxLaneType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxLaneType.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxLaneType.IntegralHeight = false;
+            this.comboBoxLaneType.ItemHeight = 30;
+            this.comboBoxLaneType.Location = new System.Drawing.Point(49, 62);
+            this.comboBoxLaneType.Name = "comboBoxLaneType";
+            this.comboBoxLaneType.Size = new System.Drawing.Size(135, 36);
+            this.comboBoxLaneType.TabIndex = 23;
+            this.comboBoxLaneType.SelectedIndexChanged += new System.EventHandler(this.comboBoxLaneType_SelectedIndexChanged);
+            // 
+            // comboboxRegion
+            // 
+            this.comboboxRegion.BackColor = System.Drawing.Color.White;
+            this.comboboxRegion.BorderColor = System.Drawing.Color.LightGray;
+            this.comboboxRegion.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.comboboxRegion.DisabledState.ForeColor = System.Drawing.Color.Black;
+            this.comboboxRegion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboboxRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxRegion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxRegion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxRegion.FocusedState.FillColor = System.Drawing.Color.White;
+            this.comboboxRegion.FocusedState.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxRegion.FocusedState.ForeColor = System.Drawing.Color.Black;
+            this.comboboxRegion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxRegion.ForeColor = System.Drawing.Color.Black;
+            this.comboboxRegion.HoverState.BorderColor = System.Drawing.Color.White;
+            this.comboboxRegion.HoverState.FillColor = System.Drawing.Color.White;
+            this.comboboxRegion.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxRegion.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.comboboxRegion.IntegralHeight = false;
+            this.comboboxRegion.ItemHeight = 30;
+            this.comboboxRegion.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.comboboxRegion.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxRegion.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.comboboxRegion.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboboxRegion.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxRegion.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
+            this.comboboxRegion.Location = new System.Drawing.Point(49, 11);
+            this.comboboxRegion.Name = "comboboxRegion";
+            this.comboboxRegion.Size = new System.Drawing.Size(135, 36);
+            this.comboboxRegion.TabIndex = 22;
+            this.comboboxRegion.SelectedIndexChanged += new System.EventHandler(this.comboboxRegion_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(12, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 14);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "노 선";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 14);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "지 역";
+            // 
+            // listStationName
+            // 
+            this.listStationName.AllowUserToAddRows = false;
+            this.listStationName.AllowUserToDeleteRows = false;
+            this.listStationName.AllowUserToResizeColumns = false;
+            this.listStationName.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.listStationName.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.listStationName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listStationName.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.listStationName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listStationName.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.listStationName.ColumnHeadersHeight = 20;
+            this.listStationName.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SSID,
+            this.route,
+            this.station});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listStationName.DefaultCellStyle = dataGridViewCellStyle6;
+            this.listStationName.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.listStationName.Location = new System.Drawing.Point(11, 136);
+            this.listStationName.MultiSelect = false;
+            this.listStationName.Name = "listStationName";
+            this.listStationName.ReadOnly = true;
+            this.listStationName.RowHeadersVisible = false;
+            this.listStationName.RowTemplate.Height = 25;
+            this.listStationName.Size = new System.Drawing.Size(186, 508);
+            this.listStationName.TabIndex = 19;
+            this.listStationName.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.listStationName.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.listStationName.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.listStationName.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.listStationName.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.listStationName.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.listStationName.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.listStationName.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.listStationName.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.listStationName.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listStationName.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.listStationName.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.listStationName.ThemeStyle.HeaderStyle.Height = 20;
+            this.listStationName.ThemeStyle.ReadOnly = true;
+            this.listStationName.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.listStationName.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.listStationName.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listStationName.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.listStationName.ThemeStyle.RowsStyle.Height = 25;
+            this.listStationName.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.listStationName.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.listStationName.Click += new System.EventHandler(this.listStationName_Click);
+            // 
+            // SSID
+            // 
+            this.SSID.HeaderText = "아이디";
+            this.SSID.Name = "SSID";
+            this.SSID.ReadOnly = true;
+            this.SSID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.SSID.Visible = false;
+            // 
+            // route
+            // 
+            this.route.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.route.FillWeight = 80F;
+            this.route.HeaderText = "노 선";
+            this.route.Name = "route";
+            this.route.ReadOnly = true;
+            this.route.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.route.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.route.Visible = false;
+            // 
+            // station
+            // 
+            this.station.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.station.HeaderText = "지하철 역";
+            this.station.Name = "station";
+            this.station.ReadOnly = true;
+            this.station.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.station.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(142, 108);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(55, 22);
+            this.guna2Button1.TabIndex = 18;
+            this.guna2Button1.Text = "검색";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(11, 108);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(124, 22);
+            this.guna2TextBox1.TabIndex = 17;
+            this.guna2TextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2TextBox1_KeyUp);
+            this.guna2TextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.guna2TextBox1_MouseClick);
             // 
             // panel2
             // 
@@ -365,207 +566,6 @@
             this.comGateNo.TabIndex = 7;
             this.comGateNo.SelectedIndexChanged += new System.EventHandler(this.comGateNo_SelectedIndexChanged);
             // 
-            // listStationName
-            // 
-            this.listStationName.AllowUserToAddRows = false;
-            this.listStationName.AllowUserToDeleteRows = false;
-            this.listStationName.AllowUserToResizeColumns = false;
-            this.listStationName.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.listStationName.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.listStationName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.listStationName.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.listStationName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listStationName.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.listStationName.ColumnHeadersHeight = 20;
-            this.listStationName.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SSID,
-            this.route,
-            this.station});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listStationName.DefaultCellStyle = dataGridViewCellStyle12;
-            this.listStationName.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listStationName.Location = new System.Drawing.Point(11, 136);
-            this.listStationName.MultiSelect = false;
-            this.listStationName.Name = "listStationName";
-            this.listStationName.ReadOnly = true;
-            this.listStationName.RowHeadersVisible = false;
-            this.listStationName.RowTemplate.Height = 25;
-            this.listStationName.Size = new System.Drawing.Size(186, 508);
-            this.listStationName.TabIndex = 19;
-            this.listStationName.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.listStationName.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.listStationName.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.listStationName.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.listStationName.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.listStationName.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.listStationName.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listStationName.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.listStationName.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.listStationName.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listStationName.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.listStationName.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.listStationName.ThemeStyle.HeaderStyle.Height = 20;
-            this.listStationName.ThemeStyle.ReadOnly = true;
-            this.listStationName.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.listStationName.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.listStationName.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listStationName.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.listStationName.ThemeStyle.RowsStyle.Height = 25;
-            this.listStationName.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listStationName.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.listStationName.Click += new System.EventHandler(this.listStationName_Click);
-            // 
-            // SSID
-            // 
-            this.SSID.HeaderText = "아이디";
-            this.SSID.Name = "SSID";
-            this.SSID.ReadOnly = true;
-            this.SSID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.SSID.Visible = false;
-            // 
-            // route
-            // 
-            this.route.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.route.FillWeight = 80F;
-            this.route.HeaderText = "노 선";
-            this.route.Name = "route";
-            this.route.ReadOnly = true;
-            this.route.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.route.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.route.Visible = false;
-            // 
-            // station
-            // 
-            this.station.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.station.HeaderText = "지하철 역";
-            this.station.Name = "station";
-            this.station.ReadOnly = true;
-            this.station.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.station.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(142, 108);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(55, 22);
-            this.guna2Button1.TabIndex = 18;
-            this.guna2Button1.Text = "검색";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(11, 108);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(124, 22);
-            this.guna2TextBox1.TabIndex = 17;
-            this.guna2TextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2TextBox1_KeyUp);
-            this.guna2TextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.guna2TextBox1_MouseClick);
-            // 
-            // comboBoxLaneType
-            // 
-            this.comboBoxLaneType.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxLaneType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxLaneType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLaneType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxLaneType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxLaneType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxLaneType.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxLaneType.IntegralHeight = false;
-            this.comboBoxLaneType.ItemHeight = 30;
-            this.comboBoxLaneType.Location = new System.Drawing.Point(52, 62);
-            this.comboBoxLaneType.Name = "comboBoxLaneType";
-            this.comboBoxLaneType.Size = new System.Drawing.Size(135, 36);
-            this.comboBoxLaneType.TabIndex = 23;
-            this.comboBoxLaneType.SelectedIndexChanged += new System.EventHandler(this.comboBoxLaneType_SelectedIndexChanged);
-            // 
-            // comboboxRegion
-            // 
-            this.comboboxRegion.BackColor = System.Drawing.Color.White;
-            this.comboboxRegion.BorderColor = System.Drawing.Color.LightGray;
-            this.comboboxRegion.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.comboboxRegion.DisabledState.ForeColor = System.Drawing.Color.Black;
-            this.comboboxRegion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboboxRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboboxRegion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboboxRegion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboboxRegion.FocusedState.FillColor = System.Drawing.Color.White;
-            this.comboboxRegion.FocusedState.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboboxRegion.FocusedState.ForeColor = System.Drawing.Color.Black;
-            this.comboboxRegion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboboxRegion.ForeColor = System.Drawing.Color.Black;
-            this.comboboxRegion.HoverState.BorderColor = System.Drawing.Color.White;
-            this.comboboxRegion.HoverState.FillColor = System.Drawing.Color.White;
-            this.comboboxRegion.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboboxRegion.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.comboboxRegion.IntegralHeight = false;
-            this.comboboxRegion.ItemHeight = 30;
-            this.comboboxRegion.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.comboboxRegion.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboboxRegion.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.comboboxRegion.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.comboboxRegion.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboboxRegion.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
-            this.comboboxRegion.Location = new System.Drawing.Point(52, 11);
-            this.comboboxRegion.Name = "comboboxRegion";
-            this.comboboxRegion.Size = new System.Drawing.Size(135, 36);
-            this.comboboxRegion.TabIndex = 22;
-            this.comboboxRegion.SelectedIndexChanged += new System.EventHandler(this.comboboxRegion_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(15, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 14);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "노 선";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(15, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 14);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "지 역";
-            // 
             // SubwayGateLink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -578,6 +578,7 @@
             this.Text = "TBSubwayGateLink";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listStationName)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl.ResumeLayout(false);
@@ -585,7 +586,6 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listStationName)).EndInit();
             this.ResumeLayout(false);
 
         }

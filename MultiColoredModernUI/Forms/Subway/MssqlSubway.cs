@@ -971,8 +971,9 @@ namespace MultiColoredModernUI.Forms.Subway
             string strSql = "";
 
 
-            strSql = string.Format("select distinct StationId,Direction,Duration,ExitNo,train,door,train2,door2 from" +
-                " naverpubtrans_aro.[dbo].[NSubwayExitLink] where stationid = {0} order by Direction,ExitNo", stationID);
+            strSql = string.Format("select * from ( select distinct StationId,Direction,Duration,ExitNo,train,door,train2,door2 from" +
+                " naverpubtrans_aro.[dbo].[NSubwayExitLink] where stationid = {0}) as aa " +
+                " order by Direction,Convert(int,case when CHARINDEX('-',exitNo) > 0 then SUBSTRING(exitNo,0,CHARINDEX('-',exitNo)) else exitNo end)", stationID);
 
             cmd = new SqlCommand(strSql, sqlConnect);
 
@@ -989,9 +990,9 @@ namespace MultiColoredModernUI.Forms.Subway
                 StaticSubway.exitLink.Add(reader["Stationid"].ToString());
 
                 if (reader["Direction"].ToString() == "0")
-                    StaticSubway.exitLink.Add("하행");
+                    StaticSubway.exitLink.Add("하 행");
                 else
-                    StaticSubway.exitLink.Add("상행");
+                    StaticSubway.exitLink.Add("상 행");
 
                 StaticSubway.exitLink.Add(reader["Duration"].ToString());
                 StaticSubway.exitLink.Add(reader["ExitNo"].ToString());
