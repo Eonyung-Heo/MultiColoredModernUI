@@ -26,6 +26,9 @@ namespace MultiColoredModernUI.Forms.Subway
         public static List<string> gateLink = new List<string>();
         public static List<List<string>> gateLinks = new List<List<string>>();
 
+        public static List<string> exitLink = new List<string>();
+        public static List<List<string>> exitLinks = new List<List<string>>();
+
 
 
     }

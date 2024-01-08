@@ -34,6 +34,7 @@ namespace MultiColoredModernUI
         public SF.SubwayFacility sfFacility = new SF.SubwayFacility { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayGateLink sfGateLink = new SF.SubwayGateLink { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SF.SubwayStation sfStation = new SF.SubwayStation { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SF.SubwayExitLink sfExitLink = new SF.SubwayExitLink { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipData spfShipCrawling = new SpF.ShipData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -408,6 +409,31 @@ namespace MultiColoredModernUI
             sql.Log(StaticMain.userName, StaticMain.userMac, "지하철 역 환승 선택");
             
         }
+
+        private void btnExitLink_Click(object sender, EventArgs e)
+        {
+            if (StaticMain.toolSelect != 5)
+            {
+                if (StaticMain.toolSelect == 1)
+                    sfStation.btnAlter_Click(sender, e);
+                else if (StaticMain.toolSelect == 2)
+                    sfFacility.btnAlter_Click(sender, e);
+                else if (StaticMain.toolSelect == 3)
+                    sfGateLink.btnAlter_Click(sender, e);
+                else if (StaticMain.toolSelect == 4)
+                    sfExchange.btnAlter_Click(sender, e);
+
+                toolSelectCheckReset();
+
+                StaticMain.toolSelect = 5;
+            }
+
+            sfExitLink.Reset();
+            OpenChildForm(sfExitLink, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "지하철 빠른 하차 선택");
+
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {

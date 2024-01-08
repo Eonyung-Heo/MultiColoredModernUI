@@ -38,23 +38,21 @@ namespace MultiColoredModernUI.Forms.Subway
                 comboboxRegion.Items.Add(StaticSubway.regions[i][1].ToString());
             }
 
+            comboboxRegion.ForeColor = Color.Black;
+            comboboxRegion.ItemsAppearance.ForeColor = Color.Black;
+            comboboxRegion.HoverState.BorderColor = Color.LightGray;
+
         }
 
         private void StationNameList()
         {
-            listStationName.Clear();
-            listStationName.View = View.Details;
-            listStationName.GridLines = true;
-            listStationName.FullRowSelect = true;
-
-
-            listStationName.Columns.Add("지하철 역 이름", listStationName.Width);
+            listStationName.Rows.Clear();
 
         }
 
         private void comboboxRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listStationName.Items.Clear();
+            listStationName.Rows.Clear();
             listStationName.Refresh();
 
             int i = comboboxRegion.SelectedIndex;
@@ -97,6 +95,8 @@ namespace MultiColoredModernUI.Forms.Subway
             int i = comboboxRegion.SelectedIndex;
             int j = comboBoxLaneType.SelectedIndex;
 
+            guna2TextBox1.Text = "";
+
             btnAlter_Click(sender, e);
 
             listClickCheck = false;
@@ -105,28 +105,32 @@ namespace MultiColoredModernUI.Forms.Subway
             {
                 laneType = Convert.ToInt16(StaticSubway.laneTypes[j][1].ToString());
                 cityCode = Convert.ToInt16(StaticSubway.regions[i][0].ToString());
-            }
 
-            sql.GetLaneType(cityCode);
-            sql.GetStationName(cityCode, laneType);
-            StationNameItemAdd();
-            guna2DataGridView1.Rows.Clear();
-            ValueClear();
+                listStationName.Columns[1].Visible = false;
+
+                sql.GetLaneType(cityCode);
+                sql.GetStationName(cityCode, laneType);
+                StationNameItemAdd();
+                guna2DataGridView1.Rows.Clear();
+                ValueClear();
+            }
+            else
+                return;
+        
+
 
         }
 
         public void StationNameItemAdd()
         {
-            listStationName.Items.Clear();
+            listStationName.Rows.Clear();
             listStationName.Refresh();
 
             for (int i = 0; i < StaticSubway.stationNames.Count; i++)
             {
                 string[] str = StaticSubway.stationNames[i].ToArray();
 
-                ListViewItem item = new ListViewItem(str);
-
-                listStationName.Items.Add(item);
+                listStationName.Rows.Add(str.ToArray());
             }
         }
 
@@ -146,16 +150,13 @@ namespace MultiColoredModernUI.Forms.Subway
 
         private void listStationName_Click(object sender, EventArgs e)
         {
-            IEnumerator enm = listStationName.SelectedIndices.GetEnumerator();
+            bool indexCheck = listStationName.CurrentCell.Selected;
 
             int currIndex = -1;
 
-            while (enm.MoveNext())
-            {
-                currIndex = (int)enm.Current;
+            if (indexCheck == true)
+                currIndex = listStationName.CurrentCell.RowIndex;
 
-
-            }
 
             if (currIndex != -1)
             {
@@ -164,7 +165,7 @@ namespace MultiColoredModernUI.Forms.Subway
 
                 listClickCheck = true;
 
-                long stationID = Convert.ToInt32(StaticSubway.stationNames[currIndex][1].ToString());
+                long stationID = Convert.ToInt32(StaticSubway.stationNames[currIndex][0].ToString());
 
                 sql.GetFacility(stationID);
                 StationItemAdd();
@@ -355,6 +356,7 @@ namespace MultiColoredModernUI.Forms.Subway
             comboAutomaticDispenser.Text = "";
             combolactationRoom.Text = "";
             comboLocker.Text = "";
+           
 
             comboLostCenter.Items.Clear();
             comboBicycleRack.Items.Clear();
@@ -423,8 +425,9 @@ namespace MultiColoredModernUI.Forms.Subway
 
         public void Reset()
         {
-            comboboxRegion.SelectedIndex = -1;
+            comboboxRegion.SelectedIndex = 0;
             comboBoxLaneType.SelectedIndex = -1;
+            guna2TextBox1.Text = "";
 
             StationNameList();
             StationList();
@@ -507,6 +510,54 @@ namespace MultiColoredModernUI.Forms.Subway
             }
 
             return check;
+
+        }
+
+        private void guna2TextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                guna2Button1_Click(sender, e);
+            }
+
+        }
+
+        private void guna2TextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (comboBoxLaneType.SelectedIndex > -1)
+                comboBoxLaneType.SelectedIndex = -1;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            int laneType = -1;
+            int cityCode = -1;
+
+
+
+            int i = comboboxRegion.SelectedIndex;
+
+            string search = guna2TextBox1.Text;
+
+            btnAlter_Click(sender, e);
+
+            listClickCheck = false;
+
+            if (i != -1)
+            {
+                cityCode = Convert.ToInt16(StaticSubway.regions[i][0].ToString());
+
+                sql.GetLaneType(cityCode);
+                sql.GetStationSearch(cityCode, search);
+                StationNameItemAdd();
+                listStationName.Columns[1].Visible = true;
+
+                guna2DataGridView1.Rows.Clear();
+                ValueClear();
+            }
+            else
+                MessageBox.Show("지역을 선택해 주세요");
+
 
         }
     }

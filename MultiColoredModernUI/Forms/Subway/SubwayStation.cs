@@ -40,11 +40,16 @@ namespace MultiColoredModernUI.Forms.Subway
                 comboboxRegion.Items.Add(StaticSubway.regions[i][1].ToString());
             }
 
+            comboboxRegion.ForeColor = Color.Black;
+            comboboxRegion.ItemsAppearance.ForeColor = Color.Black;
+            comboboxRegion.HoverState.BorderColor = Color.LightGray;
+
+
         } 
 
         private void comboboxRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listStationName.Items.Clear();
+            listStationName.Rows.Clear();
             listStationName.Refresh();
 
             int i =  comboboxRegion.SelectedIndex;
@@ -71,65 +76,29 @@ namespace MultiColoredModernUI.Forms.Subway
 
         private void StationNameList()
         {
-            listStationName.Clear();
-            listStationName.View = View.Details;
-            listStationName.GridLines = true;
-            listStationName.FullRowSelect = true;
-
-           
-            listStationName.Columns.Add("지하철 역 이름", listStationName.Width);
-
+            listStationName.Rows.Clear();
+            
         }
 
         private void StationList()
         {
-            /*
-            listStation.Clear();
-            listStation.View = View.Details;
-            listStation.GridLines = true;
-            listStation.FullRowSelect = true;
-
-
-            listStation.Columns.Add("SSID", 0);
-            listStation.Columns.Add("Namekor",100);
-            listStation.Columns.Add("Aliaskor",0);
-            listStation.Columns.Add("SX",100);
-            listStation.Columns.Add("SY",100);
-            listStation.Columns.Add("플랫폼",50);
-            listStation.Columns.Add("화장실", 50);
-            listStation.Columns.Add("횡단", 50);
-            listStation.Columns.Add("미팅 장소", 100);
-            listStation.Columns.Add("현장 민원실", 100);
-            listStation.Columns.Add("내리는 문", 100);
-            listStation.Columns.Add("자전거 보관", 100);
-            listStation.Columns.Add("전화 번호", 100);
-            listStation.Columns.Add("지번 주소", 250);
-            listStation.Columns.Add("도로명 주소", 300);
-            */
-            //listStation.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-
-            //listStation.Columns[0].Width = 0;
 
             guna2DataGridView1.Columns[0].Visible = false;
-            //guna2DataGridView1.Columns[2].Visible = false;
-
-
-
 
         }
 
         public void StationNameItemAdd()
         {
-            listStationName.Items.Clear();
+            listStationName.Rows.Clear();
             listStationName.Refresh();
 
             for (int i = 0; i < StaticSubway.stationNames.Count; i++)
             {
+
                 string[] str = StaticSubway.stationNames[i].ToArray();
+                
+                listStationName.Rows.Add(str.ToArray());
 
-                ListViewItem item = new ListViewItem(str);
-
-                listStationName.Items.Add(item);
             }
         }
 
@@ -157,6 +126,8 @@ namespace MultiColoredModernUI.Forms.Subway
                 comboBoxLaneType.Items.Add(StaticSubway.laneTypes[i][0].ToString());
             }
 
+      
+
 
         }
 
@@ -169,55 +140,32 @@ namespace MultiColoredModernUI.Forms.Subway
             int i = comboboxRegion.SelectedIndex;
             int j = comboBoxLaneType.SelectedIndex;
 
+            guna2TextBox1.Text = "";
+
             btnAlter_Click(sender, e);
 
             listClickCheck = false;
 
+        
             if (i != -1 && j != -1)
             {
                 laneType = Convert.ToInt16(StaticSubway.laneTypes[j][1].ToString());
                 cityCode = Convert.ToInt16(StaticSubway.regions[i][0].ToString());
-            }
 
-            sql.GetLaneType(cityCode);
-            sql.GetStationName(cityCode, laneType);
-            StationNameItemAdd();
-            guna2DataGridView1.Rows.Clear();
-            ValueClear();
+                listStationName.Columns[1].Visible = false;
+                sql.GetLaneType(cityCode);
+                sql.GetStationName(cityCode, laneType);
+                StationNameItemAdd();
+                guna2DataGridView1.Rows.Clear();
+                ValueClear();
+            }
+            else
+                return;
+
+
             
         }
 
-        private void listStationName_Click(object sender, EventArgs e)
-        {
-
-
-            IEnumerator enm = listStationName.SelectedIndices.GetEnumerator();
-
-            int currIndex = -1;
-
-            while (enm.MoveNext())
-            {
-                currIndex = (int)enm.Current;
-
-
-            }
-            if (currIndex != -1)
-            {
-                           
-                btnAlter_Click(sender, e);
-
-                listClickCheck = true;
-
-                long stationID = Convert.ToInt32(StaticSubway.stationNames[currIndex][1].ToString());
-
-                sql.GetStation(stationID);
-                StationItemAdd();
-
-                ValueClear();
-
-                listStation_Click(sender, e);
-            }
-        }
 
         private void listStation_Click(object sender, EventArgs e)
         {
@@ -344,7 +292,7 @@ namespace MultiColoredModernUI.Forms.Subway
             comboStationMeetingPlace.Items.Clear();
             comboStationPublicOffice.Items.Clear();
             comboStationOffDoor.Items.Clear();
-            
+          
 
             textStationAliaskor.Enabled = false;
             textStationName.Enabled = false;
@@ -391,9 +339,10 @@ namespace MultiColoredModernUI.Forms.Subway
 
         public void Reset()
         {
-            comboboxRegion.SelectedIndex = -1;
+            comboboxRegion.SelectedIndex = 0;
             comboBoxLaneType.SelectedIndex = -1;
 
+            guna2TextBox1.Text = "";
             StationNameList();
             StationList();
             ValueClear();
@@ -462,5 +411,81 @@ namespace MultiColoredModernUI.Forms.Subway
 
         }
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            int laneType = -1;
+            int cityCode = -1;
+
+            
+
+            int i = comboboxRegion.SelectedIndex;
+
+            string search = guna2TextBox1.Text;
+            
+            btnAlter_Click(sender, e);
+
+            listClickCheck = false;
+
+            if (i != -1)
+            {
+                cityCode = Convert.ToInt16(StaticSubway.regions[i][0].ToString());
+
+                sql.GetLaneType(cityCode);
+                sql.GetStationSearch(cityCode, search);
+                StationNameItemAdd();
+                listStationName.Columns[1].Visible = true;
+
+                guna2DataGridView1.Rows.Clear();
+                ValueClear();
+            }
+            else
+                MessageBox.Show("지역을 선택해 주세요");
+
+            
+        }
+
+
+
+        private void listStationName_Click(object sender, EventArgs e)
+        {
+            bool indexCheck = listStationName.CurrentCell.Selected;
+
+            int currIndex = -1;
+
+            if (indexCheck == true)
+                currIndex = listStationName.CurrentCell.RowIndex;
+
+            if (currIndex != -1)
+            {
+                btnAlter_Click(sender, e);
+
+                listClickCheck = true;
+
+                long stationID = Convert.ToInt32(StaticSubway.stationNames[currIndex][0].ToString());
+
+                sql.GetStation(stationID);
+                StationItemAdd();
+
+                ValueClear();
+
+                listStation_Click(sender, e);
+            }
+        }
+
+
+        private void guna2TextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter )
+            {
+                guna2Button1_Click(sender, e);
+            }
+
+        }
+
+        private void guna2TextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(comboBoxLaneType.SelectedIndex > -1)
+                comboBoxLaneType.SelectedIndex = -1;
+        }
     }
 }

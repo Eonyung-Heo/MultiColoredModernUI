@@ -14,6 +14,8 @@ namespace MultiColoredModernUI.Forms.Subway
     {
         SqlConnection sqlConnect;
         SqlCommand cmd;
+        SubwayStation sSf;
+
 
         public void Connect()
         {
@@ -65,7 +67,7 @@ namespace MultiColoredModernUI.Forms.Subway
 
             strSql = string.Format("select distinct Namekor,StationID from Naverodsay.dbo.TBSubwayLane where cityCode = {0}", cityCode);
 
-            if(laneType > 0)
+            if(laneType > 0)                                                                                                                                                             
                 strSql = strSql + string.Format("and Type = {0}",laneType);
 
             cmd = new SqlCommand(strSql, sqlConnect);
@@ -75,11 +77,14 @@ namespace MultiColoredModernUI.Forms.Subway
             StaticSubway.stationName.Clear();
             StaticSubway.stationNames.Clear();
 
-            while (reader.Read())
-            {
+            sSf = new SubwayStation();
 
-                StaticSubway.stationName.Add(reader["Namekor"].ToString());
+            while (reader.Read())
+            {              
                 StaticSubway.stationName.Add(reader["StationID"].ToString());
+                StaticSubway.stationName.Add("");
+                StaticSubway.stationName.Add(reader["Namekor"].ToString());
+                
 
                 StaticSubway.stationNames.Add(StaticSubway.stationName.ToList());
                 StaticSubway.stationName.Clear();
@@ -91,6 +96,78 @@ namespace MultiColoredModernUI.Forms.Subway
             reader.Close();
             sqlConnect.Close();
         }
+
+        public void GetStationSearch(int cityCode, string search)
+        {
+            Connect();
+
+            string strSql = "";
+
+            strSql = string.Format("select distinct a.StationID,b.LaneName,a.NameKor from(" +
+                " select Type, Stationid, namekor from Naverodsay.dbo.TBSubwayLane where CityCode = {0} and NameKor like '%{1}%' ) as a" +
+                " join(select * from naverodsay.dbo.TBSubwayType ) as b " +
+                "on a.Type = b.Type",cityCode,search);
+
+            cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            StaticSubway.stationName.Clear();
+            StaticSubway.stationNames.Clear();
+
+            while (reader.Read())
+            {
+                
+                StaticSubway.stationName.Add(reader["StationID"].ToString());
+                StaticSubway.stationName.Add(reader["LaneName"].ToString());
+                StaticSubway.stationName.Add(reader["Namekor"].ToString());
+
+                StaticSubway.stationNames.Add(StaticSubway.stationName.ToList());
+                StaticSubway.stationName.Clear();
+
+            }
+
+
+            //연결종료
+            reader.Close();
+            sqlConnect.Close();
+        }
+        public void GetExchangeStationSearch(int cityCode, string search)
+        {
+            Connect();
+
+            string strSql = "";
+
+            strSql = string.Format("select distinct ssid1,LaneName,namekor from " +
+                "(select slid1,namekor,ssid1 from naverpubtrans_aro.dbo.TBSubwayExchange  where " +
+                "namekor like '%{1}%' and namekor != '신도림' and ssid1 in(select stationid from naverodsay.dbo.TBSubwayLane where citycode={0})) as a " +
+                "join naverodsay.dbo.TBSubwayType as b on a.slid1 = b.LaneId", cityCode, search);
+           
+                cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            StaticSubway.stationName.Clear();
+            StaticSubway.stationNames.Clear();
+
+            while (reader.Read())
+            {
+
+                StaticSubway.stationName.Add(reader["ssid1"].ToString());
+                StaticSubway.stationName.Add(reader["LaneName"].ToString());
+                StaticSubway.stationName.Add(reader["Namekor"].ToString());
+
+                StaticSubway.stationNames.Add(StaticSubway.stationName.ToList());
+                StaticSubway.stationName.Clear();
+
+            }
+
+
+            //연결종료
+            reader.Close();
+            sqlConnect.Close();
+        }
+
 
         public void GetExChangeStationName(int cityCode, int laneType)
         {
@@ -114,9 +191,10 @@ namespace MultiColoredModernUI.Forms.Subway
 
             while (reader.Read())
             {
-
-                StaticSubway.stationName.Add(reader["Namekor"].ToString());
                 StaticSubway.stationName.Add(reader["ssid1"].ToString());
+                StaticSubway.stationName.Add("");
+                StaticSubway.stationName.Add(reader["Namekor"].ToString());
+                
 
                 StaticSubway.stationNames.Add(StaticSubway.stationName.ToList());
                 StaticSubway.stationName.Clear();
@@ -883,6 +961,51 @@ namespace MultiColoredModernUI.Forms.Subway
             cmd.ExecuteNonQuery();
 
 
+            sqlConnect.Close();
+        }
+
+        public void GetSubwayExitLink(long stationID)
+        {
+            Connect();
+
+            string strSql = "";
+
+
+            strSql = string.Format("select distinct StationId,Direction,Duration,ExitNo,train,door,train2,door2 from" +
+                " naverpubtrans_aro.[dbo].[NSubwayExitLink] where stationid = {0} order by Direction,ExitNo", stationID);
+
+            cmd = new SqlCommand(strSql, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+
+            StaticSubway.exitLink.Clear();
+            StaticSubway.exitLinks.Clear();
+
+            while (reader.Read())
+            {
+
+                //StaticSubway.exitLink.Add(reader["SubwayLaneid"].ToString());
+                StaticSubway.exitLink.Add(reader["Stationid"].ToString());
+
+                if (reader["Direction"].ToString() == "0")
+                    StaticSubway.exitLink.Add("하행");
+                else
+                    StaticSubway.exitLink.Add("상행");
+
+                StaticSubway.exitLink.Add(reader["Duration"].ToString());
+                StaticSubway.exitLink.Add(reader["ExitNo"].ToString());
+                StaticSubway.exitLink.Add(reader["train"].ToString());
+                StaticSubway.exitLink.Add(reader["door"].ToString());
+                StaticSubway.exitLink.Add(reader["train2"].ToString());
+                StaticSubway.exitLink.Add(reader["door2"].ToString());
+
+                StaticSubway.exitLinks.Add(StaticSubway.exitLink.ToList());
+                StaticSubway.exitLink.Clear();
+            }
+
+            //연결종료
+            reader.Close();
             sqlConnect.Close();
         }
 

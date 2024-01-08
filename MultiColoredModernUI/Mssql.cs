@@ -43,8 +43,12 @@ namespace MultiColoredModernUI
 
             check = reader.Read();
 
-            if(check)
+            if (check)
+            {
+                StaticMain.userName = reader["UserName"].ToString();
+                StaticMain.userMac = reader["MacAddress"].ToString();
                 StaticMain.userLevel = Convert.ToInt16(reader["UserLevel"].ToString());
+            }
 
             //연결종료
             reader.Close();
