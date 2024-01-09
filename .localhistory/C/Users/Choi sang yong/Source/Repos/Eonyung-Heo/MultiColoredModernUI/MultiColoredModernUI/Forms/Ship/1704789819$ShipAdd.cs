@@ -174,11 +174,6 @@ namespace MultiColoredModernUI.Forms.Ship
             // 항구 파트 이면 저장하기는 이걸 실행한다.
             if (Ship_Add_TabControl.SelectedTab == Ship_Harbor_page)
             {
-                if (string.IsNullOrEmpty(Ship_Area_TB.Text) || string.IsNullOrEmpty(Ship_CityCode_TB.Text))
-                {
-                    MessageBox.Show("행정구역이나 도시코드 항목이 비어 있습니다.");
-                    return;
-                }
                 string strSql_NEWodsayID1 = "select next VALUE for TBHarborODSAYID";
                 string strSql_NEWID1 = "select next VALUE for TBHarborID";
                 //string queryInsert = "INSERT INTO TEST_Choi.dbo.";
@@ -289,7 +284,7 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 if (string.IsNullOrEmpty(Ship_Sortation_CB.Text) || string.IsNullOrEmpty(Ship_ShipSortation_TB.Text))
                 {
-                    MessageBox.Show("구분이나 구분항구 항목이 비어 있습니다.");
+                    MessageBox.Show("항목이 비어 있습니다.");
                     return;
                 }
                 string strSql_NEWID3 = "select next VALUE for shiplaneID";

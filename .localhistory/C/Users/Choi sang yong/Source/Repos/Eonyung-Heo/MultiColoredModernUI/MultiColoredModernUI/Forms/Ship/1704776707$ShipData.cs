@@ -694,7 +694,9 @@ namespace MultiColoredModernUI.Forms.Ship
                         command.Parameters.AddWithValue("@Collection_date", DateTime.Today.ToString("yyyy-MM-dd"));
                         command.Parameters.AddWithValue("@Collection_day", calendar);
 
+
                         int rowsAffected = command.ExecuteNonQuery();
+
                     }
                 }
                 catch (Exception exc)

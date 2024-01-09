@@ -16,6 +16,11 @@ namespace MultiColoredModernUI.Forms.Ship
 {
     public partial class ShipAdd : Form
     {
+        public string UserChoice { get; private set; }
+        public CustomDialog()
+        {
+            InitializeComponent();
+        }
         public ShipAdd()
         {
             InitializeComponent();
@@ -112,56 +117,73 @@ namespace MultiColoredModernUI.Forms.Ship
             SqlDataReader sdt = cmd_Harbor.ExecuteReader();
             while (sdt.Read())
             {
-                Ship_RouteAdd_DG.Rows.Add(sdt[0], sdt[1], sdt[3], sdt[4], sdt[5], sdt[10]);
+                Ship_RouteAdd_DG.Rows.Add(sdt[0], sdt[1], sdt[3], sdt[4], sdt[5]);
             }
 
             sqlConnect.Close();
         }
 
+        private void btnDeparture_Click(object sender, EventArgs e)
+        {
+            UserChoice = "출발지";
+            this.Close();
+        }
+
+        private void btnDestination_Click(object sender, EventArgs e)
+        {
+            UserChoice = "도착지";
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            UserChoice = "취소";
+            this.Close();
+        }
         private void Ship_RouteAdd_DG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // 출발지/도착지 선택 여부 확인
-            DialogResult result = MessageBox.Show("출발지로 선택하시겠습니까?", "선택", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            CustomDialog customDialog = new CustomDialog();
+            DialogResult result = customDialog.ShowDialog();
 
             // 사용자의 선택에 따라 동작
-            if (result == DialogResult.Yes)
+            switch (customDialog.UserChoice)
             {
-                Ship_HarborS_TB.Clear();
-                Ship_HarborSID_TB.Clear();
-                Ship_ShipRouteOdsayIDS_TB.Clear();
-                Ship_DetailedHarborName_S_TB.Clear();
-
-                int index = 0;
-                index = e.RowIndex;
-
-                Ship_HarborS_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[2].Value.ToString();
-                Ship_HarborSID_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[1].Value.ToString();
-                Ship_ShipRouteOdsayIDS_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[0].Value.ToString();
-                Ship_DetailedHarborName_S_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[5].Value.ToString();
-
-                MessageBox.Show("출발지를 선택했습니다.");
+                case "출발지":
+                    MessageBox.Show("출발지를 선택했습니다.");
+                    break;
+                case "도착지":
+                    MessageBox.Show("도착지를 선택했습니다.");
+                    break;
+                case "취소":
+                    MessageBox.Show("취소를 선택했습니다.");
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                Ship_HarborE_TB.Clear();
-                Ship_HarborEID_TB.Clear();
-                Ship_ShipRouteOdsayIDE_TB.Clear();
-                Ship_DetailedHarborName_E_TB.Clear();
+            /*
+            Ship_CompanyName_TB.Clear();
+            Ship_ShipName2_TB.Clear();
+            Ship_StartTime_TB.Clear();
+            Ship_Timerequired_TB.Clear();
+            Ship_Rank2_TB.Clear();
+            Ship_AdultFee_TB.Clear();
+            Ship_YouthFee_TB.Clear();
+            Ship_SeniorFee_TB.Clear();
+            Ship_ChildFee_TB.Clear();
 
-                int index = 0;
-                index = e.RowIndex;
+            int index = 0;
+            index = e.RowIndex;
 
-                Ship_HarborE_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[2].Value.ToString();
-                Ship_HarborEID_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[1].Value.ToString();
-                Ship_ShipRouteOdsayIDE_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[0].Value.ToString();
-                Ship_DetailedHarborName_E_TB.Text = Ship_RouteAdd_DG.Rows[index].Cells[5].Value.ToString();
-
-                MessageBox.Show("도착지를 선택했습니다.");
-            }
-            if (!string.IsNullOrEmpty(Ship_HarborS_TB.Text) && !string.IsNullOrEmpty(Ship_HarborE_TB.Text))
-            {
-                Ship_HarborSE_TB.Text = Ship_HarborS_TB.Text + "/" + Ship_HarborE_TB.Text;
-            }
+            Ship_CompanyName_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[0].Value.ToString();
+            Ship_ShipName2_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[1].Value.ToString();
+            Ship_StartTime_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[2].Value.ToString();
+            Ship_Timerequired_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[3].Value.ToString();
+            Ship_Rank2_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[4].Value.ToString();
+            Ship_AdultFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[5].Value.ToString();
+            Ship_YouthFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[6].Value.ToString();
+            Ship_SeniorFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[7].Value.ToString();
+            Ship_ChildFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[8].Value.ToString();
+            */
         }
 
         // 저장 버튼 클릭시 보여지는 패널에 맞게 코드를 활성화하며
@@ -174,11 +196,6 @@ namespace MultiColoredModernUI.Forms.Ship
             // 항구 파트 이면 저장하기는 이걸 실행한다.
             if (Ship_Add_TabControl.SelectedTab == Ship_Harbor_page)
             {
-                if (string.IsNullOrEmpty(Ship_Area_TB.Text) || string.IsNullOrEmpty(Ship_CityCode_TB.Text))
-                {
-                    MessageBox.Show("행정구역이나 도시코드 항목이 비어 있습니다.");
-                    return;
-                }
                 string strSql_NEWodsayID1 = "select next VALUE for TBHarborODSAYID";
                 string strSql_NEWID1 = "select next VALUE for TBHarborID";
                 //string queryInsert = "INSERT INTO TEST_Choi.dbo.";
@@ -287,11 +304,6 @@ namespace MultiColoredModernUI.Forms.Ship
             // 노선 파트 이면 저장하기는 이걸 실행한다.
             else if (Ship_Add_TabControl.SelectedTab == Ship_Route_page)
             {
-                if (string.IsNullOrEmpty(Ship_Sortation_CB.Text) || string.IsNullOrEmpty(Ship_ShipSortation_TB.Text))
-                {
-                    MessageBox.Show("구분이나 구분항구 항목이 비어 있습니다.");
-                    return;
-                }
                 string strSql_NEWID3 = "select next VALUE for shiplaneID";
                 string queryInsert = "INSERT INTO NEW_SHIP.dbo.";
                 textquery = "TBShipLane VALUES (@ODSayLaneID, @IndexedSearch, @IndexedSearch2, @SelectedInfo, @ODSayHarborID_S, @ODSayHarborID_E, @Harbor_ID_S, @Harbor_ID_E, @Harbor_Name_S, @Harbor_Name_E, @Harbor_Name_SE, @DelYN, @ImportantYN, getdate(), getdate())";

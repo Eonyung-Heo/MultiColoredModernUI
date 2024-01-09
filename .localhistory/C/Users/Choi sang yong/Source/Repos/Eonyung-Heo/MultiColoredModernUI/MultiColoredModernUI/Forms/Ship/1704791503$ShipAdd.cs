@@ -176,7 +176,7 @@ namespace MultiColoredModernUI.Forms.Ship
             {
                 if (string.IsNullOrEmpty(Ship_Area_TB.Text) || string.IsNullOrEmpty(Ship_CityCode_TB.Text))
                 {
-                    MessageBox.Show("행정구역이나 도시코드 항목이 비어 있습니다.");
+                    MessageBox.Show("권역이나 도시코드 항목이 비어 있습니다.");
                     return;
                 }
                 string strSql_NEWodsayID1 = "select next VALUE for TBHarborODSAYID";

@@ -694,7 +694,9 @@ namespace MultiColoredModernUI.Forms.Ship
                         command.Parameters.AddWithValue("@Collection_date", DateTime.Today.ToString("yyyy-MM-dd"));
                         command.Parameters.AddWithValue("@Collection_day", calendar);
 
+
                         int rowsAffected = command.ExecuteNonQuery();
+
                     }
                 }
                 catch (Exception exc)
@@ -712,6 +714,11 @@ namespace MultiColoredModernUI.Forms.Ship
         private void Ship_DataClear_Click(object sender, EventArgs e)
         {
             Ship_DataGridViewData.Rows.Clear();
+        }
+
+        private void Ship_DataGridViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

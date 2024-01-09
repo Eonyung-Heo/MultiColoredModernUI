@@ -292,6 +292,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.Ship_DataGridViewData_Fee_DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Ship_DataGridViewData_Fee_DG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Ship_DataGridViewData_Fee_DG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -555,7 +556,7 @@
             this.Ship_ShipRouteOdsayIDE_Label.Name = "Ship_ShipRouteOdsayIDE_Label";
             this.Ship_ShipRouteOdsayIDE_Label.Size = new System.Drawing.Size(112, 45);
             this.Ship_ShipRouteOdsayIDE_Label.TabIndex = 106;
-            this.Ship_ShipRouteOdsayIDE_Label.Text = "도착지ODsayID";
+            this.Ship_ShipRouteOdsayIDE_Label.Text = "ODSayID_E";
             this.Ship_ShipRouteOdsayIDE_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ship_ShipRouteOdsayIDS_Label
@@ -569,7 +570,7 @@
             this.Ship_ShipRouteOdsayIDS_Label.Name = "Ship_ShipRouteOdsayIDS_Label";
             this.Ship_ShipRouteOdsayIDS_Label.Size = new System.Drawing.Size(112, 45);
             this.Ship_ShipRouteOdsayIDS_Label.TabIndex = 104;
-            this.Ship_ShipRouteOdsayIDS_Label.Text = "출발지ODsayID";
+            this.Ship_ShipRouteOdsayIDS_Label.Text = "ODSayID_S";
             this.Ship_ShipRouteOdsayIDS_Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Ship_ShipSortation_Label

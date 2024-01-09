@@ -460,9 +460,9 @@ namespace MultiColoredModernUI.Forms.Ship
                 MessageBox.Show("구분이나 구분항구 항목이 비어 있습니다.");
                 return;
             }
-            else if (string.IsNullOrEmpty(Ship_StartTime_TB.Text))
+            else if(string.IsNullOrEmpty(Ship_AdultFee_TB.Text) || string.IsNullOrEmpty(Ship_YouthFee_TB.Text) || string.IsNullOrEmpty(Ship_SeniorFee_TB.Text) || string.IsNullOrEmpty(Ship_ChildFee_TB.Text))
             {
-                MessageBox.Show("출발시간 항목이 비어 있습니다.");
+                MessageBox.Show("금액 항목이 비어 있습니다.");
                 return;
             }
             Ship_Fee_TB_TextChanged(); // 상세내역 변경
