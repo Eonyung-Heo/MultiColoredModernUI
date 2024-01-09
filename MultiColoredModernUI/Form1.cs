@@ -14,6 +14,7 @@ using SF = MultiColoredModernUI.Forms.Subway;
 using MF = MultiColoredModernUI.Forms.Master;
 using SpF = MultiColoredModernUI.Forms.Ship;
 using SaF = MultiColoredModernUI.Forms.Airplane;
+using IF = MultiColoredModernUI.Forms.InterCityBus;
 using System.Net.NetworkInformation;
 
 namespace MultiColoredModernUI
@@ -39,6 +40,9 @@ namespace MultiColoredModernUI
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SaF.AirData safAirData = new SaF.AirData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public IF.InterCityBusSchedule ifBusSchedule = new IF.InterCityBusSchedule { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public IF.InterCityBusRoute ifBusRoute = new IF.InterCityBusRoute { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public IF.InterCityBusManegement ifBusManegement = new IF.InterCityBusManegement { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -177,6 +181,7 @@ namespace MultiColoredModernUI
         {
             panelProductsSubMenu.Visible = false;
             panelShipSubMenu.Visible = false;
+            panelInterCityBusSubMenu.Visible = false;
             /*
             panelToolListSubMenu.Visible = false;
             panelSettingListSubMenu.Visible = false;
@@ -548,7 +553,25 @@ namespace MultiColoredModernUI
         {
             showSubMenu(panelInterCityBusSubMenu);
             Activatebutton(sender);
-            btnShipCollection_Click((Button)btnShipCollection, e);
+            btnBusSchedule_Click((Button)btnBusSchedule, e);
+        }
+
+        private void btnBusSchedule_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(ifBusSchedule, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "공항버스 스케쥴 선택");
+        }
+
+        private void btnBusRoute_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(ifBusRoute, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "공항버스 노선 선택");
+        }
+
+        private void btnBusManagement_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(ifBusManegement, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "공항버스 버스 관리 선택");
         }
     }
 }

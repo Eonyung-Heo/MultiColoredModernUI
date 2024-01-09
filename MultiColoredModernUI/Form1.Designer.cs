@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnAirPlane = new System.Windows.Forms.Button();
+            this.panelInterCityBusSubMenu = new System.Windows.Forms.Panel();
+            this.btnBusManagement = new System.Windows.Forms.Button();
+            this.btnBusRoute = new System.Windows.Forms.Button();
+            this.btnBusSchedule = new System.Windows.Forms.Button();
+            this.btnInterCityBus = new System.Windows.Forms.Button();
             this.panelShipSubMenu = new System.Windows.Forms.Panel();
             this.btnShipLoad = new System.Windows.Forms.Button();
             this.btnShipAdd = new System.Windows.Forms.Button();
@@ -55,19 +61,13 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.btnInterCityBus = new System.Windows.Forms.Button();
-            this.panelInterCityBusSubMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnRoute = new System.Windows.Forms.Button();
-            this.btnSchedule = new System.Windows.Forms.Button();
-            this.btnAirPlane = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
+            this.panelInterCityBusSubMenu.SuspendLayout();
             this.panelShipSubMenu.SuspendLayout();
             this.panelProductsSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
-            this.panelInterCityBusSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -90,6 +90,104 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(204, 888);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnAirPlane
+            // 
+            this.btnAirPlane.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAirPlane.FlatAppearance.BorderSize = 0;
+            this.btnAirPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAirPlane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAirPlane.ForeColor = System.Drawing.Color.Black;
+            this.btnAirPlane.Location = new System.Drawing.Point(0, 746);
+            this.btnAirPlane.Name = "btnAirPlane";
+            this.btnAirPlane.Size = new System.Drawing.Size(204, 45);
+            this.btnAirPlane.TabIndex = 17;
+            this.btnAirPlane.Text = "항공";
+            this.btnAirPlane.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAirPlane.UseVisualStyleBackColor = true;
+            this.btnAirPlane.Click += new System.EventHandler(this.btnAirPlane_Click);
+            // 
+            // panelInterCityBusSubMenu
+            // 
+            this.panelInterCityBusSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelInterCityBusSubMenu.Controls.Add(this.btnBusManagement);
+            this.panelInterCityBusSubMenu.Controls.Add(this.btnBusRoute);
+            this.panelInterCityBusSubMenu.Controls.Add(this.btnBusSchedule);
+            this.panelInterCityBusSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInterCityBusSubMenu.Location = new System.Drawing.Point(0, 615);
+            this.panelInterCityBusSubMenu.Name = "panelInterCityBusSubMenu";
+            this.panelInterCityBusSubMenu.Size = new System.Drawing.Size(204, 131);
+            this.panelInterCityBusSubMenu.TabIndex = 16;
+            // 
+            // btnBusManagement
+            // 
+            this.btnBusManagement.BackColor = System.Drawing.Color.White;
+            this.btnBusManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBusManagement.FlatAppearance.BorderSize = 0;
+            this.btnBusManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusManagement.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusManagement.ForeColor = System.Drawing.Color.Black;
+            this.btnBusManagement.Location = new System.Drawing.Point(0, 84);
+            this.btnBusManagement.Name = "btnBusManagement";
+            this.btnBusManagement.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnBusManagement.Size = new System.Drawing.Size(204, 42);
+            this.btnBusManagement.TabIndex = 13;
+            this.btnBusManagement.Text = "공항 버스 현황";
+            this.btnBusManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBusManagement.UseVisualStyleBackColor = false;
+            this.btnBusManagement.Click += new System.EventHandler(this.btnBusManagement_Click);
+            // 
+            // btnBusRoute
+            // 
+            this.btnBusRoute.BackColor = System.Drawing.Color.White;
+            this.btnBusRoute.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBusRoute.FlatAppearance.BorderSize = 0;
+            this.btnBusRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusRoute.ForeColor = System.Drawing.Color.Black;
+            this.btnBusRoute.Location = new System.Drawing.Point(0, 42);
+            this.btnBusRoute.Name = "btnBusRoute";
+            this.btnBusRoute.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnBusRoute.Size = new System.Drawing.Size(204, 42);
+            this.btnBusRoute.TabIndex = 12;
+            this.btnBusRoute.Text = "공항 버스 노선";
+            this.btnBusRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBusRoute.UseVisualStyleBackColor = false;
+            this.btnBusRoute.Click += new System.EventHandler(this.btnBusRoute_Click);
+            // 
+            // btnBusSchedule
+            // 
+            this.btnBusSchedule.BackColor = System.Drawing.Color.White;
+            this.btnBusSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBusSchedule.FlatAppearance.BorderSize = 0;
+            this.btnBusSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusSchedule.ForeColor = System.Drawing.Color.Black;
+            this.btnBusSchedule.Location = new System.Drawing.Point(0, 0);
+            this.btnBusSchedule.Name = "btnBusSchedule";
+            this.btnBusSchedule.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnBusSchedule.Size = new System.Drawing.Size(204, 42);
+            this.btnBusSchedule.TabIndex = 0;
+            this.btnBusSchedule.Text = "공항 버스 스케쥴";
+            this.btnBusSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBusSchedule.UseVisualStyleBackColor = false;
+            this.btnBusSchedule.Click += new System.EventHandler(this.btnBusSchedule_Click);
+            // 
+            // btnInterCityBus
+            // 
+            this.btnInterCityBus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInterCityBus.FlatAppearance.BorderSize = 0;
+            this.btnInterCityBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInterCityBus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterCityBus.ForeColor = System.Drawing.Color.Black;
+            this.btnInterCityBus.Location = new System.Drawing.Point(0, 570);
+            this.btnInterCityBus.Name = "btnInterCityBus";
+            this.btnInterCityBus.Size = new System.Drawing.Size(204, 45);
+            this.btnInterCityBus.TabIndex = 15;
+            this.btnInterCityBus.Text = "공항 버스";
+            this.btnInterCityBus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInterCityBus.UseVisualStyleBackColor = true;
+            this.btnInterCityBus.Click += new System.EventHandler(this.btnInterCityBus_Click);
             // 
             // panelShipSubMenu
             // 
@@ -475,101 +573,6 @@
             this.panelDeskTop.Size = new System.Drawing.Size(971, 813);
             this.panelDeskTop.TabIndex = 2;
             // 
-            // btnInterCityBus
-            // 
-            this.btnInterCityBus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInterCityBus.FlatAppearance.BorderSize = 0;
-            this.btnInterCityBus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInterCityBus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInterCityBus.ForeColor = System.Drawing.Color.Black;
-            this.btnInterCityBus.Location = new System.Drawing.Point(0, 570);
-            this.btnInterCityBus.Name = "btnInterCityBus";
-            this.btnInterCityBus.Size = new System.Drawing.Size(204, 45);
-            this.btnInterCityBus.TabIndex = 15;
-            this.btnInterCityBus.Text = "공항버스";
-            this.btnInterCityBus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInterCityBus.UseVisualStyleBackColor = true;
-            this.btnInterCityBus.Click += new System.EventHandler(this.btnInterCityBus_Click);
-            // 
-            // panelInterCityBusSubMenu
-            // 
-            this.panelInterCityBusSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelInterCityBusSubMenu.Controls.Add(this.button2);
-            this.panelInterCityBusSubMenu.Controls.Add(this.btnRoute);
-            this.panelInterCityBusSubMenu.Controls.Add(this.btnSchedule);
-            this.panelInterCityBusSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInterCityBusSubMenu.Location = new System.Drawing.Point(0, 615);
-            this.panelInterCityBusSubMenu.Name = "panelInterCityBusSubMenu";
-            this.panelInterCityBusSubMenu.Size = new System.Drawing.Size(204, 131);
-            this.panelInterCityBusSubMenu.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 84);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(204, 42);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "노선 관리";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnRoute
-            // 
-            this.btnRoute.BackColor = System.Drawing.Color.White;
-            this.btnRoute.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoute.FlatAppearance.BorderSize = 0;
-            this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoute.ForeColor = System.Drawing.Color.Black;
-            this.btnRoute.Location = new System.Drawing.Point(0, 42);
-            this.btnRoute.Name = "btnRoute";
-            this.btnRoute.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoute.Size = new System.Drawing.Size(204, 42);
-            this.btnRoute.TabIndex = 12;
-            this.btnRoute.Text = "노선 관리";
-            this.btnRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoute.UseVisualStyleBackColor = false;
-            // 
-            // btnSchedule
-            // 
-            this.btnSchedule.BackColor = System.Drawing.Color.White;
-            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSchedule.FlatAppearance.BorderSize = 0;
-            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchedule.ForeColor = System.Drawing.Color.Black;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 0);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSchedule.Size = new System.Drawing.Size(204, 42);
-            this.btnSchedule.TabIndex = 0;
-            this.btnSchedule.Text = "스케쥴 입력";
-            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSchedule.UseVisualStyleBackColor = false;
-            // 
-            // btnAirPlane
-            // 
-            this.btnAirPlane.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAirPlane.FlatAppearance.BorderSize = 0;
-            this.btnAirPlane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAirPlane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAirPlane.ForeColor = System.Drawing.Color.Black;
-            this.btnAirPlane.Location = new System.Drawing.Point(0, 746);
-            this.btnAirPlane.Name = "btnAirPlane";
-            this.btnAirPlane.Size = new System.Drawing.Size(204, 45);
-            this.btnAirPlane.TabIndex = 17;
-            this.btnAirPlane.Text = "항공";
-            this.btnAirPlane.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAirPlane.UseVisualStyleBackColor = true;
-            this.btnAirPlane.Click += new System.EventHandler(this.btnAirPlane_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -582,13 +585,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelInterCityBusSubMenu.ResumeLayout(false);
             this.panelShipSubMenu.ResumeLayout(false);
             this.panelProductsSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            this.panelInterCityBusSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -622,9 +625,9 @@
         private System.Windows.Forms.Button btnShipProducts;
         private System.Windows.Forms.Button btnExitLink;
         private System.Windows.Forms.Panel panelInterCityBusSubMenu;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnRoute;
-        private System.Windows.Forms.Button btnSchedule;
+        private System.Windows.Forms.Button btnBusManagement;
+        private System.Windows.Forms.Button btnBusRoute;
+        private System.Windows.Forms.Button btnBusSchedule;
         private System.Windows.Forms.Button btnInterCityBus;
         private System.Windows.Forms.Button btnAirPlane;
     }
