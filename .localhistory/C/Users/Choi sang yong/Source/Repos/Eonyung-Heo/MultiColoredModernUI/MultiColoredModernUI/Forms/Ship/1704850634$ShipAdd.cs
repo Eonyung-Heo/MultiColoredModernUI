@@ -102,10 +102,6 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             System.Diagnostics.Process.Start("https://tablog.neocities.org/keywordposition");
         }
-        private void Ship_CityCode_Bt_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/1CHTesRKjiHyMUCPHRsOwasTe8iKPPvRJP7s_686BYAo/edit#gid=0");
-        }
 
         public void Ship_HarborSE_CB()
         {
@@ -348,5 +344,6 @@ namespace MultiColoredModernUI.Forms.Ship
             sqlConnect.Close();
 
         }
+
     }
 }

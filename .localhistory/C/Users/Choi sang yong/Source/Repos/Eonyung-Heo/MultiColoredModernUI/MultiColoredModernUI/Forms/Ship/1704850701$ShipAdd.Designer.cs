@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Ship_Clear_BT = new Guna.UI2.WinForms.Guna2Button();
             this.Ship_Update_BT = new Guna.UI2.WinForms.Guna2Button();
@@ -122,7 +122,6 @@
             this.Ship_HarborSE_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_HarborSE_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_DetailedHarborNameAdd_SE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ship_CityCode_Bt = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             this.Ship_Add_TabControl.SuspendLayout();
             this.Ship_Harbor_page.SuspendLayout();
@@ -220,7 +219,6 @@
             // Ship_Harbor_page
             // 
             this.Ship_Harbor_page.BackColor = System.Drawing.Color.White;
-            this.Ship_Harbor_page.Controls.Add(this.Ship_CityCode_Bt);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Harbor3_Label);
@@ -685,7 +683,7 @@
             // 
             // Ship_OdsayID_TB
             // 
-            this.Ship_OdsayID_TB.BackColor = System.Drawing.Color.Transparent;
+            this.Ship_OdsayID_TB.BackColor = System.Drawing.Color.Maroon;
             this.Ship_OdsayID_TB.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Ship_OdsayID_TB.DefaultText = "";
             this.Ship_OdsayID_TB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1745,20 +1743,20 @@
             // 
             this.Ship_RouteAdd_DG.AllowUserToAddRows = false;
             this.Ship_RouteAdd_DG.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Ship_RouteAdd_DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Ship_RouteAdd_DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Ship_RouteAdd_DG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Ship_RouteAdd_DG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Ship_RouteAdd_DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ship_RouteAdd_DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Ship_RouteAdd_DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Ship_RouteAdd_DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ship_ShipRouteOdsayID_SE,
@@ -1767,14 +1765,14 @@
             this.Ship_HarborSE_2,
             this.Ship_HarborSE_3,
             this.Ship_DetailedHarborNameAdd_SE});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Ship_RouteAdd_DG.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Ship_RouteAdd_DG.DefaultCellStyle = dataGridViewCellStyle6;
             this.Ship_RouteAdd_DG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Ship_RouteAdd_DG.Location = new System.Drawing.Point(631, 20);
             this.Ship_RouteAdd_DG.Name = "Ship_RouteAdd_DG";
@@ -1841,24 +1839,6 @@
             this.Ship_DetailedHarborNameAdd_SE.HeaderText = "상세주소";
             this.Ship_DetailedHarborNameAdd_SE.Name = "Ship_DetailedHarborNameAdd_SE";
             this.Ship_DetailedHarborNameAdd_SE.ReadOnly = true;
-            // 
-            // Ship_CityCode_Bt
-            // 
-            this.Ship_CityCode_Bt.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_CityCode_Bt.BorderRadius = 8;
-            this.Ship_CityCode_Bt.BorderThickness = 1;
-            this.Ship_CityCode_Bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_CityCode_Bt.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_CityCode_Bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_CityCode_Bt.FillColor = System.Drawing.Color.White;
-            this.Ship_CityCode_Bt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_CityCode_Bt.ForeColor = System.Drawing.Color.Black;
-            this.Ship_CityCode_Bt.Location = new System.Drawing.Point(638, 80);
-            this.Ship_CityCode_Bt.Name = "Ship_CityCode_Bt";
-            this.Ship_CityCode_Bt.Size = new System.Drawing.Size(129, 45);
-            this.Ship_CityCode_Bt.TabIndex = 32;
-            this.Ship_CityCode_Bt.Text = "도시코드";
-            this.Ship_CityCode_Bt.Click += new System.EventHandler(this.Ship_CityCode_Bt_Click);
             // 
             // ShipAdd
             // 
@@ -1973,6 +1953,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_HarborSE_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_HarborSE_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_DetailedHarborNameAdd_SE;
-        private Guna.UI2.WinForms.Guna2Button Ship_CityCode_Bt;
     }
 }

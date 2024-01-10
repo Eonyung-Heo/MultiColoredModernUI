@@ -122,7 +122,6 @@
             this.Ship_HarborSE_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_HarborSE_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ship_DetailedHarborNameAdd_SE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ship_CityCode_Bt = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             this.Ship_Add_TabControl.SuspendLayout();
             this.Ship_Harbor_page.SuspendLayout();
@@ -220,7 +219,6 @@
             // Ship_Harbor_page
             // 
             this.Ship_Harbor_page.BackColor = System.Drawing.Color.White;
-            this.Ship_Harbor_page.Controls.Add(this.Ship_CityCode_Bt);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_Label);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Addr_TB);
             this.Ship_Harbor_page.Controls.Add(this.Ship_Harbor3_Label);
@@ -654,7 +652,6 @@
             this.Ship_PortID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_PortID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_PortID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_PortID_TB.Enabled = false;
             this.Ship_PortID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_PortID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_PortID_TB.ForeColor = System.Drawing.Color.Black;
@@ -692,7 +689,6 @@
             this.Ship_OdsayID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_OdsayID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_OdsayID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_OdsayID_TB.Enabled = false;
             this.Ship_OdsayID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_OdsayID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_OdsayID_TB.ForeColor = System.Drawing.Color.Black;
@@ -858,7 +854,6 @@
             this.Ship_ShipCompanyID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_ShipCompanyID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_ShipCompanyID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_ShipCompanyID_TB.Enabled = false;
             this.Ship_ShipCompanyID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_ShipCompanyID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_ShipCompanyID_TB.ForeColor = System.Drawing.Color.Black;
@@ -1337,7 +1332,6 @@
             this.Ship_DetailedHarborName_E_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_DetailedHarborName_E_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_DetailedHarborName_E_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_DetailedHarborName_E_TB.Enabled = false;
             this.Ship_DetailedHarborName_E_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_DetailedHarborName_E_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_DetailedHarborName_E_TB.ForeColor = System.Drawing.Color.Black;
@@ -1374,7 +1368,6 @@
             this.Ship_DetailedHarborName_S_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_DetailedHarborName_S_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_DetailedHarborName_S_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_DetailedHarborName_S_TB.Enabled = false;
             this.Ship_DetailedHarborName_S_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_DetailedHarborName_S_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_DetailedHarborName_S_TB.ForeColor = System.Drawing.Color.Black;
@@ -1411,7 +1404,6 @@
             this.Ship_ShipRouteOdsayIDE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_ShipRouteOdsayIDE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_ShipRouteOdsayIDE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_ShipRouteOdsayIDE_TB.Enabled = false;
             this.Ship_ShipRouteOdsayIDE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_ShipRouteOdsayIDE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_ShipRouteOdsayIDE_TB.ForeColor = System.Drawing.Color.Black;
@@ -1449,7 +1441,6 @@
             this.Ship_ShipRouteOdsayIDS_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_ShipRouteOdsayIDS_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_ShipRouteOdsayIDS_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_ShipRouteOdsayIDS_TB.Enabled = false;
             this.Ship_ShipRouteOdsayIDS_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_ShipRouteOdsayIDS_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_ShipRouteOdsayIDS_TB.ForeColor = System.Drawing.Color.Black;
@@ -1523,7 +1514,6 @@
             this.Ship_HarborE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_HarborE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_HarborE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_HarborE_TB.Enabled = false;
             this.Ship_HarborE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_HarborE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_HarborE_TB.ForeColor = System.Drawing.Color.Black;
@@ -1561,7 +1551,6 @@
             this.Ship_HarborS_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_HarborS_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_HarborS_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_HarborS_TB.Enabled = false;
             this.Ship_HarborS_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_HarborS_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_HarborS_TB.ForeColor = System.Drawing.Color.Black;
@@ -1599,7 +1588,6 @@
             this.Ship_HarborEID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_HarborEID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_HarborEID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_HarborEID_TB.Enabled = false;
             this.Ship_HarborEID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_HarborEID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_HarborEID_TB.ForeColor = System.Drawing.Color.Black;
@@ -1637,7 +1625,6 @@
             this.Ship_HarborSID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_HarborSID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_HarborSID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_HarborSID_TB.Enabled = false;
             this.Ship_HarborSID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_HarborSID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_HarborSID_TB.ForeColor = System.Drawing.Color.Black;
@@ -1689,7 +1676,6 @@
             this.Ship_HarborSE_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_HarborSE_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_HarborSE_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_HarborSE_TB.Enabled = false;
             this.Ship_HarborSE_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_HarborSE_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_HarborSE_TB.ForeColor = System.Drawing.Color.Black;
@@ -1726,7 +1712,6 @@
             this.Ship_RouteID_TB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Ship_RouteID_TB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Ship_RouteID_TB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Ship_RouteID_TB.Enabled = false;
             this.Ship_RouteID_TB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Ship_RouteID_TB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Ship_RouteID_TB.ForeColor = System.Drawing.Color.Black;
@@ -1842,24 +1827,6 @@
             this.Ship_DetailedHarborNameAdd_SE.Name = "Ship_DetailedHarborNameAdd_SE";
             this.Ship_DetailedHarborNameAdd_SE.ReadOnly = true;
             // 
-            // Ship_CityCode_Bt
-            // 
-            this.Ship_CityCode_Bt.BorderColor = System.Drawing.Color.LightGray;
-            this.Ship_CityCode_Bt.BorderRadius = 8;
-            this.Ship_CityCode_Bt.BorderThickness = 1;
-            this.Ship_CityCode_Bt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Ship_CityCode_Bt.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Ship_CityCode_Bt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Ship_CityCode_Bt.FillColor = System.Drawing.Color.White;
-            this.Ship_CityCode_Bt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Ship_CityCode_Bt.ForeColor = System.Drawing.Color.Black;
-            this.Ship_CityCode_Bt.Location = new System.Drawing.Point(638, 80);
-            this.Ship_CityCode_Bt.Name = "Ship_CityCode_Bt";
-            this.Ship_CityCode_Bt.Size = new System.Drawing.Size(129, 45);
-            this.Ship_CityCode_Bt.TabIndex = 32;
-            this.Ship_CityCode_Bt.Text = "도시코드";
-            this.Ship_CityCode_Bt.Click += new System.EventHandler(this.Ship_CityCode_Bt_Click);
-            // 
             // ShipAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1973,6 +1940,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_HarborSE_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_HarborSE_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ship_DetailedHarborNameAdd_SE;
-        private Guna.UI2.WinForms.Guna2Button Ship_CityCode_Bt;
     }
 }
