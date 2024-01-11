@@ -335,7 +335,7 @@ namespace MultiColoredModernUI.Forms.Ship
                     _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000);
 
                     IWebElement GetAttribute1 = _driver.FindElement(By.XPath(B_Code[j])); // 엘리먼트 호출
-                    string GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출
+                    string GetAttribute2 = GetAttribute1.GetAttribute("onmouseover"); // 필요데이터 추출/html/body/div[6]/div[2]/article/div[1]/div[3]/table/tbody/tr[169]
                     string[] style = GetAttribute2.Split('"'); // ="showNote(\"가사도\", \"전남 진도군 조도면 가사도리\", this)" / 데이터 구분
                     Address_E = style[1] + "(" + style[3] + ")"; // 가사도(전남 진도군 조도면 가사도리)
 

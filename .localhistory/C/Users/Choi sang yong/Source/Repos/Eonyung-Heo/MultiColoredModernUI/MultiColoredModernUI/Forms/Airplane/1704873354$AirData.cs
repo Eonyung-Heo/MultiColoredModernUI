@@ -29,7 +29,6 @@ namespace MultiColoredModernUI.Forms.Airplane
 
         List<List<string>> DataList = new List<List<string>>();
         List<string> Data = new List<string>();
-        List<string> Data_Index = new List<string>();
         int RouteCount;
         int kk = 0;
         string fileName;
@@ -121,7 +120,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                     // 공항 선택
                     StartListCount.Click();
                     _driver.FindElement(By.XPath($"/html/body/div[6]/div[2]/article/div[1]/div[2]/form/fieldset/div[2]/select/option[{ListCountElementsCount}]")).Click();
-                    
+
                     //출발 버튼
                     _driver.FindElement(By.XPath("//*[@id='sendForm']/fieldset/div[4]/span[2]/label")).Click();
                     _driver.FindElement(By.XPath("//*[@id='sendForm']/fieldset/button/span")).Click();
@@ -134,23 +133,31 @@ namespace MultiColoredModernUI.Forms.Airplane
                     {
                         continue;
                     }
-                    Thread.Sleep(2000);
                     for (int RouteListCount = 1; RouteListCount <= RouteCount; RouteListCount++)
                     {
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000);
                         //[항공사],[항공편]
                         Data.AddRange(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[1]/p/span[1]/a")).Text.Replace("(", "/").Replace(")", "").Split('/').ToList());
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                         //[출발지],[도착지]
                         Data.AddRange(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[1]/p/span[2]")).Text.Replace("에서", "!").Split('!').ToList());
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                         //출발시간
                         Data.Add(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[2]")).Text);
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                         //도착시간
                         Data.Add(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[3]")).Text);
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                         //운항요일
                         string day = "";
                         for (int daycount = 4; daycount <= 10; daycount++)
                         {
+                            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                             IWebElement element = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[{daycount}]"));
+
+
                             string innerHTML = element.GetAttribute("innerHTML");
+                            
                             if (innerHTML.Contains("<img"))
                             {
                                 string outerHTML = element.GetAttribute("outerHTML");
@@ -167,10 +174,11 @@ namespace MultiColoredModernUI.Forms.Airplane
                         }
                         Data.Add(day);
                         //운항기간
-                        IWebElement DataSlicing_1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]"));
-                        var Data_p = DataSlicing_1.FindElements(By.TagName("p"));
-                        if (Data_p.Count <= 1)
+                        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
+                        string[] DatatestList = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Replace(" ~ ", "!").Split('!');
+                        if (DatatestList.Length < 3)
                         {
+                            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
                             Data.AddRange(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]")).Text.Replace(" ~ ", "!").Split('!'));
                             DataList.Add(Data.ToList());
                             if (Air_DataGridViewData.InvokeRequired)
@@ -182,36 +190,35 @@ namespace MultiColoredModernUI.Forms.Airplane
                                 }));
                             }
                         }
-                        else if (Data_p.Count >= 2)
+                        //html/body/div[6]/div[2]/article/div[1]/div[3]/table/tbody/tr[160]/td[11]/p[4]
+                        else if (DatatestList.Length >= 3)
                         {
-                            Thread.Sleep(2000);
                             int n = 0;
-                            for (int AirRouteCount = 1; AirRouteCount <= Data_p.Count; AirRouteCount++)
+                            int nk = 7;
+                            int nm = 8;
+                            for (int AirRouteCount = 1; AirRouteCount <= DatatestList.Length; AirRouteCount += 2)
                             {
-                                string DataSlicing_2 = DataSlicing_1.Text;
-                                string DataSlicing_3 = DataSlicing_2.Substring(n, 23);
-                                Data_Index.AddRange(DataSlicing_3.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
-                                Data.AddRange(Data_Index.ToList());
-                                Thread.Sleep(2000);
+                                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2000); // 속도 제어
+                                IWebElement DataSlicing_1 = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[11]"));
+                                string DataSlicing_2 = DataSlicing_1.Text.Substring(n, 23);
+                                Data.AddRange(DataSlicing_2.Replace("\r\n", "!").Replace(" ~ ", "!").Split('!'));
                                 DataList.Add(Data.ToList());
                                 if (Air_DataGridViewData.InvokeRequired)
                                 {
                                     Air_DataGridViewData.BeginInvoke(new MethodInvoker(delegate ()
                                     {
-                                        Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8]);
+                                        Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][nk], DataList[kk][nm]);
                                         kk++;
                                     }));
-                                }
+                                } 
                                 n = n + 23;
-                                Data.Remove(Data[8]);
-                                Data.Remove(Data[7]);
-                                Data_Index.Clear();
+                                nk = nk + 2;
+                                nm = nm + 2;
                             }
                         }
-                        //html/body/div[6]/div[2]/article/div[1]/div[3]/table/tbody/tr[169]
                         else
                         {
-                            MessageBox.Show($"{RouteListCount}번 운항 기간 수집 중 오류입니다.");
+                            MessageBox.Show("운항 기간 수집 중 오류입니다.");
                         }
                         Data.Clear();
                     }
@@ -240,7 +247,7 @@ namespace MultiColoredModernUI.Forms.Airplane
             SaveFileDialog saveFile = new SaveFileDialog();
 
             // 다이얼 로그가 오픈되었을 때 최초의 경로 설정
-            saveFile.InitialDirectory = @"C:";
+            saveFile.InitialDirectory = @"D:";
 
             // 다이얼 로그의 제목
             saveFile.Title = "CSV 저장 위치 지정";
@@ -276,7 +283,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 {
                     //리스트 초기화
                     List<string> strList = new List<string>();
-                    
+                    /*
                     for (int j = 0; j < Air_DataGridViewData.Columns.Count; j++)
                     {
                         //strList.Add(Ship_DataGridViewData[j, i].Value.ToString());
@@ -284,7 +291,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                         string value = Air_DataGridViewData[j, i].Value.ToString();
                         value = value.Replace(",", "");
                         strList.Add(value);
-                    }
+                    }*/
                     String[] strArray = strList.ToArray(); //배열로 변환
                     //CSV 형식으로 변환
                     String strCsvData = String.Join(",", strArray);
