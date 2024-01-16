@@ -34,6 +34,8 @@ namespace MultiColoredModernUI.Forms.Airplane
         int kk = 0;
         string fileName;
 
+
+
         public AirData()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 //Airplane_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                _options.AddArgument("headless");
+                //_options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");
@@ -137,10 +139,99 @@ namespace MultiColoredModernUI.Forms.Airplane
                     Thread.Sleep(2000);
                     for (int RouteListCount = 1; RouteListCount <= RouteCount; RouteListCount++)
                     {
+                        string S_AirStart = "";
+                        string S_Airport = "";
+                        string E_AirStart = "";
+                        string E_Airport = "";
                         //[항공사],[항공편]
                         Data.AddRange(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[1]/p/span[1]/a")).Text.Replace("(", "/").Replace(")", "").Split('/').ToList());
                         //[출발지],[도착지]
-                        Data.AddRange(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[1]/p/span[2]")).Text.Replace("에서", "!").Split('!').ToList());
+                        var Data_SE = _driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[1]/p/span[2]")).Text.Replace("에서", "!").Split('!').ToList();
+                        if (Data_SE[0] == "서울/김포")
+                        {
+                            S_AirStart = "서울";
+                            S_Airport = "김포국제공항";
+                        }
+                        else if (Data_SE[0] == "부산/김해")
+                        {
+                            S_AirStart = "부산";
+                            S_Airport = "김해국제공항";
+                        }
+                        else if (Data_SE[0] == "포항/포항경주")
+                        {
+                            S_AirStart = "부산";
+                            S_Airport = "김해국제공항";
+                        }
+                        else if (Data_SE[0] == "청주/대전")
+                        {
+                            S_AirStart = "청주";
+                            S_Airport = "청주국제공항";
+                        }
+                        else if (Data_SE[0] == "여수/순천")
+                        {
+                            S_AirStart = "여수";
+                            S_Airport = "여수공항";
+                        }
+                        else if (Data_SE[0] == "진주/사천")
+                        {
+                            S_AirStart = "진주";
+                            S_Airport = "사천공항";
+                        }
+                        else if (Data_SE[0] == "원주/횡성")
+                        {
+                            S_AirStart = "원주";
+                            S_Airport = "원주공항";
+                        }
+                        else
+                        {
+                            S_AirStart = Data_SE[0].ToString();
+                            S_Airport = Data_SE[0].ToString() + "공항";
+                        }
+                        Data.Add(S_AirStart);
+                        Data.Add(S_Airport);
+
+                        if (Data_SE[1] == "서울/김포")
+                        {
+                            E_AirStart = "서울";
+                            E_Airport = "김포국제공항";
+                        }
+                        else if (Data_SE[1] == "부산/김해")
+                        {
+                            E_AirStart = "부산";
+                            E_Airport = "김해국제공항";
+                        }
+                        else if (Data_SE[1] == "포항/포항경주")
+                        {
+                            E_AirStart = "부산";
+                            E_Airport = "김해국제공항";
+                        }
+                        else if (Data_SE[1] == "청주/대전")
+                        {
+                            E_AirStart = "청주";
+                            E_Airport = "청주국제공항";
+                        }
+                        else if (Data_SE[1] == "여수/순천")
+                        {
+                            E_AirStart = "여수";
+                            E_Airport = "여수공항";
+                        }
+                        else if (Data_SE[1] == "진주/사천")
+                        {
+                            E_AirStart = "진주";
+                            E_Airport = "사천공항";
+                        }
+                        else if (Data_SE[1] == "원주/횡성")
+                        {
+                            E_AirStart = "원주";
+                            E_Airport = "원주공항";
+                        }
+                        else
+                        {
+                            E_AirStart = Data_SE[1].ToString();
+                            E_Airport = Data_SE[1].ToString() + "공항";
+                        }
+                        Data.Add(E_AirStart);
+                        Data.Add(E_Airport);
                         //출발시간
                         Data.Add(_driver.FindElement(By.XPath($"//*[@id='outTbody']/tr[{RouteListCount}]/td[2]")).Text);
                         //도착시간
@@ -177,7 +268,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                             {
                                 Air_DataGridViewData.BeginInvoke(new MethodInvoker(delegate ()
                                 {
-                                    Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8]);
+                                    Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8], DataList[kk][9], DataList[kk][10]);
                                     kk++;
                                 }));
                             }
@@ -198,7 +289,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                                 {
                                     Air_DataGridViewData.BeginInvoke(new MethodInvoker(delegate ()
                                     {
-                                        Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8]);
+                                        Air_DataGridViewData.Rows.Add(DataList[kk][0], DataList[kk][1], DataList[kk][2], DataList[kk][3], DataList[kk][4], DataList[kk][5], DataList[kk][6], DataList[kk][7], DataList[kk][8], DataList[kk][9], DataList[kk][10]);
                                         kk++;
                                     }));
                                 }
@@ -230,9 +321,11 @@ namespace MultiColoredModernUI.Forms.Airplane
 
         private void Air_DataCollection_BT_Click(object sender, EventArgs e)
         {
+            Air_DBupdate_BT.Enabled = false;
             //쓰레드 입혀서 작동
             Thread th1 = new Thread(new ThreadStart(Airplane_DataCrawling));
             th1.Start();
+            Air_DBupdate_BT.Enabled = true;
         }
 
         public void Air_SaveFileOpenFile()
@@ -263,8 +356,15 @@ namespace MultiColoredModernUI.Forms.Airplane
         {
             Air_SaveFileOpenFile();
             using (StreamWriter writer = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
-            //using (StreamWriter writer = new StreamWriter("D:odsay_ship_.csv", false, Encoding.GetEncoding("utf-8")))
             {
+                // 헤더를 CSV 파일에 추가
+                List<string> headerList = new List<string>();
+                foreach (DataGridViewColumn column in Air_DataGridViewData.Columns)
+                {
+                    headerList.Add(column.HeaderText);
+                }
+                writer.WriteLine(string.Join(",", headerList));
+
                 int rowCount = Air_DataGridViewData.Rows.Count;
 
                 if (Air_DataGridViewData.AllowUserToAddRows == true)
@@ -279,8 +379,6 @@ namespace MultiColoredModernUI.Forms.Airplane
                     
                     for (int j = 0; j < Air_DataGridViewData.Columns.Count; j++)
                     {
-                        //strList.Add(Ship_DataGridViewData[j, i].Value.ToString());
-                        //금액에서 ,가 있어서 데이터 수집시 오류가 발생함. 그래서 삭제하는 과정 추가
                         string value = Air_DataGridViewData[j, i].Value.ToString();
                         value = value.Replace(",", "");
                         strList.Add(value);
@@ -290,10 +388,59 @@ namespace MultiColoredModernUI.Forms.Airplane
                     String strCsvData = String.Join(",", strArray);
                     writer.WriteLine(strCsvData);
                 }
-
                 MessageBox.Show("저장완료 ");
                 writer.Close();
             }
+        }
+
+        private void Air_DBupdate_BT_Click(object sender, EventArgs e)
+        {
+            //select * from[TBInterCity_Airplane] ORDER BY IDX ASC
+            //SELECT * FROM[TBInterCity_AirplaneInfo]
+
+            //db접속정보
+            string connectionString = "Server = 218.234.32.245,5242; Database = NaverODsay_Dev_Sub; uid = sa; pwd = yasdo12!@";
+            string queryString = "INSERT INTO NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData (Company, Flight, Origin, OriginAirport, Destination, DestinationAirport, DepartureTime, ArrivalTime, Runday, StartDate, EndDate) " +
+                "VALUES (@Company, @Flight, @Origin, @OriginAirport, @Destination, @DestinationAirport, @DepartureTime, @ArrivalTime, @Runday, @StartDate, @EndDate)";
+            string deleteString = "delete NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData";
+            //INSERT INTO[TBInterCity_Airplane_CrawlingData] VALUES('대한항공', 'KE1803', '서울/김포', '부산/김해', cast('07:00:00' as datetime), cast('08:05:00' as datetime), '매일', cast('2023-12-19' as datetime), cast('2024-03-30' as datetime));
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                SqlCommand deletecommand = new SqlCommand(deleteString, connection);
+                connection.Open();
+                try
+                {
+                    deletecommand.ExecuteNonQuery();
+                    for (int jk = 0; jk < DataList.Count; jk++)
+                    {
+                        command.Parameters.Clear();
+                        command.Parameters.AddWithValue("@Company", DataList[jk][0].ToString());
+                        command.Parameters.AddWithValue("@Flight", DataList[jk][1].ToString());
+                        command.Parameters.AddWithValue("@Origin", DataList[jk][2].ToString());
+                        command.Parameters.AddWithValue("@OriginAirport", DataList[jk][3].ToString());
+                        command.Parameters.AddWithValue("@Destination", DataList[jk][4].ToString());
+                        command.Parameters.AddWithValue("@DestinationAirport", DataList[jk][5].ToString());
+                        command.Parameters.AddWithValue("@DepartureTime", DataList[jk][6].ToString());
+                        command.Parameters.AddWithValue("@ArrivalTime", DataList[jk][7].ToString());
+                        command.Parameters.AddWithValue("@Runday", DataList[jk][8].ToString());
+                        command.Parameters.AddWithValue("@StartDate", DataList[jk][9].ToString());
+                        command.Parameters.AddWithValue("@EndDate", DataList[jk][10].ToString());
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception exc)
+                {
+                    Trace.WriteLine(exc.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            MessageBox.Show("완료되었습니다");
         }
     }
 }

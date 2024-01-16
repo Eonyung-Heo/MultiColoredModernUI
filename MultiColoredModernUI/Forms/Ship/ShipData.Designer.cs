@@ -166,6 +166,7 @@
             this.Ship_TestdataButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Ship_TestdataButton.DisabledState.FillColor = System.Drawing.Color.White;
             this.Ship_TestdataButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Ship_TestdataButton.Enabled = false;
             this.Ship_TestdataButton.FillColor = System.Drawing.Color.White;
             this.Ship_TestdataButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Ship_TestdataButton.ForeColor = System.Drawing.Color.Black;

@@ -156,7 +156,7 @@ namespace MultiColoredModernUI.Forms.Ship
         //크롤링
         public void Ship_DataCrawling()
         {
-            //throw new NotImplementedException();
+            Ship_DBupdate.Enabled = false;
             try
             {
                 string[] calendar_split = calendar.Split('-');
@@ -572,6 +572,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 _driver.Dispose();
                 MessageBox.Show("종료되었습니다.");
             }
+            Ship_DBupdate.Enabled = true;
         }
 
         //쓰레드1
