@@ -443,6 +443,12 @@
     <EmbeddedResource Include="Forms\DashBoard\StatusUpdateData.resx">
       <DependentUpon>StatusUpdateData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InterCityBus\InterCityBusManegement.resx">
+      <DependentUpon>InterCityBusManegement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InterCityBus\InterCityBusRoute.resx">
+      <DependentUpon>InterCityBusRoute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InterCityBus\InterCityBusSchedule.resx">
       <DependentUpon>InterCityBusSchedule.cs</DependentUpon>
     </EmbeddedResource>

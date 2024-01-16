@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace MultiColoredModernUI.Forms.InterCityBus
 {
@@ -20,12 +21,13 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
         }
 
-        public void DeleteBusSchedule()
+        public void DeleteTable(string query)
         {
 
-            string query = "delete NTBBus";
 
             Connect();
+
+            query = "delete " + query;
 
             cmd = new SqlCommand(query, sqlConnect);
             cmd.CommandText = query;
@@ -45,10 +47,39 @@ namespace MultiColoredModernUI.Forms.InterCityBus
             cmd.CommandText = query;
             cmd.ExecuteNonQuery();
 
-
             sqlConnect.Close();
 
+        }
 
+        public void exceptBusSchedule()
+        {
+            Connect();
+
+            string query = "";
+
+
+            query = "update NTBbus set StationSequence=StationSequence-1";
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            query = "update NTBBus set DepartureTime = AID_TOOL.dbo.GetRegExReplace(departureTime,'[^0-9]','') where departureTime like '%[^0-9]%'";
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            sqlConnect.Close();
+        }
+
+        public void exceptBusRoute()
+        {
+            Connect();
+
+            string query = "";
+
+
+
+            sqlConnect.Close();
         }
 
         public List<List<string>> CheckBusSchedule()
@@ -62,22 +93,18 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
             string query = "";
 
-            query = "update NTBbus set StationSequence=StationSequence-1";
-            cmd = new SqlCommand(query, sqlConnect);
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-
-
-            for (int i = 1; i < 4; i++)
+            
+            for (int i = 1; i < 5; i++)
             {
-                query = "select * from FN_NTBbus(" + i + ")";
-
-                cmd = new SqlCommand(query, sqlConnect);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                try
                 {
+                    query = "select * from FN_NTBbus(" + i + ")";
+
+                    cmd = new SqlCommand(query, sqlConnect);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+
                     while (reader.Read())
                     {
                         sch.Add(reader["LaneID"].ToString());
@@ -95,10 +122,16 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
                     }
 
+                    reader.Close();
+
+                    if(totalSch.Count > 0)
+                        break;
+                }
+                catch
+                {
+                    MessageBox.Show(i + "번째 프로시저 실행 도중 에러 발생");
                     break;
                 }
-
-                reader.Close();
             }
 
             sqlConnect.Close();
@@ -148,7 +181,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         {
             Connect();
 
-            string query = "exec sp_Make_NBusScheduleUpdate";
+            string query = "exec sp_NBusScheduleUpdate";
 
             cmd = new SqlCommand(query, sqlConnect);
             cmd.CommandText = query;
@@ -156,6 +189,160 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
             sqlConnect.Close();
         }
+
+        public void UpdateBusSchedule(string query)
+        {
+            Connect();
+
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            sqlConnect.Close();
+        }
+
+        public List<List<string>> SelectBusRoute()
+        {
+            Connect();
+
+            List<string> sch = new List<string>();
+
+            List<List<string>> totalSch = new List<List<string>>();
+
+            string query = "select * from NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Sub] order by 1,2,3,4,5";
+
+            cmd = new SqlCommand(query, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                sch.Add(reader["route_id"].ToString());
+                sch.Add(reader["LaneNo"].ToString());
+                sch.Add(reader["stop_sequence"].ToString());
+                sch.Add(reader["up_down"].ToString());
+                sch.Add(reader["stop_id"].ToString());
+                sch.Add(reader["stop_name"].ToString());
+
+                totalSch.Add(sch.ToList());
+                sch.Clear();
+
+            }
+
+            reader.Close();
+            sqlConnect.Close();
+
+            return totalSch;
+        }
+
+        public List<List<string>> SelectNBusSchedule(string Laneid, string ServiceDayId, string OperationOrder, string StationSequence, string StationId)
+        {
+            Connect();
+
+            List<string> sch = new List<string>();
+
+            List<List<string>> totalSch = new List<List<string>>();
+
+            if (Laneid == "")
+                Laneid = "513";
+
+            string query = "select * from [naverpubtrans_aro].[dbo].[NBusSchedule_NTool] where Laneid = " + Laneid;
+
+            if (ServiceDayId != "")
+                query += "and ServiceDayId = " + ServiceDayId;
+            if (OperationOrder != "")
+                query += "and OperationOrder = " + OperationOrder;
+            if (StationSequence != "")
+                query += "and StationSequence = " + StationSequence;
+            if (StationId != "")
+                query += "and StationId = " + StationId;
+
+            query += " order by 1,2,3,4,5";
+
+
+            cmd = new SqlCommand(query, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                sch.Add(reader["Laneid"].ToString());
+                sch.Add(reader["ServiceDayId"].ToString());
+                sch.Add(reader["OperationOrder"].ToString());
+                sch.Add(reader["StationSequence"].ToString());
+                sch.Add(reader["StationId"].ToString());
+                sch.Add(reader["ArrivalTime"].ToString());
+                sch.Add(reader["DepartureTime"].ToString());
+                sch.Add(reader["ModifiedAt"].ToString());
+
+                totalSch.Add(sch.ToList());
+                sch.Clear();
+
+            }
+
+            reader.Close();
+            sqlConnect.Close();
+
+            return totalSch;
+        }
+
+
+        public List<List<string>> SelectRouteList(string search)
+        {
+            Connect();
+
+            List<string> route = new List<string>();
+
+            List<List<string>> totalroute = new List<List<string>>();
+
+            string query = "select * from NTOOL_DATA_NEW.dbo.[90_tb_route_stops_mapping] ";
+
+            if (search != "")
+                query += "where laneno like '%" + search + "%' or aroid like '%" + search + "%' or ntoolid like '%" + search + "%'";
+
+            cmd = new SqlCommand(query, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                route.Add(reader["LaneNo"].ToString());
+                route.Add(reader["AroID"].ToString());
+                route.Add(reader["NtoolID"].ToString());
+
+                totalroute.Add(route.ToList());
+                route.Clear();
+
+            }
+
+            reader.Close();
+            sqlConnect.Close();
+
+            return totalroute;
+        }
+
+        public void InsertRouteList(string LaneNo,string Aroid, string Ntoolid)
+        {
+            Connect();
+
+            if (Aroid == "")
+                Aroid = "0";
+            else if(Ntoolid == "")
+                Ntoolid = "0";
+
+
+
+            string query = string.Format("insert into NTOOL_DATA_NEW.dbo.[90_tb_route_stops_mapping] values " +
+                "('{0}',{1},{2})", LaneNo, Aroid, Ntoolid);
+
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            sqlConnect.Close();
+        }
+
+
 
     }
 }

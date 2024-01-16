@@ -150,6 +150,15 @@ namespace MultiColoredModernUI
                             //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
+                    foreach (Control previousSubBtn in panelInterCityBusSubMenu.Controls)
+                    {
+                        if (previousSubBtn.GetType() == typeof(Button))
+                        {
+                            previousSubBtn.BackColor = Color.White;
+                            //previousSubBtn.ForeColor = Color.LightGray;
+                            //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        }
+                    }
 
                 }
             }
@@ -182,10 +191,7 @@ namespace MultiColoredModernUI
             panelProductsSubMenu.Visible = false;
             panelShipSubMenu.Visible = false;
             panelInterCityBusSubMenu.Visible = false;
-            /*
-            panelToolListSubMenu.Visible = false;
-            panelSettingListSubMenu.Visible = false;
-            panelArrayListSubMenu.Visible = false;*/
+
         }
 
         private void hideSubMenu()
@@ -199,13 +205,6 @@ namespace MultiColoredModernUI
             if (panelInterCityBusSubMenu.Visible == true)
                 panelInterCityBusSubMenu.Visible = false;
 
-            /*
-            if (panelToolListSubMenu.Visible == true)
-                panelToolListSubMenu.Visible = false;
-            if (panelSettingListSubMenu.Visible == true)
-                panelSettingListSubMenu.Visible = false;
-            if (panelArrayListSubMenu.Visible == true)
-                panelArrayListSubMenu.Visible = false;*/
         }
 
         private void showSubMenu(Panel subMenu)
@@ -240,11 +239,6 @@ namespace MultiColoredModernUI
         
         private void btnCloseChileForm_Click(object sender, EventArgs e)
         {
-            /*
-            if (activeForm != null)
-                activeForm.Close();
-                */
-            //dashBoard = new DashBoard();
 
             BtnEvent();
 
