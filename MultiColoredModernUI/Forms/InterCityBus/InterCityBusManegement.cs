@@ -92,15 +92,18 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                                 MessageBox.Show("NToolID가 이미 등록 되어 있습니다.");
                         }
                     }
-                    if (route.Count== 0)
-                        sql.InsertRouteList(guna2TextBox11.Text, guna2TextBox10.Text, guna2TextBox9.Text);
 
-                    SelectRouteList();
+                    if (MessageBox.Show("선택하신 정보가 저장됩니다", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        if (route.Count == 0)
+                            sql.InsertRouteList(guna2TextBox11.Text, guna2TextBox10.Text, guna2TextBox9.Text);
 
-                    guna2TextBox11.Text = "";
-                    guna2TextBox10.Text = "";
-                    guna2TextBox9.Text = "";
+                        SelectRouteList();
 
+                        guna2TextBox11.Text = "";
+                        guna2TextBox10.Text = "";
+                        guna2TextBox9.Text = "";
+                    }
 
                 }
             }
@@ -117,6 +120,25 @@ namespace MultiColoredModernUI.Forms.InterCityBus
             guna2TextBox9.Text = "";
 
             SelectRouteList();
+        }
+
+        private void guna2DataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (MessageBox.Show("해당 정보를 삭제 하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                var laneNo = guna2DataGridView1.Rows[e.Row.Index].Cells[0].Value.ToString();
+                var aroID = guna2DataGridView1.Rows[e.Row.Index].Cells[1].Value.ToString();
+                var ntoolID = guna2DataGridView1.Rows[e.Row.Index].Cells[2].Value.ToString();
+
+                sql.DeleteRouteList(laneNo, aroID, ntoolID);
+            }
+            else
+                e.Cancel = true;
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2TextBox2.Text = guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

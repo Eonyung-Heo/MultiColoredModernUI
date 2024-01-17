@@ -46,7 +46,9 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                                         // 그 외 필요한 내용 적기
                 sFileLoadBtn.Enabled = false;
 
-                guna2TextBox1.Text = path;
+                
+                guna2ProgressBar1.Text = path;
+
 
                 Thread t = new Thread(() => sFileLoad(path));
                 t.Start();
@@ -84,6 +86,8 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     {
                         MessageBox.Show("Excel 파일 확인 필요");
                     }
+
+                    guna2DataGridView1.Rows.Clear();
 
                     for (int i = 0; i < sch.Count; i++)
                     {
@@ -173,7 +177,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                         {
                             index = 0;
 
-                            sql.InsertBusSchedule(qSchedule);
+                            sql.InsertNInterCityBus(qSchedule);
 
                             qSchedule = query;
                         }
@@ -186,7 +190,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 }
 
               
-                sql.InsertBusSchedule(qSchedule);
+                sql.InsertNInterCityBus(qSchedule);
 
                 object missing = Type.Missing;
                 object noSave = false;
@@ -254,7 +258,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     query = string.Format("update NTBBus set OperationOrder = {0}, StationSequence={1}, Stationid = {2}, Namekor = '{3}', DepartureTime = '{4}' " +
                     "where OperationOrder = {0} and StationSequence={1} and Stationid = {2} and laneid = {5} and LaneNo = '{6}'  ", OperationOrder, StationSequence, Stationid, Namekor, DepartureTime, Laneid, LaneNo);
 
-                    sql.UpdateBusSchedule(query);
+                    sql.UpdateNInterCityBus(query);
                 }
             }
 

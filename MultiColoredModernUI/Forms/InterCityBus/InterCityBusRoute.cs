@@ -25,6 +25,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         public InterCityBusRoute()
         {
             InitializeComponent();
+            sFileCheckBtn.Enabled =false;
         }
 
         private void sFileLoadBtn_Click(object sender, EventArgs e)
@@ -40,7 +41,8 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                                         // 그 외 필요한 내용 적기
                 sFileLoadBtn.Enabled = false;
 
-                guna2TextBox1.Text = path;
+
+                guna2ProgressBar1.Text = path;
 
                 Thread t = new Thread(() => sFileLoad(path));
                 t.Start();
@@ -51,9 +53,9 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         public void sFileLoad(string path)
         {
 
-            string query = "INSERT INTO NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Sub] values \n";
+            string query = "INSERT INTO NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Add] values \n";
 
-            sql.DeleteTable("NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Sub]");
+            sql.DeleteTable("NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Add]");
 
             string fileName = path.Substring(path.LastIndexOf(@"\") + 1);
 
@@ -61,7 +63,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
             List<List<string>> sch = new List<List<string>>();
 
-            sch = sql.CheckBusSchedule();
+            sch = sql.CheckBusRoute();
 
             if (guna2DataGridView1.InvokeRequired)
             {
@@ -70,13 +72,15 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     if (sch.Count == 0)
                     {
                         sch = sql.SelectBusRoute();
-                        sFileUpdateBtn.Enabled = true;
+                        sql.InsertBusRouteAll();
                     }
                     else
                     {
                         sFileCheckBtn.Enabled = true;
                         MessageBox.Show("Excel 파일 확인 필요");
                     }
+
+                    guna2DataGridView1.Rows.Clear();
 
                     for (int i = 0; i < sch.Count; i++)
                     {
@@ -134,9 +138,13 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
                     Excel.Range range = workSheet.UsedRange;    // 사용중인 셀 범위를 가져오기
 
+                    guna2ProgressBar1.Maximum = range.Rows.Count;
+
                     // 가져온 행(row) 만큼 반복
                     for (int row = 2; row <= range.Rows.Count; row++)
                     {
+                        guna2ProgressBar1.Value = row;
+
                         index++;
                         // 가져온 열(row) 만큼 반복
                         for (int column = 1; column <= range.Columns.Count; column++)
@@ -163,7 +171,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                         {
                             index = 0;
 
-                            sql.InsertBusSchedule(qSchedule);
+                            sql.InsertNInterCityBus(qSchedule);
 
                             qSchedule = query;
                         }
@@ -176,7 +184,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 }
 
 
-                sql.InsertBusSchedule(qSchedule);
+                sql.InsertNInterCityBus(qSchedule);
 
                 object missing = Type.Missing;
                 object noSave = false;
@@ -211,6 +219,63 @@ namespace MultiColoredModernUI.Forms.InterCityBus
             finally
             {
                 GC.Collect();   // 가비지 수집
+            }
+        }
+
+        private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            sFileCheckBtn.Enabled = true;
+        }
+
+        private void sFileCheckBtn_Click(object sender, EventArgs e)
+        {
+            int rowIndex = -1;
+
+            rowIndex = guna2DataGridView1.Rows.Count - 1;
+
+            if (rowIndex > -1)
+            {
+                for (int i = 0; i <= rowIndex; i++)
+                {
+                    string query = "";
+
+                    var Laneid = guna2DataGridView1.Rows[rowIndex].Cells[0].Value;
+                    var LaneNo = guna2DataGridView1.Rows[rowIndex].Cells[1].Value;
+                    var StationSequence = guna2DataGridView1.Rows[rowIndex].Cells[2].Value;
+                    var Direction = guna2DataGridView1.Rows[rowIndex].Cells[3].Value;
+                    var Stationid = guna2DataGridView1.Rows[rowIndex].Cells[4].Value;
+                    var Namekor = guna2DataGridView1.Rows[rowIndex].Cells[5].Value;
+                    
+
+                    query = string.Format("update NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Add] set stop_sequence={0}, up_down = '{1}',stop_id = {2}, stop_name = '{3}' " +
+                    "where stop_sequence={0} and stop_id = {2} and route_id = {4} ", StationSequence, Direction,Stationid, Namekor, Laneid);
+
+                    sql.UpdateNInterCityBus(query);
+                }
+            }
+
+            List<List<string>> sch = new List<List<string>>();
+
+            sch = sql.CheckBusSchedule();
+
+            sFileCheckBtn.Enabled = false;
+
+            if (sch.Count == 0)
+            {
+                sch = sql.SelectBusSchedule();
+                sql.InsertBusRouteAll();
+                sFileCheckBtn.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Excel 파일 확인 필요");
+            }
+
+            guna2DataGridView1.Rows.Clear();
+
+            for (int i = 0; i < sch.Count; i++)
+            {
+                guna2DataGridView1.Rows.Add(sch[i].ToArray());
             }
         }
     }

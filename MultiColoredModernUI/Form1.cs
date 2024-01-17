@@ -547,7 +547,7 @@ namespace MultiColoredModernUI
         {
             showSubMenu(panelInterCityBusSubMenu);
             Activatebutton(sender);
-            btnBusSchedule_Click((Button)btnBusSchedule, e);
+            btnBusManagement_Click((Button)btnBusManagement, e);
         }
 
         private void btnBusSchedule_Click(object sender, EventArgs e)
