@@ -34,11 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Air_DataGridViewData = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Air_DBupdate_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_DataDownload_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_Pagelink_BT = new Guna.UI2.WinForms.Guna2Button();
-            this.Air_DataCollection_BT = new Guna.UI2.WinForms.Guna2Button();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +45,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ship_MainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Air_DBupdate_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_DataDownload_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_Pagelink_BT = new Guna.UI2.WinForms.Guna2Button();
+            this.Air_DataCollection_BT = new Guna.UI2.WinForms.Guna2Button();
             Air_ChromeDriverTermination_BT = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Air_DataGridViewData)).BeginInit();
@@ -156,6 +156,61 @@
             this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Air_DataGridViewData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "항공사";
+            this.Column7.Name = "Column7";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "항공편";
+            this.Column1.Name = "Column1";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "출발지";
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "출발지-공항명";
+            this.Column10.Name = "Column10";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "도착지";
+            this.Column9.Name = "Column9";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "도착지-공항명";
+            this.Column11.Name = "Column11";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "출발 시간";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "도착 시간";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "운항요일";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "운항 시작 기간";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "운항 종료 기간";
+            this.Column6.Name = "Column6";
+            // 
             // Ship_MainPanel
             // 
             this.Ship_MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -247,61 +302,6 @@
             this.Air_DataCollection_BT.TabIndex = 13;
             this.Air_DataCollection_BT.Text = "데이터 수집";
             this.Air_DataCollection_BT.Click += new System.EventHandler(this.Air_DataCollection_BT_Click);
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "항공사";
-            this.Column7.Name = "Column7";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "항공편";
-            this.Column1.Name = "Column1";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "출발지";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "출발지-공항명";
-            this.Column10.Name = "Column10";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "도착지";
-            this.Column9.Name = "Column9";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "도착지-공항명";
-            this.Column11.Name = "Column11";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "출발 시간";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "도착 시간";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "운항요일";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "운항 시작 기간";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "운항 종료 기간";
-            this.Column6.Name = "Column6";
             // 
             // AirData
             // 

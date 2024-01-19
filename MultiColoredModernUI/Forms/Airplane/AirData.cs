@@ -34,8 +34,6 @@ namespace MultiColoredModernUI.Forms.Airplane
         int kk = 0;
         string fileName;
 
-
-
         public AirData()
         {
             InitializeComponent();
@@ -50,7 +48,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 //Airplane_chromeDriverUpdate();
 
                 _options = new ChromeOptions();
-                //_options.AddArgument("headless");
+                _options.AddArgument("headless");
                 _options.AddArgument("disable-gpu");
                 _options.AddArgument("-no-sandbox");
                 _options.AddArgument("--start-maximized");
@@ -159,27 +157,27 @@ namespace MultiColoredModernUI.Forms.Airplane
                         }
                         else if (Data_SE[0] == "포항/포항경주")
                         {
-                            S_AirStart = "부산";
-                            S_Airport = "김해국제공항";
+                            S_AirStart = "포항";
+                            S_Airport = "포항공항";
                         }
-                        else if (Data_SE[0] == "청주/대전")
+                        else if (Data_SE[0] == "청주")
                         {
-                            S_AirStart = "청주";
+                            S_AirStart = "청주/대전";
                             S_Airport = "청주국제공항";
                         }
-                        else if (Data_SE[0] == "여수/순천")
+                        else if (Data_SE[0] == "여수")
                         {
-                            S_AirStart = "여수";
+                            S_AirStart = "여수/순천";
                             S_Airport = "여수공항";
-                        }
+                        }/*
                         else if (Data_SE[0] == "진주/사천")
                         {
                             S_AirStart = "진주";
                             S_Airport = "사천공항";
-                        }
-                        else if (Data_SE[0] == "원주/횡성")
+                        }*/
+                        else if (Data_SE[0] == "원주")
                         {
-                            S_AirStart = "원주";
+                            S_AirStart = "원주/횡성";
                             S_Airport = "원주공항";
                         }
                         else
@@ -202,27 +200,27 @@ namespace MultiColoredModernUI.Forms.Airplane
                         }
                         else if (Data_SE[1] == "포항/포항경주")
                         {
-                            E_AirStart = "부산";
-                            E_Airport = "김해국제공항";
+                            E_AirStart = "포항";
+                            E_Airport = "포항공항";
                         }
-                        else if (Data_SE[1] == "청주/대전")
+                        else if (Data_SE[1] == "청주")
                         {
-                            E_AirStart = "청주";
+                            E_AirStart = "청주/대전";
                             E_Airport = "청주국제공항";
                         }
-                        else if (Data_SE[1] == "여수/순천")
+                        else if (Data_SE[1] == "여수")
                         {
-                            E_AirStart = "여수";
+                            E_AirStart = "여수/순천";
                             E_Airport = "여수공항";
-                        }
+                        }/*
                         else if (Data_SE[1] == "진주/사천")
                         {
                             E_AirStart = "진주";
                             E_Airport = "사천공항";
-                        }
-                        else if (Data_SE[1] == "원주/횡성")
+                        }*/
+                        else if (Data_SE[1] == "원주")
                         {
-                            E_AirStart = "원주";
+                            E_AirStart = "원주/횡성";
                             E_Airport = "원주공항";
                         }
                         else
@@ -294,8 +292,8 @@ namespace MultiColoredModernUI.Forms.Airplane
                                     }));
                                 }
                                 n = n + 23;
-                                Data.Remove(Data[8]);
-                                Data.Remove(Data[7]);
+                                Data.Remove(Data[10]);
+                                Data.Remove(Data[9]);
                                 Data_Index.Clear();
                             }
                         }
@@ -321,11 +319,13 @@ namespace MultiColoredModernUI.Forms.Airplane
 
         private void Air_DataCollection_BT_Click(object sender, EventArgs e)
         {
-            Air_DBupdate_BT.Enabled = false;
+            ///Air_DBupdate_BT.Enabled = false;
             //쓰레드 입혀서 작동
             Thread th1 = new Thread(new ThreadStart(Airplane_DataCrawling));
             th1.Start();
-            Air_DBupdate_BT.Enabled = true;
+            //Air_DBupdate_BT.Enabled = true;
+
+
         }
 
         public void Air_SaveFileOpenFile()
@@ -400,20 +400,27 @@ namespace MultiColoredModernUI.Forms.Airplane
 
             //db접속정보
             string connectionString = "Server = 218.234.32.245,5242; Database = NaverODsay_Dev_Sub; uid = sa; pwd = yasdo12!@";
-            string queryString = "INSERT INTO NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData (Company, Flight, Origin, OriginAirport, Destination, DestinationAirport, DepartureTime, ArrivalTime, Runday, StartDate, EndDate) " +
-                "VALUES (@Company, @Flight, @Origin, @OriginAirport, @Destination, @DestinationAirport, @DepartureTime, @ArrivalTime, @Runday, @StartDate, @EndDate)";
+            string queryString = "INSERT INTO NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData (Company, Flight, Origin, OriginAirport, Destination, DestinationAirport, DepartureTime, ArrivalTime, Runday, StartDate, EndDate, CrawlingDataDay) " +
+                "VALUES (@Company, @Flight, @Origin, @OriginAirport, @Destination, @DestinationAirport, @DepartureTime, @ArrivalTime, @Runday, @StartDate, @EndDate, @CrawlingDataDay)";
             string deleteString = "delete NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData";
             //INSERT INTO[TBInterCity_Airplane_CrawlingData] VALUES('대한항공', 'KE1803', '서울/김포', '부산/김해', cast('07:00:00' as datetime), cast('08:05:00' as datetime), '매일', cast('2023-12-19' as datetime), cast('2024-03-30' as datetime));
 
+            string strSql = string.Format("insert AID_TOOL.dbo.TBAirport_History ");
+            strSql += string.Format("values('{0}','Air_DBupdate'',getdate()')", StaticMain.userName);
+            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
                 SqlCommand deletecommand = new SqlCommand(deleteString, connection);
+                SqlCommand cmd = new SqlCommand(strSql, connection);
+                int rowCount = Air_DataGridViewData.RowCount;
+                
                 connection.Open();
+                cmd.ExecuteNonQuery();
+                deletecommand.ExecuteNonQuery();
                 try
                 {
-                    deletecommand.ExecuteNonQuery();
-                    for (int jk = 0; jk < DataList.Count; jk++)
+                    for (int jk = 0; jk < rowCount; jk++)
                     {
                         command.Parameters.Clear();
                         command.Parameters.AddWithValue("@Company", DataList[jk][0].ToString());
@@ -427,6 +434,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                         command.Parameters.AddWithValue("@Runday", DataList[jk][8].ToString());
                         command.Parameters.AddWithValue("@StartDate", DataList[jk][9].ToString());
                         command.Parameters.AddWithValue("@EndDate", DataList[jk][10].ToString());
+                        command.Parameters.AddWithValue("@CrawlingDataDay", DateTime.Today.ToString("yyyy-MM-dd"));
 
                         int rowsAffected = command.ExecuteNonQuery();
                     }
