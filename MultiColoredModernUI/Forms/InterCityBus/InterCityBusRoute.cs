@@ -256,7 +256,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
             List<List<string>> sch = new List<List<string>>();
 
-            sch = sql.CheckBusSchedule();
+            sch = sql.CheckBusRoute();
 
             sFileCheckBtn.Enabled = false;
 
@@ -265,6 +265,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 sch = sql.SelectBusSchedule();
                 sql.InsertBusRouteAll();
                 sFileCheckBtn.Enabled = false;
+                MessageBox.Show("노선변경사항 업데이트 완료");
             }
             else
             {

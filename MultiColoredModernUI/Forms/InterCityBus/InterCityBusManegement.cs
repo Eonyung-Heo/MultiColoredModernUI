@@ -77,34 +77,30 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     MessageBox.Show("AroID 또는 NToolID 둘중 하나의 ID는 입력 되어야 합니다.");
                 else
                 {
-                    route = sql.SelectRouteList(guna2TextBox11.Text);
+                    route = sql.SelectRouteList(guna2TextBox10.Text);
                     if (route.Count > 0)
-                        MessageBox.Show("LaneNo가 이미 등록 되어 있습니다.");
+                        MessageBox.Show("AroID가 이미 등록 되어 있습니다.");
                     else
                     {
-                        route = sql.SelectRouteList(guna2TextBox10.Text);
+                        route = sql.SelectRouteList(guna2TextBox9.Text);
                         if (route.Count > 0)
-                            MessageBox.Show("AroID가 이미 등록 되어 있습니다.");
+                            MessageBox.Show("NToolID가 이미 등록 되어 있습니다.");
                         else
                         {
-                            route = sql.SelectRouteList(guna2TextBox9.Text);
-                            if (route.Count > 0)
-                                MessageBox.Show("NToolID가 이미 등록 되어 있습니다.");
+                            if (MessageBox.Show("선택하신 정보가 저장됩니다", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                if (route.Count == 0)
+                                    sql.InsertRouteList(guna2TextBox11.Text, guna2TextBox10.Text, guna2TextBox9.Text);
+
+                                SelectRouteList();
+
+                                guna2TextBox11.Text = "";
+                                guna2TextBox10.Text = "";
+                                guna2TextBox9.Text = "";
+                            }
                         }
                     }
-
-                    if (MessageBox.Show("선택하신 정보가 저장됩니다", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        if (route.Count == 0)
-                            sql.InsertRouteList(guna2TextBox11.Text, guna2TextBox10.Text, guna2TextBox9.Text);
-
-                        SelectRouteList();
-
-                        guna2TextBox11.Text = "";
-                        guna2TextBox10.Text = "";
-                        guna2TextBox9.Text = "";
-                    }
-
+                    
                 }
             }
             else

@@ -81,6 +81,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     {
                         sch = sql.SelectBusSchedule();
                         sFileUpdateBtn.Enabled = true;
+
                     }
                     else
                     {
@@ -142,12 +143,15 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 foreach (Excel.Worksheet workSheet in workBook.Worksheets)
                 {
                     
-
                     Excel.Range range = workSheet.UsedRange;    // 사용중인 셀 범위를 가져오기
+
+                    guna2ProgressBar1.Maximum = range.Rows.Count;
 
                     // 가져온 행(row) 만큼 반복
                     for (int row = 2; row <= range.Rows.Count; row++)
                     {
+                        guna2ProgressBar1.Value = row;
+
                         index++;
                         // 가져온 열(row) 만큼 반복
                         for (int column = 1; column <= range.Columns.Count; column++)
@@ -231,6 +235,8 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         private void sFileUpdateBtn_Click(object sender, EventArgs e)
         {
             sql.ScheduleUpdate();
+
+            MessageBox.Show("스케쥴 업데이트 완료");
         }
 
 
