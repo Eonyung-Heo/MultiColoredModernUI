@@ -15,6 +15,7 @@ using MF = MultiColoredModernUI.Forms.Master;
 using SpF = MultiColoredModernUI.Forms.Ship;
 using SaF = MultiColoredModernUI.Forms.Airplane;
 using IF = MultiColoredModernUI.Forms.InterCityBus;
+using EF = MultiColoredModernUI.Forms.Etc;
 using System.Net.NetworkInformation;
 
 namespace MultiColoredModernUI
@@ -43,6 +44,7 @@ namespace MultiColoredModernUI
         public IF.InterCityBusSchedule ifBusSchedule = new IF.InterCityBusSchedule { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusRoute ifBusRoute = new IF.InterCityBusRoute { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusManegement ifBusManegement = new IF.InterCityBusManegement { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public EF.BusPrice efBusPrice = new EF.BusPrice { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -159,6 +161,15 @@ namespace MultiColoredModernUI
                             //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
+                    foreach (Control previousSubBtn in panelEtcSubMenu.Controls)
+                    {
+                        if (previousSubBtn.GetType() == typeof(Button))
+                        {
+                            previousSubBtn.BackColor = Color.White;
+                            //previousSubBtn.ForeColor = Color.LightGray;
+                            //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        }
+                    }
 
                 }
             }
@@ -191,6 +202,7 @@ namespace MultiColoredModernUI
             panelProductsSubMenu.Visible = false;
             panelShipSubMenu.Visible = false;
             panelInterCityBusSubMenu.Visible = false;
+            panelEtcSubMenu.Visible = false;
 
         }
 
@@ -205,6 +217,9 @@ namespace MultiColoredModernUI
             if (panelInterCityBusSubMenu.Visible == true)
                 panelInterCityBusSubMenu.Visible = false;
 
+            if (panelEtcSubMenu.Visible == true)
+                panelEtcSubMenu.Visible = false;
+            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -214,8 +229,6 @@ namespace MultiColoredModernUI
                 hideSubMenu();
                 subMenu.Visible = true;
             }
-            else
-                subMenu.Visible = false;
 
         }
 
@@ -566,6 +579,20 @@ namespace MultiColoredModernUI
         {
             OpenChildForm(ifBusManegement, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "공항버스 버스 관리 선택");
+        }
+
+        private void btnEtc_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelEtcSubMenu);
+            Activatebutton(sender);
+            btnBusPrice_Click((Button)btnBusPrice, e);
+        }
+
+
+        private void btnBusPrice_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(efBusPrice, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "버스 요금 선택");
         }
     }
 }

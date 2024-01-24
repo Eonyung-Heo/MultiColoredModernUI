@@ -326,6 +326,13 @@
     <Compile Include="Forms\DashBoard\StatusUpdateData.Designer.cs">
       <DependentUpon>StatusUpdateData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Etc\BusPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Etc\BusPrice.Designer.cs">
+      <DependentUpon>BusPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Etc\MssqlEtc.cs" />
     <Compile Include="Forms\InterCityBus\InterCityBusManegement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard\StatusUpdateData.resx">
       <DependentUpon>StatusUpdateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Etc\BusPrice.resx">
+      <DependentUpon>BusPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InterCityBus\InterCityBusManegement.resx">
       <DependentUpon>InterCityBusManegement.cs</DependentUpon>
