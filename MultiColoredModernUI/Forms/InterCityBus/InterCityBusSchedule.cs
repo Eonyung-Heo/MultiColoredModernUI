@@ -34,8 +34,6 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         private void sFileLoadBtn_Click(object sender, EventArgs e)
         {
      
-
-            
             string path = @""; // OpenFileDialog에서 받은 경로를 담을 변수
             OpenFileDialog dialog = new OpenFileDialog(); // 생성자 생성
             dialog.InitialDirectory = @"D:\";
@@ -46,9 +44,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                                         // 그 외 필요한 내용 적기
                 sFileLoadBtn.Enabled = false;
 
-                
                 guna2ProgressBar1.Text = path;
-
 
                 Thread t = new Thread(() => sFileLoad(path));
                 t.Start();
@@ -170,8 +166,6 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                             else
                                 lstCell.Add("" + str + ""); // 리스트에 할당
 
-
-                            
                         }
 
                         qSchedule += "(" + string.Join(",", lstCell.ToArray()) + ")"; // 표시용 데이터 추가

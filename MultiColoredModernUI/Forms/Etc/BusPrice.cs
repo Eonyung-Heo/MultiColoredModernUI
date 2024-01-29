@@ -20,7 +20,7 @@ namespace MultiColoredModernUI.Forms.Etc
         {
             InitializeComponent();
             BusFareLoad();
-
+            DataGridViewReadOnly();
 
         }
 
@@ -36,6 +36,7 @@ namespace MultiColoredModernUI.Forms.Etc
                 {
                     guna2DataGridView2.Rows.Add(fare[i].ToArray());
                 }
+
             }
 
         }
@@ -60,7 +61,9 @@ namespace MultiColoredModernUI.Forms.Etc
                 {
                     guna2DataGridView2.Rows.Add(fare[i].ToArray());
                 }
+
             }
+
         }
 
         private void guna2DataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -80,6 +83,14 @@ namespace MultiColoredModernUI.Forms.Etc
                 sql.UpdateBusPrice(citycode,busclass,buscash,buscard);
                 
             }
+        }
+
+        public void DataGridViewReadOnly()
+        {
+            guna2DataGridView2.Columns[0].ReadOnly = true;
+            guna2DataGridView2.Columns[1].ReadOnly = true;
+            guna2DataGridView2.Columns[2].ReadOnly = true;
+            guna2DataGridView2.Columns[3].ReadOnly = true;
         }
     }
 }
