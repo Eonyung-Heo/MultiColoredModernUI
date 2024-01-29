@@ -295,6 +295,18 @@
     <Compile Include="Forms\Airplane\AirData.Designer.cs">
       <DependentUpon>AirData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Airplane\Airdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Airplane\Airdetail.designer.cs">
+      <DependentUpon>Airdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Airplane\AirFare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Airplane\AirFare.designer.cs">
+      <DependentUpon>AirFare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashBoard\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -434,6 +446,9 @@
     <Compile Include="StaticMain.cs" />
     <EmbeddedResource Include="Forms\Airplane\AirData.resx">
       <DependentUpon>AirData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Airplane\Airdetail.resx">
+      <DependentUpon>Airdetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>

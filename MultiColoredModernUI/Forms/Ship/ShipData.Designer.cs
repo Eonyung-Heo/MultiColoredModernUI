@@ -283,6 +283,7 @@
             this.Ship_DataGridViewData.GridColor = System.Drawing.Color.Black;
             this.Ship_DataGridViewData.Location = new System.Drawing.Point(0, 0);
             this.Ship_DataGridViewData.Name = "Ship_DataGridViewData";
+            this.Ship_DataGridViewData.ReadOnly = true;
             this.Ship_DataGridViewData.RowHeadersVisible = false;
             this.Ship_DataGridViewData.RowTemplate.Height = 23;
             this.Ship_DataGridViewData.Size = new System.Drawing.Size(1091, 532);
@@ -300,7 +301,7 @@
             this.Ship_DataGridViewData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.Ship_DataGridViewData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Ship_DataGridViewData.ThemeStyle.HeaderStyle.Height = 26;
-            this.Ship_DataGridViewData.ThemeStyle.ReadOnly = false;
+            this.Ship_DataGridViewData.ThemeStyle.ReadOnly = true;
             this.Ship_DataGridViewData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.Ship_DataGridViewData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Ship_DataGridViewData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -314,6 +315,7 @@
             this.column_ShipName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_ShipName.HeaderText = "선박명";
             this.column_ShipName.Name = "column_ShipName";
+            this.column_ShipName.ReadOnly = true;
             this.column_ShipName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_StartTime
@@ -321,6 +323,7 @@
             this.column_StartTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_StartTime.HeaderText = "출발시각";
             this.column_StartTime.Name = "column_StartTime";
+            this.column_StartTime.ReadOnly = true;
             this.column_StartTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_TimeRequired
@@ -328,6 +331,7 @@
             this.column_TimeRequired.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_TimeRequired.HeaderText = "소요시각";
             this.column_TimeRequired.Name = "column_TimeRequired";
+            this.column_TimeRequired.ReadOnly = true;
             this.column_TimeRequired.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_Rank
@@ -335,6 +339,7 @@
             this.column_Rank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_Rank.HeaderText = "등급";
             this.column_Rank.Name = "column_Rank";
+            this.column_Rank.ReadOnly = true;
             this.column_Rank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_AdultFee
@@ -342,6 +347,7 @@
             this.column_AdultFee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_AdultFee.HeaderText = "대인";
             this.column_AdultFee.Name = "column_AdultFee";
+            this.column_AdultFee.ReadOnly = true;
             this.column_AdultFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_YouthFee
@@ -349,6 +355,7 @@
             this.column_YouthFee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_YouthFee.HeaderText = "중고";
             this.column_YouthFee.Name = "column_YouthFee";
+            this.column_YouthFee.ReadOnly = true;
             this.column_YouthFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_SeniorFee
@@ -356,6 +363,7 @@
             this.column_SeniorFee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_SeniorFee.HeaderText = "경로";
             this.column_SeniorFee.Name = "column_SeniorFee";
+            this.column_SeniorFee.ReadOnly = true;
             this.column_SeniorFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_ChildFee
@@ -363,6 +371,7 @@
             this.column_ChildFee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_ChildFee.HeaderText = "소아";
             this.column_ChildFee.Name = "column_ChildFee";
+            this.column_ChildFee.ReadOnly = true;
             this.column_ChildFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_RemainingSeat
@@ -370,6 +379,7 @@
             this.column_RemainingSeat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_RemainingSeat.HeaderText = "잔여석";
             this.column_RemainingSeat.Name = "column_RemainingSeat";
+            this.column_RemainingSeat.ReadOnly = true;
             this.column_RemainingSeat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // column_Reservation
@@ -377,6 +387,7 @@
             this.column_Reservation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_Reservation.HeaderText = "예매";
             this.column_Reservation.Name = "column_Reservation";
+            this.column_Reservation.ReadOnly = true;
             this.column_Reservation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Harbor_Name_S
@@ -384,6 +395,7 @@
             this.Harbor_Name_S.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Harbor_Name_S.HeaderText = "출발지";
             this.Harbor_Name_S.Name = "Harbor_Name_S";
+            this.Harbor_Name_S.ReadOnly = true;
             this.Harbor_Name_S.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Harbor_Name_E
@@ -391,6 +403,7 @@
             this.Harbor_Name_E.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Harbor_Name_E.HeaderText = "도착지";
             this.Harbor_Name_E.Name = "Harbor_Name_E";
+            this.Harbor_Name_E.ReadOnly = true;
             this.Harbor_Name_E.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Harbor_DetailsName_S
@@ -398,6 +411,7 @@
             this.Harbor_DetailsName_S.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Harbor_DetailsName_S.HeaderText = "출발지 상세주소";
             this.Harbor_DetailsName_S.Name = "Harbor_DetailsName_S";
+            this.Harbor_DetailsName_S.ReadOnly = true;
             this.Harbor_DetailsName_S.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Harbor_DetailsName_E
@@ -405,6 +419,7 @@
             this.Harbor_DetailsName_E.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Harbor_DetailsName_E.HeaderText = "도착지 상세주소";
             this.Harbor_DetailsName_E.Name = "Harbor_DetailsName_E";
+            this.Harbor_DetailsName_E.ReadOnly = true;
             this.Harbor_DetailsName_E.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ShipData

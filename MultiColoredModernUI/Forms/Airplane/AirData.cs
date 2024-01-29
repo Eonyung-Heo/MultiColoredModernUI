@@ -37,7 +37,6 @@ namespace MultiColoredModernUI.Forms.Airplane
         public AirData()
         {
             InitializeComponent();
-
             try
             {
                 _driverService = ChromeDriverService.CreateDefaultService();
@@ -81,6 +80,11 @@ namespace MultiColoredModernUI.Forms.Airplane
             try
             {
                 _driver.Dispose();
+                this.Invoke((MethodInvoker)delegate
+                {
+                    Air_DBupdate_BT.Enabled = true;
+                    Air_DataCollection_BT.Enabled = true;
+                });
                 MessageBox.Show("종료되었습니다.");
             }
             catch
@@ -88,7 +92,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 MessageBox.Show("사용한 드라이버가 열려있지 않습니다.");
             }
         }
-        
+
         //항공시간표 링크
         private void Air_Pagelink_BT_Click(object sender, EventArgs e)
         {
@@ -114,14 +118,14 @@ namespace MultiColoredModernUI.Forms.Airplane
                 // 공항 갯수 카운트
                 IWebElement StartListCount = _driver.FindElement(By.XPath("/html/body/div[6]/div[2]/article/div[1]/div[2]/form/fieldset/div[2]/select"));
                 var ListCountElements = StartListCount.FindElements(By.TagName("option"));
-                
+
                 // 크롤링
                 for (int ListCountElementsCount = 1; ListCountElementsCount <= ListCountElements.Count; ListCountElementsCount++)
                 {
                     // 공항 선택
                     StartListCount.Click();
                     _driver.FindElement(By.XPath($"/html/body/div[6]/div[2]/article/div[1]/div[2]/form/fieldset/div[2]/select/option[{ListCountElementsCount}]")).Click();
-                    
+
                     //출발 버튼
                     _driver.FindElement(By.XPath("//*[@id='sendForm']/fieldset/div[4]/span[2]/label")).Click();
                     _driver.FindElement(By.XPath("//*[@id='sendForm']/fieldset/button/span")).Click();
@@ -243,7 +247,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                             if (innerHTML.Contains("<img"))
                             {
                                 string outerHTML = element.GetAttribute("outerHTML");
-                                day = day + outerHTML.Substring(16,1);
+                                day = day + outerHTML.Substring(16, 1);
                             }
                             else
                             {
@@ -313,19 +317,22 @@ namespace MultiColoredModernUI.Forms.Airplane
             }
             finally
             {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    Air_DBupdate_BT.Enabled = true;
+                    Air_DataCollection_BT.Enabled = true;
+                });
                 MessageBox.Show("종료되었습니다.");
             }
         }
 
         private void Air_DataCollection_BT_Click(object sender, EventArgs e)
         {
-            ///Air_DBupdate_BT.Enabled = false;
+            Air_DBupdate_BT.Enabled = false;
+            Air_DataCollection_BT.Enabled = false;
             //쓰레드 입혀서 작동
             Thread th1 = new Thread(new ThreadStart(Airplane_DataCrawling));
             th1.Start();
-            //Air_DBupdate_BT.Enabled = true;
-
-
         }
 
         public void Air_SaveFileOpenFile()
@@ -376,7 +383,7 @@ namespace MultiColoredModernUI.Forms.Airplane
                 {
                     //리스트 초기화
                     List<string> strList = new List<string>();
-                    
+
                     for (int j = 0; j < Air_DataGridViewData.Columns.Count; j++)
                     {
                         string value = Air_DataGridViewData[j, i].Value.ToString();
@@ -393,11 +400,13 @@ namespace MultiColoredModernUI.Forms.Airplane
             }
         }
 
+        private void AirnotDBupdate()
+        {
+
+        }
+
         private void Air_DBupdate_BT_Click(object sender, EventArgs e)
         {
-            //select * from[TBInterCity_Airplane] ORDER BY IDX ASC
-            //SELECT * FROM[TBInterCity_AirplaneInfo]
-
             //db접속정보
             string connectionString = "Server = 218.234.32.245,5242; Database = NaverODsay_Dev_Sub; uid = sa; pwd = yasdo12!@";
             string queryString = "INSERT INTO NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData (Company, Flight, Origin, OriginAirport, Destination, DestinationAirport, DepartureTime, ArrivalTime, Runday, StartDate, EndDate, CrawlingDataDay) " +
@@ -407,14 +416,14 @@ namespace MultiColoredModernUI.Forms.Airplane
 
             string strSql = string.Format("insert AID_TOOL.dbo.TBAirport_History ");
             strSql += string.Format("values('{0}','Air_DBupdate'',getdate()')", StaticMain.userName);
-            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
                 SqlCommand deletecommand = new SqlCommand(deleteString, connection);
                 SqlCommand cmd = new SqlCommand(strSql, connection);
                 int rowCount = Air_DataGridViewData.RowCount;
-                
+
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 deletecommand.ExecuteNonQuery();
@@ -438,6 +447,7 @@ namespace MultiColoredModernUI.Forms.Airplane
 
                         int rowsAffected = command.ExecuteNonQuery();
                     }
+
                 }
                 catch (Exception exc)
                 {
