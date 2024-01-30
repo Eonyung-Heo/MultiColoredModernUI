@@ -41,6 +41,8 @@ namespace MultiColoredModernUI
         public SpF.ShipAdd spfShipAdd = new SpF.ShipAdd { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SpF.ShipLoad spfShipLoad = new SpF.ShipLoad { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public SaF.AirData safAirData = new SaF.AirData { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SaF.AirDetail safAirDetail = new SaF.AirDetail { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public SaF.AirFare safAirFare = new SaF.AirFare { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusSchedule ifBusSchedule = new IF.InterCityBusSchedule { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusRoute ifBusRoute = new IF.InterCityBusRoute { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusManegement ifBusManegement = new IF.InterCityBusManegement { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -161,6 +163,15 @@ namespace MultiColoredModernUI
                             //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
+                    foreach (Control previousSubBtn in panelAirSubMenu.Controls)
+                    {
+                        if (previousSubBtn.GetType() == typeof(Button))
+                        {
+                            previousSubBtn.BackColor = Color.White;
+                            //previousSubBtn.ForeColor = Color.LightGray;
+                            //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        }
+                    }
                     foreach (Control previousSubBtn in panelEtcSubMenu.Controls)
                     {
                         if (previousSubBtn.GetType() == typeof(Button))
@@ -170,7 +181,6 @@ namespace MultiColoredModernUI
                             //previousSubBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
-
                 }
             }
         }
@@ -202,8 +212,8 @@ namespace MultiColoredModernUI
             panelProductsSubMenu.Visible = false;
             panelShipSubMenu.Visible = false;
             panelInterCityBusSubMenu.Visible = false;
+            panelAirSubMenu.Visible = false;
             panelEtcSubMenu.Visible = false;
-
         }
 
         private void hideSubMenu()
@@ -217,9 +227,11 @@ namespace MultiColoredModernUI
             if (panelInterCityBusSubMenu.Visible == true)
                 panelInterCityBusSubMenu.Visible = false;
 
+            if (panelAirSubMenu.Visible == true)
+                panelAirSubMenu.Visible = false;
+
             if (panelEtcSubMenu.Visible == true)
                 panelEtcSubMenu.Visible = false;
-            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -229,7 +241,6 @@ namespace MultiColoredModernUI
                 hideSubMenu();
                 subMenu.Visible = true;
             }
-
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -237,29 +248,21 @@ namespace MultiColoredModernUI
             showSubMenu(panelProductsSubMenu);
             Activatebutton(sender);
             btnStation_Click((Button)btnStation, e);
-            
         }
-
-
-
 
         private void panelTitle_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture(); 
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-           
         }
         
         private void btnCloseChileForm_Click(object sender, EventArgs e)
         {
-
             BtnEvent();
 
             OpenChildForm(dashBoard, sender);
-
-            
+    
             Reset();
-
         }
 
         private void Reset()
@@ -270,15 +273,12 @@ namespace MultiColoredModernUI
             btnCloseChileForm.Visible = false;
             btnCloseChileForm.BackColor = Color.White;
             hideSubMenu();
-
-            
         }
         
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
 
-            
             dashBoard = new DashBoard();
             dashBoard.TopLevel = false;
             this.panelDeskTop.Controls.Add(dashBoard);
@@ -289,12 +289,7 @@ namespace MultiColoredModernUI
             dashBoard.BringToFront();
             dashBoard.Show();
 
-
             BtnEvent();
-
-           
-   
-
         }
         
         private void btnMaster_Click(object sender, EventArgs e)
@@ -305,7 +300,6 @@ namespace MultiColoredModernUI
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            
             if (WindowState == FormWindowState.Normal)
                 this.WindowState = FormWindowState.Maximized;
             else
@@ -334,7 +328,6 @@ namespace MultiColoredModernUI
             
         public void btnRegionData_Click(object sender, EventArgs e)
         {
-
             OpenChildForm(dfRegionData, sender);
             hideSubMenu();
         }
@@ -422,7 +415,6 @@ namespace MultiColoredModernUI
             sfExchange.Reset();
             OpenChildForm(sfExchange, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "지하철 역 환승 선택");
-            
         }
 
         private void btnExitLink_Click(object sender, EventArgs e)
@@ -446,7 +438,6 @@ namespace MultiColoredModernUI
             sfExitLink.Reset();
             OpenChildForm(sfExitLink, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "지하철 빠른 하차 선택");
-
         }
 
 
@@ -470,24 +461,18 @@ namespace MultiColoredModernUI
 
         public  void BtnEvent()
         {
-
             dashBoard.RegionDataView += new DashBoard.FormSendDataHandler(btnRegionData_Click);
             dashBoard.DataManegementView += new DashBoard.FormSendDataHandler(btnDataManegement_Click);
-
         }
 
         private void btnDataManegement_Click(object sender, EventArgs e)
         {
-            
             OpenChildForm(dfDataManegement, sender);
             hideSubMenu();
-
-
         }
 
         private void toolSelectCheckReset()
         {
-
             sfStation.listClickReset();
             sfFacility.listClickReset();
             sfGateLink.listClickReset();
@@ -508,8 +493,6 @@ namespace MultiColoredModernUI
             showSubMenu(panelShipSubMenu);
             Activatebutton(sender);
             btnShipCollection_Click((Button)btnShipCollection, e); 
-            //btnShipAdd_Click((Button)btnShipAdd, e);//상용추가
-            //btnShipLoad_Click((Button)btnShipLoad, e);//상용추가
         }
 
         private void btnShipCollection_Click(object sender, EventArgs e)
@@ -535,25 +518,42 @@ namespace MultiColoredModernUI
         //상용추가
         private void btnAirPlane_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelAirSubMenu);
+            Activatebutton(sender);
+            btnAirData_Click((Button)btnAirData, e);
+        }
+
+        private void btnAirData_Click(object sender, EventArgs e)
+        {
             OpenChildForm(safAirData, sender);
-            hideSubMenu();
-            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 선택");
+            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 데이터 수집 선택");
+        }
+
+        private void btnAirDetail_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(safAirDetail, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 상세내역 선택");
+        }
+
+        private void btnAirFare_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(safAirFare, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "항공 요금 선택");
         }
 
         public void levelDisable(int level)
         {
-            
             if (level != -1)
             {
                 if (level == 1)
                 {
                     btnMaster.Visible = false;
+                    /*
                     btnShipProducts.Visible = false;
                     btnAirPlane.Visible = false;
-
+                    */
                 }
             }
-                
         }
 
         private void btnInterCityBus_Click(object sender, EventArgs e)
@@ -587,7 +587,6 @@ namespace MultiColoredModernUI
             Activatebutton(sender);
             btnBusPrice_Click((Button)btnBusPrice, e);
         }
-
 
         private void btnBusPrice_Click(object sender, EventArgs e)
         {
