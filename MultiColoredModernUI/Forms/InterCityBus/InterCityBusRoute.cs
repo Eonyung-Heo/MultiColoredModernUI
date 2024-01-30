@@ -73,6 +73,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     {
                         sch = sql.SelectBusRoute();
                         sql.InsertBusRouteAll();
+                        MessageBox.Show("노선 변경 리스트 업데이트 완료");
                     }
                     else
                     {
@@ -151,6 +152,12 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                         {
                             object obj = (range.Cells[row, column] as Excel.Range).Value2;
 
+                            if (column == 1 && obj == null)
+                            {
+                                index--;
+                                break;
+                            }
+
                             if (obj == null)
                                 obj = "0";
 
@@ -164,25 +171,31 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                                 lstCell.Add(str); // 리스트에 할당
                         }
 
-                        qSchedule += "(" + string.Join(",", lstCell.ToArray()) + ")"; // 표시용 데이터 추가
-                        lstCell.Clear();
+                        if(lstCell.Count > 0)
+                            qSchedule += "(" + string.Join(",", lstCell.ToArray()) + ")"; // 표시용 데이터 추가
 
                         if (index == 999)
                         {
                             index = 0;
 
+                            qSchedule = qSchedule.TrimEnd(',', '\n');
+
                             sql.InsertNInterCityBus(qSchedule);
 
                             qSchedule = query;
                         }
-                        else
+                        else if (lstCell.Count > 0)
                         {
                             if (row >= 2 && row < range.Rows.Count)
                                 qSchedule += ",\n";
                         }
+
+                        lstCell.Clear();
                     }
                 }
 
+
+                qSchedule = qSchedule.TrimEnd(',', '\n');
 
                 sql.InsertNInterCityBus(qSchedule);
 
@@ -221,6 +234,8 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 GC.Collect();   // 가비지 수집
             }
         }
+
+        
 
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -265,7 +280,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 sch = sql.SelectBusSchedule();
                 sql.InsertBusRouteAll();
                 sFileCheckBtn.Enabled = false;
-                MessageBox.Show("노선변경사항 업데이트 완료");
+                MessageBox.Show("노선 변경 리스트 업데이트 완료");
             }
             else
             {
