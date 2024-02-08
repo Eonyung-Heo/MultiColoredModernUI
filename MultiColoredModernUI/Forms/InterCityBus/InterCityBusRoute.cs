@@ -90,8 +90,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
                     sFileLoadBtn.Enabled = true;
 
-                }
-                ));
+                }));
             }
 
         }
@@ -261,7 +260,6 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                     var Stationid = guna2DataGridView1.Rows[rowIndex].Cells[4].Value;
                     var Namekor = guna2DataGridView1.Rows[rowIndex].Cells[5].Value;
                     
-
                     query = string.Format("update NTOOL_DATA_NEW.dbo.[07_1_tb_route_stops_Aro_Ex_Add] set stop_sequence={0}, up_down = '{1}',stop_id = {2}, stop_name = '{3}' " +
                     "where stop_sequence={0} and stop_id = {2} and route_id = {4} ", StationSequence, Direction,Stationid, Namekor, Laneid);
 
