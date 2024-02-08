@@ -414,17 +414,18 @@ namespace MultiColoredModernUI.Forms.Airplane
             string deleteString = "delete NaverODsay_Dev_Sub.dbo.TBInterCity_Airplane_CrawlingData";
             //INSERT INTO[TBInterCity_Airplane_CrawlingData] VALUES('대한항공', 'KE1803', '서울/김포', '부산/김해', cast('07:00:00' as datetime), cast('08:05:00' as datetime), '매일', cast('2023-12-19' as datetime), cast('2024-03-30' as datetime));
 
-            string strSql = string.Format("insert AID_TOOL.dbo.TBAirport_History ");
-            strSql += string.Format("values('{0}','Air_DBupdate'',getdate()')", StaticMain.userName);
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                var strSql = "insert into TBAirport_History ";
+                strSql += $"values('{StaticMain.userName}', 'TBInterCity_Airplane_CrawlingData',getdate())";
+
                 SqlCommand command = new SqlCommand(queryString, connection);
                 SqlCommand deletecommand = new SqlCommand(deleteString, connection);
                 SqlCommand cmd = new SqlCommand(strSql, connection);
                 int rowCount = Air_DataGridViewData.RowCount;
 
                 connection.Open();
+                
                 cmd.ExecuteNonQuery();
                 deletecommand.ExecuteNonQuery();
                 try

@@ -18,6 +18,8 @@ namespace MultiColoredModernUI.Forms.Airplane
         public int i;
         string fileName;
 
+        DataGridView DGname;
+
         //db 관련함수
         SqlDataReader dr;
         SqlConnection sqlConnect;
@@ -144,47 +146,6 @@ namespace MultiColoredModernUI.Forms.Airplane
             EnabledTrue();
         }
 
-        private void Air_DataDownload_BT_Click(object sender, EventArgs e)
-        {
-            Air_SaveFileOpenFile();
-            using (StreamWriter writer = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
-            {
-                // 헤더를 CSV 파일에 추가
-                List<string> headerList = new List<string>();
-                foreach (DataGridViewColumn column in Air_AirplaneData_DG.Columns)
-                {
-                    headerList.Add(column.HeaderText);
-                }
-                writer.WriteLine(string.Join(",", headerList));
-
-                int rowCount = Air_AirplaneData_DG.Rows.Count;
-
-                if (Air_AirplaneData_DG.AllowUserToAddRows == true)
-                {
-                    rowCount = rowCount - 1;
-                }
-
-                for (int i = 0; i < rowCount; i++)
-                {
-                    //리스트 초기화
-                    List<string> strList = new List<string>();
-
-                    for (int j = 0; j < Air_AirplaneData_DG.Columns.Count; j++)
-                    {
-                        string value = Air_AirplaneData_DG[j, i].Value.ToString();
-                        value = value.Replace(",", "");
-                        strList.Add(value);
-                    }
-                    String[] strArray = strList.ToArray(); //배열로 변환
-                    //CSV 형식으로 변환
-                    String strCsvData = String.Join(",", strArray);
-                    writer.WriteLine(strCsvData);
-                }
-                MessageBox.Show("저장완료 ");
-                writer.Close();
-            }
-        }
-
         public void Air_SaveFileOpenFile()
         {
             SaveFileDialog saveFile = new SaveFileDialog();
@@ -206,6 +167,67 @@ namespace MultiColoredModernUI.Forms.Airplane
             {
                 // 경로와 파일명을 filename에 저장
                 fileName = saveFile.FileName.ToString();
+            }
+        }
+
+        private void Air_DataDownload_BT_Click(object sender, EventArgs e)
+        {
+            if (Air_Detail_TabControl.SelectedTab == Air_AirplaneData)
+            {
+                DGname = Air_AirplaneData_DG;
+            }
+            else if (Air_Detail_TabControl.SelectedTab == Air_CompanyDifferenceData)
+            {
+                DGname = Air_CompanyDifferenceData_DG;
+            }
+            else if (Air_Detail_TabControl.SelectedTab == Air_RouteDifferenceData)
+            {
+                DGname = Air_RouteDifferenceData_DG;
+            }
+            else if (Air_Detail_TabControl.SelectedTab == Air_NewData)
+            {
+                DGname = Air_NewData_DG;
+            }
+            else if (Air_Detail_TabControl.SelectedTab == Air_DeleteData)
+            {
+                DGname = Air_DeleteData_DG;
+            }
+            Air_SaveFileOpenFile();
+            using (StreamWriter writer = new StreamWriter(fileName, false, Encoding.GetEncoding("utf-8")))
+            {
+                // 헤더를 CSV 파일에 추가
+                List<string> headerList = new List<string>();
+                foreach (DataGridViewColumn column in DGname.Columns)
+                {
+                    headerList.Add(column.HeaderText);
+                }
+                writer.WriteLine(string.Join(",", headerList));
+
+                int rowCount = DGname.Rows.Count;
+
+                if (DGname.AllowUserToAddRows == true)
+                {
+                    rowCount = rowCount - 1;
+                }
+
+                for (int i = 0; i < rowCount; i++)
+                {
+                    //리스트 초기화
+                    List<string> strList = new List<string>();
+
+                    for (int j = 0; j < DGname.Columns.Count; j++)
+                    {
+                        string value = DGname[j, i].Value.ToString();
+                        value = value.Replace(",", "");
+                        strList.Add(value);
+                    }
+                    String[] strArray = strList.ToArray(); //배열로 변환
+                    //CSV 형식으로 변환
+                    String strCsvData = String.Join(",", strArray);
+                    writer.WriteLine(strCsvData);
+                }
+                MessageBox.Show("저장완료 ");
+                writer.Close();
             }
         }
 

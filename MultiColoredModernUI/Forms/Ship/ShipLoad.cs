@@ -16,6 +16,7 @@ namespace MultiColoredModernUI.Forms.Ship
     {
         
         public int i;
+        public int CodeNum = 0;
 
         //db 관련함수
         SqlDataReader dr;
@@ -36,6 +37,15 @@ namespace MultiColoredModernUI.Forms.Ship
         {
             // db접속정보
             sqlConnect = new SqlConnection("Server = 218.234.32.194,5242; Database = NEW_SHIP; uid = sa; pwd = yasdo12!@; MultipleActiveResultSets = True");
+
+            sqlConnect.Open();
+        }
+
+        //SQL접속
+        public void Connect_History()
+        {
+            // db접속정보
+            sqlConnect = new SqlConnection("Server = 218.234.32.245,5242; Database = AID_TOOL; uid = sa; pwd = yasdo12!@; MultipleActiveResultSets = True");
 
             sqlConnect.Open();
         }
@@ -281,6 +291,7 @@ namespace MultiColoredModernUI.Forms.Ship
 
                 Ship_HarborS_TB.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[0].Value.ToString(); //출발항
                 Ship_HarborE_TB.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[1].Value.ToString(); //도착항
+                Ship_HarborSE_TB.Text = Ship_HarborS_TB.Text + "/" + Ship_HarborE_TB.Text; // 출도착항/
                 Ship_HarborSID_TB.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[2].Value.ToString(); //출발항구ID
                 Ship_HarborEID_TB.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[3].Value.ToString(); //도착항구ID
                 Ship_ShipCreateDate_TB1.Text = Ship_DataGridViewData_Route_DG.Rows[index].Cells[4].Value.ToString(); //작성날짜
@@ -455,23 +466,113 @@ namespace MultiColoredModernUI.Forms.Ship
         //저장하기 누를시 코드
         private void Ship_Update_BT_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Ship_Sortation_CB.Text) || string.IsNullOrEmpty(Ship_ShipSortation_TB.Text))
+            Connect_History();
+            if(CodeNum == 0)
             {
-                MessageBox.Show("구분이나 구분항구 항목이 비어 있습니다.");
-                return;
+                if (string.IsNullOrEmpty(Ship_Sortation_CB.Text) || string.IsNullOrEmpty(Ship_ShipSortation_TB.Text))
+                {
+                    MessageBox.Show("구분이나 구분항구 항목이 비어 있습니다.");
+                    return;
+                }
+                else if (string.IsNullOrEmpty(Ship_StartTime_TB.Text))
+                {
+                    MessageBox.Show("출발시간 항목이 비어 있습니다.");
+                    return;
+                }
+                Ship_Fee_TB_TextChanged(); // 상세내역 변경
+                Ship_DetailedHarborName_S_TB_TextChanged();//출발지 상세주소 변경
+                Ship_DetailedHarborName_E_TB_TextChanged();//도착지 상세주소 변경
+                Ship_UpdateDate_TB_TextChanged();//시간변경
+                Ship_DataGridViewData_Route_DG.Rows.Clear();
+                selectODSayLaneID();
+                
+                var LoadHistoryInsert = "insert into TBShip_History";
+
+                string tableName;
+                string MainID;
+                string SubID;
+                string DataName1;
+                string DataName2;
+                string descript1;
+                string descript2;
+                string descript3;
+                string descript4;
+                string descript5;
+                string LoadHistoryValues;
+                string Histroy;
+                
+                if (Ship_Load_TabControl.SelectedTab == Ship_Route_page)
+                {
+                    tableName = "TBShiplane";
+                    MainID = Ship_RouteID_TB.Text;
+                    SubID = "";
+                    DataName1 = Ship_HarborS_TB.Text;
+                    DataName2 = Ship_HarborE_TB.Text;
+                    descript1 = "";
+                    descript2 = "";
+                    descript3 = "";
+                    descript4 = "";
+                    descript5 = "";
+
+                    LoadHistoryValues = $"values({StaticMain.userName},{tableName},{MainID},{SubID},{DataName1},{DataName2},{descript1},{descript2},{descript3},{descript4},{descript5},getdate()";
+                    Histroy = LoadHistoryInsert + LoadHistoryValues;
+                }
+                else if (Ship_Load_TabControl.SelectedTab == Ship_ShipCompany_page)
+                {
+                    tableName = "";
+                    MainID = ;
+                    SubID = ;
+                    DataName1 = "";
+                    DataName2 = "";
+                    descript1 = "";
+                    descript2 = "";
+                    descript3 = "";
+                    descript4 = "";
+                    descript5 = "";
+
+                    LoadHistoryValues = $"values({StaticMain.userName},{tableName},{MainID},{SubID},{DataName1},{DataName2},{descript1},{descript2},{descript3},{descript4},{descript5},getdate()";
+                    Histroy = LoadHistoryInsert + LoadHistoryValues;
+
+                }
+                else if (Ship_Load_TabControl.SelectedTab == Ship_Station_page)
+                {
+                    tableName = "";
+                    MainID = ;
+                    SubID = ;
+                    DataName1 = "";
+                    DataName2 = "";
+                    descript1 = "";
+                    descript2 = "";
+                    descript3 = "";
+                    descript4 = "";
+                    descript5 = "";
+
+                    LoadHistoryValues = $"values({StaticMain.userName},{tableName},{MainID},{SubID},{DataName1},{DataName2},{descript1},{descript2},{descript3},{descript4},{descript5},getdate()";
+                    Histroy = LoadHistoryInsert + LoadHistoryValues;
+                }
+                else
+                {
+                    MessageBox.Show("페이지 선택 에러");
+                    return;
+                }
+                
+                for (i = 0;i ==  ;i++)
+                {
+                    SqlCommand cmd = new SqlCommand(Histroy, sqlConnect);
+                    cmd.CommandText = Histroy;
+                    cmd.ExecuteNonQuery();
+                }
+                //*/
+                sqlConnect.Close();
+                MessageBox.Show("변경 항목이 저장되었습니다.");
             }
-            else if (string.IsNullOrEmpty(Ship_StartTime_TB.Text))
+            else if (CodeNum == 1)
             {
-                MessageBox.Show("출발시간 항목이 비어 있습니다.");
-                return;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("신규 타임이 저장되었습니다.");
+                sqlConnect.Close();
+                CodeNum = 0;
             }
-            Ship_Fee_TB_TextChanged(); // 상세내역 변경
-            Ship_DetailedHarborName_S_TB_TextChanged();//출발지 상세주소 변경
-            Ship_DetailedHarborName_E_TB_TextChanged();//도착지 상세주소 변경
-            Ship_UpdateDate_TB_TextChanged();//시간변경
-            Ship_DataGridViewData_Route_DG.Rows.Clear();
-            selectODSayLaneID();
-            MessageBox.Show("저장되었습니다.");
         }
 
         private void Ship_DataGridViewData_Fee_DG_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -499,9 +600,67 @@ namespace MultiColoredModernUI.Forms.Ship
             Ship_SeniorFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[7].Value.ToString();
             Ship_ChildFee_TB.Text = Ship_DataGridViewData_Fee_DG.Rows[index].Cells[8].Value.ToString();
         }
+
+        private void Ship_NewTime_BT1_Click(object sender, EventArgs e)
+        {
+            CodeNum = 1;
+            if (Ship_RouteID_TB.Text == "")
+            {
+                MessageBox.Show("ID값이 지정되지 않았습니다.");
+                return;
+            }
+            Ship_RouteID_TB.Enabled = false;
+            Ship_HarborSE_TB.Enabled = false;
+            Ship_Sortation_CB.Enabled = false;
+            Ship_HarborSID_TB.Enabled = false;
+            Ship_HarborEID_TB.Enabled = false;
+            Ship_HarborS_TB.Enabled = false;
+            Ship_HarborE_TB.Enabled = false;
+            Ship_ShipSortation_TB.Enabled = false;
+            Ship_ShipRouteOdsayIDS_TB.Enabled = false;
+            Ship_ShipRouteOdsayIDE_TB.Enabled = false;
+            Ship_DetailedHarborName_S_TB.Enabled = false;
+            Ship_DetailedHarborName_E_TB.Enabled = false;
+            Ship_ShipCreateDate_TB1.Enabled = false;
+            Ship_ShipUpDate_TB1.Enabled = false;
+            Ship_DataGridViewData_Route_DG.CurrentCell = null;
+
+            Connect();
+
+            string strSql_ShipLaneInfo = "select * from NEW_SHIP.dbo.TBShipLaneInfo";
+
+            SqlCommand cmd_LaneInfo = new SqlCommand(strSql_ShipLaneInfo, sqlConnect);
+
+            SqlDataReader dt = cmd_LaneInfo.ExecuteReader();
+
+            //ODSayLaneID idx ODSayShipCompanyID ShipCompanyName ShipCompanyTel ShipName    ConfirmDate StartTime   TimeRequired Rank    AdultFee YouthFee    SeniorFee ChildFee    RemainingSeat
+
+
+            string strSql = "UPDATE NEW_SHIP.dbo.TBHarbor SET ShipCompanyName = @CompanyName, ShipCompanyTel = @, ShipName = @ShipName, ConfirmDate = @, StartTime = @StartTime, TimeRequired = @Timerequired, Rank = @Rank2, AdultFee = @AdultFee, YouthFee = @YouthFee, SeniorFee = @SeniorFee, ChildFee = @ChildFee" +
+                "  where ODSayHarborID = @ODSayHarborID and ID = @ID";
+            SqlCommand cmd = new SqlCommand(strSql, sqlConnect);
+            if (Ship_AdultFee_TB.Text != "" & Ship_YouthFee_TB.Text != "" & Ship_SeniorFee_TB.Text != "" & Ship_ChildFee_TB.Text != "")
+            {
+                cmd.Parameters.AddWithValue("@Ship_CompanyName", Ship_CompanyName_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_ShipName2", Ship_ShipName2_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_StartTime", Ship_StartTime_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_Timerequired", Ship_Timerequired_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_Rank2", Ship_Rank2_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_AdultFee", Ship_AdultFee_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_YouthFee", Ship_YouthFee_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_SeniorFee", Ship_SeniorFee_TB.Text);
+                cmd.Parameters.AddWithValue("@Ship_ChildFee", Ship_ChildFee_TB.Text);
+            }
+            else
+            {
+                MessageBox.Show("신규타임 오류입니다.");
+            }
+            
+            /* 데이터 조건 추가해야함 */
+        }
         //-----------------------------------------------노선정보------------------------------------------------------------
 
-            
+
 
         //-----------------------------------------------해운정보------------------------------------------------------------
         public void selectODSayShipCompanyID()
@@ -1040,14 +1199,6 @@ namespace MultiColoredModernUI.Forms.Ship
 
         
 
-
-
-
-
-
-
-
         //-----------------------------------------------항구정보------------------------------------------------------------
-
     }
 }

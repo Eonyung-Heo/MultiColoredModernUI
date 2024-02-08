@@ -450,6 +450,9 @@
     <EmbeddedResource Include="Forms\Airplane\Airdetail.resx">
       <DependentUpon>Airdetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Airplane\AirFare.resx">
+      <DependentUpon>AirFare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
