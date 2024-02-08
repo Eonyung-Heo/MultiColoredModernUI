@@ -401,7 +401,7 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         }
 
 
-        public List<List<string>> SelectRouteList(string search)
+        public List<List<string>> SelectRouteList(string search,string aroid,string ntoolid)
         {
             Connect();
 
@@ -413,6 +413,12 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
             if (search != "")
                 query += "where laneno like '%" + search + "%' or aroid like '%" + search + "%' or ntoolid like '%" + search + "%'";
+
+            if (aroid != "")
+                query += "where  aroid = " + aroid;
+
+            else if (ntoolid != "")
+                query += "where  ntoolid = " + ntoolid;
 
             cmd = new SqlCommand(query, sqlConnect);
 
