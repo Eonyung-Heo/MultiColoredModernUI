@@ -29,55 +29,18 @@ namespace MultiColoredModernUI.Forms.Etc
 
             string query = "";
 
-            int i = 0;
+            query = string.Format("select * from TBBusFare_Ex2 where cityname like '%{0}%'", cityname);
 
-            query = "select * from TBBusFare_Ex2";
-
-
-            if (citycode != "" || cityname != "" || busclass != "" || busclassname != "")
-            {
-                query += " where";
-
-                int iCount = 0;
-
-                if (citycode != "")
-                {
-                    iCount++;
-                    query += string.Format(" citycode = {0}", citycode);
-                }
-
-                if (cityname != "")
-                {
-                    iCount++;
-
-                    if (iCount > 1)
-                        query += " and ";
-
-                    query += string.Format(" cityname like '%{0}%'", cityname);
-                }
-                if (busclass != "")
-                {
-                    iCount++;
-
-                    if (iCount > 1)
-                        query += " and ";
-
-                    query += string.Format(" busclass = {0}", busclass);
-                }
-                if (busclassname != "")
-                {
-                    iCount++;
-
-                    if (iCount > 1)
-                        query += " and ";
-
-                    query += string.Format(" busclassname like '%{0}%'", busclassname);
-                }
-            }
-
+            if (citycode != "")
+                query += string.Format(" and citycode = {0}", citycode);
+            
+            if (busclass != "")           
+               query += string.Format(" and busclass = {0}", busclass);
+            
+            if (busclassname != "")
+                query += string.Format(" and busclassname like '%{0}%'", busclassname);
+            
             query += " order by 3,1,2,4";
-
-
 
             cmd = new SqlCommand(query, sqlConnect);
 
@@ -115,6 +78,51 @@ namespace MultiColoredModernUI.Forms.Etc
             cmd.ExecuteNonQuery();
 
             sqlConnect.Close();
+        }
+
+        public List<List<string>> SelectInterCityBusPrice(string laneid, string laneno, string fare, string citycode)
+        {
+            Connect();
+
+            List<string> price = new List<string>();
+            List<List<string>> totalprices = new List<List<string>>();
+
+            string query = "";
+
+            query = string.Format("select * from [245].NTOOL_DATA_NEW.dbo.[90_tb_AirBusfare] where route_name like '%{0}%'", laneno);
+
+            if (laneid != "")
+                query += string.Format(" and route_id = {0}", laneid);
+
+            if (fare != "")
+                query += string.Format(" and fare = {0}", fare);
+
+            if (citycode != "")
+                query += string.Format(" and city_code = {0}", citycode);
+
+            query += " order by 3,1,2,4";
+
+            cmd = new SqlCommand(query, sqlConnect);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                price.Add(reader["route_id"].ToString());
+                price.Add(reader["route_name"].ToString());
+                price.Add(reader["fare_id"].ToString());
+                price.Add(reader["fare"].ToString());
+                price.Add(reader["city_cdoe"].ToString());
+
+                totalprices.Add(price.ToList());
+                price.Clear();
+
+            }
+
+            reader.Close();
+            sqlConnect.Close();
+
+            return totalprices;
         }
     }
 }

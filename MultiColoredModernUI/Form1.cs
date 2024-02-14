@@ -47,6 +47,7 @@ namespace MultiColoredModernUI
         public IF.InterCityBusRoute ifBusRoute = new IF.InterCityBusRoute { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public IF.InterCityBusManegement ifBusManegement = new IF.InterCityBusManegement { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public EF.BusPrice efBusPrice = new EF.BusPrice { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public EF.InterCityBusPrice efInterBusPrice = new EF.InterCityBusPrice { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
 
         public MF.MasterForm mfMaster = new MF.MasterForm { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -592,6 +593,12 @@ namespace MultiColoredModernUI
         {
             OpenChildForm(efBusPrice, sender);
             sql.Log(StaticMain.userName, StaticMain.userMac, "버스 요금 선택");
+        }
+
+        private void btnInterCityBusPrice_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(efInterBusPrice, sender);
+            sql.Log(StaticMain.userName, StaticMain.userMac, "공항 버스 예외 요금 선택");
         }
     }
 }

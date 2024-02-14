@@ -68,6 +68,7 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btnInterCityBusPrice = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelEtcSubMenu.SuspendLayout();
             this.panelAirSubMenu.SuspendLayout();
@@ -100,17 +101,18 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(204, 1036);
+            this.panelSideMenu.Size = new System.Drawing.Size(204, 1139);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelEtcSubMenu
             // 
             this.panelEtcSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelEtcSubMenu.Controls.Add(this.btnInterCityBusPrice);
             this.panelEtcSubMenu.Controls.Add(this.btnBusPrice);
             this.panelEtcSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEtcSubMenu.Location = new System.Drawing.Point(0, 967);
             this.panelEtcSubMenu.Name = "panelEtcSubMenu";
-            this.panelEtcSubMenu.Size = new System.Drawing.Size(187, 42);
+            this.panelEtcSubMenu.Size = new System.Drawing.Size(204, 87);
             this.panelEtcSubMenu.TabIndex = 24;
             // 
             // btnBusPrice
@@ -124,7 +126,7 @@
             this.btnBusPrice.Location = new System.Drawing.Point(0, 0);
             this.btnBusPrice.Name = "btnBusPrice";
             this.btnBusPrice.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBusPrice.Size = new System.Drawing.Size(187, 42);
+            this.btnBusPrice.Size = new System.Drawing.Size(204, 42);
             this.btnBusPrice.TabIndex = 13;
             this.btnBusPrice.Text = "버스 요금";
             this.btnBusPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,7 +141,7 @@
             this.btnEtc.ForeColor = System.Drawing.Color.Black;
             this.btnEtc.Location = new System.Drawing.Point(0, 922);
             this.btnEtc.Name = "btnEtc";
-            this.btnEtc.Size = new System.Drawing.Size(187, 45);
+            this.btnEtc.Size = new System.Drawing.Size(204, 45);
             this.btnEtc.TabIndex = 23;
             this.btnEtc.Text = "기타";
             this.btnEtc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,7 +157,7 @@
             this.panelAirSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAirSubMenu.Location = new System.Drawing.Point(0, 791);
             this.panelAirSubMenu.Name = "panelAirSubMenu";
-            this.panelAirSubMenu.Size = new System.Drawing.Size(187, 131);
+            this.panelAirSubMenu.Size = new System.Drawing.Size(204, 131);
             this.panelAirSubMenu.TabIndex = 18;
             // 
             // btnAirFare
@@ -169,7 +171,7 @@
             this.btnAirFare.Location = new System.Drawing.Point(0, 84);
             this.btnAirFare.Name = "btnAirFare";
             this.btnAirFare.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAirFare.Size = new System.Drawing.Size(187, 42);
+            this.btnAirFare.Size = new System.Drawing.Size(204, 42);
             this.btnAirFare.TabIndex = 15;
             this.btnAirFare.Text = "항공 요금";
             this.btnAirFare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,7 +189,7 @@
             this.btnAirDetail.Location = new System.Drawing.Point(0, 42);
             this.btnAirDetail.Name = "btnAirDetail";
             this.btnAirDetail.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAirDetail.Size = new System.Drawing.Size(187, 42);
+            this.btnAirDetail.Size = new System.Drawing.Size(204, 42);
             this.btnAirDetail.TabIndex = 14;
             this.btnAirDetail.Text = "항공 상세내역";
             this.btnAirDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +207,7 @@
             this.btnAirData.Location = new System.Drawing.Point(0, 0);
             this.btnAirData.Name = "btnAirData";
             this.btnAirData.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAirData.Size = new System.Drawing.Size(187, 42);
+            this.btnAirData.Size = new System.Drawing.Size(204, 42);
             this.btnAirData.TabIndex = 13;
             this.btnAirData.Text = "항공 데이터 수집";
             this.btnAirData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,7 +223,7 @@
             this.btnAirPlane.ForeColor = System.Drawing.Color.Black;
             this.btnAirPlane.Location = new System.Drawing.Point(0, 746);
             this.btnAirPlane.Name = "btnAirPlane";
-            this.btnAirPlane.Size = new System.Drawing.Size(187, 45);
+            this.btnAirPlane.Size = new System.Drawing.Size(204, 45);
             this.btnAirPlane.TabIndex = 17;
             this.btnAirPlane.Text = "항공";
             this.btnAirPlane.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,7 +239,7 @@
             this.panelInterCityBusSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInterCityBusSubMenu.Location = new System.Drawing.Point(0, 615);
             this.panelInterCityBusSubMenu.Name = "panelInterCityBusSubMenu";
-            this.panelInterCityBusSubMenu.Size = new System.Drawing.Size(187, 131);
+            this.panelInterCityBusSubMenu.Size = new System.Drawing.Size(204, 131);
             this.panelInterCityBusSubMenu.TabIndex = 16;
             // 
             // btnBusRoute
@@ -251,7 +253,7 @@
             this.btnBusRoute.Location = new System.Drawing.Point(0, 84);
             this.btnBusRoute.Name = "btnBusRoute";
             this.btnBusRoute.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBusRoute.Size = new System.Drawing.Size(187, 42);
+            this.btnBusRoute.Size = new System.Drawing.Size(204, 42);
             this.btnBusRoute.TabIndex = 15;
             this.btnBusRoute.Text = "공항 버스 노선";
             this.btnBusRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,7 +271,7 @@
             this.btnBusSchedule.Location = new System.Drawing.Point(0, 42);
             this.btnBusSchedule.Name = "btnBusSchedule";
             this.btnBusSchedule.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBusSchedule.Size = new System.Drawing.Size(187, 42);
+            this.btnBusSchedule.Size = new System.Drawing.Size(204, 42);
             this.btnBusSchedule.TabIndex = 14;
             this.btnBusSchedule.Text = "공항 버스 스케쥴";
             this.btnBusSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,7 +289,7 @@
             this.btnBusManagement.Location = new System.Drawing.Point(0, 0);
             this.btnBusManagement.Name = "btnBusManagement";
             this.btnBusManagement.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBusManagement.Size = new System.Drawing.Size(187, 42);
+            this.btnBusManagement.Size = new System.Drawing.Size(204, 42);
             this.btnBusManagement.TabIndex = 13;
             this.btnBusManagement.Text = "공항 버스 현황";
             this.btnBusManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,7 +305,7 @@
             this.btnInterCityBus.ForeColor = System.Drawing.Color.Black;
             this.btnInterCityBus.Location = new System.Drawing.Point(0, 570);
             this.btnInterCityBus.Name = "btnInterCityBus";
-            this.btnInterCityBus.Size = new System.Drawing.Size(187, 45);
+            this.btnInterCityBus.Size = new System.Drawing.Size(204, 45);
             this.btnInterCityBus.TabIndex = 15;
             this.btnInterCityBus.Text = "공항 버스";
             this.btnInterCityBus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,7 +321,7 @@
             this.panelShipSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShipSubMenu.Location = new System.Drawing.Point(0, 434);
             this.panelShipSubMenu.Name = "panelShipSubMenu";
-            this.panelShipSubMenu.Size = new System.Drawing.Size(187, 136);
+            this.panelShipSubMenu.Size = new System.Drawing.Size(204, 136);
             this.panelShipSubMenu.TabIndex = 13;
             // 
             // btnShipLoad
@@ -333,7 +335,7 @@
             this.btnShipLoad.Location = new System.Drawing.Point(0, 84);
             this.btnShipLoad.Name = "btnShipLoad";
             this.btnShipLoad.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipLoad.Size = new System.Drawing.Size(187, 42);
+            this.btnShipLoad.Size = new System.Drawing.Size(204, 42);
             this.btnShipLoad.TabIndex = 13;
             this.btnShipLoad.Text = "해운 데이터 수정";
             this.btnShipLoad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -351,7 +353,7 @@
             this.btnShipAdd.Location = new System.Drawing.Point(0, 42);
             this.btnShipAdd.Name = "btnShipAdd";
             this.btnShipAdd.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipAdd.Size = new System.Drawing.Size(187, 42);
+            this.btnShipAdd.Size = new System.Drawing.Size(204, 42);
             this.btnShipAdd.TabIndex = 12;
             this.btnShipAdd.Text = "해운 데이터 추가";
             this.btnShipAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,7 +371,7 @@
             this.btnShipCollection.Location = new System.Drawing.Point(0, 0);
             this.btnShipCollection.Name = "btnShipCollection";
             this.btnShipCollection.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShipCollection.Size = new System.Drawing.Size(187, 42);
+            this.btnShipCollection.Size = new System.Drawing.Size(204, 42);
             this.btnShipCollection.TabIndex = 0;
             this.btnShipCollection.Text = "해운 데이터 수집";
             this.btnShipCollection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +387,7 @@
             this.btnShipProducts.ForeColor = System.Drawing.Color.Black;
             this.btnShipProducts.Location = new System.Drawing.Point(0, 389);
             this.btnShipProducts.Name = "btnShipProducts";
-            this.btnShipProducts.Size = new System.Drawing.Size(187, 45);
+            this.btnShipProducts.Size = new System.Drawing.Size(204, 45);
             this.btnShipProducts.TabIndex = 12;
             this.btnShipProducts.Text = "해운";
             this.btnShipProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +405,7 @@
             this.panelProductsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelProductsSubMenu.Location = new System.Drawing.Point(0, 210);
             this.panelProductsSubMenu.Name = "panelProductsSubMenu";
-            this.panelProductsSubMenu.Size = new System.Drawing.Size(187, 179);
+            this.panelProductsSubMenu.Size = new System.Drawing.Size(204, 179);
             this.panelProductsSubMenu.TabIndex = 2;
             // 
             // btnExitLink
@@ -417,7 +419,7 @@
             this.btnExitLink.Location = new System.Drawing.Point(0, 140);
             this.btnExitLink.Name = "btnExitLink";
             this.btnExitLink.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnExitLink.Size = new System.Drawing.Size(187, 35);
+            this.btnExitLink.Size = new System.Drawing.Size(204, 35);
             this.btnExitLink.TabIndex = 5;
             this.btnExitLink.Text = "지하철 빠른 하차";
             this.btnExitLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,7 +437,7 @@
             this.btnExchange.Location = new System.Drawing.Point(0, 105);
             this.btnExchange.Name = "btnExchange";
             this.btnExchange.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnExchange.Size = new System.Drawing.Size(187, 35);
+            this.btnExchange.Size = new System.Drawing.Size(204, 35);
             this.btnExchange.TabIndex = 3;
             this.btnExchange.Text = "지하철 환승 정보";
             this.btnExchange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -453,7 +455,7 @@
             this.btnGateLink.Location = new System.Drawing.Point(0, 70);
             this.btnGateLink.Name = "btnGateLink";
             this.btnGateLink.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnGateLink.Size = new System.Drawing.Size(187, 35);
+            this.btnGateLink.Size = new System.Drawing.Size(204, 35);
             this.btnGateLink.TabIndex = 2;
             this.btnGateLink.Text = "지하철 출구 정보";
             this.btnGateLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -471,7 +473,7 @@
             this.btnFacility.Location = new System.Drawing.Point(0, 35);
             this.btnFacility.Name = "btnFacility";
             this.btnFacility.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFacility.Size = new System.Drawing.Size(187, 35);
+            this.btnFacility.Size = new System.Drawing.Size(204, 35);
             this.btnFacility.TabIndex = 1;
             this.btnFacility.Text = "지하철 시설 정보";
             this.btnFacility.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -489,7 +491,7 @@
             this.btnStation.Location = new System.Drawing.Point(0, 0);
             this.btnStation.Name = "btnStation";
             this.btnStation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStation.Size = new System.Drawing.Size(187, 35);
+            this.btnStation.Size = new System.Drawing.Size(204, 35);
             this.btnStation.TabIndex = 0;
             this.btnStation.Text = "지하철 역 정보";
             this.btnStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -505,7 +507,7 @@
             this.btnProducts.ForeColor = System.Drawing.Color.Black;
             this.btnProducts.Location = new System.Drawing.Point(0, 165);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(187, 45);
+            this.btnProducts.Size = new System.Drawing.Size(204, 45);
             this.btnProducts.TabIndex = 8;
             this.btnProducts.Text = "지하철";
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -521,7 +523,7 @@
             this.btnDataManegement.ForeColor = System.Drawing.Color.Black;
             this.btnDataManegement.Location = new System.Drawing.Point(0, 120);
             this.btnDataManegement.Name = "btnDataManegement";
-            this.btnDataManegement.Size = new System.Drawing.Size(187, 45);
+            this.btnDataManegement.Size = new System.Drawing.Size(204, 45);
             this.btnDataManegement.TabIndex = 5;
             this.btnDataManegement.Text = "데이터 관리(유지보수) 현황";
             this.btnDataManegement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -537,7 +539,7 @@
             this.btnRegionData.ForeColor = System.Drawing.Color.Black;
             this.btnRegionData.Location = new System.Drawing.Point(0, 75);
             this.btnRegionData.Name = "btnRegionData";
-            this.btnRegionData.Size = new System.Drawing.Size(187, 45);
+            this.btnRegionData.Size = new System.Drawing.Size(204, 45);
             this.btnRegionData.TabIndex = 4;
             this.btnRegionData.Text = "데이터 보유현황";
             this.btnRegionData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,7 +553,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(187, 75);
+            this.panelLogo.Size = new System.Drawing.Size(204, 75);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -560,7 +562,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(204, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -572,9 +574,9 @@
             this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaster.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaster.ForeColor = System.Drawing.Color.Black;
-            this.btnMaster.Location = new System.Drawing.Point(0, 1009);
+            this.btnMaster.Location = new System.Drawing.Point(0, 1094);
             this.btnMaster.Name = "btnMaster";
-            this.btnMaster.Size = new System.Drawing.Size(187, 45);
+            this.btnMaster.Size = new System.Drawing.Size(204, 45);
             this.btnMaster.TabIndex = 3;
             this.btnMaster.Text = "Master";
             this.btnMaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -691,14 +693,32 @@
             this.panelDeskTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDeskTop.Location = new System.Drawing.Point(204, 75);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(971, 961);
+            this.panelDeskTop.Size = new System.Drawing.Size(971, 1064);
             this.panelDeskTop.TabIndex = 2;
+            // 
+            // btnInterCityBusPrice
+            // 
+            this.btnInterCityBusPrice.BackColor = System.Drawing.Color.White;
+            this.btnInterCityBusPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInterCityBusPrice.FlatAppearance.BorderSize = 0;
+            this.btnInterCityBusPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInterCityBusPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterCityBusPrice.ForeColor = System.Drawing.Color.Black;
+            this.btnInterCityBusPrice.Location = new System.Drawing.Point(0, 42);
+            this.btnInterCityBusPrice.Name = "btnInterCityBusPrice";
+            this.btnInterCityBusPrice.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnInterCityBusPrice.Size = new System.Drawing.Size(204, 42);
+            this.btnInterCityBusPrice.TabIndex = 14;
+            this.btnInterCityBusPrice.Text = "공항 버스 예외 요금";
+            this.btnInterCityBusPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInterCityBusPrice.UseVisualStyleBackColor = false;
+            this.btnInterCityBusPrice.Click += new System.EventHandler(this.btnInterCityBusPrice_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 1036);
+            this.ClientSize = new System.Drawing.Size(1175, 1139);
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelSideMenu);
@@ -760,6 +780,7 @@
         private System.Windows.Forms.Panel panelEtcSubMenu;
         private System.Windows.Forms.Button btnBusPrice;
         private System.Windows.Forms.Button btnEtc;
+        private System.Windows.Forms.Button btnInterCityBusPrice;
     }
 }
 
