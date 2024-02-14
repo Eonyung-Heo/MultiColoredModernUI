@@ -485,7 +485,7 @@ namespace MultiColoredModernUI.Forms.Ship
                 Ship_UpdateDate_TB_TextChanged();//시간변경
                 Ship_DataGridViewData_Route_DG.Rows.Clear();
                 selectODSayLaneID();
-                
+                /*
                 var LoadHistoryInsert = "insert into TBShip_History";
 
                 string tableName;
@@ -562,7 +562,7 @@ namespace MultiColoredModernUI.Forms.Ship
                     cmd.CommandText = Histroy;
                     cmd.ExecuteNonQuery();
                 }
-                //*/
+                */
                 sqlConnect.Close();
                 MessageBox.Show("변경 항목이 저장되었습니다.");
             }
