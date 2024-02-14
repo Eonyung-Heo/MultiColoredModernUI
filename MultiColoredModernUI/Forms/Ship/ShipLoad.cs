@@ -561,7 +561,7 @@ namespace MultiColoredModernUI.Forms.Ship
                     SqlCommand cmd = new SqlCommand(Histroy, sqlConnect);
                     cmd.CommandText = Histroy;
                     cmd.ExecuteNonQuery();
-                }
+                }.
                 */
                 sqlConnect.Close();
                 MessageBox.Show("변경 항목이 저장되었습니다.");
