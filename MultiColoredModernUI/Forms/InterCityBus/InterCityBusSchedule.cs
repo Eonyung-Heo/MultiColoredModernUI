@@ -154,6 +154,12 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                         {
                             object obj = (range.Cells[row, column] as Excel.Range).Value2;
 
+                            if (column == 1 && obj == null)
+                            {
+                                index--;
+                                break;
+                            }
+
                             if (obj == null)
                                 obj = "0";
 
@@ -168,26 +174,32 @@ namespace MultiColoredModernUI.Forms.InterCityBus
 
                         }
 
-                        qSchedule += "(" + string.Join(",", lstCell.ToArray()) + ")"; // 표시용 데이터 추가
-                        lstCell.Clear();
+                        if (lstCell.Count > 0)
+                            qSchedule += "(" + string.Join(",", lstCell.ToArray()) + ")"; // 표시용 데이터 추가
+                        
 
                         if (index == 999)
                         {
                             index = 0;
 
+                            qSchedule = qSchedule.TrimEnd(',', '\n');
+
                             sql.InsertNInterCityBus(qSchedule);
 
                             qSchedule = query;
                         }
-                        else
+                        else if (lstCell.Count > 0)
                         {
                             if (row >= 2 && row < range.Rows.Count)
                                 qSchedule += ",\n";
                         }
+
+                        lstCell.Clear();
                     }
                 }
 
-              
+                qSchedule = qSchedule.TrimEnd(',', '\n');
+
                 sql.InsertNInterCityBus(qSchedule);
 
                 object missing = Type.Missing;

@@ -112,7 +112,7 @@ namespace MultiColoredModernUI.Forms.Etc
                 price.Add(reader["route_name"].ToString());
                 price.Add(reader["fare_id"].ToString());
                 price.Add(reader["fare"].ToString());
-                price.Add(reader["city_cdoe"].ToString());
+                price.Add(reader["city_code"].ToString());
 
                 totalprices.Add(price.ToList());
                 price.Clear();
@@ -123,6 +123,20 @@ namespace MultiColoredModernUI.Forms.Etc
             sqlConnect.Close();
 
             return totalprices;
+        }
+
+        public void UpdateInterCityBusPrice(string laneid, string fareid,string fare)
+        {
+            Connect();
+
+            string query = string.Format("update [245].NTOOL_DATA_NEW.dbo.[90_tb_AirBusfare] set fare = {2} where route_id = {0} and fare_id = {1}", laneid, fareid,fare);
+
+
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            sqlConnect.Close();
         }
     }
 }

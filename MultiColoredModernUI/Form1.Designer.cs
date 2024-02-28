@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelEtcSubMenu = new System.Windows.Forms.Panel();
+            this.btnInterCityBusPrice = new System.Windows.Forms.Button();
             this.btnBusPrice = new System.Windows.Forms.Button();
             this.btnEtc = new System.Windows.Forms.Button();
             this.panelAirSubMenu = new System.Windows.Forms.Panel();
@@ -68,7 +69,6 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.btnInterCityBusPrice = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelEtcSubMenu.SuspendLayout();
             this.panelAirSubMenu.SuspendLayout();
@@ -115,6 +115,24 @@
             this.panelEtcSubMenu.Size = new System.Drawing.Size(204, 87);
             this.panelEtcSubMenu.TabIndex = 24;
             // 
+            // btnInterCityBusPrice
+            // 
+            this.btnInterCityBusPrice.BackColor = System.Drawing.Color.White;
+            this.btnInterCityBusPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInterCityBusPrice.FlatAppearance.BorderSize = 0;
+            this.btnInterCityBusPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInterCityBusPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterCityBusPrice.ForeColor = System.Drawing.Color.Black;
+            this.btnInterCityBusPrice.Location = new System.Drawing.Point(0, 42);
+            this.btnInterCityBusPrice.Name = "btnInterCityBusPrice";
+            this.btnInterCityBusPrice.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnInterCityBusPrice.Size = new System.Drawing.Size(204, 42);
+            this.btnInterCityBusPrice.TabIndex = 14;
+            this.btnInterCityBusPrice.Text = "공항 버스 예외 요금";
+            this.btnInterCityBusPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInterCityBusPrice.UseVisualStyleBackColor = false;
+            this.btnInterCityBusPrice.Click += new System.EventHandler(this.btnInterCityBusPrice_Click);
+            // 
             // btnBusPrice
             // 
             this.btnBusPrice.BackColor = System.Drawing.Color.White;
@@ -131,6 +149,7 @@
             this.btnBusPrice.Text = "버스 요금";
             this.btnBusPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBusPrice.UseVisualStyleBackColor = false;
+            this.btnBusPrice.Click += new System.EventHandler(this.btnBusPrice_Click);
             // 
             // btnEtc
             // 
@@ -695,24 +714,6 @@
             this.panelDeskTop.Name = "panelDeskTop";
             this.panelDeskTop.Size = new System.Drawing.Size(971, 1064);
             this.panelDeskTop.TabIndex = 2;
-            // 
-            // btnInterCityBusPrice
-            // 
-            this.btnInterCityBusPrice.BackColor = System.Drawing.Color.White;
-            this.btnInterCityBusPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInterCityBusPrice.FlatAppearance.BorderSize = 0;
-            this.btnInterCityBusPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInterCityBusPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInterCityBusPrice.ForeColor = System.Drawing.Color.Black;
-            this.btnInterCityBusPrice.Location = new System.Drawing.Point(0, 42);
-            this.btnInterCityBusPrice.Name = "btnInterCityBusPrice";
-            this.btnInterCityBusPrice.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnInterCityBusPrice.Size = new System.Drawing.Size(204, 42);
-            this.btnInterCityBusPrice.TabIndex = 14;
-            this.btnInterCityBusPrice.Text = "공항 버스 예외 요금";
-            this.btnInterCityBusPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInterCityBusPrice.UseVisualStyleBackColor = false;
-            this.btnInterCityBusPrice.Click += new System.EventHandler(this.btnInterCityBusPrice_Click);
             // 
             // Form1
             // 

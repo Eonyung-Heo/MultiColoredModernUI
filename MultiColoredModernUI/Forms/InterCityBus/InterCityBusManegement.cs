@@ -139,6 +139,8 @@ namespace MultiColoredModernUI.Forms.InterCityBus
                 var ntoolID = guna2DataGridView1.Rows[e.Row.Index].Cells[2].Value.ToString();
 
                 sql.DeleteRouteList(laneNo, aroID, ntoolID);
+
+                MessageBox.Show("삭제 완료");
             }
             else
                 e.Cancel = true;

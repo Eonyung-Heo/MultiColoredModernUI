@@ -466,9 +466,15 @@ namespace MultiColoredModernUI.Forms.InterCityBus
         public void DeleteRouteList(string LaneNo, string Aroid, string Ntoolid)
         {
             Connect();
-
+            
             string query = string.Format("delete NTOOL_DATA_NEW.dbo.[90_tb_route_stops_mapping] where  " +
                 "LaneNo = '{0}'and Aroid = {1} or Ntoolid = {2}", LaneNo, Aroid, Ntoolid);
+
+            cmd = new SqlCommand(query, sqlConnect);
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+
+            query = "exec sp_InterCityDelete";
 
             cmd = new SqlCommand(query, sqlConnect);
             cmd.CommandText = query;
