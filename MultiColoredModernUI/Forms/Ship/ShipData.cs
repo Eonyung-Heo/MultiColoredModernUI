@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 //using ChromeDriverUpdater;
 using System.Data.SqlClient;
-
+ 
 using System.Threading;
 
 namespace MultiColoredModernUI.Forms.Ship
@@ -156,7 +156,7 @@ namespace MultiColoredModernUI.Forms.Ship
         //크롤링
         public void Ship_DataCrawling()
         {
-            Ship_DBupdate.Enabled = false;
+            
             try
             {
                 string[] calendar_split = calendar.Split('-');
@@ -579,6 +579,7 @@ namespace MultiColoredModernUI.Forms.Ship
         //에러이유 크로스 스레드를 써야함. 이유:스레드 작동 도중 ui는 변경되지않게 되어있는데 변경되어서.
         private void Ship_DataCollection_Click(object sender, EventArgs e)
         {
+            Ship_DBupdate.Enabled = false;
             //쓰레드 입혀서 작동
             Thread th1 = new Thread(new ThreadStart(Ship_DataCrawling));
             //th1.IsBackground = true;

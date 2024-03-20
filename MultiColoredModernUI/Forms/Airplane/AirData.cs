@@ -34,6 +34,11 @@ namespace MultiColoredModernUI.Forms.Airplane
         int kk = 0;
         string fileName;
 
+
+        /* 1.드라이버 오류시 드라이버 버전 구글 크롬 과 버전 맞추기
+         * 2.그래도 안될시 도구에 패키지 업데이트하기.
+         * 3. 재부팅 및 실행중인 크롬드라이버 끄기
+         */
         public AirData()
         {
             InitializeComponent();
